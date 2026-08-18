@@ -1,0 +1,18 @@
+# 游戏目录（目录联接/junction，指向外部游戏安装目录，不纳入版本控制）
+/Game/
+
+# 备份与中间产物
+*.bak
+*.bak0000
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统/编辑器
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
