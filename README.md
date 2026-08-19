@@ -22,8 +22,8 @@
 | 环节 | 工具 | 版本 |
 |------|------|------|
 | 提取 | PowerShell `.NET XmlDocument` + 标准 CSV 写入；Python `csv` / `ElementTree` 完整性校验 | PowerShell 7.6.4 / Python 3.12.10 |
-| 翻译 | AINiee（待用户在 GUI 执行）；`analyze_placeholders.py` / `validate_translation.py` | 工作区当前版本 / Python 3.12.10 |
-| 回填 |  |  |
+| 翻译 | AINiee；`analyze_placeholders.py` / 项目收紧规则复检 | AINiee 7.2.4 dev / Python 3.12.10 |
+| 回填 | `repack_stringtables.py` 直接替换 StreamingAssets XML 字符串表 | Python 3.12.10 |
 
 ## 文本提取
 - 文本位置：`Game/WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/**/*.stringtable`
@@ -40,11 +40,21 @@
 - 校验状态：70,163 条逻辑记录全部对齐，无空译文；67,828 条已翻译或发生本地化改动，2,335 条原样保留（运行时标记、调试/编辑占位、专名、虚构语言等）。原始通用校验器会把玩家可见的自然方括号/尖括号文本误判为变量，因此在执行其自动修复后恢复了校验前备份，并按本项目人工收紧规则复检。实际运行时方括号标记、数字/命名花括号、`<quad>` / `<a>` 标签、printf 格式符、字面转义及每条真实换行结构均一致；另修复 1 条提前闭合的 `[/Color]` 标签。项目专用复检退出码为 0。
 
 ## 回填
-- 工具/命令：
-- 步骤：
-- 验证方法：
+- 工具/命令：`python repack_stringtables.py torment-tides-of-numenera_text.csv torment-tides-of-numenera_text_translated.csv <原英文目录> repack/localized/en`
+- 策略：游戏直接从 `StreamingAssets/data/localized/<语言>/text/**/*.stringtable` 读取文本。为避免修改语言枚举代码，生成完整中文覆盖包并覆盖现有 `en` 语言槽；`language.xml` 保持 English 标识，因此游戏选用英语时直接加载中文。
+- 生成结果：2,250 个字符串表、89,239 个非空字段全部映射；83,363 个字段发生本地化改动，83,310 个字段含中日韩统一表意文字；输出树 SHA-256：`85F75C575774528EFF3E5DE5F484DECA9353BBB2C591B51881C17D2C2B7B6A3D`。
+- 修改文件：`Game/WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/` 下的 2,250 个 `.stringtable`；部署后与 `repack/localized/en/` 的 2,251 个文件逐一 SHA-256 一致。
+- 原版备份：`backups/localized_en_original_20260819_085840.zip`（2,250 个字符串表，压缩包 5,328,111 字节，已验证目录清单）。恢复时解压其中 `en/` 覆盖游戏的同名目录即可。
+- 验证方法：实际启动 `TidesOfNumenera.exe`，依次检查启动、主菜单、加载提示、性别选择与首段新游戏剧情。
+- 验证结果：通过。游戏正常启动且无崩溃；上述界面均加载中文；中文字体完整，无方框、乱码或明显缺字；首段剧情段落换行和“继续”按钮显示正常。
 
 ## 已知问题
+
+- 当前方案占用英语语言槽，游戏内不再提供原英文文本；需要英文时从上述 ZIP 恢复。
+- Steam“验证游戏文件完整性”或游戏更新可能还原英文字符串表；发生后重新运行回填脚本并部署覆盖包即可。
+- 译文由 AINiee 批量生成，专名与文风可能存在少量不一致；已完成结构、占位符和首屏实机验证，但未逐条人工润色全部 70,163 条。
+- 2,335 条原文有意保持不变，主要是运行时标记、编辑/调试占位、虚构语言、赞助者姓名和无中文化必要的符号内容。
+- 标题 Logo 属于图片资源，仍显示英文，不影响菜单和正文汉化。
 
 ## 版本记录
 - 2026-08-18 - 初始化汉化项目工作区（start-translate skill）
@@ -52,3 +62,4 @@
 - 2026-08-18 - 从英文 `.stringtable` 提取并校验 70,163 条唯一原文
 - 2026-08-18 - 完成 AINiee 翻译准备、占位符人工复核与术语建议
 - 2026-08-19 - 完成 70,163 条译文校验，补译正式英文残留并修复颜色标签
+- 2026-08-19 - 生成并部署中文字符串表覆盖包；完成主菜单、加载、角色选择与首段剧情实机验证

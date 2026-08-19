@@ -1,6 +1,13 @@
 # 游戏目录（目录联接/junction，指向外部游戏安装目录，不纳入版本控制）
 /Game/
 
+# 本地回填输出与原游戏备份（不纳入版本库）
+/repack/
+/backups/
+/AiNieeOutput/
+/bilingual_auto/
+/need_retranslate.csv
+
 # 备份与中间产物
 *.bak
 *.bak0000
