@@ -8,6 +8,9 @@
 /bilingual_auto/
 /need_retranslate.csv
 
+# 对外发布的二进制压缩包（发布记录保留在 README）
+/Dispatch/*.zip
+
 # 备份与中间产物
 *.bak
 *.bak0000

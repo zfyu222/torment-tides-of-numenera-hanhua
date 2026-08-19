@@ -24,6 +24,7 @@
 | 提取 | PowerShell `.NET XmlDocument` + 标准 CSV 写入；Python `csv` / `ElementTree` 完整性校验 | PowerShell 7.6.4 / Python 3.12.10 |
 | 翻译 | AINiee；`analyze_placeholders.py` / 项目收紧规则复检 | AINiee 7.2.4 dev / Python 3.12.10 |
 | 回填 | `repack_stringtables.py` 直接替换 StreamingAssets XML 字符串表 | Python 3.12.10 |
+| 发布 | `game-release-patch`；百度网盘本地上传 MCP | Python 3.12.10 |
 
 ## 文本提取
 - 文本位置：`Game/WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/**/*.stringtable`
@@ -48,6 +49,19 @@
 - 验证方法：实际启动 `TidesOfNumenera.exe`，依次检查启动、主菜单、加载提示、性别选择与首段新游戏剧情。
 - 验证结果：通过。游戏正常启动且无崩溃；上述界面均加载中文；中文字体完整，无方框、乱码或明显缺字；首段剧情段落换行和“继续”按钮显示正常。
 
+## 对外发布
+
+- 补丁：`Dispatch/torment-tides-of-numenera_子非鱼汉化1.0.zip`
+- 标题：`《Torment: Tides of Numenera》子非鱼AI汉化补丁 v1.0`
+- 支持版本/平台：Steam v1.1.0（Windows）。
+- 内容：按游戏根目录路径提供 `WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/` 下的 2,250 个已汉化 `.stringtable` 文件；不含游戏本体、原始资源、CSV 或开发文件。
+- 安装：退出游戏后，将压缩包中的 `WIN` 文件夹复制到游戏根目录并选择合并/覆盖。安装前请备份 `WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/`；无需 Mod 加载器。
+- 卸载：恢复安装前备份；没有备份时，在 Steam 客户端执行“验证游戏文件完整性”。
+- 本地校验：ZIP 共 2,253 个条目（2,250 个载荷文件及根目录的 `补丁说明.txt`、`PATCH_MANIFEST.json`、`SHA256SUMS.txt`）；全部载荷 SHA-256 与清单一致，说明文件为 UTF-8 BOM，且不含可执行文件。
+- 验证：已在 Steam Windows v1.1.0 实测启动、主菜单、加载提示、性别选择与首段剧情，中文显示正常。
+- 百度网盘：`/Hanhua/torment-tides-of-numenera/torment-tides-of-numenera_子非鱼汉化1.0.zip`（上传成功，fs_id：`763362289175445`）。
+- 已知问题：标题 Logo 仍为英文；本补丁为 AI 辅助汉化，尚未逐条人工润色，少量超长文本可能需要后续优化。
+
 ## 已知问题
 
 - 当前方案占用英语语言槽，游戏内不再提供原英文文本；需要英文时从上述 ZIP 恢复。
@@ -63,3 +77,4 @@
 - 2026-08-18 - 完成 AINiee 翻译准备、占位符人工复核与术语建议
 - 2026-08-19 - 完成 70,163 条译文校验，补译正式英文残留并修复颜色标签
 - 2026-08-19 - 生成并部署中文字符串表覆盖包；完成主菜单、加载、角色选择与首段剧情实机验证
+- 2026-08-19 - 生成并校验 v1.0 对外补丁，上传至百度网盘
