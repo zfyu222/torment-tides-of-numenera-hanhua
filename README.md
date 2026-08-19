@@ -57,9 +57,9 @@
 - 内容：按游戏根目录路径提供 `WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/` 下的 2,250 个已汉化 `.stringtable` 文件；不含游戏本体、原始资源、CSV 或开发文件。
 - 安装：退出游戏后，将压缩包中的 `WIN` 文件夹复制到游戏根目录并选择合并/覆盖。安装前请备份 `WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/`；无需 Mod 加载器。
 - 卸载：恢复安装前备份；没有备份时，在 Steam 客户端执行“验证游戏文件完整性”。
-- 本地校验：ZIP 共 2,253 个条目（2,250 个载荷文件及根目录的 `补丁说明.txt`、`PATCH_MANIFEST.json`、`SHA256SUMS.txt`）；全部载荷 SHA-256 与清单一致，说明文件为 UTF-8 BOM，且不含可执行文件。
+- 本地校验：2026-08-20 重新生成 ZIP（6,681,819 字节），共 2,253 个条目（2,250 个载荷文件及根目录的 `补丁说明.txt`、`PATCH_MANIFEST.json`、`SHA256SUMS.txt`）；全部载荷 SHA-256 与清单一致，说明文件为 UTF-8 BOM，且不含可执行文件。
 - 验证：已在 Steam Windows v1.1.0 实测启动、主菜单、加载提示、性别选择与首段剧情，中文显示正常。
-- 百度网盘：`/Hanhua/torment-tides-of-numenera/torment-tides-of-numenera_子非鱼汉化1.0.zip`（上传成功，fs_id：`763362289175445`）。
+- 百度网盘：`/Hanhua/torment-tides-of-numenera/torment-tides-of-numenera_子非鱼汉化1.0.zip`（2026-08-20 已更新为重新排版的说明书，fs_id：`817088248918257`）。
 - 已知问题：标题 Logo 仍为英文；本补丁为 AI 辅助汉化，尚未逐条人工润色，少量超长文本可能需要后续优化。
 
 ## 已知问题
@@ -78,3 +78,4 @@
 - 2026-08-19 - 完成 70,163 条译文校验，补译正式英文残留并修复颜色标签
 - 2026-08-19 - 生成并部署中文字符串表覆盖包；完成主菜单、加载、角色选择与首段剧情实机验证
 - 2026-08-19 - 生成并校验 v1.0 对外补丁，上传至百度网盘
+- 2026-08-20 - 重排补丁说明书为玩家阅读版，重新校验并覆盖更新 v1.0 发布文件
