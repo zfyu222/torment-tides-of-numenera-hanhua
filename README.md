@@ -53,15 +53,16 @@
 
 ## 对外发布
 
-- 补丁：`Dispatch/torment-tides-of-numenera_子非鱼汉化1.0.zip`
-- 标题：`《Torment: Tides of Numenera》子非鱼AI汉化补丁 v1.0`
+- 补丁：`Dispatch/torment-tides-of-numenera_子非鱼汉化1.1.zip`
+- 标题：`《Torment: Tides of Numenera》子非鱼AI汉化补丁 v1.1`
 - 支持版本/平台：Steam v1.1.0（Windows）。
 - 内容：按游戏根目录路径提供 `WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/` 下的 2,250 个已汉化 `.stringtable` 文件；不含游戏本体、原始资源、CSV 或开发文件。
 - 安装：退出游戏后，将压缩包中的 `WIN` 文件夹复制到游戏根目录并选择合并/覆盖。安装前请备份 `WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/`；无需 Mod 加载器。
 - 卸载：恢复安装前备份；没有备份时，在 Steam 客户端执行“验证游戏文件完整性”。
-- 本地校验：2026-08-20 重新生成 ZIP（6,681,819 字节），共 2,253 个条目（2,250 个载荷文件及根目录的 `补丁说明.txt`、`PATCH_MANIFEST.json`、`SHA256SUMS.txt`）；全部载荷 SHA-256 与清单一致，说明文件为 UTF-8 BOM，且不含可执行文件。
-- 验证：已在 Steam Windows v1.1.0 实测启动、主菜单、加载提示、性别选择与首段剧情，中文显示正常。
-- 百度网盘：`/Hanhua/torment-tides-of-numenera/torment-tides-of-numenera_子非鱼汉化1.0.zip`（2026-08-20 已更新为重新排版的说明书，fs_id：`817088248918257`）。
+- 本地校验：2026-08-22 生成 v1.1 ZIP（6,692,330 字节，SHA-256：`DA35BCB9B1E5CCC5BA0D3DEA7D5671818B0BA038C9B9A64DA17E0C0E20216641`），共 2,253 个条目（2,250 个载荷文件及根目录的 `补丁说明.txt`、`PATCH_MANIFEST.json`、`SHA256SUMS.txt`）；全部载荷 SHA-256 与清单一致，说明文件为 UTF-8 BOM，且不含可执行文件。载荷先复制至 `Dispatch/Files/` 并按游戏根目录路径压缩。
+- 验证：已在 Steam Windows v1.1.0 实测启动、主菜单、性别选择与首段剧情，中文显示正常。
+- 更新日志：v1.1 根据术语表完成全量重新翻译与术语校准，修复运行时标签和文本布局；说明书保留 `v1.0：首次发布` 记录。
+- 百度网盘：`/Hanhua/torment-tides-of-numenera/torment-tides-of-numenera_子非鱼汉化1.1.zip`（上传成功，fs_id：`456699135704108`）；按发布规则已删除同目录旧版 v1.0 ZIP，未影响其他文件。
 - 已知问题：标题 Logo 仍为英文；本补丁为 AI 辅助汉化，尚未逐条人工润色，少量超长文本可能需要后续优化。
 
 ## 已知问题
@@ -82,4 +83,5 @@
 - 2026-08-19 - 生成并校验 v1.0 对外补丁，上传至百度网盘
 - 2026-08-20 - 重排补丁说明书为玩家阅读版，重新校验并覆盖更新 v1.0 发布文件
 - 2026-08-22 - 从术语校准译文重建并部署中文字符串表，完成主菜单与首段剧情实机验证
+- 2026-08-22 - 生成并校验 v1.1 对外补丁，替换百度网盘中的旧版 v1.0 发布文件
 - 2026-08-22 - 导入术语校准后的全量译文，完成格式与运行时标记复检

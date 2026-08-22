@@ -10,6 +10,7 @@
 
 # 对外发布的二进制压缩包（发布记录保留在 README）
 /Dispatch/*.zip
+/Dispatch/Files/
 
 # 备份与中间产物
 *.bak
