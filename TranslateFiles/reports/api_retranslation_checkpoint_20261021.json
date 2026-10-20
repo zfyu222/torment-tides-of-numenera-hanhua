@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-21",
+  "stage": "extract",
+  "completed": false,
+  "accepted_tasks": 453,
+  "total_current_tasks": 1285,
+  "pending_tasks": 806,
+  "running_handoffs": 26,
+  "records_saved_this_run": 22502,
+  "api_requests": 604,
+  "failed_attempts": 151,
+  "elapsed_seconds": 4962.6275,
+  "known_prompt_tokens": 4494590,
+  "known_completion_tokens": 3516207,
+  "known_total_tokens": 8010797,
+  "unknown_usage_requests": 18,
+  "blocker": "HTTP400: No available relay channel for current group and model；单次最小连通诊断同样返回此错误，未更换服务或模型。",
+  "other_failures": {
+    "format_rejections": 133,
+    "transport_errors": 18,
+    "note": "实际元数据存在finish_reason=length，部分回复以推理文字开始而未输出完整JSON；未将截断内容手工补造成术语结果。 其中72份拒收回复包含术语来源与引用原文不匹配，不能全部归因于JSON语法。",
+    "source_evidence_mismatches": 72
+  },
+  "next_action": "用户恢复原接口通道，或指定另一个服务/模型后，通过公共恢复入口先收集落盘回复，沿用session映射、尝试预算和成功结果。先完成术语提取/审校，再试译；不要重跑已完成批次。",
+  "receipt": "TranslateFiles/reports/api_runs/6cff712fe08d4cc2a5157faea74cc545.json",
+  "pending_handoffs": [
+    {
+      "session_id": "06a8c62636704b479083b1991feaa8f2",
+      "task_id": "extract-r2-00045-f26eb0f1-s56a24855",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "b1c2749c9f074e70b93b0408cc16a07a",
+      "task_id": "extract-r2-00051-c7c4295c-s047f875f",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "39b37d1e3a64407c89179490233fe0f3",
+      "task_id": "extract-r2-00055-13ba5f37-s6eccb141",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "975dc4818d584e9bbbffea5cd79363d2",
+      "task_id": "extract-r2-00098-0171f8e4-s0605a6a6",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "dcf2a7f3ce044f4f9fb602c326149bdb",
+      "task_id": "extract-r2-00125-6b6101cd-s2d2ecad5",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "ea510e14b9b74078a116fe86ebbd8b08",
+      "task_id": "extract-r2-00140-29035441-s22e85e88",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "0966d9e19fb14c538487f6da42e59ab5",
+      "task_id": "extract-r2-00170-cbc26b28-s9dcd9feb",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "a940ed1798844809b9d5a88832089c09",
+      "task_id": "extract-r2-00170-cbc26b28-sdbc382d5",
+      "has_raw_response": true,
+      "has_result": false
+    },
+    {
+      "session_id": "393c9c18d1b240519ff07b80d1fdb4fe",
+      "task_id": "extract-r2-00174-a06d4116-sb74c6d4c",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "21f80a7e84c94eb39da4245352e2a0bf",
+      "task_id": "extract-r2-00214-96ca6fc8-s1734f6b8",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "75411e5741e34540971df5841d13ddcb",
+      "task_id": "extract-r2-00274-fea8c37d-s8e6c411b",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "1145fee3d4ee48b688650e141afd3360",
+      "task_id": "extract-r2-00274-fea8c37d-s97de6f2b",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "95cd96ebff11447e9f3c6d0ba2885d89",
+      "task_id": "extract-r2-00274-fea8c37d-s8afe54c3",
+      "has_raw_response": false,
+      "has_result": false
+    },
+    {
+      "session_id": "93772be5553a4de48a2a1c489d279505",
+      "task_id": "extract-r2-00282-b6a2dfbd-s86eb76f6",
+      "has_raw_response": false,
+      "has_result": false
+    },
+    {
+      "session_id": "338f5ccf0d354c99b8a416437f0485cd",
+      "task_id": "extract-r2-00338-ed0b4f93-s3e2488e7",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "3dc09cebe90440fea8d62ad1ac58a9cd",
+      "task_id": "extract-r2-00346-71d42322-s57bb538a",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "160a95a951184cf1a46d1fe096b3d6a4",
+      "task_id": "extract-r2-00354-beee56d5-s51f10b51",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "511688f0ec934299bb50e395760b27b0",
+      "task_id": "extract-r2-00363-b897b4f5-sf76bea09",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "d240034b16a44c5aae6ea8ce8ac49495",
+      "task_id": "extract-r2-00375-5bcf0849-sc4e639b9",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "8859bafb5c0a4177ab44e9738b9a58d5",
+      "task_id": "extract-r2-00375-5bcf0849-se953de62",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "a896be0c666247129ed5e0eeb9d4badd",
+      "task_id": "extract-r2-00393-1f1c4604-s366b7116",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "9cfd386edace4ee5a7e4d207b63cfeb4",
+      "task_id": "extract-r2-00430-f6fa6ee8",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "2fd5a04cd37749faaa6a8446e86b12b9",
+      "task_id": "extract-r2-00433-9b9bc725",
+      "has_raw_response": true,
+      "has_result": true
+    },
+    {
+      "session_id": "f32d0fb8837247b9b2c5005945a13f9c",
+      "task_id": "extract-r2-00477-ee8a5720-s937276aa",
+      "has_raw_response": true,
+      "has_result": false
+    },
+    {
+      "session_id": "ad145eda91eb4452b2bdbd66052638e2",
+      "task_id": "extract-r2-00473-adaf24a3-sfefb78c5",
+      "has_raw_response": false,
+      "has_result": false
+    },
+    {
+      "session_id": "96c8224153454e8dacb9c3f493465407",
+      "task_id": "extract-r2-00477-ee8a5720-sd3ac7c29",
+      "has_raw_response": false,
+      "has_result": false
+    }
+  ],
+  "baseline_unchanged": true
+}

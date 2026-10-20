@@ -1,0 +1,17 @@
+[
+  {
+    "markers": "",
+    "regex": "\\[(?:Global|GLOBAL|Color|DamageIcon|FettleIcon|DefenseIcon|Control|Skill):[^\\]\\r\\n]+\\]|\\[/Color\\]|\\[[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?\\]|\\[CritFettleDescriptions\\]|\\[Backer\\ Tomb\\ Item\\ Text\\]|\\[SimpleDamageModifiers\\]|\\[Backer\\ Tomb\\ Address\\]|\\[PassiveEffectsBasic\\]|\\[SimpleTaskModifiers\\]|\\[FettleDescriptions\\]|\\[FettleEffectsBasic\\]|\\[CritFettleEffects\\]|\\[DamageFromEffort\\]|\\[CritRangeBonus\\]|\\[IndigoDuration\\]|\\[SilverDuration\\]|\\[SummonDuration\\]|\\[IndigoFetDesc\\]|\\[SilverFetDesc\\]|\\[SkillIdealist\\]|\\[StatModifiers\\]|\\[BonusAmount1\\]|\\[BonusAmount2\\]|\\[CritDuration\\]|\\[CurrentBonus\\]|\\[IndigoFettle\\]|\\[OtherAbility\\]|\\[Player\\ Class\\]|\\[SilverFettle\\]|\\[Actor\\ Class\\]|\\[CritFettles\\]|\\[HealingCrit\\]|\\[Player\\ Name\\]|\\[SkillIndigo\\]|\\[SkillSilver\\]|\\[TotalDamage\\]|\\[Actor\\ Name\\]|\\[CritDamage\\]|\\[FettleInfo\\]|\\[MaxDamage\\]|\\[SkillBlue\\]|\\[SkillGold\\]|\\[Accuracy\\]|\\[DmgBonus\\]|\\[Duration\\]|\\[Idealist\\]|\\[SkillRed\\]|\\[Fettles\\]|\\[Healing\\]|\\[Damage\\]|\\[Blue\\]|\\[Gold\\]|\\[Red\\]",
+    "info": "自定义流程实际保护规则：square_bracket"
+  },
+  {
+    "markers": "",
+    "regex": "(?:<quad\\s+class=\"[A-Za-z0-9_-]+\">|</?a(?:\\s+name=\"[^\"]+\")?>)",
+    "info": "自定义流程实际保护规则：angle_tag"
+  },
+  {
+    "info": "本游戏花括号内容由GUIUtils.StripDebugText作为开发注释移除；保留原样，不将说明混入正文",
+    "markers": "",
+    "regex": "\\{[^{}]*\\}"
+  }
+]
