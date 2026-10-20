@@ -1,0 +1,254 @@
+[
+  {
+    "record": 1,
+    "source": "A platoon of militia dressed in the same uniform as Matkina and yourself approaches. In the back, a conspicuous figure in a decorative mask watches impassively.\n\nA man in front, decorated more lavishly than his fellow soldiers, approaches."
+  },
+  {
+    "record": 1081,
+    "source": "[this? the room we're in? It's a chamber of the Changing God]"
+  },
+  {
+    "record": 1560,
+    "source": "[Briefly open the valve and try to aim the spray.]\n\n{SCRIPT: Trigger cone targetting.}"
+  },
+  {
+    "record": 1561,
+    "source": "[Open the valve and try to aim the spray again.]\n\n{SCRIPT: Trigger cone targetting.}"
+  },
+  {
+    "record": 5966,
+    "source": "\"He went to work in the Bloom. We haven't heard from him in a long time.\""
+  },
+  {
+    "record": 7862,
+    "source": "[But... the danger. Will you protect me?]\n\n{SCRIPT: Has never joined party.}"
+  },
+  {
+    "record": 7999,
+    "source": "You take slow, steady breaths, feeling the heat rising up your back like a hungry bonfire. \n\nSuddenly, a cool hand covers your burning eyes. A smooth arm folds over your stomach. "
+  },
+  {
+    "record": 8000,
+    "source": "Your words are a whisper. You can barely breathe now, and the heat fills you like a fever. \n\nSuddenly, a cool hand covers your burning eyes. A smooth arm folds over your stomach. "
+  },
+  {
+    "record": 8021,
+    "source": "[The cultist reports that he and his men hid the stichus under a robe and escorted it out of the area. He asks if there was anything else you needed.]"
+  },
+  {
+    "record": 8022,
+    "source": "[The cultist reports that he and his men did as you bid, and smuggled the stichus out of the area by covering it with a spare oversized robe. He asks if there is anything else they can do for your holiness.]"
+  },
+  {
+    "record": 9772,
+    "source": "[we will super-save it and maybe put it back to work]"
+  },
+  {
+    "record": 11102,
+    "source": "[Well, damn. I guess you earned it, though. Fine.]\n\n{QUEST END NODE 18}"
+  },
+  {
+    "record": 14979,
+    "source": "[Clerk writes a note, pops it into a wormhole. A little while later, a return note pops back through the wormhole, approving the request.]\n\n{SCRIPT: Add addendum to quest and give dispensation letter to player.}"
+  },
+  {
+    "record": 15916,
+    "source": "\"\"\n{SCRIPT: Should only play if PC has reached this node through Node 65.}"
+  },
+  {
+    "record": 16790,
+    "source": "[The symbols in the pillar bob up and down like slow fish.]"
+  },
+  {
+    "record": 19198,
+    "source": "[Unless you can get the passcode, there's nowhere you can go.]"
+  },
+  {
+    "record": 20124,
+    "source": "[Raw and unbridled horror]\n[the temp text pities you  and omits its description, for now]\n"
+  },
+  {
+    "record": 20172,
+    "source": "[Play it straight. Tell Inifere the horrible things.]\n{SCRIPT: task modifiers based on clues learned}"
+  },
+  {
+    "record": 20173,
+    "source": "[Try again to tell Inifere about the horrible things.]\n{SCRIPT: task modifiers based on clues learned}"
+  },
+  {
+    "record": 20184,
+    "source": "[The mob is calmed and Inifere appears moved.]\n{SCRIPT: note that you made progress with Inifere.}"
+  },
+  {
+    "record": 20190,
+    "source": "[You have all the info you need. Let's try something else.]"
+  },
+  {
+    "record": 22287,
+    "source": "[Try to pry loose a synth bracket to use as a shunt.]"
+  },
+  {
+    "record": 22308,
+    "source": "[Find the weakest point in a cable and pull until it snaps.]"
+  },
+  {
+    "record": 22806,
+    "source": "<Coty says hi.  He doesn't seem to love his new job.>"
+  },
+  {
+    "record": 22819,
+    "source": "<The Speck tells you a bit about the Bloom's feeding cycle.  GAIN XP>"
+  },
+  {
+    "record": 22820,
+    "source": "<The Speck tells you about the secret Maw in the back of the Shrine>"
+  },
+  {
+    "record": 22832,
+    "source": "<A chain of node follows of the companions that are present saying whether or not they'll go if you wish it.  Leaving this vague for now>"
+  },
+  {
+    "record": 22837,
+    "source": "<The Bloom rejects you.  I guess you didn't act predatory enough up to this point>"
+  },
+  {
+    "record": 25953,
+    "source": "[Skoura asks if you've found a way to restore her sight.]"
+  },
+  {
+    "record": 28773,
+    "source": "[The first guard yells to the other one that they're free.]"
+  },
+  {
+    "record": 31592,
+    "source": "[See if there's anything else to extract from inside the arm.]"
+  },
+  {
+    "record": 31735,
+    "source": "[Having done something, things occur after.]\n\n{SCRIPT: define a new c4411_HerjaState, set it on this new option, and have a reintro for that new state.}"
+  },
+  {
+    "record": 32214,
+    "source": "[There's no way you'll even be able to unsee that.]"
+  },
+  {
+    "record": 33587,
+    "source": "[A series of taps and wrist flicks signal the door to open.]"
+  },
+  {
+    "record": 33696,
+    "source": "[Introduction Node if matkina]\n[He will not talk to matkina, only mock her]"
+  },
+  {
+    "record": 33788,
+    "source": "<Product. I only. No other. Give give, I only, return happy bubbles.>"
+  },
+  {
+    "record": 40617,
+    "source": "[That's it. Easy does it. Glad I didn't have one of those.]"
+  },
+  {
+    "record": 40665,
+    "source": "[There's a man here who doesn't have much to say to you.]"
+  },
+  {
+    "record": 40671,
+    "source": "[He's shocked and wants to know how you know that name.]"
+  },
+  {
+    "record": 43804,
+    "source": "Should be red because it is a Response Node pointing to a Response Node"
+  },
+  {
+    "record": 43805,
+    "source": "Should not be red because points to a Talk Node that is safe."
+  },
+  {
+    "record": 43827,
+    "source": "You succeed in not hurting your body, but it hurts your brain."
+  },
+  {
+    "record": 44559,
+    "source": "<I'm a castoff, like you. I came here through a Merecaster. To help you.>"
+  },
+  {
+    "record": 44561,
+    "source": "<What were those things? The 'others' - those bodies and the creatures beneath?>"
+  },
+  {
+    "record": 44584,
+    "source": "<Inifere, listen to me. This thing, it's called the Sorrow. It will kill you all if you don't act!>"
+  },
+  {
+    "record": 44637,
+    "source": "<Think, Inifere. The only escape from your suffering lies through that door. Beyond the Gate is just more pain. Forever.>"
+  },
+  {
+    "record": 44682,
+    "source": "<They're killers already. I saw what they did to Choi Cai'sul.>"
+  },
+  {
+    "record": 44684,
+    "source": "<Inifere, your mind's bleeding into mine. Can you use that to give me Choi's remains, before it's too late?>"
+  },
+  {
+    "record": 44688,
+    "source": "<The last thing I need is more of your mind. I want to set her free, and perhaps ease your burden.>"
+  },
+  {
+    "record": 45402,
+    "source": "[Comb through the stuff kids left behind.]\n\n{Increment Time_Actual +1; set FoundAnbrasToyAtCave = 1}"
+  },
+  {
+    "record": 45410,
+    "source": "[Mostly it's garbage, but you find a child's toy in there too]"
+  },
+  {
+    "record": 47121,
+    "source": "[You do so. It's not that hard - this is a placeholder.]"
+  },
+  {
+    "record": 49442,
+    "source": "[Enable a guy and make him move to a nearby waypoint, please.]"
+  },
+  {
+    "record": 49746,
+    "source": "[Check if the party has 2 or more of the item in their collective inventories.]"
+  },
+  {
+    "record": 49747,
+    "source": "[Why, yes, you do have 2 or more of that item between you.]"
+  },
+  {
+    "record": 49748,
+    "source": "[You don't appear to have 2 or more of that item between you.]"
+  },
+  {
+    "record": 49754,
+    "source": "[I don't seem to have any of the item in the first place!]"
+  },
+  {
+    "record": 49765,
+    "source": "[My eyes do not see such an item equipped on you, m'lord.]"
+  },
+  {
+    "record": 50907,
+    "source": "[Ask Tranquility to use her voice to lull you into a trance.]"
+  },
+  {
+    "record": 52732,
+    "source": "Now that you can focus on it, you see that the large mass is clearly a gargantuan mega-continent, the only land of any size on this side of the world at least. Great inland seas and lakes dot its enormity and curiously regular mountain ranges march up and down and across its surface. You are falling toward what looks to be a great bay, a sprawling city perched on its shore just to the north."
+  },
+  {
+    "record": 53271,
+    "source": "[\"I am *you*. I'm the memories in your body, buried deep.\"]"
+  },
+  {
+    "record": 53520,
+    "source": "[You are now a nano, a master of the numenera of the past.]"
+  },
+  {
+    "record": 54098,
+    "source": "[\"I don't need any help. If you want to run, now's the time.\"]"
+  }
+]

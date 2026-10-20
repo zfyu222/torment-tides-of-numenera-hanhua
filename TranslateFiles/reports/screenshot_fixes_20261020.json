@@ -1,0 +1,264 @@
+{
+  "records": 70163,
+  "changed_records": 32,
+  "translation_fixes": 29,
+  "sha256": "2541e64264d271e5d46b22a6c6c4f133c13382c5fdfa1f22aabe8c9562fd65e8",
+  "changes": [
+    {
+      "record": 1,
+      "source": "A platoon of militia dressed in the same uniform as Matkina and yourself approaches. In the back, a conspicuous figure in a decorative mask watches impassively.\r\n\r\nA man in front, decorated more lavishly than his fellow soldiers, approaches.",
+      "before": "A platoon of militia dressed in the same uniform as Matkina and yourself approaches. In the back, a conspicuous figure in a decorative mask watches impassively.\r\n\r\nA man in front, decorated more lavishly than his fellow soldiers, approaches.",
+      "after": "一队民兵走了过来，穿着与你和马特金娜相同的制服。队伍后方，一个戴着华丽面具的醒目人物面无表情地注视着。\n\n走在前面的男人朝你走来，他的装束比其他士兵更为华贵。",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 5966,
+      "source": "\"He went to work in the Bloom. We haven't heard from him in a long time.\"",
+      "before": "\"He went to work in the Bloom. We haven't heard from him in a long time.\"",
+      "after": "\"他去花海工作了。我们已经很久没有他的消息了。\"",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 7999,
+      "source": "You take slow, steady breaths, feeling the heat rising up your back like a hungry bonfire. \r\n\r\nSuddenly, a cool hand covers your burning eyes. A smooth arm folds over your stomach. ",
+      "before": "You take slow, steady breaths, feeling the heat rising up your back like a hungry bonfire. \r\n\r\nSuddenly, a cool hand covers your burning eyes. A smooth arm folds over your stomach. ",
+      "after": "你缓慢而平稳地呼吸着，感到热意沿着后背升腾，犹如一团贪婪的篝火。 \n\n突然，一只冰凉的手覆住你灼热的双眼。一条光滑的手臂环住了你的腹部。 ",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 8000,
+      "source": "Your words are a whisper. You can barely breathe now, and the heat fills you like a fever. \r\n\r\nSuddenly, a cool hand covers your burning eyes. A smooth arm folds over your stomach. ",
+      "before": "Your words are a whisper. You can barely breathe now, and the heat fills you like a fever. \r\n\r\nSuddenly, a cool hand covers your burning eyes. A smooth arm folds over your stomach. ",
+      "after": "你的话语轻如耳语。你几乎已经无法呼吸，热意像高烧一般充斥着全身。 \n\n突然，一只冰凉的手覆住你灼热的双眼。一条光滑的手臂环住了你的腹部。 ",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 33785,
+      "source": "<What do you want?>",
+      "before": "<What do you want?>",
+      "after": "<你想要什么？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 33788,
+      "source": "<Product. I only. No other. Give give, I only, return happy bubbles.>",
+      "before": "<Product. I only. No other. Give give, I only, return happy bubbles.>",
+      "after": "<货物。只能给我。不能给别人。给，给，只给我，回报快乐泡泡。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 33793,
+      "source": "<Happy bubbles? Good smells?>",
+      "before": "<Happy bubbles? Good smells?>",
+      "after": "<快乐泡泡？好闻的气味？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 33794,
+      "source": "<Why 'you only'? Can't I trade with others?>",
+      "before": "<Why 'you only'? Can't I trade with others?>",
+      "after": "<为什么只能给你？我不能和别人交易吗？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 33813,
+      "source": "<I have the 'product' that you want now?>",
+      "before": "<I have the 'product' that you want now?>",
+      "after": "<我现在有你想要的“货物”了吗？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44535,
+      "source": "<Snap out of it! We're going to drown!>",
+      "before": "<Snap out of it! We're going to drown!>",
+      "after": "<清醒一点！我们要淹死了！>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44543,
+      "source": "<Inifere, stop fighting me.>",
+      "before": "<Inifere, stop fighting me.>",
+      "after": "<伊尼费尔，别再抗拒我了。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44549,
+      "source": "<Inifere?>",
+      "before": "<Inifere?>",
+      "after": "<伊尼费尔？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44550,
+      "source": "<Inifere, are you still there?>",
+      "before": "<Inifere, are you still there?>",
+      "after": "<伊尼费尔，你还在吗？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44559,
+      "source": "<I'm a castoff, like you. I came here through a Merecaster. To help you.>",
+      "before": "<I'm a castoff, like you. I came here through a Merecaster. To help you.>",
+      "after": "<我和你一样，是个遗弃者。我通过记忆示器来到这里，是来帮你的。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44560,
+      "source": "<How are *you* here? My consciousness should have replaced yours.>",
+      "before": "<How are *you* here? My consciousness should have replaced yours.>",
+      "after": "<你怎么会在这里？我的意识本该取代你的。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44561,
+      "source": "<What were those things? The 'others' - those bodies and the creatures beneath?>",
+      "before": "<What were those things? The 'others' - those bodies and the creatures beneath?>",
+      "after": "<那些东西是什么？那些“其他人”——那些躯体，还有它们下面的生物？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44578,
+      "source": "<Why is he here?>",
+      "before": "<Why is he here?>",
+      "after": "<他为什么在这里？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44579,
+      "source": "<What exactly are you planning to do?>",
+      "before": "<What exactly are you planning to do?>",
+      "after": "<你到底打算做什么？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44584,
+      "source": "<Inifere, listen to me. This thing, it's called the Sorrow. It will kill you all if you don't act!>",
+      "before": "<Inifere, listen to me. This thing, it's called the Sorrow. It will kill you all if you don't act!>",
+      "after": "<伊尼费尔，听我说。这东西叫作哀恸。你再不行动，它就会杀死你们所有人！>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44594,
+      "source": "<Your cult will turn to killing anyway. I've seen it.>",
+      "before": "<Your cult will turn to killing anyway. I've seen it.>",
+      "after": "<你的教派迟早还是会大开杀戒。我亲眼见过。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44607,
+      "source": "<Inifere, you need to spring the traps.>",
+      "before": "<Inifere, you need to spring the traps.>",
+      "after": "<伊尼费尔，你得触发那些陷阱。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44608,
+      "source": "<Please, spring the traps!>",
+      "before": "<Please, spring the traps!>",
+      "after": "<求你了，触发那些陷阱！>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44637,
+      "source": "<Think, Inifere. The only escape from your suffering lies through that door. Beyond the Gate is just more pain. Forever.>",
+      "before": "<Think, Inifere. The only escape from your suffering lies through that door. Beyond the Gate is just more pain. Forever.>",
+      "after": "<想一想，伊尼费尔。唯有穿过那扇门，你才能摆脱痛苦。大门之外只有更多的痛苦，永无止境。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44678,
+      "source": "<I want to help you, the way Ronos Cai'sul tried.>",
+      "before": "<I want to help you, the way Ronos Cai'sul tried.>",
+      "after": "<我想帮助你，就像罗诺斯·凯苏尔曾试着做的那样。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44679,
+      "source": "<Why was Choi Cai'sul among the dead?>",
+      "before": "<Why was Choi Cai'sul among the dead?>",
+      "after": "<为什么死者中会有崔·凯苏尔？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44682,
+      "source": "<They're killers already. I saw what they did to Choi Cai'sul.>",
+      "before": "<They're killers already. I saw what they did to Choi Cai'sul.>",
+      "after": "<他们早就是杀人凶手了。我亲眼见过他们对崔·凯苏尔做的事。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44684,
+      "source": "<Inifere, your mind's bleeding into mine. Can you use that to give me Choi's remains, before it's too late?>",
+      "before": "<Inifere, your mind's bleeding into mine. Can you use that to give me Choi's remains, before it's too late?>",
+      "after": "<伊尼费尔，你的心智正在渗入我的心智。趁现在还来得及，你能借此把崔的遗骸交给我吗？>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 44688,
+      "source": "<The last thing I need is more of your mind. I want to set her free, and perhaps ease your burden.>",
+      "before": "<The last thing I need is more of your mind. I want to set her free, and perhaps ease your burden.>",
+      "after": "<我最不需要的就是让你的心智继续渗进来。我想让她得到解脱，也许还能减轻你的负担。>",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 52732,
+      "source": "Now that you can focus on it, you see that the large mass is clearly a gargantuan mega-continent, the only land of any size on this side of the world at least. Great inland seas and lakes dot its enormity and curiously regular mountain ranges march up and down and across its surface. You are falling toward what looks to be a great bay, a sprawling city perched on its shore just to the north.",
+      "before": "Now that you can focus on it, you see that the large mass is clearly a gargantuan mega-continent, the only land of any size on this side of the world at least. Great inland seas and lakes dot its enormity and curiously regular mountain ranges march up and down and across its surface. You are falling toward what looks to be a great bay, a sprawling city perched on its shore just to the north.",
+      "after": "现在你能够看清了：那片巨大的陆块显然是一块广袤无比的超级大陆——至少在世界的这一面，它是唯一称得上辽阔的陆地。巨大的内海与湖泊点缀其间，排列得出奇规整的山脉在大陆表面纵横起伏。你正朝着一片看似巨大海湾的地方坠落；海湾北侧的岸边，盘踞着一座绵延开阔的城市。",
+      "kind": "translation",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 68056,
+      "source": "To more easily move the bowl in front of you, use [Control: lmb] to spend Might for a higher level of Effort. Don't worry if you fail this task. In Torment, failure often results in interesting outcomes.",
+      "before": "要更轻松地移动你面前的碗，可使用 [Control: lmb] 消耗威能来提升努力等级。即使此任务失败也不必担心。在《Torment》中，失败往往带来意想不到的有趣结果。",
+      "after": "要更轻松地移动你面前的碗，可使用 [Control: lmb]\n消耗威能来提升努力等级。即使此任务失败也不必担心。\n在《Torment》中，失败往往带来意想不到的有趣结果。",
+      "kind": "tutorial_line_breaks",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 68080,
+      "source": "To more easily move the bowl in front of you, use [Control: leftstick] to spend Might for a higher level of Effort. Don't worry if you fail this task. In Torment, failure often results in interesting outcomes.",
+      "before": "要更轻松地移动面前的碗，按 [Control: leftstick] 消耗力量值来投入更高的努力等级。如果任务失败也不必担心。在《苦难》中，失败往往导向有趣的结果。",
+      "after": "要更轻松地移动面前的碗，按 [Control: leftstick]\n消耗力量值来投入更高的努力等级。如果任务失败也不必担心。\n在《苦难》中，失败往往导向有趣的结果。",
+      "kind": "tutorial_line_breaks",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    },
+    {
+      "record": 68082,
+      "source": "The first is Equipment, which contains any items equipped to the current character. Equipment includes melee and ranged weapons, shields, armor, ornaments such as rings and amulets, and Bonded items.",
+      "before": "第一部分是“装备”，包含当前角色身上穿着的所有物品。装备包括近战和远程武器、盾牌、护甲、戒指和护身符之类的饰品，以及绑定物品。",
+      "after": "第一部分是“装备”，包含当前角色身上穿着的所有物品。\n装备包括近战和远程武器、盾牌、护甲、\n戒指和护身符之类的饰品，以及绑定物品。",
+      "kind": "tutorial_line_breaks",
+      "review": "人工核对原意、现有专名、语气、标记与换行；教程仅调整显示换行。"
+    }
+  ]
+}

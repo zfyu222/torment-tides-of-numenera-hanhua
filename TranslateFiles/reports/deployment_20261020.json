@@ -1,0 +1,42 @@
+{
+  "locale_files_verified": 2251,
+  "changed_files": [
+    {
+      "path": "text\\conversations\\00_kholn_village\\b9111_colonel_ledak.stringtable",
+      "before_sha256": "910132fa9d41b73ba4834312e3f915e9ceb79869e90a54d4830f5a40842d4bde",
+      "after_sha256": "7bdcccbc41368978438d25027ffee08a4a938be1150055f82f23b742978a659b"
+    },
+    {
+      "path": "text\\conversations\\a_sagus\\a2201_avina.stringtable",
+      "before_sha256": "cb652f33053e6448796d485f136933acd4e9a4ad2fd338347d3c7b73fecab17f",
+      "after_sha256": "971d20badec87c98b0acbf401c67d782fcfc5704cef3eccfd267876fbfe1040c"
+    },
+    {
+      "path": "text\\conversations\\a_sagus\\a2201_rubble.stringtable",
+      "before_sha256": "e89e5e3a38d98228d366caa211b2ad63b91cbe48f7f8a72917a8904274efeea5",
+      "after_sha256": "b2dc8b98597d32dbd16507de7ca56b135a5de6ec1710160b5bcb8b5de2845e65"
+    },
+    {
+      "path": "text\\conversations\\c_bloom\\c4601_ascension_ouyaobelisk.stringtable",
+      "before_sha256": "7e2bcb1e48cab857175b5ebce5757115f8c086cd56cce202e805ef26ac1e4e28",
+      "after_sha256": "0e8034595d33fba28cd1cae17123fff9ce4eaa850c35507aef5051b105053d47"
+    },
+    {
+      "path": "text\\conversations\\si_meres\\mere_bs1_iniferesmere.stringtable",
+      "before_sha256": "38832279fb9bb914cf4418ee1678a5e6ec141886bd21c5c6cccf2dc441f1f5af",
+      "after_sha256": "9239030687b76d94389096f7ecd328d90fd67b2bc4675a9f387f3ce938c76ad2"
+    },
+    {
+      "path": "text\\conversations\\x_labyrinth\\x1131_falling.stringtable",
+      "before_sha256": "d3cfd9125710ecd005e12f6d5fee1a1c2ca016935e60a62dc192d7010b52c254",
+      "after_sha256": "0f7804a5d374d64362b25c3222ce2bd9de4f0c52727b2071537c8dde9a68950a"
+    },
+    {
+      "path": "text\\game\\ttongui.stringtable",
+      "before_sha256": "eb4cd27c2e4904adfa678bdb1f5493045cbcd53400dbcaf7fd4d26aaecead2f5",
+      "after_sha256": "a8abd5b22ca2e9a800a1b623133456fe4e7fbb2a066f565372fd11878730e89d"
+    }
+  ],
+  "managed_dll_restored": true,
+  "probe_removed": true
+}

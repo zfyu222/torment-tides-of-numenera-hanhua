@@ -5,6 +5,7 @@
 /repack/
 /backups/
 /AiNieeOutput/
+/AiNieeCache/
 /bilingual_auto/
 /need_retranslate.csv
 
@@ -20,6 +21,15 @@
 # Python
 __pycache__/
 *.pyc
+
+# 本地逆向副本、反编译输出与临时实机诊断程序
+/Analysis/input/
+/Analysis/decompiled/
+/Analysis/firstpass/
+/Analysis/*.dll
+/Analysis/*.exe
+/Analysis/case*.txt
+/Analysis/*.log
 
 # 系统/编辑器
 Thumbs.db
