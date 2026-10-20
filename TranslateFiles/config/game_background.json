@@ -1,0 +1,14 @@
+{
+  "text": "## 游戏信息\n- 原名：Torment: Tides of Numenera\n- 中文名：折磨：努曼内拉之潮（暂译）\n- 开发商：inXile Entertainment\n- 发行平台：Steam（Windows；商店页亦列出 macOS、SteamOS + Linux）\n- 引擎：Unity 5.4.1p3（Mono；版本取自 `globalgamemanagers` 文件头）\n- 原语言：英语（Steam 同时提供法语、德语、西班牙语、波兰语、俄语）\n\n## 游戏简介\n\n本作是《异域镇魂曲》的精神续作，属于单人等距视角、以叙事与抉择为核心的 CRPG，背景设定在 Monte Cook 创作的努曼内拉“第九世界”。玩家扮演从轨道坠落、曾被“变易之神”占据躯体的新意识，需要躲避名为“悲伤”的古老追猎者，并回答“一个生命有何意义”。资料来源：[Steam 商店页](https://store.steampowered.com/app/272270/Torment_Tides_of_Numenera/)。\n\n## 汉化目标\n- 范围：英文字符串表中的剧情、对话、任务、系统与 UI 文本\n- 目标语言：简体中文",
+  "sha256": "d41751436b72ff8020e830b8340501974a0702f74fc446b27cc01703de1c987b",
+  "source": {
+    "kind": "readme",
+    "path": "README.md",
+    "sha256": "5517c5e8ecf5d5e60d18da252cf29660d48c73f5b5001c6e64a37d611d598368",
+    "sections": [
+      "游戏信息",
+      "游戏简介",
+      "汉化目标"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "records": 70163,
+  "resource_fields": 89239,
+  "old_translation_sha256": "2541e64264d271e5d46b22a6c6c4f133c13382c5fdfa1f22aabe8c9562fd65e8",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "old_translation_backup": "TranslateFiles\\backups\\ainiee_before_custom_20261020\\torment-tides-of-numenera_text_translated.csv",
+  "policy": "旧正式译稿与游戏文件保留；新译经试译校准、全量翻译、独立审校和程序验收后才导出。"
+}

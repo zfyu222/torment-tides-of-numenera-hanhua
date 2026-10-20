@@ -1,0 +1,7 @@
+{
+  "placeholder_family_overrides": {
+    "square_bracket": "\\[(?:Global|GLOBAL|Color|DamageIcon|FettleIcon|DefenseIcon|Control|Skill):[^\\]\\r\\n]+\\]|\\[/Color\\]|\\[[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?\\]|\\[CritFettleDescriptions\\]|\\[Backer\\ Tomb\\ Item\\ Text\\]|\\[SimpleDamageModifiers\\]|\\[Backer\\ Tomb\\ Address\\]|\\[PassiveEffectsBasic\\]|\\[SimpleTaskModifiers\\]|\\[FettleDescriptions\\]|\\[FettleEffectsBasic\\]|\\[CritFettleEffects\\]|\\[DamageFromEffort\\]|\\[CritRangeBonus\\]|\\[IndigoDuration\\]|\\[SilverDuration\\]|\\[SummonDuration\\]|\\[IndigoFetDesc\\]|\\[SilverFetDesc\\]|\\[SkillIdealist\\]|\\[StatModifiers\\]|\\[BonusAmount1\\]|\\[BonusAmount2\\]|\\[CritDuration\\]|\\[CurrentBonus\\]|\\[IndigoFettle\\]|\\[OtherAbility\\]|\\[Player\\ Class\\]|\\[SilverFettle\\]|\\[Actor\\ Class\\]|\\[CritFettles\\]|\\[HealingCrit\\]|\\[Player\\ Name\\]|\\[SkillIndigo\\]|\\[SkillSilver\\]|\\[TotalDamage\\]|\\[Actor\\ Name\\]|\\[CritDamage\\]|\\[FettleInfo\\]|\\[MaxDamage\\]|\\[SkillBlue\\]|\\[SkillGold\\]|\\[Accuracy\\]|\\[DmgBonus\\]|\\[Duration\\]|\\[Idealist\\]|\\[SkillRed\\]|\\[Fettles\\]|\\[Healing\\]|\\[Damage\\]|\\[Blue\\]|\\[Gold\\]|\\[Red\\]",
+    "angle_tag": "(?:<quad\\s+class=\"[A-Za-z0-9_-]+\">|</?a(?:\\s+name=\"[^\"]+\")?>)",
+    "rpgmaker_code": null
+  }
+}
