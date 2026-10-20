@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-21",
+  "stage": "extract",
+  "completed": false,
+  "api_channel_recovered": true,
+  "newly_accepted_batches": 778,
+  "accepted_total": 1231,
+  "total_batches": 1285,
+  "outstanding_handoffs": 54,
+  "covered_unique_source_records": 66508,
+  "source_records": 70163,
+  "current_run": {
+    "requests": 1195,
+    "failed_attempts": 417,
+    "elapsed_seconds": 13588.8393
+  },
+  "project_tokens": {
+    "prompt_tokens": 13802671,
+    "completion_tokens": 17005749,
+    "total_tokens": 30808420,
+    "cached_prompt_tokens": 2226031,
+    "reasoning_tokens": 9889131,
+    "reported_requests": 1714,
+    "unknown_requests": 85
+  },
+  "retry_limit_recovery": {
+    "before": 3,
+    "after": 4,
+    "revision_preserved": 2,
+    "original_attempt_counts_preserved": true,
+    "validation": "4项恢复边界回归+14项API设置与运行器回归通过；正式API恢复实际新增接收778批。"
+  },
+  "remaining_reasons": {
+    "execution_attempt_limit": 36,
+    "format_retry_limit": 18
+  },
+  "example_rejection": "术语White Death引用的原文为I. Am. The White. Death.，连续原文校验不匹配；需要语义判断如何保留源文中的断句形式，不能直接豁免来源校验。",
+  "next_action": "定向处理54个失败交接，勿自动再次提高尝试上限或重跑已完成项；尚未术语审校、冻结、试译或正文翻译。",
+  "baseline_unchanged": true,
+  "receipt": "TranslateFiles/reports/api_runs/131a2318c6d2437899da75ddf408d1f8.json"
+}
