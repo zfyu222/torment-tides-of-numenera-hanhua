@@ -19,6 +19,15 @@
      if stage == 'glossary_review':
          return ('output_template 是结构示例，不是任务清单；entry_reviews 必须覆盖全部分配 entries.ref，'
                  '不包含只读关联项；edits/quarantine 用 ref 指向 e编号，无需 table/index。'
+@@ -120,7 +124,7 @@
+ def api_protocol_data(payload):
+     """Remove scheduling/default fields, never semantic evidence or unknown fields."""
+     value = copy.deepcopy(payload)
+-    for key in ('protocol', 'revision', 'config_hash', 'worker', 'lease_token', 'attempt'):
++    for key in ('protocol', 'revision', 'config_hash', 'worker', 'lease_token', 'attempt', 'extract_split_lineage'):
+         value.pop(key, None)
+     if payload['stage'] == 'extract':
+         value.pop('source_hash', None)  # Extraction output has no source-hash field.
 @@ -137,14 +141,77 @@
      if payload['stage'] in ('extract', 'glossary_review'):
          from workflow_api_transport import compact_term_input
@@ -100,7 +109,90 @@
              + 'output_template 为输出骨架，任务范围已列好；不要把空证据或待定状态当作完成。\n'
 --- a/Tools/localization/ainiee_bridge.py
 +++ b/Tools/localization/ainiee_bridge.py
-@@ -448,6 +448,11 @@
+@@ -398,6 +398,47 @@
+         self.usage = usage
+ 
+ 
++def collect_api_stream(response):
++    """Join final-answer deltas only; require a real terminal chunk.
++
++    Usage is cumulative provider data, not a sum of chunk-level snapshots.
++    Reasoning deltas remain separate and never enter the translation JSON.
++    """
++    content, finish, model, usage = [], None, None, None
++    def metadata():
++        value = {'usage_reported': usage is not None, 'finish_reason': finish,
++                 'response_model': model, 'response_transport': 'stream'}
++        if usage is not None:
++            for key in ('prompt_tokens', 'completion_tokens', 'total_tokens',
++                        'prompt_tokens_details', 'completion_tokens_details'):
++                item = getattr(usage, key, None)
++                if item is not None:
++                    value[key] = item.model_dump() if hasattr(item, 'model_dump') else item
++        return value
++    try:
++        for chunk in response:
++            model = getattr(chunk, 'model', None) or model
++            usage = getattr(chunk, 'usage', None) or usage
++            for choice in chunk.choices:
++                if getattr(choice, 'index', 0) != 0:
++                    raise ValueError('Unexpected additional stream choice')
++                part = getattr(choice.delta, 'content', None)
++                if part is not None:
++                    if not isinstance(part, str):
++                        raise ValueError('Stream content must be text')
++                    content.append(part)
++                finish = getattr(choice, 'finish_reason', None) or finish
++        if finish is None:
++            raise ApiFailure('incomplete_stream', True, usage=metadata())
++        return ''.join(content), metadata()
++    except ApiFailure:
++        raise
++    except Exception:
++        raise ApiFailure('stream_interrupted', True, usage=metadata()) from None
++    finally:
++        response.close()
++
++
+ class AINieeAPI:
+     """Reuse patched client factory, provider parameters and SSE parsing.
+ 
+@@ -417,17 +458,33 @@
+         settings = self.settings
+         params = {'model': settings['model_name'], 'messages': [
+             {'role': 'system', 'content': system}, {'role': 'user', 'content': user}],
+-            'stream': False, 'timeout': settings.get('request_timeout', 120),
++            'stream': settings.get('stream', False), 'timeout': settings.get('request_timeout', 120),
+             'extra_body': settings.get('extra_body', {})}
+         if settings.get('temperature', 1) != 1:
+             params['temperature'] = settings['temperature']
+         if settings.get('max_completion_tokens'):
+             params['max_completion_tokens'] = settings['max_completion_tokens']
+         params = self.parser.apply_platform_thinking_params(params, settings)
++        if params['stream']:
++            params['stream_options'] = {'include_usage': True}
+         try:
+             raw = self.client.chat.completions.with_raw_response.create(**params)
++            content_type = raw.headers.get('content-type', '')
++            if isinstance(content_type, str) and 'text/html' in content_type.lower():
++                # Some gateway homepages return HTTP 200 for an incorrect API
++                # route. This is not a model's empty reply or a transient SSE
++                # failure; retrying the same address cannot repair the route.
++                raise ApiFailure('unexpected_html_response', False, usage={'usage_reported': False})
+             try:
+                 response = raw.parse()
++                if params['stream']:
++                    content, token_usage = collect_api_stream(response)
++                    if not content:
++                        detail = token_usage.get('completion_tokens_details') or {}
++                        code = ('reasoning_budget_exhausted' if token_usage.get('finish_reason') == 'length'
++                                and detail.get('reasoning_tokens', 0) else 'empty_response')
++                        raise ApiFailure(code, code == 'empty_response', usage=token_usage)
++                    return content, token_usage
+                 content = response.choices[0].message.content
+                 usage = response.usage
+                 token_usage = ({'prompt_tokens': usage.prompt_tokens, 'completion_tokens': usage.completion_tokens,
+@@ -448,6 +505,11 @@
                                 'usage_reported': bool(prompt or completion), 'finish_reason': None,
                                 'response_transport': 'sse_fallback'}
              if not content:
@@ -114,7 +206,50 @@
          except ApiFailure:
 --- a/Tools/localization/translation_workflow.py
 +++ b/Tools/localization/translation_workflow.py
-@@ -1671,6 +1671,7 @@
+@@ -65,7 +65,7 @@
+             'api_url': '', 'model_name': '', 'api_key_env': 'SHH_TRANSLATION_API_KEY',
+             'request_timeout': 120, 'think_switch': False, 'temperature': 1,
+             'max_completion_tokens': 16384, 'max_requests': 10000, 'requests_per_minute': 0,
+-            'concurrency': 50, 'tls_switch': False, 'extra_body': {}},
++            'concurrency': 50, 'tls_switch': False, 'stream': False, 'extra_body': {}},
+ }
+ 
+ 
+@@ -224,6 +224,8 @@
+     if any(k not in STAGES or v not in ('api', 'codex') for k, v in config['stage_backends'].items()):
+         raise ValueError('Invalid stage_backends')
+     api = config['api']
++    if type(api.get('stream', False)) is not bool:
++        raise ValueError('API stream must be boolean')
+     if api['api_format'] != 'OpenAI':
+         raise ValueError('This release supports OpenAI-compatible API transport')
+     for key in ('max_requests', 'concurrency', 'request_timeout', 'max_completion_tokens'):
+@@ -474,9 +476,13 @@
+                 if not eligible:
+                     return {'tasks': [r['id'] for r in existing], 'existing': True}
+             elif stage == 'glossary_review':
+-                extraction = db.execute('SELECT * FROM tasks WHERE stage="extract" AND revision=? ORDER BY rowid', (revision,)).fetchall()
++                extraction = db.execute('SELECT * FROM tasks WHERE stage="extract" AND revision=? AND status!="obsolete" ORDER BY rowid', (revision,)).fetchall()
+                 if not extraction or any(t['status'] != 'done' for t in extraction):
+                     raise ValueError('Complete every glossary extraction task first')
++                extracted_ids = [record_id for task in extraction for record_id in json.loads(task['ids'])]
++                if (len(extracted_ids) != len(set(extracted_ids))
++                        or set(extracted_ids) != {row['id'] for row in records}):
++                    raise ValueError('Completed extraction must cover every source record exactly once')
+                 from glossary_merge import merge_extractions
+                 original = merge_extractions((task['id'], json.loads(task['result'])['analysis']) for task in extraction)
+                 folder = self.root / f'glossary/r{revision}'
+@@ -1446,7 +1452,8 @@
+                    for k in ('api_key', 'api_url', 'model_name')):
+                 raise ValueError('Fill api_key, api_url and model_name in ' + str(path))
+             key = local['api_key'].strip()
+-            settings = merge_config({**DEFAULT, **config}, {'api': {k: v for k, v in local.items() if k not in ('api_key', 'batching')}})['api']
++            base = {**DEFAULT, **config, 'api': {**DEFAULT['api'], **config.get('api', {})}}
++            settings = merge_config(base, {'api': {k: v for k, v in local.items() if k not in ('api_key', 'batching')}})['api']
+             return settings, key
+     settings = copy.deepcopy(config['api'])
+     key = os.environ.get(settings['api_key_env'])
+@@ -1671,6 +1678,7 @@
                      db.execute('UPDATE api_calls SET task_id=?,session_id=? WHERE id=?',
                                 (session['task_id'], session['session_id'], call_id))
              retry_reason = None
@@ -122,7 +257,7 @@
              try:
                  rate_wait_start = time.perf_counter()
                  while slot > time.time():
-@@ -1734,6 +1735,13 @@
+@@ -1734,6 +1742,13 @@
              except (bridge.ApiFailure, ValueError) as error:
                  retryable = error.retryable if isinstance(error, bridge.ApiFailure) else True
                  code = str(error) if isinstance(error, bridge.ApiFailure) else 'invalid_model_result'
@@ -136,9 +271,71 @@
                  with flow.db() as db:
                      error_usage = getattr(error, 'usage', None)
                      db.execute('UPDATE api_calls SET status=?,usage=coalesce(?,usage) WHERE id=?',
+--- a/Tools/localization/workflow_batches.py
++++ b/Tools/localization/workflow_batches.py
+@@ -17,6 +17,42 @@
+ 
+ 
+ class BatchMixin:
++    def split_extract_recovery(self, task_id, record_limit=12, worker_stopped=False):
++        """Replan only a stopped extraction scope, inheriting its used attempts."""
++        from translation_workflow import fingerprint, encoded
++        with self.db() as db:
++            config = self.config(db)
++            self.batch_tables(db)
++            if (not worker_stopped or not self.meta(db, 'paused')
++                    or (self.root / 'state/api_round.lock').exists()
++                    or db.execute('SELECT 1 FROM api_calls WHERE status="reserved"').fetchone()):
++                raise ValueError('Extraction split requires paused workflow, stopped workers and no active API runner/call')
++            task = db.execute('SELECT * FROM tasks WHERE id=?', (task_id,)).fetchone()
++            if (not task or task['stage'] != 'extract' or task['revision'] != self.meta(db, 'revision')
++                    or task['status'] not in ('running', 'failed', 'pending') or task['backend'] != 'api'):
++                raise ValueError('Only an unfinished current API extraction can be split')
++            if task['attempt'] >= config['max_attempts']:
++                raise ValueError('No remaining attempt budget; investigate before an explicit increase')
++            payload = json.loads(task['payload'])
++            if fingerprint({k:v for k,v in payload.items() if k != 'input_hash'}) != task['input_hash']:
++                raise ValueError('Task payload hash mismatch')
++            records = payload['records']
++            if [r['id'] for r in records] != json.loads(task['ids']):
++                raise ValueError('Task scope mismatch')
++            lineage = list(payload.get('extract_split_lineage', []))
++            payload['extract_split_lineage'] = lineage + [{'task_id': task_id, 'attempt': task['attempt']}]
++            planned = self.plan_task_allocation(db, payload, 'api', reliability_limit=record_limit)
++            if len(planned) < 2:
++                raise ValueError('No smaller complete-record extraction split is possible at this limit')
++            children = self.allocate_task(db, payload, 'api', attempt=task['attempt'], planned=planned)
++            db.execute('UPDATE tasks SET status="obsolete" WHERE id=?', (task_id,))
++            db.execute('UPDATE batch_runs SET status="interrupted",receipt=? WHERE task_id=? AND status="waiting"',
++                       (encoded({'status':'interrupted','reason':'explicit extraction split','children':children}), task_id))
++            self.event(db, 'split_extract_recovery', {'task':task_id, 'children':children,
++                       'inherited_attempts':task['attempt'], 'record_limit':record_limit})
++            return {'status':'split','task_id':task_id,'children':children,
++                    'inherited_attempts':task['attempt'],'records':len(records)}
++
+     def batch_split(self, task_id):
+         """Split an untouched review task within input and output budgets."""
+         from translation_workflow import encoded, fingerprint
+--- a/Tools/localization/test_api_settings.py
++++ b/Tools/localization/test_api_settings.py
+@@ -12,6 +12,14 @@
+ 
+ 
+ class APISettingsTests(unittest.TestCase):
++    def test_optional_streaming_loads_for_older_snapshot_without_mutation(self):
++        original = copy.deepcopy(DEFAULT); original['api'].pop('stream')
++        self.save({'api_url': 'https://example.invalid/v1', 'api_key': 'fixture-only',
++                   'model_name': 'fixture', 'stream': True})
++        settings, _ = load_api_settings(original, self.path)
++        self.assertTrue(settings['stream'])
++        self.assertNotIn('stream', original['api'])
++
+     def setUp(self):
+         self.temp = tempfile.TemporaryDirectory()
+         self.addCleanup(self.temp.cleanup)
 --- /dev/null
 +++ b/Tools/localization/test_api_cost_optimization.py
-@@ -0,0 +1,146 @@
+@@ -0,0 +1,159 @@
 +"""Lossless metadata transport and bounded handling of exhausted output budgets."""
 +import copy
 +import json
@@ -223,6 +420,19 @@
 +
 +
 +class ExhaustionTests(unittest.TestCase):
++    def test_html_gateway_page_is_not_retried_as_empty_model_response(self):
++        from ModuleFolders.Infrastructure.LLMRequester.OpenaiRequester import OpenaiRequester
++        client = bridge.AINieeAPI.__new__(bridge.AINieeAPI)
++        client.settings = {'model_name': 'fixture', 'extra_body': {}}
++        client.parser = OpenaiRequester(); client.client = Mock()
++        raw = client.client.chat.completions.with_raw_response.create.return_value
++        raw.headers = {'content-type': 'text/html; charset=utf-8'}
++        with self.assertRaises(bridge.ApiFailure) as error:
++            client.request('', 'fixture')
++        self.assertEqual(str(error.exception), 'unexpected_html_response')
++        self.assertFalse(error.exception.retryable)
++        raw.parse.assert_not_called()
++
 +    def test_complete_valid_length_response_is_still_collected(self):
 +        fixture = fixtures.WorkflowTests(); fixture.setUp(); self.addCleanup(fixture.tearDown)
 +        flow = fixture.flow; flow.pause(True)
@@ -285,3 +495,132 @@
 +
 +
 +if __name__ == '__main__': unittest.main()
+--- /dev/null
++++ b/Tools/localization/test_api_stream.py
+@@ -0,0 +1,56 @@
++import unittest
++from types import SimpleNamespace as N
++from ainiee_bridge import collect_api_stream, ApiFailure
++
++
++class Response:
++    def __init__(self, chunks): self.chunks = chunks; self.closed = False
++    def __iter__(self): return iter(self.chunks)
++    def close(self): self.closed = True
++
++
++def chunk(content=None, finish=None, usage=None, reasoning=None):
++    return N(model='fixture', usage=usage, choices=[N(index=0, finish_reason=finish,
++        delta=N(content=content, reasoning_content=reasoning))])
++
++
++class StreamTests(unittest.TestCase):
++    def test_reasoning_never_enters_answer_and_final_usage_is_not_double_counted(self):
++        usage = N(prompt_tokens=10, completion_tokens=20, total_tokens=30,
++                  completion_tokens_details={'reasoning_tokens': 12})
++        response = Response([chunk(reasoning='private reasoning'), chunk('{"analysis":'),
++            chunk('{}', usage=usage), chunk('}', 'stop'), N(choices=[], usage=usage, model='fixture')])
++        content, data = collect_api_stream(response)
++        self.assertEqual(content, '{"analysis":{}}')
++        self.assertEqual(data['total_tokens'], 30)
++        self.assertEqual(data['completion_tokens_details']['reasoning_tokens'], 12)
++        self.assertTrue(response.closed)
++
++    def test_missing_terminal_event_rejects_even_valid_json(self):
++        response = Response([chunk('{}')])
++        with self.assertRaises(ApiFailure) as error: collect_api_stream(response)
++        self.assertEqual(str(error.exception), 'incomplete_stream')
++        self.assertFalse(error.exception.usage['usage_reported'])
++        self.assertTrue(response.closed)
++
++    def test_length_and_missing_usage_are_not_fabricated(self):
++        response = Response([chunk('{', 'length')])
++        content, data = collect_api_stream(response)
++        self.assertEqual(content, '{')
++        self.assertEqual(data['finish_reason'], 'length')
++        self.assertFalse(data['usage_reported'])
++        self.assertNotIn('total_tokens', data)
++
++    def test_disconnect_preserves_last_reported_usage_and_never_accepts_partial(self):
++        class Broken(Response):
++            def __iter__(self):
++                yield chunk('{}', usage=N(prompt_tokens=10, completion_tokens=20, total_tokens=30))
++                raise OSError('fixture disconnect')
++        response = Broken([])
++        with self.assertRaises(ApiFailure) as error: collect_api_stream(response)
++        self.assertEqual(str(error.exception), 'stream_interrupted')
++        self.assertEqual(error.exception.usage['total_tokens'], 30)
++        self.assertTrue(response.closed)
++
++
++if __name__ == '__main__': unittest.main()
+--- /dev/null
++++ b/Tools/localization/test_extract_recovery_split.py
+@@ -0,0 +1,67 @@
++import json
++from pathlib import Path
++import unittest
++import test_translation_workflow as fixtures
++from translation_workflow import read_json, write_json
++
++
++class ExtractSplitTests(unittest.TestCase):
++    def setUp(self):
++        self.f = fixtures.WorkflowTests(); self.f.setUp(); self.addCleanup(self.f.tearDown)
++        self.flow = self.f.flow; self.flow.pause(True)
++        self.flow.configure({'backend':'api'}, 'Isolated extraction recovery', impact='none')
++        self.flow.pause(False)
++        self.session = self.flow.batch_open('extract','old-api-worker',backend='api')
++
++    def test_split_preserves_exact_scope_payload_and_used_attempts(self):
++        with self.flow.db() as db:
++            old = dict(db.execute('SELECT * FROM tasks WHERE id=?',(self.session['task_id'],)).fetchone())
++        self.flow.pause(True)
++        result = self.flow.split_extract_recovery(old['id'],1,worker_stopped=True)
++        with self.flow.db() as db:
++            children = [dict(db.execute('SELECT * FROM tasks WHERE id=?',(i,)).fetchone()) for i in result['children']]
++            self.assertEqual(db.execute('SELECT status FROM tasks WHERE id=?',(old['id'],)).fetchone()[0], 'obsolete')
++            self.assertEqual(db.execute('SELECT status FROM batch_runs WHERE id=?',(self.session['session_id'],)).fetchone()[0], 'interrupted')
++        self.assertEqual([r for c in children for r in json.loads(c['payload'])['records']],json.loads(old['payload'])['records'])
++        self.assertEqual([i for c in children for i in json.loads(c['ids'])],json.loads(old['ids']))
++        self.assertTrue(all(c['attempt']==old['attempt'] for c in children))
++        self.assertTrue(all(json.loads(c['payload'])['extract_split_lineage'][-1]['task_id']==old['id'] for c in children))
++
++    def test_live_or_unconfirmed_workers_cannot_be_split(self):
++        with self.assertRaises(ValueError): self.flow.split_extract_recovery(self.session['task_id'],1,True)
++        self.flow.pause(True)
++        with self.assertRaises(ValueError): self.flow.split_extract_recovery(self.session['task_id'],1,False)
++
++    def test_noop_split_is_rejected_without_losing_task(self):
++        self.flow.pause(True)
++        with self.assertRaises(ValueError): self.flow.split_extract_recovery(self.session['task_id'],100,True)
++        with self.flow.db() as db:
++            self.assertEqual(db.execute('SELECT status FROM tasks WHERE id=?',(self.session['task_id'],)).fetchone()[0], 'running')
++
++    def complete_split(self):
++        self.flow.pause(True)
++        result = self.flow.split_extract_recovery(self.session['task_id'],1,True)
++        with self.assertRaises(ValueError): self.flow.prepare('glossary_review')
++        self.flow.pause(False)
++        number = 0
++        while True:
++            packet = self.flow.batch_open('extract','fresh-split-worker-'+str(number),backend='api')
++            if packet['status'] != 'ready': break
++            value = read_json(Path(packet['result_file']).with_name('result.template.json'))
++            write_json(Path(packet['result_file']),value)
++            self.flow.batch_finish(packet['session_id']); number += 1
++        return result
++
++    def test_completed_children_allow_glossary_review_without_obsolete_parent(self):
++        self.complete_split()
++        self.flow.prepare('glossary_review')
++
++    def test_obsolete_parent_cannot_hide_a_missing_child_scope(self):
++        result = self.complete_split()
++        with self.flow.db() as db:
++            db.execute('UPDATE tasks SET status="obsolete" WHERE id=?',(result['children'][0],))
++        with self.assertRaisesRegex(ValueError,'exactly once'):
++            self.flow.prepare('glossary_review')
++
++
++if __name__=='__main__': unittest.main()

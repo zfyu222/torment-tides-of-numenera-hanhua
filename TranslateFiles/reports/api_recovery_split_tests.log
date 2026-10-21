@@ -1,0 +1,10 @@
+[INFO] 初始化 tiktoken 编码器缓存...
+[BabeldocPatch] 补丁已应用
+  保护的缓存目录: D:\StaticHanHua\Tools\AINiee\ProjectCache\tiktoken
+[INFO] tiktoken 缓存目录已设置: 
+D:\StaticHanHua\Tools\AINiee\ProjectCache\tiktoken (83.55 ms)
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 13.621s
+
+OK

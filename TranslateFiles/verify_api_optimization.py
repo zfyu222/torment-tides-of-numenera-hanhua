@@ -1,5 +1,6 @@
 """Bounded live verification in isolated fixtures; never modifies production state."""
 import copy
+import argparse
 import csv
 import hashlib
 import json
@@ -16,7 +17,14 @@ from workflow_profile import usage_totals
 from workflow_tokens import count_tokens
 
 project = Path(__file__).resolve().parent.parent
-folder = project/'TranslateFiles/verification/api_optimization_20261021_v3'
+parser = argparse.ArgumentParser()
+parser.add_argument('--run-name', required=True)
+parser.add_argument('--modes', choices=('baseline', 'optimized'), nargs='+', default=['baseline', 'optimized'])
+parser.add_argument('--request-limit', type=int, choices=range(1, 5), default=4)
+args = parser.parse_args()
+if not args.run_name or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-' for c in args.run_name):
+    raise SystemExit('run-name must be a simple directory name')
+folder = project/'TranslateFiles/verification'/args.run_name
 folder.mkdir(parents=True, exist_ok=True)
 report_file = folder/'report.json'
 if report_file.exists():
@@ -61,7 +69,7 @@ for run in sample:
 settings, key = w.load_api_settings(config)
 settings = {**settings, 'target_platform': 'deepseek', 'think_switch': True, 'think_depth': 'high', 'concurrency': 1}
 client = bridge.AINieeAPI(settings, key); del key
-report = {'status': 'running', 'request_limit': 4, 'requests': [], 'stages': [],
+report = {'status': 'running', 'request_limit': args.request_limit, 'requests': [], 'stages': [],
           'model': settings['model_name'], 'thinking': 'enabled; existing service/model, high',
           'local_benchmark': {'batches': len(sample), 'before_tokens': old_tokens, 'after_tokens': new_tokens,
                               'reduction_percent': round(100*(old_tokens-new_tokens)/old_tokens, 2),
@@ -86,7 +94,7 @@ class Bounded:
 
 try:
     with (folder/'execution.log').open('w', encoding='utf-8') as log, redirect_stdout(log), redirect_stderr(log):
-        for mode in ('baseline', 'optimized'):
+        for mode in args.modes:
             root = folder/mode; root.mkdir()
             source = root/'sample_text.csv'
             with source.open('w', encoding='utf-8', newline='') as stream:

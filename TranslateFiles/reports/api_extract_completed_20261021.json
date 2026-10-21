@@ -1,0 +1,288 @@
+{
+  "stage": "extract",
+  "coverage": 70163,
+  "coverage_exact": true,
+  "completed_tasks": 1343,
+  "note": "8 unfinished parent tasks split into 66 children, with used attempts inherited. Not comparable by task count alone to original1285. All source IDs covered exactly once.",
+  "production_rounds": [
+    {
+      "run_id": "e44e67881366403d8df558b64b11a7fa",
+      "accepted": 4,
+      "failed": 16,
+      "elapsed_seconds": 277.2839,
+      "tokens": {
+        "prompt_tokens": 28113,
+        "completion_tokens": 29351,
+        "total_tokens": 57464,
+        "cached_prompt_tokens": 0,
+        "reasoning_tokens": 24461,
+        "reported_requests": 4,
+        "unknown_requests": 16
+      }
+    },
+    {
+      "run_id": "7caf7e4d5a63454cafd5e12a31431823",
+      "accepted": 1,
+      "failed": 4,
+      "elapsed_seconds": 117.9387,
+      "tokens": {
+        "prompt_tokens": 41555,
+        "completion_tokens": 80565,
+        "total_tokens": 122120,
+        "cached_prompt_tokens": 41216,
+        "reasoning_tokens": 78959,
+        "reported_requests": 5,
+        "unknown_requests": 0
+      }
+    },
+    {
+      "run_id": "cdf8c3b1dc784e00bbfeb92e49838bfa",
+      "accepted": 1,
+      "failed": 0,
+      "elapsed_seconds": 10.5649,
+      "tokens": {
+        "prompt_tokens": 1580,
+        "completion_tokens": 999,
+        "total_tokens": 2579,
+        "cached_prompt_tokens": 0,
+        "reasoning_tokens": 630,
+        "reported_requests": 1,
+        "unknown_requests": 0
+      }
+    },
+    {
+      "run_id": "d776407c178849efa81ea8b053fc68df",
+      "accepted": 65,
+      "failed": 0,
+      "elapsed_seconds": 464.464,
+      "tokens": {
+        "prompt_tokens": 120946,
+        "completion_tokens": 393223,
+        "total_tokens": 514169,
+        "cached_prompt_tokens": 5120,
+        "reasoning_tokens": 367649,
+        "reported_requests": 65,
+        "unknown_requests": 0
+      }
+    }
+  ],
+  "known_tokens_this_recovery": 696332,
+  "unknown_usage_requests_this_recovery": 16,
+  "sample_validation_nonstream": {
+    "status": "completed",
+    "request_limit": 2,
+    "requests": [
+      {
+        "number": 1,
+        "usage": {
+          "prompt_tokens": 1803,
+          "completion_tokens": 3971,
+          "usage_reported": true,
+          "finish_reason": "stop",
+          "response_model": "deepseek-v4.1-flash",
+          "total_tokens": 5774,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 3792,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      {
+        "number": 2,
+        "usage": {
+          "prompt_tokens": 3131,
+          "completion_tokens": 4309,
+          "usage_reported": true,
+          "finish_reason": "stop",
+          "response_model": "deepseek-v4.1-flash",
+          "total_tokens": 7440,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 2592,
+            "rejected_prediction_tokens": null
+          }
+        }
+      }
+    ],
+    "stages": [
+      {
+        "mode": "optimized",
+        "stage": "extract",
+        "accepted": 1,
+        "failed": 0,
+        "stage_clean": false,
+        "needs_attention": [],
+        "pending_handoffs": []
+      },
+      {
+        "mode": "optimized",
+        "stage": "glossary_review",
+        "accepted": 1,
+        "failed": 0,
+        "stage_clean": false,
+        "needs_attention": [],
+        "pending_handoffs": []
+      }
+    ],
+    "model": "deepseek-v4.1-flash",
+    "thinking": "enabled; existing service/model, high",
+    "local_benchmark": {
+      "batches": 100,
+      "before_tokens": 807835,
+      "after_tokens": 625187,
+      "reduction_percent": 22.61,
+      "metadata_reconstruction": "all sampled records identical; sources and ordinals identical"
+    },
+    "original_ordinals": [
+      26754,
+      26733,
+      26734,
+      26735,
+      26736,
+      26737
+    ],
+    "frozen": {
+      "status": "frozen",
+      "glossary": {
+        "path": "glossary\\r2\\freeze_f2519986\\built\\glossary_reviewed.json",
+        "hash": "538e8df22614cb334c694c2d26e8e84b41ea8801169a73f2778822531c476daf",
+        "revision": 2
+      }
+    },
+    "production_state_unchanged": true,
+    "usage": {
+      "prompt_tokens": 4934,
+      "completion_tokens": 8280,
+      "total_tokens": 13214,
+      "cached_prompt_tokens": 0,
+      "reasoning_tokens": 6384,
+      "reported_requests": 2,
+      "unknown_requests": 0
+    }
+  },
+  "sample_validation_stream": {
+    "status": "completed",
+    "request_limit": 2,
+    "requests": [
+      {
+        "number": 1,
+        "usage": {
+          "usage_reported": true,
+          "finish_reason": "stop",
+          "response_model": "deepseek-v4.1-flash",
+          "response_transport": "stream",
+          "prompt_tokens": 1803,
+          "completion_tokens": 2498,
+          "total_tokens": 4301,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 1792
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 2315,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      {
+        "number": 2,
+        "usage": {
+          "usage_reported": true,
+          "finish_reason": "stop",
+          "response_model": "deepseek-v4.1-flash",
+          "response_transport": "stream",
+          "prompt_tokens": 3139,
+          "completion_tokens": 3380,
+          "total_tokens": 6519,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 2235,
+            "rejected_prediction_tokens": null
+          }
+        }
+      }
+    ],
+    "stages": [
+      {
+        "mode": "optimized",
+        "stage": "extract",
+        "accepted": 1,
+        "failed": 0,
+        "stage_clean": false,
+        "needs_attention": [],
+        "pending_handoffs": []
+      },
+      {
+        "mode": "optimized",
+        "stage": "glossary_review",
+        "accepted": 1,
+        "failed": 0,
+        "stage_clean": false,
+        "needs_attention": [],
+        "pending_handoffs": []
+      }
+    ],
+    "model": "deepseek-v4.1-flash",
+    "thinking": "enabled; existing service/model, high",
+    "local_benchmark": {
+      "batches": 100,
+      "before_tokens": 807835,
+      "after_tokens": 625187,
+      "reduction_percent": 22.61,
+      "metadata_reconstruction": "all sampled records identical; sources and ordinals identical"
+    },
+    "original_ordinals": [
+      26754,
+      26733,
+      26734,
+      26735,
+      26736,
+      26737
+    ],
+    "frozen": {
+      "status": "frozen",
+      "glossary": {
+        "path": "glossary\\r2\\freeze_3bc86ad1\\built\\glossary_reviewed.json",
+        "hash": "1c232a5c4f7998cae199f139e89b4e3dbe14b64b11821c9b8a230ccaaa9915c0",
+        "revision": 2
+      }
+    },
+    "production_state_unchanged": true,
+    "usage": {
+      "prompt_tokens": 4942,
+      "completion_tokens": 5878,
+      "total_tokens": 10820,
+      "cached_prompt_tokens": 1792,
+      "reasoning_tokens": 4550,
+      "reported_requests": 2,
+      "unknown_requests": 0
+    }
+  },
+  "thinking": "explicitly enabled, high",
+  "model": "deepseek-v4.1-flash",
+  "endpoint": "https://acy7.com/v1",
+  "next_stage": "glossary_review",
+  "formal_translation_unchanged": true
+}

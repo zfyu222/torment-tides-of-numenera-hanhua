@@ -1,0 +1,88 @@
+{
+  "pending_before": [
+    {
+      "id": "extract-r2-01254-25d4c9fc-sb942b0a4",
+      "status": "running",
+      "attempt": 5,
+      "lease_until": 1792549575.3737812
+    },
+    {
+      "id": "extract-r2-01254-25d4c9fc-s2ff304a3",
+      "status": "running",
+      "attempt": 5,
+      "lease_until": 1792549546.9515996
+    },
+    {
+      "id": "extract-r2-01254-25d4c9fc-sf8fe8e6e",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01258-b8b4738d-s2de0a579",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01258-b8b4738d-sb60f444b",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01258-b8b4738d-s8c808896",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01262-97032e5f-s2e3246ef",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01262-97032e5f-se5843d35",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01266-e93b1bcd-sf0e5ce24",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01266-e93b1bcd-s5e0729c0",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01274-a775faa6-sf24a4fb5",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01274-a775faa6-sf61b8e46",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    },
+    {
+      "id": "extract-r2-01274-a775faa6-s0e2aa932",
+      "status": "pending",
+      "attempt": 4,
+      "lease_until": null
+    }
+  ],
+  "remaining_batches": 13,
+  "thinking": "explicit enabled",
+  "endpoint": "https://acy7.com/v1",
+  "model": "deepseek-v4.1-flash",
+  "validated_sample": "verification/api_optimization_20261021_v5/report.json",
+  "user_preference": "API only; no new Sol workers; completed outputs retained"
+}

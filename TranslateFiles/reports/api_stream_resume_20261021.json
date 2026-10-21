@@ -1,0 +1,60 @@
+{
+  "remaining": [
+    {
+      "id": "extract-r2-01254-25d4c9fc-sb942b0a4",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01254-25d4c9fc-s2ff304a3",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01254-25d4c9fc-sf8fe8e6e",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01258-b8b4738d-sb60f444b",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01258-b8b4738d-s8c808896",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01262-97032e5f-s2e3246ef",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01274-a775faa6-sf24a4fb5",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01274-a775faa6-sf61b8e46",
+      "status": "running",
+      "attempt": 6
+    },
+    {
+      "id": "extract-r2-01274-a775faa6-s0e2aa932",
+      "status": "running",
+      "attempt": 6
+    }
+  ],
+  "configuration_receipt": {
+    "revision": 2,
+    "semantic_reset": false,
+    "affected_records": [],
+    "retry_limit_only": true
+  },
+  "validation": "verification/api_optimization_20261021_v6_stream/report.json",
+  "per_task_new_request_limit": 1,
+  "model": "deepseek-v4.1-flash",
+  "thinking": "enabled",
+  "stream": true
+}
