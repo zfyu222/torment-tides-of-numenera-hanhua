@@ -1,0 +1,75 @@
+diff --git a/Tools/localization/translation_workflow.py b/Tools/localization/translation_workflow.py
+index dbd1573..c7b844b 100644
+--- a/Tools/localization/translation_workflow.py
++++ b/Tools/localization/translation_workflow.py
+@@ -260,14 +260,20 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+         if self.root.exists() and self.root.resolve() != self.root:
+             raise ValueError('TranslateFiles must not redirect outside the project')
+         self.db_path = self.root / 'state/workflow.sqlite3'
++        # API workers share this Workflow. Serialize their short transactions
++        # before SQLite's busy timeout, so a busy worker cannot starve a peer.
++        self._db_lock = threading.RLock()
+ 
+     @contextmanager
+     def db(self):
+         if not self.db_path.exists():
+             raise ValueError('Run init first')
+-        connection = sqlite3.connect(self.db_path, timeout=30)
+-        connection.row_factory = sqlite3.Row
++        connection = None
++        with measure('db_lock_wait'):
++            self._db_lock.acquire()
+         try:
++            connection = sqlite3.connect(self.db_path, timeout=30)
++            connection.row_factory = sqlite3.Row
+             connection.execute('PRAGMA foreign_keys=ON')
+             with measure('db_lock_wait'):
+                 connection.execute('BEGIN IMMEDIATE')
+@@ -277,10 +283,13 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+             yield connection
+             connection.commit()
+         except BaseException:
+-            connection.rollback()
++            if connection is not None:
++                connection.rollback()
+             raise
+         finally:
+-            connection.close()
++            if connection is not None:
++                connection.close()
++            self._db_lock.release()
+ 
+     @staticmethod
+     def meta(db, key, default=None):
+@@ -1113,6 +1122,20 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+             if not self.meta(db, 'glossary'):
+                 # Preserve completed extraction tasks under the new scheduling/backend revision.
+                 db.execute('UPDATE tasks SET revision=? WHERE status="done" AND stage="extract"', (revision,))
++                # Completed glossary reviews stay valid when the change is only scheduling,
++                # transport or retry limits; dropping them would repeat hours of paid work.
++                sources = {row[0] for row in db.execute(
++                    'SELECT DISTINCT revision FROM tasks WHERE stage="glossary_review" AND status="done"')}
++                for source in sorted(sources):
++                    if source == revision:
++                        continue
++                    old_folder = self.root / f'glossary/r{source}'
++                    new_folder = self.root / f'glossary/r{revision}'
++                    if old_folder.is_dir() and not new_folder.exists():
++                        import shutil
++                        shutil.copytree(old_folder, new_folder)
++                db.execute('UPDATE tasks SET revision=? WHERE status="done" AND stage="glossary_review"',
++                           (revision,))
+             if quality_upgrade:
+                 # Historical semantic flags lack per-entry evidence and instance ownership.
+                 # Keep artifacts as history, but require the stronger terminology pipeline again.
+@@ -1380,6 +1403,10 @@ def prompt(payload, *, api=False):
+                 '其他条目或未附原文的行号一律不得引用；'
+                 'source_excerpt 必须是所引 ordinal 原文的连续逐字片段，不拼接、不省略、不改写、不翻译；'
+                 'entry_reviews 只写 entries 中的 e编号，不得包含 related_entries 或 term_families 条目。'
++                'additions 的 table 只能是 characters、terms、non_translate；row 用 source 与 recommended_translation'
++                '（characters 另需 gender，terms 另需 category_path），不新增通用翻译类条目。'
++                'terms 的 category_path 只能取 身份/物品/组织/地名/技能/种族/其他 之一；'
++                '原文或候选写成“地点”等非法值时，必须在 edits 中改为合法值。'
+                 '逐项证据不能用程序检查或全表 summary 替代，不在 reason 中重复四维全文。')
+         common += glossary_contract
+     if stage in ('pilot_translate', 'translate') and (not api or payload.get('approved_pilot_examples') or payload.get('pilot_style_notes')):
