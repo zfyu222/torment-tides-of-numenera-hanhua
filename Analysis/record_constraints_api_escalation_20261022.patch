@@ -1,0 +1,388 @@
+diff --git a/.agents/skills/game-translate/references/placeholder_patterns.md b/.agents/skills/game-translate/references/placeholder_patterns.md
+index b910f82..68eb145 100644
+--- a/.agents/skills/game-translate/references/placeholder_patterns.md
++++ b/.agents/skills/game-translate/references/placeholder_patterns.md
+@@ -62,3 +62,7 @@ AINiee 内置正则库已覆盖大部分，无需手工添加：
+ - 普通括号注释、方括号内的完整句子
+ 
+ **判别方法**：机器型标记通常无空格、无句读、长度短、由字母数字和 `:_=/.#%` 组成。analyze 脚本的 curly 家族只匹配 `\{\d+\}` 和 `\{name\}`/`\{key=value\}` 这类机器型，句型 `{}` 不会误伤。
++
++冻结术语的 source 默认按字面匹配，包括 `[Sorrow Flame]`、带括号的人名和句点等自然标点；只有明确写入 `src_state=regex` 才按正则处理。不得用 AINiee 的标点推断覆盖冻结状态，否则字符类会误命中空格或字母。共用术语匹配策略版本为 3，旧检查凭据需按当前策略复核，冻结表本身保持不变。
++
++经验证的单条排版/特殊原文约束使用配置 record_constraints：以正式记录ID索引，必须绑定该条UTF-8 source_sha256并给出reason。physical_newlines指定精确物理换行序列，literal_suffix指定必须原样保留的原文末尾（例如未闭合开发注释）；不得改原文或通用关闭检查。相同规则用于准备、保护、匹配、修复、检查和导出，改变约束仅使对应条目的检查签名失效。
+diff --git a/Tools/localization/ainiee_bridge.py b/Tools/localization/ainiee_bridge.py
+index 5e47b00..487a5b8 100644
+--- a/Tools/localization/ainiee_bridge.py
++++ b/Tools/localization/ainiee_bridge.py
+@@ -77,7 +77,7 @@ def glossary_rows(analysis):
+ _FROZEN_MATCHERS = {}
+ _MATCH_CONTEXTS = OrderedDict()
+ _MATCH_LOCK = threading.RLock()
+-TERM_MATCH_VERSION = 2
++TERM_MATCH_VERSION = 3
+ 
+ 
+ def _visible_term_match(start, end, protected_spans):
+@@ -102,6 +102,16 @@ def _frozen_matcher(helper_class):
+         # Keep one subclass per helper class so its cached compiled search patterns
+         # are reused across records during full-project validation.
+         class FrozenMatcher(helper_class):
++            @classmethod
++            def normalize_row(cls, row):
++                normalized = super().normalize_row(row)
++                # Frozen source strings are literal unless their author explicitly
++                # marked a regex. Punctuation in game text is not regex syntax.
++                stored = row.get(cls.VALID_KEY) if isinstance(row, dict) else None
++                if stored in (cls.STATE_VALID, cls.STATE_REGEX, cls.STATE_INVALID):
++                    normalized[cls.VALID_KEY] = stored
++                return normalized
++
+             @classmethod
+             def normalize_rows(cls, rows):
+                 return rows if isinstance(rows, _PreparedRows) else super().normalize_rows(rows)
+@@ -361,7 +371,29 @@ def normalize_exception_sources(exceptions, terms, case_sensitive):
+     return normalized
+ 
+ 
+-def structural_issues(source, translation, rules):
++def record_constraint(row, config):
++    constraint = config.get('record_constraints', {}).get(row['id'], {})
++    if constraint and hashlib.sha256(row['source'].encode('utf-8')).hexdigest() != constraint['source_sha256']:
++        raise ValueError('Record constraint source changed: ' + row['id'])
++    return constraint
++
++
++def record_rules(row, config, rules):
++    constraint = record_constraint(row, config)
++    suffix = constraint.get('literal_suffix')
++    if suffix is None:
++        return rules
++    if not suffix or not row['source'].endswith(suffix):
++        raise ValueError('Protected suffix does not match source: ' + row['id'])
++    return [*rules, ('record_literal_suffix', re.compile(re.escape(suffix) + r'\Z'))]
++
++
++def record_structural_issues(row, translation, rules, config):
++    return structural_issues(row['source'], translation, record_rules(row, config, rules),
++                             record_constraint(row, config).get('physical_newlines'))
++
++
++def structural_issues(source, translation, rules, expected_newlines=None):
+     issues = []
+     if source.strip() and not translation.strip():
+         issues.append('empty_translation')
+@@ -386,7 +418,8 @@ def structural_issues(source, translation, rules):
+             destination_pattern = re.compile(pattern.pattern, (pattern.flags & ~re.UNICODE) | re.ASCII)
+         if originals != Counter(m.group(0) for m in destination_pattern.finditer(translation)):
+             issues.append(name)
+-    if re.findall(r'\r\n|\r|\n', source) != re.findall(r'\r\n|\r|\n', translation):
++    expected = re.findall(r'\r\n|\r|\n', source) if expected_newlines is None else expected_newlines
++    if expected != re.findall(r'\r\n|\r|\n', translation):
+         issues.append('physical_newlines')
+     return issues
+ 
+diff --git a/Tools/localization/translation_workflow.py b/Tools/localization/translation_workflow.py
+index dbd1573..628d8f5 100644
+--- a/Tools/localization/translation_workflow.py
++++ b/Tools/localization/translation_workflow.py
+@@ -42,6 +42,7 @@ from workflow_task_contract import WORKER_INSTRUCTION, output_template, render_p
+ STAGES = ('extract', 'glossary_review', 'pilot_translate', 'pilot_review', 'translate', 'review', 'polish', 'final_review')
+ DEFAULT = {
+     'workflow': 'custom', 'backend': 'codex', 'model': 'gpt-6-luna',
++    'record_constraints': {}, 'escalation_backend': 'codex',
+     'source_language': 'auto', 'target_language': '简体中文',
+     'style': '忠实原文、自然简洁；保留人物口吻，不补充原文没有的信息。',
+     'game_background': None,
+@@ -168,7 +169,7 @@ def merge_config(base, patch, nested=False):
+     for key, value in patch.items():
+         if key not in result:
+             raise ValueError('Unknown configuration field: ' + key)
+-        if isinstance(result[key], dict) and isinstance(value, dict) and key not in ('stage_backends', 'extra_body', 'placeholder_family_overrides'):
++        if isinstance(result[key], dict) and isinstance(value, dict) and key not in ('stage_backends', 'extra_body', 'placeholder_family_overrides', 'record_constraints'):
+             result[key] = merge_config(result[key], value, True)
+         else:
+             result[key] = copy.deepcopy(value)
+@@ -178,6 +179,24 @@ def merge_config(base, patch, nested=False):
+ 
+ 
+ def validate_config(config):
++    if config.get('escalation_backend', 'codex') not in ('codex', 'api'):
++        raise ValueError('Unsupported escalation backend')
++    constraints = config.get('record_constraints', {})
++    if not isinstance(constraints, dict):
++        raise ValueError('record_constraints must be a source-bound mapping')
++    for record_id, rule in constraints.items():
++        if (not isinstance(record_id, str) or not isinstance(rule, dict)
++                or set(rule) - {'source_sha256', 'reason', 'physical_newlines', 'literal_suffix'}
++                or not isinstance(rule.get('reason'), str) or not rule['reason'].strip()
++                or not isinstance(rule.get('source_sha256'), str)
++                or not re.fullmatch(r'[0-9a-f]{64}', rule['source_sha256'])
++                or ('physical_newlines' not in rule and 'literal_suffix' not in rule)):
++            raise ValueError('Record constraints need source hash, reason and explicit rules')
++        if 'physical_newlines' in rule and (not isinstance(rule['physical_newlines'], list)
++                or any(n not in ('\r\n', '\n', '\r') for n in rule['physical_newlines'])):
++            raise ValueError('Explicit newline sequence required')
++        if 'literal_suffix' in rule and (not isinstance(rule['literal_suffix'], str) or not rule['literal_suffix']):
++            raise ValueError('Literal suffix must be nonempty text')
+     if config['workflow'] not in ('custom', 'ainiee') or config['backend'] not in ('codex', 'api'):
+         raise ValueError('Unsupported workflow/backend')
+     reserve = config.get('review_output_reserve_percent', 20)
+@@ -260,14 +279,20 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+         if self.root.exists() and self.root.resolve() != self.root:
+             raise ValueError('TranslateFiles must not redirect outside the project')
+         self.db_path = self.root / 'state/workflow.sqlite3'
++        # API workers share this Workflow. Serialize their short transactions
++        # before SQLite's busy timeout, so a busy worker cannot starve a peer.
++        self._db_lock = threading.RLock()
+ 
+     @contextmanager
+     def db(self):
+         if not self.db_path.exists():
+             raise ValueError('Run init first')
+-        connection = sqlite3.connect(self.db_path, timeout=30)
+-        connection.row_factory = sqlite3.Row
++        connection = None
++        with measure('db_lock_wait'):
++            self._db_lock.acquire()
+         try:
++            connection = sqlite3.connect(self.db_path, timeout=30)
++            connection.row_factory = sqlite3.Row
+             connection.execute('PRAGMA foreign_keys=ON')
+             with measure('db_lock_wait'):
+                 connection.execute('BEGIN IMMEDIATE')
+@@ -277,10 +302,13 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+             yield connection
+             connection.commit()
+         except BaseException:
+-            connection.rollback()
++            if connection is not None:
++                connection.rollback()
+             raise
+         finally:
+-            connection.close()
++            if connection is not None:
++                connection.close()
++            self._db_lock.release()
+ 
+     @staticmethod
+     def meta(db, key, default=None):
+@@ -577,7 +605,7 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+                         if receipt.get('reviewer') != 'main':
+                             payload['pilot_style_notes'] = receipt['decisions']['summary']
+                 for row in group:
+-                    source, mapping = bridge.protect(row['source'], row['id'], rules) if stage in ('translate', 'pilot_translate') else (row['source'], [])
++                    source, mapping = bridge.protect(row['source'], row['id'], bridge.record_rules(row, config, rules)) if stage in ('translate', 'pilot_translate') else (row['source'], [])
+                     payload['records'].append({'id': row['id'], 'ordinal': row['ordinal'], 'source': source,
+                                                'translation': row['translation'], 'locked': bool(row['locked']),
+                                                'metadata': row['metadata'],
+@@ -772,12 +800,12 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+         if stage == 'polish' and translation != row['translation'] and not nonempty(item.get('reason')):
+             raise ValueError('Polishing changes require a reason')
+         if terms is None:
+-            terms = bridge.matched_terms(analysis, [row['source']], config, rules=rules)
++            terms = bridge.matched_terms(analysis, [row['source']], config, rules=bridge.record_rules(row, config, rules))
+         exceptions = bridge.normalize_exception_sources(item.get('exceptions', json.loads(row['exceptions'])), terms, config['case_sensitive'])
+         if not isinstance(exceptions, list) or any(not isinstance(e, dict) or not e.get('source') or not str(e.get('reason', '')).strip()
+                                                   for e in exceptions):
+             raise ValueError('Context exceptions need source and reason')
+-        failures = bridge.structural_issues(row['source'], translation, rules)
++        failures = bridge.record_structural_issues(row, translation, rules, config)
+         if failures:
+             raise ValueError(f'{item["id"]}: structural mismatch {failures}')
+         known_sources = {t['src'] for t in terms}
+@@ -1062,6 +1090,11 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+             if digest(self.meta(db, 'source_path')) != self.meta(db, 'source_hash'):
+                 raise ValueError('Source changed; cannot reconfigure this run')
+             new = merge_config({**DEFAULT, **old, 'game_background': old.get('game_background', '')}, patch)
++            for record_id in new.get('record_constraints', {}):
++                row = db.execute('SELECT id,source FROM records WHERE id=?', (record_id,)).fetchone()
++                if row is None:
++                    raise ValueError('Unknown constrained record: ' + record_id)
++                bridge.record_rules(row, new, [])
+             background = resolve_background(self.project, new)
+             background_file = self.root / 'config/game_background.json'
+             if 'game_background' not in patch and background_file.exists():
+@@ -1113,6 +1146,20 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+             if not self.meta(db, 'glossary'):
+                 # Preserve completed extraction tasks under the new scheduling/backend revision.
+                 db.execute('UPDATE tasks SET revision=? WHERE status="done" AND stage="extract"', (revision,))
++                # Completed glossary reviews stay valid when the change is only scheduling,
++                # transport or retry limits; dropping them would repeat hours of paid work.
++                sources = {row[0] for row in db.execute(
++                    'SELECT DISTINCT revision FROM tasks WHERE stage="glossary_review" AND status="done"')}
++                for source in sorted(sources):
++                    if source == revision:
++                        continue
++                    old_folder = self.root / f'glossary/r{source}'
++                    new_folder = self.root / f'glossary/r{revision}'
++                    if old_folder.is_dir() and not new_folder.exists():
++                        import shutil
++                        shutil.copytree(old_folder, new_folder)
++                db.execute('UPDATE tasks SET revision=? WHERE status="done" AND stage="glossary_review"',
++                           (revision,))
+             if quality_upgrade:
+                 # Historical semantic flags lack per-entry evidence and instance ownership.
+                 # Keep artifacts as history, but require the stronger terminology pipeline again.
+@@ -1188,7 +1235,7 @@ class Workflow(RestartMixin, PilotMixin, AllocationMixin, SolRoundMixin, ReviewR
+             total = len(records)
+             print(f'export progress: structural validation 0/{total}', file=sys.stderr, flush=True)
+             for index, row in enumerate(records, 1):
+-                issues = bridge.structural_issues(row['source'], row['translation'], rules)
++                issues = bridge.record_structural_issues(row, row['translation'], rules, config)
+                 if issues:
+                     raise ValueError(f"Final structural validation failed: {row['id']} ({', '.join(issues)})")
+                 if index % 1000 == 0 or index == total:
+@@ -1380,6 +1427,10 @@ def prompt(payload, *, api=False):
+                 '其他条目或未附原文的行号一律不得引用；'
+                 'source_excerpt 必须是所引 ordinal 原文的连续逐字片段，不拼接、不省略、不改写、不翻译；'
+                 'entry_reviews 只写 entries 中的 e编号，不得包含 related_entries 或 term_families 条目。'
++                'additions 的 table 只能是 characters、terms、non_translate；row 用 source 与 recommended_translation'
++                '（characters 另需 gender，terms 另需 category_path），不新增通用翻译类条目。'
++                'terms 的 category_path 只能取 身份/物品/组织/地名/技能/种族/其他 之一；'
++                '原文或候选写成“地点”等非法值时，必须在 edits 中改为合法值。'
+                 '逐项证据不能用程序检查或全表 summary 替代，不在 reason 中重复四维全文。')
+         common += glossary_contract
+     if stage in ('pilot_translate', 'translate') and (not api or payload.get('approved_pilot_examples') or payload.get('pilot_style_notes')):
+diff --git a/Tools/localization/workflow_allocation.py b/Tools/localization/workflow_allocation.py
+index 6708589..0b0d220 100644
+--- a/Tools/localization/workflow_allocation.py
++++ b/Tools/localization/workflow_allocation.py
+@@ -98,7 +98,8 @@ class AllocationMixin:
+         if 'repair_counts' in value and (not isinstance(value['repair_counts'], dict) or
+                 set(value['repair_counts']) != seen or any(type(n) is not int or n < 1 for n in value['repair_counts'].values())):
+             raise ValueError('Task allocation: repair counters must cover every assigned ID')
+-        if value.get('repair_tier') == 'sol' and (backend != 'codex' or not value.get('required_model')):
++        api_escalation = backend == 'api' and value.get('escalation_backend') == 'api' and not value.get('required_model')
++        if value.get('repair_tier') == 'sol' and not api_escalation and (backend != 'codex' or not value.get('required_model')):
+             raise ValueError('Task allocation: Sol repair requires its explicit Codex model')
+         if stage == 'glossary_review':
+             entries = value.get('entries', [])
+diff --git a/Tools/localization/workflow_batches.py b/Tools/localization/workflow_batches.py
+index 23c8b9e..b3e9fb0 100644
+--- a/Tools/localization/workflow_batches.py
++++ b/Tools/localization/workflow_batches.py
+@@ -166,6 +166,7 @@ class BatchMixin:
+             if original['id'] not in scope:
+                 continue
+             raw = db.execute('SELECT source FROM records WHERE id=?', (original['id'],)).fetchone()['source']
++            source_row = {'id': original['id'], 'source': raw}
+             row = {k: original[k] for k in ('id', 'ordinal', 'source', 'translation', 'metadata', 'locked') if k in original}
+             for field in ('diagnostic', 'diagnostic_detail', 'candidate', 'repair_constraints'):
+                 if field in original:
+@@ -173,7 +174,10 @@ class BatchMixin:
+             row['protection'] = original.get('protection', [])
+             if raw != original['source']:
+                 row['original_source'] = raw
+-            terms = bridge.matched_terms(glossary, [raw], config, rules=rules)
++            terms = bridge.matched_terms(glossary, [raw], config, rules=bridge.record_rules(source_row, config, rules))
++            constraint = bridge.record_constraint(source_row, config)
++            if constraint:
++                row['metadata'] = dict(row.get('metadata', {}), validated_record_constraints=constraint)
+             row['terms'] = [{k: t[k] for k in ('src', 'dst', 'src_state', 'info') if t.get(k)}
+                             for t in terms]
+             if original.get('exceptions'):
+diff --git a/Tools/localization/workflow_drafts.py b/Tools/localization/workflow_drafts.py
+index 1cfb356..182426d 100644
+--- a/Tools/localization/workflow_drafts.py
++++ b/Tools/localization/workflow_drafts.py
+@@ -138,7 +138,7 @@ class DraftMixin:
+             # All report/receipt writes remain on the calling transaction thread.
+             item, protection = self.draft_candidate(row, originals.get(row['id']))
+             errors = []
+-            terms = bridge.matched_terms(glossary, [row['source']], config, rules=rules)
++            terms = bridge.matched_terms(glossary, [row['source']], config, rules=bridge.record_rules(row, config, rules))
+             try:
+                 self.validate_body_row(row, fake_task, {}, item, {'protection': protection},
+                                        config, rules, glossary, terms=terms)
+@@ -154,7 +154,7 @@ class DraftMixin:
+                 errors.append(str(exc)); exempt = set()
+             missing = [t['src'] for t in terms if t['src'] not in exempt and t['dst'] not in row['translation']
+                        and not bridge.helper().is_keep_original_translation(t['dst'])]
+-            structure = bridge.structural_issues(row['source'], row['translation'], rules)
++            structure = bridge.record_structural_issues(row, row['translation'], rules, config)
+             if missing:
+                 errors.append('terminology mismatch: ' + ', '.join(missing))
+             if structure:
+@@ -306,7 +306,10 @@ class DraftMixin:
+                    and journal['translation'] == row['translation'] else None)
+             # Advancing into semantic review does not change an unchanged text's
+             # signature. Keep raw-marker evidence stable across stage changes.
+-            signatures[row['id']] = fingerprint([row['source'], row['translation'], row['exceptions'], raw])
++            signature_data = [row['source'], row['translation'], row['exceptions'], raw]
++            if row['id'] in config.get('record_constraints', {}):
++                signature_data.append(config['record_constraints'][row['id']])
++            signatures[row['id']] = fingerprint(signature_data)
+         self.adopt_legacy_draft_scan(db, config, rows, signatures, policy)
+         previous = {r['record_id']: dict(r) for r in db.execute(f'SELECT * FROM {prefix}draft_checks WHERE policy_key=?', (policy,))}
+         changed = [r['id'] for r in rows if r['id'] not in previous or previous[r['id']]['signature'] != signatures[r['id']]]
+@@ -420,16 +423,17 @@ class DraftMixin:
+                            'terms': bridge.matched_terms(glossary, [r['source'] for r in group], config, rules=rules),
+                            'revision_request': '全文草稿已完成；本批为跨批汇总的失败语句。只修复列出的诊断，保留其他已保存译文。'}
+                 for row in group:
+-                    protected, protection = bridge.protect(row['source'], row['id'], rules)
++                    row_rules = bridge.record_rules(row, config, rules)
++                    protected, protection = bridge.protect(row['source'], row['id'], row_rules)
+                     payload['records'].append({'id': row['id'], 'ordinal': row['ordinal'], 'source': protected,
+                         'translation': row['translation'], 'protection': protection, 'metadata': row['metadata'],
+                         'exceptions': json.loads(row['exceptions']), 'locked': bool(row['locked']),
+-                        'repair_constraints': self.repair_constraints(row['source'], row['translation'], json.loads(row['exceptions']), glossary, config, rules=rules),
++                        'repair_constraints': self.repair_constraints(row['source'], row['translation'], json.loads(row['exceptions']), glossary, config, rules=row_rules),
+                         'diagnostic': failed_by_id[row['id']]['diagnostics'],
+                         'candidate': {'id': row['id'], 'translation': row['translation']}})
+                 signature = fingerprint(payload); payload['input_hash'] = signature
+                 tasks.extend(self.allocate_task(db, payload,
+-                    'codex' if payload['repair_tier'] == 'sol' else config['stage_backends'].get(stage, config['backend'])))
++                    config.get('escalation_backend', 'codex') if payload['repair_tier'] == 'sol' else config['stage_backends'].get(stage, config['backend'])))
+         clean = not failures and not tasks
+         report_file = self.root / f'reports/{prefix}full_draft_scan.json'
+         task_states = [dict(r) for r in db.execute('SELECT id,status,attempt,ids,payload FROM tasks WHERE stage=? AND revision=?',
+diff --git a/Tools/localization/workflow_review_rounds.py b/Tools/localization/workflow_review_rounds.py
+index 97bff99..9a1aad6 100644
+--- a/Tools/localization/workflow_review_rounds.py
++++ b/Tools/localization/workflow_review_rounds.py
+@@ -59,9 +59,14 @@ class ReviewRoundMixin:
+         from translation_workflow import encoded
+         before = original.get('repair_constraints')
+         rules = self.rules(db, config)
++        source = original['source']
++        if record_id in config.get('record_constraints', {}):
++            actual = db.execute('SELECT id,source FROM records WHERE id=?', (record_id,)).fetchone()
++            rules = bridge.record_rules(actual, config, rules)
++            source = actual['source']
+         if not before:
+-            before = self.repair_constraints(original['source'], original.get('translation'), original.get('exceptions', []), glossary, config, rules=rules)
+-        after = self.repair_constraints(original['source'], translation, exceptions, glossary, config, rules=rules)
++            before = self.repair_constraints(source, original.get('translation'), original.get('exceptions', []), glossary, config, rules=rules)
++        after = self.repair_constraints(source, translation, exceptions, glossary, config, rules=rules)
+         lost = sorted(set(after['missing_terms']) & {t['src'] for t in before['satisfied_terms']})
+         if not lost:
+             return []
+@@ -182,7 +187,9 @@ class ReviewRoundMixin:
+ 
+     @staticmethod
+     def repair_routing(config, tier):
+-        return {'repair_tier': tier, 'required_model': config.get('sol_repair_model', 'gpt-6-sol') if tier == 'sol' else None,
++        backend = config.get('escalation_backend', 'codex')
++        return {'repair_tier': tier, 'escalation_backend': backend,
++                'required_model': config.get('sol_repair_model', 'gpt-6-sol') if tier == 'sol' and backend == 'codex' else None,
+                 'repair_budget_scope': 'record',
+                 'repair_round_limit': config.get('body_repair_round_limit', 6),
+                 'automatic_escalation': tier == 'sol'}
+@@ -249,7 +256,7 @@ class ReviewRoundMixin:
+         route_groups = sorted({(r['used'], r['tier']) for r in rows})
+         for used, tier in route_groups:
+             batch_groups.extend(self.review_batches([r for r in rows if (r['used'], r['tier']) == (used, tier)],
+-                                                    config, stage, 'codex' if tier == 'sol' else None))
++                                                    config, stage, config.get('escalation_backend', 'codex') if tier == 'sol' else None))
+         print(f'repair-plan progress: prepared {len(batch_groups)} task groups; building payloads', flush=True)
+         for task_index, group in enumerate(batch_groups, 1):
+             task_id = stage + '-round-' + uuid.uuid4().hex[:16]
+@@ -285,7 +292,7 @@ class ReviewRoundMixin:
+                     print(f'repair-plan progress: task {task_index}/{len(batch_groups)}; records {item_index}/{len(group)}', flush=True)
+             value = fingerprint(payload); payload['input_hash'] = value
+             tasks.extend(self.allocate_task(db, payload,
+-                'codex' if group[0]['tier'] == 'sol' else config['stage_backends'].get(stage, config['backend'])))
++                config.get('escalation_backend', 'codex') if group[0]['tier'] == 'sol' else config['stage_backends'].get(stage, config['backend'])))
+         approvals = self.meta(db, 'quality_approvals', {}); approvals.pop('pilot' if stage == 'pilot_review' else 'final', None)
+         self.put(db, 'quality_approvals', approvals)
+         print(f'repair-plan progress: complete; tasks={len(tasks)}; ready={len(rows)}; locked={len(blocked)}', flush=True)
