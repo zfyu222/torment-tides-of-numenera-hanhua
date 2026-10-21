@@ -1,0 +1,366 @@
+{
+  "generated_at": "2026-10-21T17:36:56+0800",
+  "summary": {
+    "acy7": {
+      "before": 3,
+      "after": 6,
+      "requests": 6
+    },
+    "deepseek": {
+      "before": 3,
+      "after": 6,
+      "requests": 6
+    }
+  },
+  "rows": [
+    {
+      "group": "failed_before",
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s4cc44f89",
+      "arm": "acy7",
+      "input_chars_before": 25190,
+      "input_chars_after": 17070,
+      "status": "received",
+      "seconds": 24.768,
+      "usage": {
+        "prompt_tokens": 5695,
+        "completion_tokens": 3478,
+        "total_tokens": 9173,
+        "finish_reason": "stop",
+        "response_model": "deepseek-v4.1-flash",
+        "reasoning_tokens": 3078
+      },
+      "before_first_pass": false,
+      "before_failure": "entry_review: Glossary review requires cited source context and specific reason; ref=characters:7; available_evidence_rows=[270, 595, 1013, 1093, 1094, 1528, 2614, 7506]; invalid_or_unprovided_rows=[1211, 1215, 5184, 9737, 12006, 22612, 38672, 54374, 57702]; excerpt_matches_cited_rows=[1094]; reason_missing=False. source_excerpt must be one exact contiguous excerpt from a cited, provided source; do not join par",
+      "first_pass": true,
+      "failure": null,
+      "rerun_after_refinement": true,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "diffs": {}
+      }
+    },
+    {
+      "group": "failed_before",
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s4cc44f89",
+      "arm": "deepseek",
+      "input_chars_before": 25190,
+      "input_chars_after": 17070,
+      "status": "received",
+      "seconds": 17.218,
+      "usage": {
+        "prompt_tokens": 5695,
+        "completion_tokens": 3183,
+        "total_tokens": 8878,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 2760
+      },
+      "before_first_pass": false,
+      "before_failure": "transport_binding: Unknown or read-only glossary entry reference 'e2'; assigned: ['e1']",
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "diffs": {}
+      }
+    },
+    {
+      "group": "failed_before",
+      "task_id": "glossary_review-r4-00094-a5240955-s0df7953d",
+      "arm": "acy7",
+      "input_chars_before": 10888,
+      "input_chars_after": 10021,
+      "status": "received",
+      "seconds": 17.992,
+      "usage": {
+        "prompt_tokens": 3599,
+        "completion_tokens": 2109,
+        "total_tokens": 5708,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 1775
+      },
+      "before_first_pass": false,
+      "before_failure": "transport_binding: Unknown or read-only glossary entry reference 'e2'; assigned: ['e1']",
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "diffs": {}
+      }
+    },
+    {
+      "group": "failed_before",
+      "task_id": "glossary_review-r4-00094-a5240955-s0df7953d",
+      "arm": "deepseek",
+      "input_chars_before": 10888,
+      "input_chars_after": 10042,
+      "status": "received",
+      "seconds": 12.304,
+      "usage": {
+        "prompt_tokens": 3609,
+        "completion_tokens": 2186,
+        "total_tokens": 5795,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 1859
+      },
+      "before_first_pass": false,
+      "before_failure": "entry_review: Glossary review requires cited source context and specific reason; ref=terms:319; available_evidence_rows=[4664, 6630, 6725, 13585]; invalid_or_unprovided_rows=[3473]; excerpt_matches_cited_rows=[4664]; reason_missing=False. source_excerpt must be one exact contiguous excerpt from a cited, provided source; do not join paraphrases or insert ellipses.",
+      "first_pass": true,
+      "failure": null,
+      "rerun_after_refinement": true,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "diffs": {}
+      }
+    },
+    {
+      "group": "failed_before",
+      "task_id": "glossary_review-r4-00199-91c3a060",
+      "arm": "acy7",
+      "input_chars_before": 16586,
+      "input_chars_after": 16477,
+      "status": "received",
+      "seconds": 79.179,
+      "usage": {
+        "prompt_tokens": 5548,
+        "completion_tokens": 12195,
+        "total_tokens": 17743,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 10305
+      },
+      "before_first_pass": false,
+      "before_failure": "transport_binding: Review check pair requires exactly [status, evidence]: checks",
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 10,
+        "total": 12,
+        "diffs": {
+          "terms:2289": {
+            "gold": "穆尔登状态",
+            "after": "默登状态"
+          },
+          "terms:2291": {
+            "gold": "介入",
+            "after": "侵入"
+          }
+        }
+      }
+    },
+    {
+      "group": "failed_before",
+      "task_id": "glossary_review-r4-00199-91c3a060",
+      "arm": "deepseek",
+      "input_chars_before": 16586,
+      "input_chars_after": 16477,
+      "status": "received",
+      "seconds": 79.859,
+      "usage": {
+        "prompt_tokens": 5548,
+        "completion_tokens": 17913,
+        "total_tokens": 23461,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 16038
+      },
+      "before_first_pass": false,
+      "before_failure": "transport_binding: Review check pair requires exactly [status, evidence]: source",
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 12,
+        "total": 12,
+        "diffs": {}
+      }
+    },
+    {
+      "group": "passed_before",
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s2eaa0a99",
+      "arm": "acy7",
+      "input_chars_before": 19202,
+      "input_chars_after": 13013,
+      "status": "received",
+      "seconds": 39.316,
+      "usage": {
+        "prompt_tokens": 4605,
+        "completion_tokens": 6264,
+        "total_tokens": 10869,
+        "finish_reason": "stop",
+        "response_model": "deepseek-v4.1-flash",
+        "reasoning_tokens": 5785
+      },
+      "before_first_pass": true,
+      "before_failure": null,
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "diffs": {}
+      }
+    },
+    {
+      "group": "passed_before",
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s2eaa0a99",
+      "arm": "deepseek",
+      "input_chars_before": 19202,
+      "input_chars_after": 13013,
+      "status": "received",
+      "seconds": 10.07,
+      "usage": {
+        "prompt_tokens": 4605,
+        "completion_tokens": 1924,
+        "total_tokens": 6529,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 1595
+      },
+      "before_first_pass": true,
+      "before_failure": null,
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "diffs": {}
+      }
+    },
+    {
+      "group": "passed_before",
+      "task_id": "glossary_review-r4-00174-dfb23e2c",
+      "arm": "acy7",
+      "input_chars_before": 35001,
+      "input_chars_after": 34616,
+      "status": "received",
+      "seconds": 98.26,
+      "usage": {
+        "prompt_tokens": 10944,
+        "completion_tokens": 15480,
+        "total_tokens": 26424,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 13139
+      },
+      "before_first_pass": true,
+      "before_failure": null,
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 11,
+        "total": 12,
+        "diffs": {
+          "terms:1786": {
+            "gold": "水中呼吸者",
+            "after": "水下呼吸者"
+          }
+        }
+      }
+    },
+    {
+      "group": "passed_before",
+      "task_id": "glossary_review-r4-00174-dfb23e2c",
+      "arm": "deepseek",
+      "input_chars_before": 35001,
+      "input_chars_after": 34616,
+      "status": "received",
+      "seconds": 88.914,
+      "usage": {
+        "prompt_tokens": 10944,
+        "completion_tokens": 20026,
+        "total_tokens": 30970,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 17849
+      },
+      "before_first_pass": true,
+      "before_failure": null,
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 11,
+        "total": 12,
+        "diffs": {
+          "terms:1786": {
+            "gold": "水中呼吸者",
+            "after": "水下呼吸者"
+          }
+        }
+      }
+    },
+    {
+      "group": "passed_before",
+      "task_id": "glossary_review-r4-00237-5b5a1bd7",
+      "arm": "acy7",
+      "input_chars_before": 15452,
+      "input_chars_after": 15571,
+      "status": "received",
+      "seconds": 44.919,
+      "usage": {
+        "prompt_tokens": 5168,
+        "completion_tokens": 7089,
+        "total_tokens": 12257,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 4509
+      },
+      "before_first_pass": true,
+      "before_failure": null,
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 11,
+        "total": 12,
+        "diffs": {
+          "terms:2954": {
+            "gold": "散播恐慌",
+            "after": "散播沮丧"
+          }
+        }
+      },
+      "rerun_after_refinement": true
+    },
+    {
+      "group": "passed_before",
+      "task_id": "glossary_review-r4-00237-5b5a1bd7",
+      "arm": "deepseek",
+      "input_chars_before": 15452,
+      "input_chars_after": 15592,
+      "status": "received",
+      "seconds": 35.283,
+      "usage": {
+        "prompt_tokens": 5178,
+        "completion_tokens": 7753,
+        "total_tokens": 12931,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 4934
+      },
+      "before_first_pass": true,
+      "before_failure": null,
+      "first_pass": true,
+      "failure": null,
+      "rerun_after_refinement": true,
+      "term_agreement": {
+        "agree": 10,
+        "total": 12,
+        "diffs": {
+          "terms:2951": {
+            "gold": "溶剂喷洒",
+            "after": "溶剂喷剂"
+          },
+          "terms:2954": {
+            "gold": "散播恐慌",
+            "after": "散播沮丧"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-10-21T17:07:39+0800",
+  "rows": [
+    {
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s4cc44f89",
+      "arm": "acy7",
+      "chars_before": 25190,
+      "chars_after": 21098,
+      "evidence_rows_before": 561,
+      "evidence_rows_after": 8,
+      "status": "received",
+      "seconds": 25.656,
+      "usage": {
+        "prompt_tokens": 7779,
+        "completion_tokens": 3392,
+        "total_tokens": 11171,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 2982
+      },
+      "first_pass": true,
+      "failure": null
+    },
+    {
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s4cc44f89",
+      "arm": "deepseek",
+      "chars_before": 25190,
+      "chars_after": 21098,
+      "evidence_rows_before": 561,
+      "evidence_rows_after": 8,
+      "status": "received",
+      "seconds": 29.541,
+      "usage": {
+        "prompt_tokens": 7779,
+        "completion_tokens": 5388,
+        "total_tokens": 13167,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 4451
+      },
+      "first_pass": false,
+      "failure": "transport_binding: Unknown or read-only glossary entry reference 'e2'; assigned: ['e1']"
+    },
+    {
+      "task_id": "glossary_review-r4-00094-a5240955-s0df7953d",
+      "arm": "acy7",
+      "chars_before": 10888,
+      "chars_after": 10395,
+      "evidence_rows_before": 16,
+      "evidence_rows_after": 4,
+      "status": "received",
+      "seconds": 15.751,
+      "usage": {
+        "prompt_tokens": 3802,
+        "completion_tokens": 1035,
+        "total_tokens": 4837,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 690
+      },
+      "first_pass": true,
+      "failure": null
+    },
+    {
+      "task_id": "glossary_review-r4-00094-a5240955-s0df7953d",
+      "arm": "deepseek",
+      "chars_before": 10888,
+      "chars_after": 10395,
+      "evidence_rows_before": 16,
+      "evidence_rows_after": 4,
+      "status": "received",
+      "seconds": 12.238,
+      "usage": {
+        "prompt_tokens": 3802,
+        "completion_tokens": 2166,
+        "total_tokens": 5968,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 1700
+      },
+      "first_pass": false,
+      "failure": "entry_review: Glossary review requires cited source context and specific reason; ref=terms:319; available_evidence_rows=[4664, 6630, 6725, 13585]; invalid_or_unprovided_rows=[]; excerpt_matches_cited_rows=[]; reason_missing=False. source_excerpt must be one exact contiguous excerpt from a cited, provided source; do not join paraphrases or insert ellipses."
+    },
+    {
+      "task_id": "glossary_review-r4-00199-91c3a060",
+      "arm": "acy7",
+      "chars_before": 16586,
+      "chars_after": 16472,
+      "evidence_rows_before": 48,
+      "evidence_rows_after": 29,
+      "status": "received",
+      "seconds": 53.338,
+      "usage": {
+        "prompt_tokens": 5550,
+        "completion_tokens": 8852,
+        "total_tokens": 14402,
+        "finish_reason": "stop",
+        "response_model": "deepseek-v4.1-flash",
+        "reasoning_tokens": 5764
+      },
+      "first_pass": false,
+      "failure": "entry_review: Glossary review requires cited source context and specific reason; ref=terms:2289; available_evidence_rows=[49542]; invalid_or_unprovided_rows=[]; excerpt_matches_cited_rows=[]; reason_missing=False. source_excerpt must be one exact contiguous excerpt from a cited, provided source; do not join paraphrases or insert ellipses."
+    },
+    {
+      "task_id": "glossary_review-r4-00199-91c3a060",
+      "arm": "deepseek",
+      "chars_before": 16586,
+      "chars_after": 16472,
+      "evidence_rows_before": 48,
+      "evidence_rows_after": 29,
+      "status": "received",
+      "seconds": 75.721,
+      "usage": {
+        "prompt_tokens": 5550,
+        "completion_tokens": 16041,
+        "total_tokens": 21591,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 13985
+      },
+      "first_pass": true,
+      "failure": null
+    }
+  ]
+}

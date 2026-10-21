@@ -1,0 +1,547 @@
+{
+  "generated_at": "2026-10-21T16:44:22+0800",
+  "project": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera",
+  "arms": [
+    {
+      "name": "acy7",
+      "api_url": "https://acy7.com/v1",
+      "model_name": "deepseek-v4.1-flash",
+      "think_switch": true,
+      "stream": true
+    },
+    {
+      "name": "deepseek",
+      "api_url": "https://api.deepseek.com",
+      "model_name": "deepseek-chat",
+      "think_switch": true,
+      "stream": true
+    }
+  ],
+  "batches": [
+    {
+      "index": 1,
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s2eaa0a99",
+      "entries": 1,
+      "input_chars": 19202,
+      "gold_terms": {
+        "characters:13": "阿利格恩"
+      }
+    },
+    {
+      "index": 2,
+      "task_id": "glossary_review-r4-00068-4e9e19e8-sceaf9711",
+      "entries": 3,
+      "input_chars": 25162,
+      "gold_terms": {
+        "terms:55": "塔巴特",
+        "terms:56": "阻尼器",
+        "terms:58": "加拉维亚湾"
+      }
+    },
+    {
+      "index": 3,
+      "task_id": "glossary_review-r4-00174-dfb23e2c",
+      "entries": 12,
+      "input_chars": 35001,
+      "gold_terms": {
+        "terms:1785": "水下呼吸",
+        "terms:1786": "水中呼吸者",
+        "terms:1788": "尼库尔教堂",
+        "terms:1789": "哈基姆之塔",
+        "terms:1790": "持证向导",
+        "terms:1791": "向导",
+        "terms:1793": "苦痛",
+        "terms:1794": "纯天然刀草脚蹼",
+        "terms:1795": "埃莉娅的苦痛",
+        "terms:1796": "呼吸空气者",
+        "terms:1798": "和平之门",
+        "terms:1799": "尼库尔之眼"
+      }
+    },
+    {
+      "index": 4,
+      "task_id": "glossary_review-r4-00237-5b5a1bd7",
+      "entries": 12,
+      "input_chars": 15452,
+      "gold_terms": {
+        "terms:2937": "苦干",
+        "terms:2938": "精准无误",
+        "terms:2942": "定身反应",
+        "terms:2943": "人类极限",
+        "terms:2947": "多面努力",
+        "terms:2948": "安奈利德攻击",
+        "terms:2950": "幻影战士",
+        "terms:2951": "溶剂喷洒",
+        "terms:2952": "激励气场",
+        "terms:2954": "散播恐慌",
+        "terms:2955": "振奋交谈",
+        "terms:2956": "学识：机械"
+      }
+    },
+    {
+      "index": 5,
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s4cc44f89",
+      "entries": 1,
+      "input_chars": 25190,
+      "gold_terms": {
+        "characters:7": "变易之神"
+      }
+    },
+    {
+      "index": 6,
+      "task_id": "glossary_review-r4-00094-a5240955-s0df7953d",
+      "entries": 1,
+      "input_chars": 10888,
+      "gold_terms": {
+        "terms:319": "议会"
+      }
+    },
+    {
+      "index": 7,
+      "task_id": "glossary_review-r4-00199-91c3a060",
+      "entries": 12,
+      "input_chars": 16586,
+      "gold_terms": {
+        "terms:2289": "穆尔登状态",
+        "terms:2290": "悲伤紧迫度",
+        "terms:2291": "介入",
+        "terms:2292": "队伍经验值",
+        "terms:2295": "任务附录",
+        "terms:2296": "心脏外围",
+        "terms:2297": "跨维度自动扶梯",
+        "terms:2300": "村庄恐慌",
+        "terms:2301": "村庄信任",
+        "terms:2302": "奈恩的信任",
+        "terms:2303": "塔什的记忆",
+        "terms:2304": "努曼内拉商人"
+      }
+    },
+    {
+      "index": 8,
+      "task_id": "glossary_review-r4-00265-e57ff43a",
+      "entries": 12,
+      "input_chars": 16691,
+      "gold_terms": {
+        "terms:3461": "永恒旅者护符",
+        "terms:3464": "智能指环",
+        "terms:3466": "纤维棒",
+        "terms:3467": "工头的孩子们",
+        "terms:3470": "青铜球",
+        "terms:3472": "治愈之剑",
+        "terms:3473": "阿利格恩的外套",
+        "terms:3474": "泰比尔的斗篷",
+        "terms:3475": "玛特金娜的斗篷",
+        "terms:3476": "莱茵的夹克",
+        "terms:3477": "卡莉丝蒂吉的连衣裙",
+        "terms:3478": "阿利格恩的背心"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s2eaa0a99",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 22.305,
+      "usage": {
+        "prompt_tokens": 7850,
+        "completion_tokens": 2857,
+        "total_tokens": 10707,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 2383
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "terms": {
+          "characters:13": "阿利格恩"
+        },
+        "edits": 0
+      },
+      "review_summary": "本批仅审校 e1（Aligern）。核对全部提取候选与出处后，确认标准译名为“阿利格恩”，角色分类为 characters/男性；阿利根、阿里格恩、阿里根、艾利格恩、阿利杰恩均为同一人名的音译候选，不分别立条。只读关联中的 Aligern Echo 等复合词应沿用核心译名，但本批不修改关联项。"
+    },
+    {
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s2eaa0a99",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 26.021,
+      "usage": {
+        "prompt_tokens": 7850,
+        "completion_tokens": 4712,
+        "total_tokens": 12562,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 4326
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 1,
+        "total": 1,
+        "terms": {
+          "characters:13": "阿利格恩"
+        },
+        "edits": 0
+      },
+      "review_summary": "本批仅 e1 一个词条；核对 Aligern 的全部译名候选与出处后，确认标准译名为“阿利格恩”，角色为男性，分类为 characters，无需修改。"
+    },
+    {
+      "task_id": "glossary_review-r4-00068-4e9e19e8-sceaf9711",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 59.422,
+      "usage": {
+        "prompt_tokens": 8032,
+        "completion_tokens": 7726,
+        "total_tokens": 15758,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 6794
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 3,
+        "total": 3,
+        "terms": {
+          "terms:55": "塔巴特",
+          "terms:56": "阻尼器",
+          "terms:58": "加拉维亚湾"
+        },
+        "edits": 1
+      },
+      "review_summary": "完成 e1-e3 审校：Tabaht 统一为“塔巴特”，dampener 采用“阻尼器”，Garravia Sound 由“加拉维亚海峡”修正为“加拉维亚湾”。f1 经核对为同词带冠词共享译名，不是不同名称冲突。"
+    },
+    {
+      "task_id": "glossary_review-r4-00068-4e9e19e8-sceaf9711",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 53.801,
+      "usage": {
+        "prompt_tokens": 8032,
+        "completion_tokens": 10001,
+        "total_tokens": 18033,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 9086
+      },
+      "first_pass": false,
+      "failure": "entry_review: Glossary review requires cited source context and specific reason; ref=terms:58; available_evidence_rows=[1119, 2761, 6783, 13382, 62669, 62693]; invalid_or_unprovided_rows=[]; excerpt_matches_cited_rows=[]; reason_missing=False. source_excerpt must be one exact contiguous excerpt from a cited, provided source; do not join paraphrases or insert ellipses."
+    },
+    {
+      "task_id": "glossary_review-r4-00174-dfb23e2c",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 134.394,
+      "usage": {
+        "prompt_tokens": 11141,
+        "completion_tokens": 19654,
+        "total_tokens": 30795,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 17112
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 12,
+        "total": 12,
+        "terms": {
+          "terms:1785": "水下呼吸",
+          "terms:1786": "水中呼吸者",
+          "terms:1788": "尼库尔教堂",
+          "terms:1789": "哈基姆之塔",
+          "terms:1790": "持证向导",
+          "terms:1791": "向导",
+          "terms:1793": "苦痛",
+          "terms:1794": "纯天然刀草脚蹼",
+          "terms:1795": "埃莉娅的苦痛",
+          "terms:1796": "呼吸空气者",
+          "terms:1798": "和平之门",
+          "terms:1799": "尼库尔之眼"
+        },
+        "edits": 3
+      },
+      "review_summary": "完成 e1-e12 术语审校：统一 Ny'kul 为“尼库尔”，修正 Eye of Ny'kul 译名并按其地点/物品多义改分类；将 water-breather/air-breather 分类与跨批变体对齐；确认 Alia's/Elia's Anguish 同指一物，guide/The Guide 同词异境可共用“向导”。"
+    },
+    {
+      "task_id": "glossary_review-r4-00174-dfb23e2c",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 110.561,
+      "usage": {
+        "prompt_tokens": 11141,
+        "completion_tokens": 21966,
+        "total_tokens": 33107,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 19076
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 12,
+        "total": 12,
+        "terms": {
+          "terms:1785": "水下呼吸",
+          "terms:1786": "水中呼吸者",
+          "terms:1788": "尼库尔教堂",
+          "terms:1789": "哈基姆之塔",
+          "terms:1790": "持证向导",
+          "terms:1791": "向导",
+          "terms:1793": "苦痛",
+          "terms:1794": "纯天然刀草脚蹼",
+          "terms:1795": "埃莉娅的苦痛",
+          "terms:1796": "呼吸空气者",
+          "terms:1798": "和平之门",
+          "terms:1799": "尼库尔之眼"
+        },
+        "edits": 2
+      },
+      "review_summary": "已完成 e1-e12 的来源、译名、分类与一致性审校；将 e2 统一为“水中呼吸者”，将 e12 统一为“尼库尔之眼”并改标为多义统称。已核对 f1 为 air-breather 单复数变体，f2 为 Alia/Elia 同物异拼，f3 为普通 guide 与机器专名 The Guide 同译但语境不同，均不按错译处理。"
+    },
+    {
+      "task_id": "glossary_review-r4-00237-5b5a1bd7",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 45.147,
+      "usage": {
+        "prompt_tokens": 5113,
+        "completion_tokens": 6856,
+        "total_tokens": 11969,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 4272
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 12,
+        "total": 12,
+        "terms": {
+          "terms:2937": "苦干",
+          "terms:2938": "精准无误",
+          "terms:2942": "定身反应",
+          "terms:2943": "人类极限",
+          "terms:2947": "多面努力",
+          "terms:2948": "安奈利德攻击",
+          "terms:2950": "幻影战士",
+          "terms:2951": "溶剂喷洒",
+          "terms:2952": "激励气场",
+          "terms:2954": "散播恐慌",
+          "terms:2955": "振奋交谈",
+          "terms:2956": "学识：机械"
+        },
+        "edits": 0
+      },
+      "review_summary": "本批 12 条均为 en/text/game/abilities.stringtable 中的技能/能力名，分类“技能”成立。逐条对照名称与随附描述（第 57396–57432、66797 行）核对语义：苦干、精准无误、定身反应、人类极限、多面努力、安奈利德攻击、幻影战士、溶剂喷洒、激励气场、散播恐慌、振奋交谈均与描述机制吻合，无需改动。术语一致性方面：Effort 沿用“努力”（e16），Attack 沿用“攻击”（e19），Warrior 沿用“战士”（e14），human 沿用“人类”（e18），solvent 沿用“溶剂”（e23），精准与 e24 核心词一致；Lore: Machinery 采用“学识：机械”，与同一句中 Lore: Mystical/Lore: Natural 的“学识：X”格式一致，并与 e20“机械学识”核心词相同（仅为语序差异）。e1 与 e17 grease-cutter、e10 与 e15 Dismay Fettle 属形近或词根相近但实体不同，按语境区分，不强行统一。本批 audit.findings 为空，无 f 编号需确认，未提交任何 edit/quarantine/additions。"
+    },
+    {
+      "task_id": "glossary_review-r4-00237-5b5a1bd7",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 27.802,
+      "usage": {
+        "prompt_tokens": 5113,
+        "completion_tokens": 5306,
+        "total_tokens": 10419,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 2906
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 11,
+        "total": 12,
+        "terms": {
+          "terms:2937": "苦干",
+          "terms:2938": "精准无误",
+          "terms:2942": "定身反应",
+          "terms:2943": "人类极限",
+          "terms:2947": "多面努力",
+          "terms:2948": "安奈利德攻击",
+          "terms:2950": "幻影战士",
+          "terms:2951": "溶剂喷洒",
+          "terms:2952": "激励气场",
+          "terms:2954": "散播沮丧",
+          "terms:2955": "振奋交谈",
+          "terms:2956": "学识：机械"
+        },
+        "edits": 1
+      },
+      "review_summary": "本批 12 条均为 abilities 表技能词条，已逐条核对技能名与说明行的对应关系、译名与分类。全部归入“技能”类无误；e12“学识：机械”与跨批 e20“机械学识”核心一致，仅词序不同。e10“Sow Dismay”所施加状态即跨批 e15“Dismay Fettle/沮丧症”，Dismay 应统一为“沮丧”，故将“散播恐慌”修正为“散播沮丧”。其余条目与相关词族（Effort=努力、human=人类、solvent=溶剂、Psychic/Illusory Warrior 共用“战士”、Tidal Surge Attack 共用“攻击”）保持一致；term_families 中 grease/limit 等组件提示经核对属不同语义，不作同义统一。"
+    },
+    {
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s4cc44f89",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 25.276,
+      "usage": {
+        "prompt_tokens": 9888,
+        "completion_tokens": 3245,
+        "total_tokens": 13133,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 2549
+      },
+      "first_pass": false,
+      "failure": "entry_review: Glossary review requires cited source context and specific reason; ref=characters:7; available_evidence_rows=[270, 595, 1013, 1093, 1094, 1528, 2614, 7506]; invalid_or_unprovided_rows=[1211, 1215, 5184, 9737, 12006, 22612, 38672, 54374, 57702]; excerpt_matches_cited_rows=[1094]; reason_missing=False. source_excerpt must be one exact contiguous excerpt from a cited, provided source; do not join par"
+    },
+    {
+      "task_id": "glossary_review-r4-00001-eaf0daf2-s4cc44f89",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 66.353,
+      "usage": {
+        "prompt_tokens": 9888,
+        "completion_tokens": 12571,
+        "total_tokens": 22459,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 11546
+      },
+      "first_pass": false,
+      "failure": "transport_binding: Unknown or read-only glossary entry reference 'e2'; assigned: ['e1']"
+    },
+    {
+      "task_id": "glossary_review-r4-00094-a5240955-s0df7953d",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 28.063,
+      "usage": {
+        "prompt_tokens": 4060,
+        "completion_tokens": 4352,
+        "total_tokens": 8412,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 3606
+      },
+      "first_pass": false,
+      "failure": "transport_binding: Unknown or read-only glossary entry reference 'e2'; assigned: ['e1']"
+    },
+    {
+      "task_id": "glossary_review-r4-00094-a5240955-s0df7953d",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 11.065,
+      "usage": {
+        "prompt_tokens": 4060,
+        "completion_tokens": 2043,
+        "total_tokens": 6103,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 1526
+      },
+      "first_pass": false,
+      "failure": "entry_review: Glossary review requires cited source context and specific reason; ref=terms:319; available_evidence_rows=[4664, 6630, 6725, 13585]; invalid_or_unprovided_rows=[3473]; excerpt_matches_cited_rows=[4664]; reason_missing=False. source_excerpt must be one exact contiguous excerpt from a cited, provided source; do not join paraphrases or insert ellipses."
+    },
+    {
+      "task_id": "glossary_review-r4-00199-91c3a060",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 43.012,
+      "usage": {
+        "prompt_tokens": 5607,
+        "completion_tokens": 6773,
+        "total_tokens": 12380,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 4068
+      },
+      "first_pass": false,
+      "failure": "transport_binding: Review check pair requires exactly [status, evidence]: checks"
+    },
+    {
+      "task_id": "glossary_review-r4-00199-91c3a060",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 40.914,
+      "usage": {
+        "prompt_tokens": 5607,
+        "completion_tokens": 7747,
+        "total_tokens": 13354,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 4814
+      },
+      "first_pass": false,
+      "failure": "transport_binding: Review check pair requires exactly [status, evidence]: source"
+    },
+    {
+      "task_id": "glossary_review-r4-00265-e57ff43a",
+      "arm": "acy7",
+      "status": "received",
+      "seconds": 60.734,
+      "usage": {
+        "prompt_tokens": 5380,
+        "completion_tokens": 9040,
+        "total_tokens": 14420,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "reasoning_tokens": 6751
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 9,
+        "total": 12,
+        "terms": {
+          "terms:3461": "永恒旅者护符",
+          "terms:3464": "智能指环",
+          "terms:3466": "纤维棒",
+          "terms:3467": "工头之子",
+          "terms:3470": "青铜球",
+          "terms:3472": "治愈之剑",
+          "terms:3473": "阿利格恩的外套",
+          "terms:3474": "泰比尔斗篷",
+          "terms:3475": "玛特金娜的斗篷",
+          "terms:3476": "莱茵的夹克",
+          "terms:3477": "卡莉丝缇吉的连衣裙",
+          "terms:3478": "阿利格恩的背心"
+        },
+        "edits": 3
+      },
+      "review_summary": "审校 12 条物品术语，物品分类均正确；修正 e4 的复数表达、e10 的 jacket 核心词统一、e11 的 Callistege 人名用字。其余译名与出处描述相符，未发现需隔离或新增条目。"
+    },
+    {
+      "task_id": "glossary_review-r4-00265-e57ff43a",
+      "arm": "deepseek",
+      "status": "received",
+      "seconds": 27.244,
+      "usage": {
+        "prompt_tokens": 5380,
+        "completion_tokens": 5390,
+        "total_tokens": 10770,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "reasoning_tokens": 2755
+      },
+      "first_pass": true,
+      "failure": null,
+      "term_agreement": {
+        "agree": 10,
+        "total": 12,
+        "terms": {
+          "terms:3461": "永恒旅者护符",
+          "terms:3464": "智能指环",
+          "terms:3466": "纤维棒",
+          "terms:3467": "工头之子",
+          "terms:3470": "青铜球",
+          "terms:3472": "治愈之剑",
+          "terms:3473": "阿利格恩的外套",
+          "terms:3474": "泰比尔斗篷",
+          "terms:3475": "玛特金娜的斗篷",
+          "terms:3476": "莱茵的夹克",
+          "terms:3477": "卡莉丝蒂吉的连衣裙",
+          "terms:3478": "阿利格恩的背心"
+        },
+        "edits": 1
+      },
+      "review_summary": "本批 12 条均为 items.stringtable 的物品术语（名称+描述行）。逐条对照来源名与描述核对：物品分类均正确；专名译名（阿利格恩、玛特金娜、泰比尔、莱茵）内部一致。发现一处专名音译冲突：Callistege 在条目内译作“卡莉丝缇吉”，与同批词族提示的标准译名“卡莉丝蒂吉”不一致，已出修订为“卡莉丝蒂吉的连衣裙”。其余涉及语境的差异（mantle 依描述作“斗篷”、jacket 作“夹克”、sphere 作“球”）经比对描述文本后确认属可接受语境变体，不作统一改动。audit.findings 为空，无可确认项。"
+    }
+  ]
+}
