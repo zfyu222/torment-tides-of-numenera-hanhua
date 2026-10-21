@@ -1,0 +1,12 @@
+{
+  "purpose": "Check explicit disabled thinking on the existing selected service/model before later stages; no workflow or global configuration changed by these probes.",
+  "model": "deepseek-v4.1-flash",
+  "endpoint": "https://yjapi.shop/v1",
+  "finding": "Current target_platform custom_platform_shh with think_switch false does not send thinking.disabled through the AINiee adapter. Project-only target_platform deepseek causes its existing adapter to send the explicit disabled setting. Global local settings do not override target_platform or think_switch.",
+  "proposed_project_transport_patch": {"api": {"target_platform": "deepseek", "think_switch": false}},
+  "requests": [
+    {"completion_limit": 64, "reply": "{\"ok\":###}", "json_valid": false, "prompt_tokens": 17, "completion_tokens": 5, "total_tokens": 22, "reasoning_tokens": 0, "finish_reason": "stop"},
+    {"completion_limit": 256, "reply": "{\"translation\":\"继续\",\"review_complete\":true}", "json_valid": true, "prompt_tokens": 36, "completion_tokens": 12, "total_tokens": 48, "reasoning_tokens": 0, "finish_reason": "stop"}
+  ],
+  "conclusion": "Existing endpoint accepts explicit disabled thinking and a small translation/boolean JSON response succeeded. One probe was invalid JSON; this is not proof of full-stage reliability or semantic review completion. Subsequent stages must retain normal validation and bounded retries. No source or result was overwritten."
+}

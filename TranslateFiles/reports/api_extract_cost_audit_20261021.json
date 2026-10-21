@@ -1,0 +1,132 @@
+{
+  "scope": "All stored api_calls for the current project, extraction only; excludes manual probes and Codex usage.",
+  "statuses": {
+    "received": {
+      "requests": 1231,
+      "unknown_usage": 0,
+      "prompt_tokens": 9622852,
+      "completion_tokens": 10793694,
+      "total_tokens": 20416546,
+      "reasoning_tokens": 5614679,
+      "cached_prompt_tokens": 1197818
+    },
+    "invalid_model_result": {
+      "requests": 298,
+      "unknown_usage": 4,
+      "prompt_tokens": 2534892,
+      "completion_tokens": 3115512,
+      "total_tokens": 5650404,
+      "reasoning_tokens": 1177909,
+      "cached_prompt_tokens": 321401,
+      "length_terminated": 130
+    },
+    "APITimeoutError:transport": {
+      "requests": 14,
+      "unknown_usage": 14,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "reasoning_tokens": 0,
+      "cached_prompt_tokens": 0
+    },
+    "cancelled": {
+      "requests": 82,
+      "unknown_usage": 82,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "reasoning_tokens": 0,
+      "cached_prompt_tokens": 0
+    },
+    "APIConnectionError:transport": {
+      "requests": 51,
+      "unknown_usage": 51,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "reasoning_tokens": 0,
+      "cached_prompt_tokens": 0
+    },
+    "InternalServerError:502": {
+      "requests": 14,
+      "unknown_usage": 14,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "reasoning_tokens": 0,
+      "cached_prompt_tokens": 0
+    },
+    "BadRequestError:400": {
+      "requests": 2,
+      "unknown_usage": 2,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "reasoning_tokens": 0,
+      "cached_prompt_tokens": 0
+    },
+    "empty_response": {
+      "requests": 189,
+      "unknown_usage": 0,
+      "prompt_tokens": 1644927,
+      "completion_tokens": 3096543,
+      "total_tokens": 4741470,
+      "reasoning_tokens": 3096543,
+      "cached_prompt_tokens": 706812,
+      "length_terminated": 189
+    }
+  },
+  "rejection_files": {
+    "Term source does not occur in cited evidence": 135,
+    "Every term needs source evidence in its extraction batch": 8,
+    "Invalid source at non_translate:0": 11,
+    "JSON parse error": 139,
+    "Missing or unsupported table: non_translate": 3,
+    "API extraction requires analysis": 2
+  },
+  "rejection_examples": {
+    "Term source does not occur in cited evidence": {
+      "file": "TranslateFiles\\tasks\\extract-r2-00001-55dcbd42-s370a24a9\\handoffs\\d60286737fb04bf780944d482907bb5e\\rejection.json",
+      "error": "Term source does not occur in cited evidence"
+    },
+    "Every term needs source evidence in its extraction batch": {
+      "file": "TranslateFiles\\tasks\\extract-r2-00023-ce8d0f48-s8a9cab29\\handoffs\\5c7690de26384890b201e4c10b726f9e\\rejection.json",
+      "error": "Every term needs source evidence in its extraction batch"
+    },
+    "Invalid source at non_translate:0": {
+      "file": "TranslateFiles\\tasks\\extract-r2-00037-9f85ab49-sfcbc3d81\\handoffs\\15407d27cc884aa9a26a0b6ef8c06623\\rejection.json",
+      "error": "Invalid source at non_translate:0"
+    },
+    "JSON parse error": {
+      "file": "TranslateFiles\\tasks\\extract-r2-00051-c7c4295c-s047f875f\\handoffs\\403410b059fc4f14a4299650f9c87e1d\\rejection.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "Missing or unsupported table: non_translate": {
+      "file": "TranslateFiles\\tasks\\extract-r2-00051-c7c4295c-s047f875f\\handoffs\\b1c2749c9f074e70b93b0408cc16a07a\\rejection.json",
+      "error": "Missing or unsupported table: non_translate"
+    },
+    "API extraction requires analysis": {
+      "file": "TranslateFiles\\tasks\\extract-r2-00274-fea8c37d-s37266a00\\handoffs\\03e4244ac16e4d1bafed244269f8acd9\\rejection.json",
+      "error": "API extraction requires analysis"
+    }
+  },
+  "local_input_sample": {
+    "batches": 100,
+    "full_input_tokens": 807835,
+    "source_only_tokens": 169997,
+    "metadata_tokens": 490796,
+    "records": 5500,
+    "note": "Components are separately tokenized estimates and are not exactly additive."
+  },
+  "task_status": {
+    "done": 1272,
+    "running": 2,
+    "pending": 11
+  },
+  "limitations": [
+    "Unknown usage is not zero consumption.",
+    "The user portal 23.11M cannot be equated to this cumulative project sum without its date range and billing aggregation.",
+    "Reasoning is part of completion tokens; cached prompt tokens are part of prompt tokens, not extra charges to add again.",
+    "A zero/missing reasoning field does not prove the provider performed no reasoning."
+  ]
+}

@@ -41,7 +41,7 @@
   "whole_word": true,
   "protect_named_curly": true,
   "polish": false,
-  "max_attempts": 4,
+  "max_attempts": 5,
   "body_repair_round_limit": 6,
   "sol_repair_model": "gpt-6-sol",
   "lease_seconds": 3600,
