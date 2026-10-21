@@ -1,0 +1,66 @@
+diff --git a/.agents/skills/game-translate/references/placeholder_patterns.md b/.agents/skills/game-translate/references/placeholder_patterns.md
+index b910f82..1f8a271 100644
+--- a/.agents/skills/game-translate/references/placeholder_patterns.md
++++ b/.agents/skills/game-translate/references/placeholder_patterns.md
+@@ -62,3 +62,5 @@ AINiee 内置正则库已覆盖大部分，无需手工添加：
+ - 普通括号注释、方括号内的完整句子
+ 
+ **判别方法**：机器型标记通常无空格、无句读、长度短、由字母数字和 `:_=/.#%` 组成。analyze 脚本的 curly 家族只匹配 `\{\d+\}` 和 `\{name\}`/`\{key=value\}` 这类机器型，句型 `{}` 不会误伤。
++
++冻结术语的 source 默认按字面匹配，包括 `[Sorrow Flame]`、带括号的人名和句点等自然标点；只有明确写入 `src_state=regex` 才按正则处理。不得用 AINiee 的标点推断覆盖冻结状态，否则字符类会误命中空格或字母。共用术语匹配策略版本为 3，旧检查凭据需按当前策略复核，冻结表本身保持不变。
+diff --git a/Tools/localization/ainiee_bridge.py b/Tools/localization/ainiee_bridge.py
+index 5e47b00..6ae4b08 100644
+--- a/Tools/localization/ainiee_bridge.py
++++ b/Tools/localization/ainiee_bridge.py
+@@ -77,7 +77,7 @@ def glossary_rows(analysis):
+ _FROZEN_MATCHERS = {}
+ _MATCH_CONTEXTS = OrderedDict()
+ _MATCH_LOCK = threading.RLock()
+-TERM_MATCH_VERSION = 2
++TERM_MATCH_VERSION = 3
+ 
+ 
+ def _visible_term_match(start, end, protected_spans):
+@@ -102,6 +102,16 @@ def _frozen_matcher(helper_class):
+         # Keep one subclass per helper class so its cached compiled search patterns
+         # are reused across records during full-project validation.
+         class FrozenMatcher(helper_class):
++            @classmethod
++            def normalize_row(cls, row):
++                normalized = super().normalize_row(row)
++                # Frozen source strings are literal unless their author explicitly
++                # marked a regex. Punctuation in game text is not regex syntax.
++                stored = row.get(cls.VALID_KEY) if isinstance(row, dict) else None
++                if stored in (cls.STATE_VALID, cls.STATE_REGEX, cls.STATE_INVALID):
++                    normalized[cls.VALID_KEY] = stored
++                return normalized
++
+             @classmethod
+             def normalize_rows(cls, rows):
+                 return rows if isinstance(rows, _PreparedRows) else super().normalize_rows(rows)
+diff --git a/Tools/localization/test_term_boundaries.py b/Tools/localization/test_term_boundaries.py
+index 88bd032..127048a 100644
+--- a/Tools/localization/test_term_boundaries.py
++++ b/Tools/localization/test_term_boundaries.py
+@@ -69,7 +69,20 @@ class TermBoundaryTests(unittest.TestCase):
+ 
+     def test_non_latin_terms_and_explicit_regex_still_work(self):
+         self.assertEqual(self.match('勇者', [('勇者', '英雄')]), [('勇者', '英雄')])
+-        self.assertEqual(self.match('Magic Sword', [(r'Magic\s+Sword', '魔法剑')]), [('Magic Sword', '魔法剑')])
++        analysis = {'terms': [{'source': r'Magic\s+Sword', 'recommended_translation': '魔法剑',
++                              'src_state': 'regex'}]}
++        self.assertEqual([r['dst'] for r in bridge.matched_terms(
++            analysis, ['Magic Sword'], self.options)], ['魔法剑'])
++
++    def test_frozen_punctuation_is_literal_not_inferred_regex(self):
++        terms = [('[Sorrow Flame]', '[悲伤之焰]'), ('Matkina (Young)', '年轻玛特金娜'),
++                 ('V.', '维'), ('Urmpfh?', '乌尔姆普夫？')]
++        self.assertEqual(self.match('A normal sentence with spaces.', terms), [])
++        for source, target in terms:
++            with self.subTest(source=source):
++                self.assertEqual(self.match(source, terms), [(source, target)])
++        analysis = {'non_translate': [{'source': '[DEBUG] Continue.'}]}
++        self.assertEqual(bridge.matched_terms(analysis, ['D and E are letters.'], self.options), [])
+ 
+ 
+ class TermCacheVersionTests(unittest.TestCase):
