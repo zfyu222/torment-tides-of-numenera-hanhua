@@ -1,0 +1,64 @@
+{
+  "status": "needs_attention",
+  "request_limit": 4,
+  "requests": [
+    {
+      "number": 1,
+      "usage": {
+        "usage_reported": false
+      },
+      "error": "AuthenticationError:401"
+    }
+  ],
+  "stages": [
+    {
+      "mode": "baseline",
+      "stage": "extract",
+      "accepted": 0,
+      "failed": 1,
+      "stage_clean": false,
+      "needs_attention": [
+        {
+          "session_id": "c1499fb2e5a8412cbe91fee14f4bb62b",
+          "error": "AuthenticationError:401"
+        }
+      ],
+      "pending_handoffs": [
+        {
+          "session_id": "c1499fb2e5a8412cbe91fee14f4bb62b",
+          "status": "waiting",
+          "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\verification\\api_optimization_20261021_v3\\baseline\\TranslateFiles\\tasks\\extract-r2-00001-dbd021e7\\handoffs\\c1499fb2e5a8412cbe91fee14f4bb62b\\input.md",
+          "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\verification\\api_optimization_20261021_v3\\baseline\\TranslateFiles\\tasks\\extract-r2-00001-dbd021e7\\handoffs\\c1499fb2e5a8412cbe91fee14f4bb62b\\result.json"
+        }
+      ]
+    }
+  ],
+  "model": "deepseek-v4.1-flash",
+  "thinking": "enabled; existing service/model, high",
+  "local_benchmark": {
+    "batches": 100,
+    "before_tokens": 807835,
+    "after_tokens": 625187,
+    "reduction_percent": 22.61,
+    "metadata_reconstruction": "all sampled records identical; sources and ordinals identical"
+  },
+  "original_ordinals": [
+    26754,
+    26733,
+    26734,
+    26735,
+    26736,
+    26737
+  ],
+  "error": "baseline extraction incomplete; no paid automatic replay",
+  "production_state_unchanged": true,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cached_prompt_tokens": 0,
+    "reasoning_tokens": 0,
+    "reported_requests": 0,
+    "unknown_requests": 1
+  }
+}

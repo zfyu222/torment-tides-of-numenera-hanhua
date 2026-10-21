@@ -1,0 +1,287 @@
+--- a/Tools/localization/workflow_task_contract.py
++++ b/Tools/localization/workflow_task_contract.py
+@@ -1,5 +1,7 @@
+ """Program-owned output envelopes. Empty evidence never means semantic approval."""
+ import copy
++import json
++from collections import Counter
+ 
+ WORKER_INSTRUCTION = ('任务输入、分批、预算、ID、版本与字段结构由程序准备。直接完成本阶段工作，'
+     '不运行任务校验或结果检查脚本，不重组批次、不扫描全库、不自行补建任务。'
+@@ -88,7 +90,9 @@
+ 
+ def api_template_instruction(stage):
+     if stage == 'extract':
+-        return 'output_template 是结构示例；阅读全部 records 后提取术语，无术语可返回空数组。'
++        return ('output_template 是结构示例；阅读全部 records 后提取术语，无术语可返回空数组。'
++                'source 必须逐字复制所引原文中的连续片段，保留其标点，不合并分散词语；'
++                'evidence_rows 引用确实含该片段的 ordinal，歧义和候选差异保留必要出处。')
+     if stage == 'glossary_review':
+         return ('output_template 是结构示例，不是任务清单；entry_reviews 必须覆盖全部分配 entries.ref，'
+                 '不包含只读关联项；edits/quarantine 用 ref 指向 e编号，无需 table/index。'
+@@ -137,14 +141,77 @@
+     if payload['stage'] in ('extract', 'glossary_review'):
+         from workflow_api_transport import compact_term_input
+         value = compact_term_input(value, payload)
++    compact_record_metadata(value)
+     return value
++
++
++def compact_record_metadata(value):
++    """Factor repeated metadata values without dropping context or changing tasks.
++
++    Only the new wire presentation changes; canonical payloads and existing
++    handoff files retain their full metadata. Unknown metadata keys stay intact.
++    """
++    rows = value.get('records', [])
++    if ('shared_metadata' in value or 'shared_metadata_text' in value
++            or any('metadata_refs' in row for row in rows)):
++        return  # Never overwrite an existing/future presentation namespace.
++    counts = Counter()
++    for row in rows:
++        metadata = row.get('metadata')
++        if isinstance(metadata, dict):
++            counts.update((key, json.dumps(item, ensure_ascii=False, sort_keys=True))
++                          for key, item in metadata.items())
++    shared, refs = {}, {}
++    for row in rows:
++        metadata = row.get('metadata')
++        if not isinstance(metadata, dict):
++            continue
++        for key, item in list(metadata.items()):
++            token = (key, json.dumps(item, ensure_ascii=False, sort_keys=True))
++            # Very short values cost less inline than a table plus references.
++            if counts[token] < 2 or len(token[1]) < 24:
++                continue
++            if token not in refs:
++                ref = 'm' + str(len(refs) + 1)
++                refs[token] = ref
++                shared[ref] = {key: item}
++            row.setdefault('metadata_refs', []).append(refs[token])
++            del metadata[key]
++        if not metadata:
++            row.pop('metadata', None)
++    if shared:
++        value['shared_metadata'] = shared
++    # Resource addresses commonly differ only in #ID=...; retain the entire
++    # address through a shared prefix rather than repeating a long file path.
++    resources = [row['metadata'].get('resource') for row in rows if isinstance(row.get('metadata'), dict)]
++    prefixes = Counter(item.partition('#')[0] for item in resources
++                       if isinstance(item, str) and '#' in item)
++    text_refs, texts = {}, {}
++    for row in rows:
++        metadata = row.get('metadata', {})
++        if not isinstance(metadata, dict):
++            continue
++        resource = metadata.get('resource')
++        if not isinstance(resource, str) or '#' not in resource:
++            continue
++        prefix, marker, suffix = resource.partition('#')
++        if prefixes[prefix] < 2 or len(prefix) < 24:
++            continue
++        if prefix not in text_refs:
++            ref = 'p' + str(len(text_refs) + 1)
++            text_refs[prefix] = ref; texts[ref] = prefix
++        metadata['resource'] = {'prefix_ref': text_refs[prefix], 'suffix': marker + suffix}
++    if texts:
++        value['shared_metadata_text'] = texts
+ 
+ 
+ def render_protocol_input(payload, result_file, *, api=False):
+     from translation_workflow import prompt
+     system, data = prompt(payload, api=api)
+     if api:
+-        return system + '\n' + api_template_instruction(payload['stage']) + '\n```json\n' + data + '\n```\n'
++        return (system + '\n' + api_template_instruction(payload['stage']) +
++                '\nshared_metadata 是共用上下文表；每条 metadata_refs 引用其字段，与本条 metadata 合并理解。'
++                'resource 的 prefix_ref 引用 shared_metadata_text，完整资源位置为该前缀与 suffix 原样拼接。\n```json\n' + data + '\n```\n')
+     return ('# 已准备的任务\n' + system + '\n'
+             + '按模板产出 JSON，由执行器保存到：' + str(result_file) + '\n'
+             + 'output_template 为输出骨架，任务范围已列好；不要把空证据或待定状态当作完成。\n'
+--- a/Tools/localization/ainiee_bridge.py
++++ b/Tools/localization/ainiee_bridge.py
+@@ -448,6 +448,11 @@
+                                'usage_reported': bool(prompt or completion), 'finish_reason': None,
+                                'response_transport': 'sse_fallback'}
+             if not content:
++                detail = token_usage.get('completion_tokens_details') or {}
++                if token_usage.get('finish_reason') == 'length' and detail.get('reasoning_tokens', 0):
++                    # Retrying the same reasoning-only exhaustion blindly can
++                    # repeatedly spend the full completion budget for no result.
++                    raise ApiFailure('reasoning_budget_exhausted', False, usage=token_usage)
+                 raise ApiFailure('empty_response', True, usage=token_usage)
+             return content, token_usage
+         except ApiFailure:
+--- a/Tools/localization/translation_workflow.py
++++ b/Tools/localization/translation_workflow.py
+@@ -1671,6 +1671,7 @@
+                     db.execute('UPDATE api_calls SET task_id=?,session_id=? WHERE id=?',
+                                (session['task_id'], session['session_id'], call_id))
+             retry_reason = None
++            usage = None
+             try:
+                 rate_wait_start = time.perf_counter()
+                 while slot > time.time():
+@@ -1734,6 +1735,13 @@
+             except (bridge.ApiFailure, ValueError) as error:
+                 retryable = error.retryable if isinstance(error, bridge.ApiFailure) else True
+                 code = str(error) if isinstance(error, bridge.ApiFailure) else 'invalid_model_result'
++                if (not isinstance(error, bridge.ApiFailure) and isinstance(usage, dict)
++                        and usage.get('finish_reason') == 'length'):
++                    # Do not repeat an unchanged pack that already exhausted
++                    # its output budget. Preserve the rejection for explicit
++                    # budget/splitting recovery; never accept a partial result.
++                    retryable = False
++                    code = 'rejected_length_terminated_response'
+                 with flow.db() as db:
+                     error_usage = getattr(error, 'usage', None)
+                     db.execute('UPDATE api_calls SET status=?,usage=coalesce(?,usage) WHERE id=?',
+--- /dev/null
++++ b/Tools/localization/test_api_cost_optimization.py
+@@ -0,0 +1,146 @@
++"""Lossless metadata transport and bounded handling of exhausted output budgets."""
++import copy
++import json
++import os
++from pathlib import Path
++from types import SimpleNamespace as NS
++import unittest
++from unittest.mock import Mock, patch
++
++import ainiee_bridge as bridge
++import translation_workflow as workflow
++import test_translation_workflow as fixtures
++from workflow_task_contract import api_protocol_data, compact_record_metadata, render_protocol_input
++from workflow_tokens import count_tokens
++
++
++class MetadataTests(unittest.TestCase):
++    def payload(self, stage='extract'):
++        metadata = {'note': '资源位置只用于定位，不保证说话者身份或剧情连续。' * 3,
++                    'group': 'conversations/long_group_name_for_context',
++                    'speaker': 'Alice', 'future': {'facts': ['one', 'two'] * 5}}
++        return {'stage': stage, 'task_id': 'task', 'input_hash': 'hash',
++                'records': [{'id': str(i), 'ordinal': i, 'source': f'White. Death. {i} {{0}}',
++                             'metadata': {**metadata, 'resource': f'file/{i}#id={i}', 'unique': i},
++                             'protection': [{'placeholder': '[P1]', 'original': '{0}'}]}
++                            for i in range(1, 21)]}
++
++    def test_all_fields_are_reconstructable_and_original_is_unchanged(self):
++        payload = self.payload(); original = copy.deepcopy(payload)
++        wire = api_protocol_data(payload)
++        self.assertEqual(payload, original)
++        for before, row in zip(payload['records'], wire['records']):
++            restored = {}
++            for ref in row.get('metadata_refs', []):
++                restored.update(wire['shared_metadata'][ref])
++            restored.update(row.get('metadata', {}))
++            self.assertEqual(restored, before['metadata'])
++            self.assertEqual(row['source'], before['source'])
++            self.assertEqual(row['ordinal'], before['ordinal'])
++            self.assertEqual(row['protection'], before['protection'])
++        text = render_protocol_input(payload, Path('unused'), api=True)
++        self.assertIn('metadata_refs', text)
++        raw = copy.deepcopy(wire)
++        raw.pop('shared_metadata')
++        for row, before in zip(raw['records'], payload['records']):
++            row.pop('metadata_refs', None); row['metadata'] = before['metadata']
++        self.assertLess(count_tokens(json.dumps(wire, ensure_ascii=False)),
++                        count_tokens(json.dumps(raw, ensure_ascii=False)) * .7)
++
++    def test_absent_metadata_never_inherits_other_record_context(self):
++        payload = self.payload(); payload['records'][0].pop('metadata')
++        payload['records'][1]['metadata'] = {'speaker': 'Bob'}
++        wire = api_protocol_data(payload)
++        self.assertNotIn('metadata_refs', wire['records'][0])
++        self.assertEqual(wire['records'][1]['metadata'], {'speaker': 'Bob'})
++        self.assertNotIn('metadata_refs', wire['records'][1])
++
++    def test_reserved_namespace_and_existing_handoffs_are_not_rewritten(self):
++        for extra in ({'shared_metadata': {'unknown': 'keep'}}, {}):
++            value = self.payload(); value.update(extra)
++            if not extra: value['records'][0]['metadata_refs'] = ['future']
++            before = copy.deepcopy(value); compact_record_metadata(value)
++            self.assertEqual(value, before)
++
++    def test_non_api_payload_and_single_unique_metadata_stay_inline(self):
++        payload = self.payload(); before = copy.deepcopy(payload)
++        render_protocol_input(payload, Path('unused'), api=False)
++        self.assertEqual(payload, before)
++        payload['records'] = [payload['records'][0]]
++        self.assertNotIn('shared_metadata', api_protocol_data(payload))
++
++    def test_resource_prefixes_reconstruct_exact_addresses(self):
++        payload = self.payload()
++        for i, row in enumerate(payload['records']):
++            row['metadata']['resource'] = 'en/text/conversations/full_directory/full_filename.stringtable#ID=' + str(i)
++        wire = api_protocol_data(payload)
++        for before, row in zip(payload['records'], wire['records']):
++            resource = row['metadata']['resource']
++            self.assertEqual(wire['shared_metadata_text'][resource['prefix_ref']] + resource['suffix'],
++                             before['metadata']['resource'])
++        self.assertEqual(len(wire['shared_metadata_text']), 1)
++
++
++class ExhaustionTests(unittest.TestCase):
++    def test_complete_valid_length_response_is_still_collected(self):
++        fixture = fixtures.WorkflowTests(); fixture.setUp(); self.addCleanup(fixture.tearDown)
++        flow = fixture.flow; flow.pause(True)
++        flow.configure({'backend': 'api', 'api': {'api_url': 'https://example.invalid',
++                       'model_name': 'fixture', 'concurrency': 1}}, 'Complete response fixture', impact='none')
++        flow.pause(False)
++        class Client:
++            def request(self, system, user):
++                return json.dumps({'analysis': {'characters': [], 'terms': [], 'non_translate': []}}), {
++                    'prompt_tokens': 10, 'completion_tokens': 20, 'usage_reported': True, 'finish_reason': 'length'}
++            def close(self): pass
++        with patch.dict(os.environ, {'SHH_TRANSLATION_API_KEY': 'fixture'}):
++            result = workflow.run_api(flow, 'extract', lambda *_: Client())
++        self.assertEqual(result['accepted'], 2)
++        self.assertEqual(result['failed'], 0)
++        self.assertFalse(result['needs_attention'])
++        self.assertFalse(result['pending_handoffs'])
++        with flow.db() as db:
++            self.assertEqual(db.execute('SELECT count(*) FROM tasks WHERE stage="extract" AND status!="done"').fetchone()[0], 0)
++
++    def test_thinking_parameters_are_preserved_and_reasoning_only_exhaustion_stops(self):
++        from ModuleFolders.Infrastructure.LLMRequester.OpenaiRequester import OpenaiRequester
++        client = bridge.AINieeAPI.__new__(bridge.AINieeAPI)
++        client.settings = {'model_name': 'deepseek-v4.1-flash', 'target_platform': 'deepseek',
++                           'think_switch': True, 'think_depth': 'high', 'extra_body': {}}
++        client.parser = OpenaiRequester(); client.client = Mock()
++        response = NS(choices=[NS(message=NS(content=''), finish_reason='length')],
++                      usage=NS(prompt_tokens=10, completion_tokens=16384, total_tokens=16394,
++                               completion_tokens_details={'reasoning_tokens': 16384}), model='fixture')
++        client.client.chat.completions.with_raw_response.create.return_value.parse.return_value = response
++        with self.assertRaises(bridge.ApiFailure) as error:
++            client.request('', 'fixture')
++        self.assertFalse(error.exception.retryable)
++        self.assertEqual(str(error.exception), 'reasoning_budget_exhausted')
++        self.assertEqual(error.exception.usage['total_tokens'], 16394)
++        sent = client.client.chat.completions.with_raw_response.create.call_args.kwargs
++        self.assertEqual(sent['extra_body']['thinking'], {'type': 'enabled'})
++
++    def test_invalid_length_reply_is_not_retried_and_no_partial_is_accepted(self):
++        fixture = fixtures.WorkflowTests(); fixture.setUp(); self.addCleanup(fixture.tearDown)
++        flow = fixture.flow; flow.pause(True)
++        flow.configure({'backend': 'api', 'api': {'api_url': 'https://example.invalid',
++                       'model_name': 'fixture', 'concurrency': 1}}, 'Exhaustion fixture', impact='none')
++        flow.pause(False); calls = []
++        class Client:
++            def request(self, system, user):
++                calls.append(user)
++                return '{"analysis":', {'prompt_tokens': 10, 'completion_tokens': 20,
++                    'total_tokens': 30, 'usage_reported': True, 'finish_reason': 'length'}
++            def close(self): pass
++        with patch.dict(os.environ, {'SHH_TRANSLATION_API_KEY': 'fixture'}):
++            result = workflow.run_api(flow, 'extract', lambda *_: Client())
++        self.assertEqual(len(calls), 1)
++        self.assertTrue(result['paused'])
++        self.assertEqual(result['accepted'], 0)
++        with flow.db() as db:
++            call = db.execute('SELECT status,usage FROM api_calls WHERE status!="cancelled"').fetchone()
++            self.assertEqual(call['status'], 'rejected_length_terminated_response')
++            self.assertEqual(json.loads(call['usage'])['total_tokens'], 30)
++
++
++if __name__ == '__main__': unittest.main()
