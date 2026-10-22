@@ -15,5 +15,16 @@
   "budget_before": 9517,
   "budget_after": 9518,
   "configuration_modified": false,
-  "next_action": "resume remaining review via current config"
+  "next_action": "resume remaining review via current config",
+  "continuation": {
+    "receipt": "0a316255146f4500b304118b8e212018",
+    "accepted_batches": 4,
+    "records_saved": 30,
+    "reported_tokens": 55560,
+    "http_error": "NotFoundError:404",
+    "server_fault_charged_to_local_budget": false,
+    "additional_format_issue": "Whole-source reference conflicts with explicit source_excerpt on two records",
+    "status": "paused_after_service_failure",
+    "next_action": "API currently responds intermittently; await user correction/resume"
+  }
 }
