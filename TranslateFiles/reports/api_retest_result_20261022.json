@@ -1,0 +1,19 @@
+{
+  "receipt": "c8a84f0ef553491bbbb3bc239e3076e0",
+  "session": "12563b429d5f48ea82807fd0f9d4f600",
+  "api_received": true,
+  "requests_started": 1,
+  "failed_attempts": 0,
+  "usage": {
+    "prompt_tokens": 4533,
+    "completion_tokens": 2768,
+    "total_tokens": 7301,
+    "reasoning_tokens_included": 1907
+  },
+  "handoff_status": "repair_part_saved",
+  "remaining_parts": 1,
+  "budget_before": 9517,
+  "budget_after": 9518,
+  "configuration_modified": false,
+  "next_action": "resume remaining review via current config"
+}
