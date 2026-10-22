@@ -1,0 +1,9 @@
+{
+  "sessions": [
+    "337e37e5de3e4b0faef2a194ea49eb25",
+    "e6d3622317164a08be948542cfd83421",
+    "247aed176672411d8835f5c2c2f77ea5"
+  ],
+  "max_initial_requests": 3,
+  "max_format_retries_per_session": 1
+}

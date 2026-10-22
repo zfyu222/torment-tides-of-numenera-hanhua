@@ -1,0 +1,54 @@
+{
+  "status": "local_and_real_api_probe_passed",
+  "changes": [
+    "idempotent dispatch lookup indexes",
+    "lazy ordered claim retaining attempt, model and independence checks"
+  ],
+  "unchanged": [
+    "API concurrency from configuration",
+    "thinking enabled",
+    "semantic evidence requirements",
+    "task/source hashes",
+    "saved results and cumulative budgets"
+  ],
+  "tests": {
+    "passed": 25,
+    "modules": [
+      "test_dispatch_performance",
+      "test_api_service_budget",
+      "test_resume_partial_lease",
+      "test_workflow_batches",
+      "test_db_worker_lock"
+    ]
+  },
+  "readonly_snapshot_query_benchmark": {
+    "before_seconds": 4.908071,
+    "after_seconds": 0.0101284,
+    "same_rows": true,
+    "index_setup_seconds": 3.8712693,
+    "note": "Same full database snapshot, identical query and parameters; not end-to-end throughput."
+  },
+  "before_run": {
+    "run_id": "7f0089c89e594d1980b3c514d650d4db",
+    "accepted_batches": 1305,
+    "saved_records": 11436,
+    "total_done_batches": 4632,
+    "total_batches": 6209,
+    "mean_in_flight_last_30min": 5.2,
+    "mean_request_seconds_last_30min": 47.96,
+    "median_dispatch_gap_seconds_last_30min": 9.38
+  },
+  "probe_sessions_file": "TranslateFiles/reports/dispatch_probe_sessions_20261022.json",
+  "real_probe": {
+    "run_id": "fd5a235468ce430f90df4f4488dc2ccb",
+    "initial_requests": 3,
+    "accepted_batches": 3,
+    "failed": 0,
+    "records_saved": 32,
+    "reported_total_tokens": 38262,
+    "reasoning_tokens_included": 17507,
+    "all_requests_usage_known": true,
+    "pending_handoffs_are_preexisting": true,
+    "note": "Explicit 3-session probe validates shared request/collect chain; does not measure saturated concurrency."
+  }
+}
