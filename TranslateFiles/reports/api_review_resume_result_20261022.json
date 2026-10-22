@@ -1,0 +1,27 @@
+{
+  "run_id": "cca43138b53f4bb5a7aa8586c8bb88b2",
+  "stage": "review",
+  "status": "paused_transport_timeout",
+  "accepted_batches_this_run": 205,
+  "records_saved_this_run": 2824,
+  "completed_batches_after_run": 3326,
+  "total_batches": 6209,
+  "failed_attempts": 16,
+  "needs_attention_count": 6,
+  "pending_handoffs_count": 24,
+  "stop_error": "APITimeoutError:transport",
+  "service_failure_consumes_request_budget": false,
+  "concurrency_policy": "read current API config without overrides",
+  "peak_in_flight": 5,
+  "thinking_enabled": true,
+  "run_tokens": {
+    "prompt_tokens": 1648351,
+    "completion_tokens": 2671174,
+    "total_tokens": 4319525,
+    "cached_prompt_tokens": 537856,
+    "reasoning_tokens": 1967599,
+    "reported_requests": 284,
+    "unknown_requests": 1
+  },
+  "next_action": "Resolve service timeout before resuming; preserve partial replies and address format errors through public recovery APIs."
+}
