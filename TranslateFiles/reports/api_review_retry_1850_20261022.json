@@ -1,0 +1,22 @@
+{
+  "run_id": "c48c7f6eedd9459dae965589fe9de782",
+  "stage": "review",
+  "status": "paused_api_404",
+  "accepted_batches_this_run": 1,
+  "records_saved_this_run": 16,
+  "completed_batches_after_run": 3327,
+  "total_batches": 6209,
+  "stop_error": "NotFoundError:404",
+  "service_failure_consumes_request_budget": false,
+  "run_tokens": {
+    "prompt_tokens": 5232,
+    "completion_tokens": 16566,
+    "total_tokens": 21798,
+    "cached_prompt_tokens": 0,
+    "reasoning_tokens": 13440,
+    "reported_requests": 1,
+    "unknown_requests": 1
+  },
+  "concurrency_policy": "read current API config without overrides",
+  "next_action": "API route still intermittently returns HTTP404; stopped without automatic service retries."
+}
