@@ -1,37 +1,31 @@
 {
   "revision": 7,
   "stage": "review",
-  "status": "paused_new_api_404",
-  "request_count": 11730,
-  "max_requests": 100000,
+  "status": "paused_api_403",
+  "paused": true,
   "review_tasks": {
-    "done": 3117,
-    "pending": 2975,
-    "running": 117
+    "done": 5764,
+    "pending": 422,
+    "running": 23
   },
-  "accepted_review_records": 33571,
   "body_drafts": 70163,
   "draft_check_clean": true,
   "review_complete": false,
-  "task_max_attempts": 10,
-  "retry_budget_reason": "50 tasks reached attempt=8 due to HTTP429; added two attempts without resetting history",
-  "latest_review_receipt": "8c0dfe621a904c4e98e36e0794203e9b",
-  "review_run_tokens": {
-    "total_tokens": 52039595,
-    "reasoning_tokens_included": 30693147,
-    "unknown_requests": 460
+  "request_count": 14717,
+  "request_budget_used": 12500,
+  "max_requests": 100000,
+  "concurrency_policy": "use api.local.jsonc as configured without overrides",
+  "latest_review_receipt": "abcc1cf49dae47c4898b263b340f2d8e",
+  "latest_run_tokens": {
+    "prompt_tokens": 6160814,
+    "completion_tokens": 13474472,
+    "total_tokens": 19635286,
+    "cached_prompt_tokens": 1627648,
+    "reasoning_tokens": 10161357,
+    "reported_requests": 1259,
+    "unknown_requests": 1
   },
-  "failure_attempts": {
-    "http429": 457,
-    "timeout": 3,
-    "invalid_model_result": 89
-  },
-  "pending_probe_session": "353a086f1d7e419f8cead630c5b4ff26",
-  "probe_sent": false,
-  "next_action": "User to correct current API endpoint/model routing; no further requests until resumed",
-  "old_csv_unchanged": true,
+  "next_action": "API returned 403; no automatic service retries. Resume after service access is restored; preserve existing candidates and format-repair budgets.",
   "schedule_automation_id": null,
-  "http429_interpretation": "User clarified insufficient balance; concurrency overload not established",
-  "request_budget_used": 9517,
-  "concurrency_policy": "use api.local.jsonc as configured without overrides"
+  "old_csv_unchanged": true
 }

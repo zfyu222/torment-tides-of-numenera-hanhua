@@ -1,5 +1,5 @@
 {
-  "status": "local_and_real_api_probe_passed",
+  "status": "production_validated_paused_api_403",
   "changes": [
     "idempotent dispatch lookup indexes",
     "lazy ordered claim retaining attempt, model and independence checks"
@@ -50,5 +50,29 @@
     "all_requests_usage_known": true,
     "pending_handoffs_are_preexisting": true,
     "note": "Explicit 3-session probe validates shared request/collect chain; does not measure saturated concurrency."
+  },
+  "production_validation": {
+    "run_id": "abcc1cf49dae47c4898b263b340f2d8e",
+    "accepted_batches": 1129,
+    "records_saved": 15658,
+    "elapsed_seconds": 2600.8721,
+    "requests_started": 1260,
+    "peak_in_flight": 25,
+    "mean_in_flight": 23.793,
+    "accepted_batches_per_hour": 1562.71,
+    "before_accepted_batches_per_hour": 392.25,
+    "mean_batch_open_seconds": 0.6418,
+    "run_tokens": {
+      "prompt_tokens": 6160814,
+      "completion_tokens": 13474472,
+      "total_tokens": 19635286,
+      "cached_prompt_tokens": 1627648,
+      "reasoning_tokens": 10161357,
+      "reported_requests": 1259,
+      "unknown_requests": 1
+    },
+    "stop_error": "PermissionDeniedError:403",
+    "service_failure_consumes_request_budget": false,
+    "note": "Observed different consecutive production task ranges, not a controlled throughput experiment; API waiting averages were similar."
   }
 }
