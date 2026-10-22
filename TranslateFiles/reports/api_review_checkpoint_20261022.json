@@ -1,9 +1,9 @@
 {
   "revision": 7,
   "stage": "review",
-  "status": "paused_at_request_cap",
+  "status": "paused_by_user_until_noon",
   "request_count": 10000,
-  "max_requests": 10000,
+  "max_requests": 100000,
   "review_tasks": {
     "done": 2707,
     "pending": 3496,
@@ -33,6 +33,7 @@
   },
   "pending_probe_session": "353a086f1d7e419f8cead630c5b4ff26",
   "probe_sent": false,
-  "next_action": "await user decision on raising cumulative max_requests; then one unissued probe session before full resume",
-  "old_csv_unchanged": true
+  "next_action": "2026-10-22 12:00 Asia/Shanghai one-shot thread heartbeat api; verify balance via one unissued session, continue only if successful",
+  "old_csv_unchanged": true,
+  "schedule_automation_id": "api"
 }
