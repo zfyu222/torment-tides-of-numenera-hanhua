@@ -14,8 +14,8 @@
   "draft_check_clean": true,
   "review_complete": false,
   "api_limits_selected_only": {
-    "concurrency": 5,
-    "requests_per_minute": 30,
+    "concurrency": 25,
+    "requests_per_minute": 0,
     "think_switch": true
   },
   "task_max_attempts": 10,
@@ -35,5 +35,6 @@
   "probe_sent": false,
   "next_action": "2026-10-22 12:00 Asia/Shanghai one-shot thread heartbeat api; verify balance via one unissued session, continue only if successful",
   "old_csv_unchanged": true,
-  "schedule_automation_id": "api"
+  "schedule_automation_id": "api",
+  "http429_interpretation": "User clarified insufficient balance; concurrency overload not established"
 }

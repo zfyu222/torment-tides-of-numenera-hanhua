@@ -1,0 +1,46 @@
+{
+  "sample_calls": 40,
+  "sampling": "40 uniformly spaced received API calls; field token counts independent and not additive exact wire accounting",
+  "input_field_tokens": {
+    "full_input": 205681,
+    "records": 390,
+    "source": 13220,
+    "original_source": 0,
+    "translation": 16507,
+    "metadata": 36485,
+    "protection": 0,
+    "existing_exceptions": 14567,
+    "repair_constraints": 0,
+    "shared_terms": 11982
+  },
+  "batch_records_min_median_max": [
+    4,
+    9.0,
+    24
+  ],
+  "output_field_value_tokens": {
+    "id": 1170,
+    "reason": 11112,
+    "checks": 66392,
+    "changes": 1351,
+    "issues": 390,
+    "exceptions": 2203,
+    "keep": 364,
+    "source_ref": 1170,
+    "translation": 1300
+  },
+  "reuse_counts": {
+    "rows": 390,
+    "keep_true": 364,
+    "has_translation": 13,
+    "both_keep_translation": 0,
+    "changes": 13,
+    "before_supplied": 0,
+    "after_supplied": 0
+  },
+  "input_header_tokens": {
+    "instructions": 42080,
+    "style_background_header": 22320,
+    "full": 205681
+  }
+}
