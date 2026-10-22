@@ -1,15 +1,15 @@
 {
   "revision": 7,
   "stage": "review",
-  "status": "paused_by_user_until_noon",
+  "status": "paused_by_user_server_failure",
   "request_count": 10000,
   "max_requests": 100000,
   "review_tasks": {
-    "done": 2707,
-    "pending": 3496,
-    "running": 6
+    "done": 3117,
+    "pending": 2975,
+    "running": 117
   },
-  "accepted_review_records": 29693,
+  "accepted_review_records": 33571,
   "body_drafts": 70163,
   "draft_check_clean": true,
   "review_complete": false,
@@ -20,7 +20,7 @@
   },
   "task_max_attempts": 10,
   "retry_budget_reason": "50 tasks reached attempt=8 due to HTTP429; added two attempts without resetting history",
-  "latest_review_receipt": "0c93b075e7a44a21b2991671fde140c6",
+  "latest_review_receipt": "31d9d77ab894406f9cd34f75001af1e2",
   "review_run_tokens": {
     "total_tokens": 52039595,
     "reasoning_tokens_included": 30693147,
@@ -33,8 +33,8 @@
   },
   "pending_probe_session": "353a086f1d7e419f8cead630c5b4ff26",
   "probe_sent": false,
-  "next_action": "2026-10-22 12:00 Asia/Shanghai one-shot thread heartbeat api; verify balance via one unissued session, continue only if successful",
+  "next_action": "Wait for explicit user resume after API server recovery; no automatic restart",
   "old_csv_unchanged": true,
-  "schedule_automation_id": "api",
+  "schedule_automation_id": null,
   "http429_interpretation": "User clarified insufficient balance; concurrency overload not established"
 }

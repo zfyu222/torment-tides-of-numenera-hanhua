@@ -1,0 +1,13 @@
+{
+  "session_id": "bea3ee66a2de42d5a0e43e543f232354",
+  "temporary_selected_api": "yjapi",
+  "temporary_max_requests": 10001,
+  "global_user_cap": 100000,
+  "reason": "one API request only for noon balance verification; remove per-API override after probe",
+  "receipt": "64c9667553a54f1fab8971e9ac72b2a6",
+  "api_received": true,
+  "http_balance_error": false,
+  "records_preserved": 15,
+  "format_failures": 1,
+  "temporary_cap_removed": true
+}
