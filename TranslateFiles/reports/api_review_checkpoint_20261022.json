@@ -1,0 +1,38 @@
+{
+  "revision": 7,
+  "stage": "review",
+  "status": "paused_at_request_cap",
+  "request_count": 10000,
+  "max_requests": 10000,
+  "review_tasks": {
+    "done": 2707,
+    "pending": 3496,
+    "running": 6
+  },
+  "accepted_review_records": 29693,
+  "body_drafts": 70163,
+  "draft_check_clean": true,
+  "review_complete": false,
+  "api_limits_selected_only": {
+    "concurrency": 5,
+    "requests_per_minute": 30,
+    "think_switch": true
+  },
+  "task_max_attempts": 10,
+  "retry_budget_reason": "50 tasks reached attempt=8 due to HTTP429; added two attempts without resetting history",
+  "latest_review_receipt": "0c93b075e7a44a21b2991671fde140c6",
+  "review_run_tokens": {
+    "total_tokens": 52039595,
+    "reasoning_tokens_included": 30693147,
+    "unknown_requests": 460
+  },
+  "failure_attempts": {
+    "http429": 457,
+    "timeout": 3,
+    "invalid_model_result": 89
+  },
+  "pending_probe_session": "353a086f1d7e419f8cead630c5b4ff26",
+  "probe_sent": false,
+  "next_action": "await user decision on raising cumulative max_requests; then one unissued probe session before full resume",
+  "old_csv_unchanged": true
+}

@@ -4,33 +4,33 @@
   "model": "gpt-6-luna",
   "record_constraints": {
     "R0047130_885cf407e0": {
-      "source_sha256": "885cf407e0172d462df50bbf08db08911ffe3ab1ff89d2f1f047c02ec0355bed",
       "literal_suffix": "{NATHAN: This node begins 3 Talk Nodes in a row (a no-no for Meres, if you'll recall). Also it forces an action on the player, so maybe this node can give the player a choice of things to do, all of which ultimately lead to him realizing that he can make ice with his powers. (It also might be cooler to describe how he uses the numenera to make ice - not defining, of course, just a brief description of what it would feel like).",
-      "reason": "原文末尾开发注释缺少右花括号，须完整原样保留且不得补右括号；正文照常翻译。注释内部不是可译术语，撤销只为注释内部词设置的旧语境例外。"
+      "reason": "原文末尾开发注释缺少右花括号，须完整原样保留且不得补右括号；正文照常翻译。注释内部不是可译术语，撤销只为注释内部词设置的旧语境例外。",
+      "source_sha256": "885cf407e0172d462df50bbf08db08911ffe3ab1ff89d2f1f047c02ec0355bed"
     },
     "R0068056_ca3e830cff": {
-      "source_sha256": "ca3e830cffa42c46efe73dc84680afdafbd1a9989c39ac394d16d7609d2a1036",
       "physical_newlines": [
         "\r\n",
         "\r\n"
       ],
-      "reason": "该教程已实机验证中文长行触发缩字，明确采用三行排版。必须恰有两处CRLF，保留控制图标；其他文本不豁免换行校验。"
+      "reason": "该教程已实机验证中文长行触发缩字，明确采用三行排版。必须恰有两处CRLF，保留控制图标；其他文本不豁免换行校验。",
+      "source_sha256": "ca3e830cffa42c46efe73dc84680afdafbd1a9989c39ac394d16d7609d2a1036"
     },
     "R0068080_c71c9a7b37": {
-      "source_sha256": "c71c9a7b37ab90469577a90af0fdb75e6f0c5ea6246b92fcec8568ed417ca576",
       "physical_newlines": [
         "\r\n",
         "\r\n"
       ],
-      "reason": "该教程已实机验证中文长行触发缩字，明确采用三行排版。必须恰有两处CRLF，保留控制图标；其他文本不豁免换行校验。"
+      "reason": "该教程已实机验证中文长行触发缩字，明确采用三行排版。必须恰有两处CRLF，保留控制图标；其他文本不豁免换行校验。",
+      "source_sha256": "c71c9a7b37ab90469577a90af0fdb75e6f0c5ea6246b92fcec8568ed417ca576"
     },
     "R0068082_0dd0a62f31": {
-      "source_sha256": "0dd0a62f3139c6532bfe9497832bd38301a2dfad34e543594a2865ee7fabb707",
       "physical_newlines": [
         "\r\n",
         "\r\n"
       ],
-      "reason": "该教程已实机验证中文长行触发缩字，明确采用三行排版。必须恰有两处CRLF，保留控制图标；其他文本不豁免换行校验。"
+      "reason": "该教程已实机验证中文长行触发缩字，明确采用三行排版。必须恰有两处CRLF，保留控制图标；其他文本不豁免换行校验。",
+      "source_sha256": "0dd0a62f3139c6532bfe9497832bd38301a2dfad34e543594a2865ee7fabb707"
     }
   },
   "escalation_backend": "api",
@@ -73,7 +73,7 @@
   "whole_word": true,
   "protect_named_curly": true,
   "polish": false,
-  "max_attempts": 8,
+  "max_attempts": 10,
   "body_repair_round_limit": 6,
   "sol_repair_model": "gpt-6-sol",
   "lease_seconds": 3600,
