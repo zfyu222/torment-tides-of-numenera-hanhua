@@ -4,28 +4,29 @@
   "status": "paused_api_403",
   "paused": true,
   "review_tasks": {
-    "done": 5764,
-    "pending": 422,
-    "running": 23
+    "done": 5771,
+    "pending": 420,
+    "running": 18
   },
   "body_drafts": 70163,
   "draft_check_clean": true,
   "review_complete": false,
-  "request_count": 14717,
-  "request_budget_used": 12500,
+  "request_count": 14725,
+  "request_budget_used": 12507,
   "max_requests": 100000,
   "concurrency_policy": "use api.local.jsonc as configured without overrides",
-  "latest_review_receipt": "abcc1cf49dae47c4898b263b340f2d8e",
+  "latest_review_receipt": "e521d5efb02e4fdf90165d047b6ce353",
   "latest_run_tokens": {
-    "prompt_tokens": 6160814,
-    "completion_tokens": 13474472,
-    "total_tokens": 19635286,
-    "cached_prompt_tokens": 1627648,
-    "reasoning_tokens": 10161357,
-    "reported_requests": 1259,
+    "prompt_tokens": 31924,
+    "completion_tokens": 57553,
+    "total_tokens": 89477,
+    "cached_prompt_tokens": 11520,
+    "reasoning_tokens": 40756,
+    "reported_requests": 6,
     "unknown_requests": 1
   },
   "next_action": "API returned 403; no automatic service retries. Resume after service access is restored; preserve existing candidates and format-repair budgets.",
   "schedule_automation_id": null,
-  "old_csv_unchanged": true
+  "old_csv_unchanged": true,
+  "review_output_tokens": 32768
 }
