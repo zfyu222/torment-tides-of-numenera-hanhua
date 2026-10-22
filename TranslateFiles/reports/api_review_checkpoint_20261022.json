@@ -1,32 +1,47 @@
 {
   "revision": 7,
   "stage": "review",
-  "status": "paused_api_connection_error",
-  "paused": true,
+  "status": "quality_needs_attention",
+  "paused": false,
   "review_tasks": {
-    "done": 5996,
-    "pending": 187,
-    "running": 26
+    "done": 6276
   },
   "body_drafts": 70163,
   "draft_check_clean": true,
   "review_complete": false,
-  "request_count": 15092,
-  "request_budget_used": 12869,
+  "request_count": 15431,
+  "request_budget_used": 13208,
   "max_requests": 100000,
   "concurrency_policy": "use api.local.jsonc as configured without overrides",
-  "latest_review_receipt": "cad0450625f94d12854cb65cc24d55c9",
+  "latest_review_receipt": "0a59b86732c04e06945a9e4a28bedccd",
   "latest_run_tokens": {
-    "prompt_tokens": 65807,
-    "completion_tokens": 185207,
-    "total_tokens": 251014,
-    "cached_prompt_tokens": 14336,
-    "reasoning_tokens": 138802,
-    "reported_requests": 12,
-    "unknown_requests": 1
+    "prompt_tokens": 621803,
+    "completion_tokens": 1203669,
+    "total_tokens": 1825472,
+    "cached_prompt_tokens": 108288,
+    "reasoning_tokens": 1073744,
+    "reported_requests": 84,
+    "unknown_requests": 0
   },
-  "next_action": "Latest selected API returned APIConnectionError:transport. No automatic service retries; preserve saved results and remaining repair budgets.",
+  "next_action": "Investigate why model repeatedly normalizes required CRLF/trailing spaces; preserve stop history and do not blindly dispatch more attempts.",
   "schedule_automation_id": null,
   "old_csv_unchanged": true,
-  "review_output_tokens": 32768
+  "review_output_tokens": 32768,
+  "records": {
+    "review": 70161,
+    "translate": 2
+  },
+  "remaining_quality_ids": [
+    "R0043769_c80ba23b80",
+    "R0046604_6cf462f2bf"
+  ],
+  "connection_retry_rule": {
+    "additional_retries": 3,
+    "delays_seconds": [
+      2,
+      4,
+      8
+    ],
+    "local_fault_budget_charge": false
+  }
 }
