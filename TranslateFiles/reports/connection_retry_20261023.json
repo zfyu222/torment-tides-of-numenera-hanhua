@@ -1,0 +1,36 @@
+{
+  "policy": {
+    "additional_connection_retries": 3,
+    "delays_seconds": [
+      2,
+      4,
+      8
+    ],
+    "retry_codes": [
+      "APIConnectionError",
+      "APITimeoutError",
+      "stream_interrupted",
+      "incomplete_stream"
+    ],
+    "http_faults_retry": false,
+    "service_failures_count_against_local_budget": false,
+    "sdk_retries": 0
+  },
+  "tests_passed": 14,
+  "production_probe": {
+    "receipt": "07ecdad8dc9b4ddbadd50a2c3da9edc3",
+    "accepted": 1,
+    "failed": 0,
+    "records_saved": 17,
+    "usage": {
+      "prompt_tokens": 4901,
+      "completion_tokens": 19964,
+      "total_tokens": 24865,
+      "cached_prompt_tokens": 1280,
+      "reasoning_tokens": 16043,
+      "reported_requests": 1,
+      "unknown_requests": 0
+    },
+    "note": "Real API succeeded without transient failure; exhaustion/recovery/pause branches verified by fixtures, not forced against live service."
+  }
+}

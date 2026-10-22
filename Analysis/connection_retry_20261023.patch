@@ -1,0 +1,54 @@
+--- a/Tools/localization/translation_workflow.py
++++ b/Tools/localization/translation_workflow.py
+@@ -27,7 +27,7 @@
+ import glossary_tool
+ import glossary_families
+ import jsonc_config
+-from workflow_api_budget import budget_requests, effective_attempts, service_failure
++from workflow_api_budget import budget_requests, effective_attempts, service_failure, connection_retry_delay
+ from workflow_tokens import count_tokens, record_limit, batch_limit, record_tokens
+ from workflow_profile import RunProfile, profiled, progress, usage_totals, measure
+ from workflow_batches import BatchMixin
+@@ -1794,6 +1794,7 @@
+         nonlocal stopped, in_flight
+         session, retry_reason = None, None
+         request_failures = 0
++        connection_retries = 0
+         while not stopped:
+             # Transport owns request accounting only. Input, collection and repair
+             # go through precisely the same handoffs as a Codex SubAgent.
+@@ -1810,6 +1811,7 @@
+                 try:
+                     if retry_reason is None:
+                         request_failures = 0
++                        connection_retries = 0
+                     session = (flow.batch_retry(session['session_id'], worker, retry_reason,
+                                                 format_error=retry_reason == 'invalid_model_result')
+                                if retry_reason else open_session(worker))
+@@ -1913,8 +1915,24 @@
+                 profile.emit('attempt_failed', call_id=call_id, error_type=type(error).__name__, retryable=retryable)
+                 report_progress()
+                 if isinstance(error, bridge.ApiFailure) and service_failure(code):
+-                    # A service failure earns no model-budget debit, but must not
+-                    # cause unbounded free retries or keep dispatching new work.
++                    delay = connection_retry_delay(code, connection_retries) if retryable else None
++                    if delay is not None:
++                        connection_retries += 1
++                        profile.emit('connection_retry_scheduled', call_id=call_id,
++                                     retry=connection_retries, delay_seconds=delay)
++                        until = time.monotonic() + delay
++                        with profile.measure('connection_retry_wait'):
++                            while time.monotonic() < until and not stopped:
++                                time.sleep(min(0.25, max(0, until - time.monotonic())))
++                                with flow.db() as db:
++                                    if flow.meta(db, 'paused'):
++                                        summary['paused'] = True
++                                        return
++                        # Reuse the ordinary transport-retry handoff. Failed calls
++                        # stay in the ledger and earn their existing budget credit.
++                        retry_reason = code
++                        continue
++                    # HTTP denials and exhausted transport retries pause dispatch.
+                     summary['paused'] = True
+                     stopped = True
+                     summary['needs_attention'].append({'session_id': session['session_id'],
