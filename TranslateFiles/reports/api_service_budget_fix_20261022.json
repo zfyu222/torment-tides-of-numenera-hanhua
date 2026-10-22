@@ -1,0 +1,29 @@
+{
+  "status": "paused_api_404",
+  "policy": {
+    "concurrency": "read current api.local.jsonc only; no override or CLI control",
+    "service_failures": "retain raw calls and usage; exclude from project max_requests and task max_attempts; stop dispatch on first service failure",
+    "model_result_failures": "continue to count malformed results, truncation and reasoning budget exhaustion",
+    "historical_credits": "new calls bind raw task_attempt; legacy initial calls grouped by session, repair parts conservatively by token/round"
+  },
+  "tests": {
+    "local_tests_passed": 30,
+    "actual_api_probe_receipt": "8c0dfe621a904c4e98e36e0794203e9b",
+    "requests_started": 1,
+    "error": "NotFoundError:404",
+    "service_failure": true,
+    "further_requests": false,
+    "semantic_result_received": false
+  },
+  "counts": {
+    "raw_requests_before": 11729,
+    "raw_requests_after": 11730,
+    "budget_requests_before": 9517,
+    "budget_requests_after": 9517,
+    "probe_raw_task_attempt_after": 11,
+    "probe_effective_task_attempt_after": 3
+  },
+  "usage": "No usage returned for the failed API probe; not treated as zero billing",
+  "configuration_modified_this_change": false,
+  "known_limit": "Legacy repair parts without exact attempt binding receive conservative credits; raw history is never rewritten"
+}
