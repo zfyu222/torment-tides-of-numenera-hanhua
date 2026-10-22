@@ -1,0 +1,16 @@
+{
+  "issue": "sync_api_batching refused review_output_tokens increase while old stopped API handoffs remained",
+  "change": "Public configure impact=none permits only an output capacity increase while paused without reserved calls or running non-API tasks; task identity, state, attempt, lease and revision retained",
+  "before": 16384,
+  "after": 32768,
+  "revision": 7,
+  "tests_passed": 10,
+  "probe_receipt": "d0a6e89145be4e0bb50a36c58f0db538",
+  "probe_accepted_batches": 1,
+  "probe_saved_records": 19,
+  "probe_failed": 0,
+  "reported_total_tokens": 9113,
+  "reasoning_tokens_included": 5244,
+  "concurrency_from_config": 25,
+  "thinking_enabled": true
+}
