@@ -1,5 +1,5 @@
 {
-  "status": "zip_validated",
+  "status": "published_and_download_verified",
   "archive": "torment-tides-of-numenera_子非鱼汉化1.3.zip",
   "size": 9174225,
   "sha256": "e663c31fccd7f66542443b6cc942e2088dfb378e5ceb3ec9fd6d4ece90b772f2",
@@ -8,5 +8,11 @@
   "extraction_directory": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\backups\\release_verify_v1_3",
   "manifest_and_checksums": "passed",
   "user_current_game_check": "passed",
-  "published": false
+  "published": true,
+  "release_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.3",
+  "asset_name": "torment-tides-of-numenera_.1.3.zip",
+  "asset_label": "torment-tides-of-numenera_子非鱼汉化1.3.zip",
+  "asset_download_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/download/v1.3/torment-tides-of-numenera_.1.3.zip",
+  "downloaded_sha256": "e663c31fccd7f66542443b6cc942e2088dfb378e5ceb3ec9fd6d4ece90b772f2",
+  "latest_stable": true
 }
