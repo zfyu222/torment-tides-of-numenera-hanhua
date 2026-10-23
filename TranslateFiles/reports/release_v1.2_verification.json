@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "archive": "torment-tides-of-numenera_子非鱼汉化1.2.zip",
+  "archive_sha256": "48e08b21ceca7b866b71afeeefff1aef46f52a0f28a8f97958619a9fc9e95a22",
+  "archive_bytes": 9174610,
+  "zip_entries": 2254,
+  "payload_files": 2251,
+  "manifest_and_checksums_match": true,
+  "safe_extraction_verified": true,
+  "extracted_install_paths_match_tested_game": true,
+  "guide_utf8_bom": true,
+  "cumulative_changelog": [
+    "v1.0",
+    "v1.1",
+    "v1.2"
+  ],
+  "game_and_credentials_absent_from_git_index": true,
+  "runtime_evidence": "release_v1.2_user_runtime_confirmation.json",
+  "public_release": "pending"
+}

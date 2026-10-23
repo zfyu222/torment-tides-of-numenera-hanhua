@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-23",
+  "reporter": "user",
+  "question": "你是否已用刚安装的新版本正常启动游戏，并检查主菜单、代表性对白/选项、任务日志，以及修复后的教程页，确认没有崩溃、缺字或文字遮挡？",
+  "answer": "已检查，这些场景均正常",
+  "attribution": "用户自行正常游玩确认，不冒充代理逐场景实测。用户未提供具体角色、任务名或分辨率。",
+  "translation_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "installed_payload_manifest": "TranslateFiles/reports/release_v1.2_payload.json",
+  "payload_files": 2251,
+  "payload_hashes_rechecked_after_confirmation": true
+}

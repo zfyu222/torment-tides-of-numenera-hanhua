@@ -10,7 +10,7 @@
   "platform": "Steam（Windows）",
   "install": "完全退出游戏。先备份 WIN/TidesOfNumenera_Data/Managed/Assembly-CSharp.dll 和 WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/。将压缩包中的 WIN 文件夹复制到含 WIN 子目录的游戏根目录，选择合并并覆盖；不要放进 WIN 目录形成 WIN/WIN。游戏语言选择 English（英语），该语言槽会显示中文。本版包含程序显示修复DLL，仅适用于上述支持版本，无需安装Mod加载器。",
   "uninstall": "退出游戏，用安装前备份恢复 Assembly-CSharp.dll 及整个 en/text 目录。没有备份时，使用 Steam 的“验证游戏文件完整性”恢复原版；该操作也会移除汉化覆盖。",
-  "verification": "全文翻译、独立语义审校、占位符和术语校验已完成；所有XML可解析。已在游戏原生教程预制体中完成英文/中文及图标长文对照，1920×1080下中文字号与按钮显示正常。当前发布验收记录尚未补齐，此文件为准备稿，不代表已发布。",
+  "verification": "全文翻译、独立语义审校、占位符和术语校验已完成，所有XML可解析。用户已用当前安装版实际确认正常启动、主菜单、代表性对白/选项、任务日志及修复后的教程页均正常，无崩溃、缺字或文字遮挡。另完成1920×1080游戏原生教程窗口英文/中文及图标长文对照，中文字号和按钮显示正常。以上为代表性场景验收，未逐场景通关。",
   "known_issues": "AI汉化可能仍有措辞、专名或遗漏问题；未逐场景通关验证。标题Logo保留英文，部分中文自动断行可能将标点留在行首。物理手柄、其他分辨率和不同游戏构建尚未完整验证。Steam更新或验证文件完整性可能恢复原文件。仅将本补丁覆盖到支持的游戏版本。反馈及后续更新：https://github.com/zfyu222/torment-tides-of-numenera-hanhua/issues；请关注或订阅 https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases 获取新版。",
   "changes": "使用自定义API完成全文重新翻译与独立审校，补齐已确认漏译，统一部分人名与称呼；修复中文教程正文过度缩字，按内容自动增加窗口高度，保留原译文。"
 }
