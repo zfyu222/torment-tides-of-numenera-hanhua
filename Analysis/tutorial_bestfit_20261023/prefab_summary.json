@@ -1,0 +1,35 @@
+{
+  "source": "sharedassets3.assets",
+  "source_sha256": "86a65e25ca990f5545eea8b8ab669d9a2fcf91fb4a88b20b6da8b52c68f7489b",
+  "root_game_object": 3958,
+  "root_transform": 9910,
+  "component_classes": [
+    "Button",
+    "ButtonWwiseEvent",
+    "ConsoleIconSwapper",
+    "ConsoleObjectToggler",
+    "ContentSizeFitter",
+    "GraphicRaycaster",
+    "HorizontalLayoutGroup",
+    "HyperText",
+    "Image",
+    "LayoutElement",
+    "Shadow",
+    "Sorter",
+    "StringDBText",
+    "TutorialMessageWindow",
+    "VerticalLayoutGroup"
+  ],
+  "scroll_rect_present": false,
+  "message_label": {
+    "object_name": "Message Label",
+    "HyperText_path_id": 13787,
+    "font_size": 46,
+    "best_fit": true,
+    "minimum_size": 4,
+    "maximum_size": 64,
+    "horizontal_wrap": true,
+    "vertical_overflow": "Truncate"
+  },
+  "layout": "Nested VerticalLayoutGroup + ContentSizeFitter vertical PreferredSize; actual prefab placeholder explicitly describes resizing for multiline text."
+}

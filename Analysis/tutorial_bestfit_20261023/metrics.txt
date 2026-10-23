@@ -1,0 +1,5 @@
+Begin at GameState.Awake
+english bestFit=True effectiveFont=22 lines=7 preferredHeight=338 rect=(x:-734.00, y:-169.00, width:1468.00, height:338.00) chars=402 textChars=401 screen=1920x1080
+chinese_baseline bestFit=True effectiveFont=7 lines=3 preferredHeight=48 rect=(x:-734.00, y:-24.00, width:1468.00, height:48.00) chars=128 textChars=127 screen=1920x1080
+chinese_fixed bestFit=False effectiveFont=44 lines=6 preferredHeight=290 rect=(x:-734.00, y:-145.00, width:1468.00, height:290.00) chars=128 textChars=127 screen=1920x1080
+skills_fixed bestFit=False effectiveFont=44 lines=6 preferredHeight=290 rect=(x:-734.00, y:-145.00, width:1468.00, height:290.00) chars=585 textChars=328 screen=1920x1080

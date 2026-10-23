@@ -1,0 +1,45 @@
+{
+  "status": "installed_verified",
+  "original_sha256": "677cb9884b3adc18a65005d37a55784164821f484f970339cd15297105686664",
+  "patched_sha256": "fdc889090036407c7625cb847e2ebc9827cd6bbe47ae6e50ac2461cf00056b88",
+  "runtime_comparison": "passed_real_prefab_at_1920x1080",
+  "method_validation": [
+    "Expected changed method: System.Void inXile.UI.TTON.MessageWindow::SetMessage(System.String,System.String,System.String,System.String,inXile.UI.TTON.MessageWindow/MessageWindowCallback,inXile.UI.TTON.MessageWindow/MessageWindowCallback)",
+    "Expected changed method: System.Void inXile.UI.TTON.MessageWindow::SetMessage(System.String)",
+    "Verified 45469 methods; exactly 2 guarded prefixes added; original method bodies and assembly references preserved"
+  ],
+  "metrics": [
+    "Begin at GameState.Awake",
+    "english bestFit=True effectiveFont=22 lines=7 preferredHeight=338 rect=(x:-734.00, y:-169.00, width:1468.00, height:338.00) chars=402 textChars=401 screen=1920x1080",
+    "chinese_baseline bestFit=True effectiveFont=7 lines=3 preferredHeight=48 rect=(x:-734.00, y:-24.00, width:1468.00, height:48.00) chars=128 textChars=127 screen=1920x1080",
+    "chinese_fixed bestFit=False effectiveFont=44 lines=6 preferredHeight=290 rect=(x:-734.00, y:-145.00, width:1468.00, height:290.00) chars=128 textChars=127 screen=1920x1080",
+    "skills_fixed bestFit=False effectiveFont=44 lines=6 preferredHeight=290 rect=(x:-734.00, y:-145.00, width:1468.00, height:290.00) chars=585 textChars=328 screen=1920x1080"
+  ],
+  "changes": [
+    "Only MessageWindow.SetMessage overload entry prefixes",
+    "Guarded by TutorialMessageWindow instance and CJK text",
+    "Disable resizeTextForBestFit and permit vertical overflow, allowing existing ContentSizeFitter to expand"
+  ],
+  "new_runtime_dependencies": false,
+  "translation_or_resource_changes": false,
+  "temporary_resource_wrap_status": "rolled back to exact pre-test hash",
+  "screenshots": {
+    "english.png": "63ac11e5c73d3ac36531c38414e1075eadf34875ee3bf77ab7b4e76a93f81fc1",
+    "chinese_baseline.png": "be0c407e181a5f584c5068c728331f12fac1aba9b97fd28776a22e897fcddeaa",
+    "chinese_fixed.png": "919109e809a8fe95fe5ffa5345ae4dde3ecc135f5a495afbf33a4284eb6091c9",
+    "skills_fixed.png": "d19cf0ae88472ca8fd6b9f4efbfdbf3c14aa46c59253e843201d32c98c1bf879"
+  },
+  "evidence_directory": "Analysis/tutorial_bestfit_20261023",
+  "limitations": [
+    "Real prefab spawned by temporary startup QA, not full inventory quest trigger",
+    "1920x1080 only; other resolutions and physical gamepad pending",
+    "No full gameplay/save-load regression run"
+  ],
+  "qa_cleanup": "Original program SHA verified restored and temporary QA DLL removed before installing the clean patch; cleanup process-exit race repaired by verified restoration",
+  "installed": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\Torment Tides of Numenera\\WIN\\TidesOfNumenera_Data\\Managed\\Assembly-CSharp.dll",
+  "backup": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\backups\\tutorial_bestfit_20261023\\Assembly-CSharp.dll",
+  "qa_assembly_sha256": "1f7a4e4b1db33f360cf992a80fd8538cd1cbe0509ba4866cd05e63613c1fcb59",
+  "qa_assembly_scope": "Temporary GameState.Awake entry added only for controlled comparison; final clean patch contains no QA call or probe reference. Runtime screenshots measure the same patched SetMessage methods, not a full gameplay regression of the clean final hash.",
+  "unchanged_translation_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "unchanged_tutorial_resource_sha256": "cad5e4958fb662dd1c1eae189061972d42eb2adc66fed8daf670ade6309a0c15"
+}
