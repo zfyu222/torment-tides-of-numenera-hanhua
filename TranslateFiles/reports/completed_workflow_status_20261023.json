@@ -1,0 +1,59 @@
+{
+  "revision": 7,
+  "paused": false,
+  "quality": {
+    "final": {
+      "report_hash": "fb1477f4be375a894b888f500eedb118e99fe6e6c8edd445efe51d43342d60c0",
+      "reviewer": "main:user-authorized-small-review"
+    },
+    "pilot": {
+      "report_hash": "f8e86c229e418a1be677179807484f6b570cba610de14f98ac9f354c56ae85c4",
+      "reviewer": "main"
+    }
+  },
+  "workflow": "custom",
+  "glossary_frozen": true,
+  "records": {
+    "review": 70163
+  },
+  "tasks": [
+    {
+      "stage": "extract",
+      "status": "done",
+      "n": 1343
+    },
+    {
+      "stage": "extract",
+      "status": "obsolete",
+      "n": 8
+    },
+    {
+      "stage": "glossary_review",
+      "status": "done",
+      "n": 1092
+    },
+    {
+      "stage": "pilot_translate",
+      "status": "done",
+      "n": 9
+    },
+    {
+      "stage": "review",
+      "status": "done",
+      "n": 6293
+    },
+    {
+      "stage": "translate",
+      "status": "done",
+      "n": 2971
+    },
+    {
+      "stage": "translate",
+      "status": "obsolete",
+      "n": 1
+    }
+  ],
+  "attention": [],
+  "api_requests": 15447,
+  "api_budget_requests": 13224
+}

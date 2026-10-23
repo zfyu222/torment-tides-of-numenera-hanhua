@@ -1,0 +1,17 @@
+{
+  "stage": "review",
+  "reviewer": "main:user-authorized-layout-fix",
+  "reason": "用户明确要求少量剩余问题直接解决；仅恢复源文换行类型和边界空白，保留API已有语义修订与证据，所有质量门槛重新校验。",
+  "records": [
+    {
+      "id": "R0043769_c80ba23b80",
+      "source_sha256": "c80ba23b80083ab39da99553068d3534d6a720e6c8cacc8a16e59df222c36cbf",
+      "candidate_sha256": "ccbae1410ba1a698774292989046fe9a7a3bfd3a0d2df9efc66a1cbc92b61824"
+    },
+    {
+      "id": "R0046604_6cf462f2bf",
+      "source_sha256": "6cf462f2bf8dbbe5342306bd019f4d40627615094fcebdbf5c32b597271d1a3b",
+      "candidate_sha256": "e142ee2e01cabad6cbe08a0799a8bc724fa89b8c8b523ed36619e36daa704f5e"
+    }
+  ]
+}

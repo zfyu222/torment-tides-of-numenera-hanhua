@@ -1,0 +1,19 @@
+{
+  "status": "incomplete_no_valid_runtime_evidence",
+  "translation_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "method": "Temporary existing MainMenuWindow.Start hook, real TutorialMessageWindow prefab; game started in background. Bounded attempts did not produce metrics or screenshots.",
+  "original_assembly_restored": true,
+  "assembly_sha256": "677cb9884b3adc18a65005d37a55784164821f484f970339cd15297105686664",
+  "temporary_probe_removed": true,
+  "metrics_produced": false,
+  "screenshots_produced": false,
+  "gameplay_dialogue_tested": false,
+  "quest_tested": false,
+  "physical_controller_tested": false,
+  "log_evidence": "Analysis/input/tutorial_20261023/output_log.txt",
+  "startup_missing_test_files_also_absent_in_original_backup": [
+    "en/text/quests/test quests/test_crisis_objectives_jko.stringtable",
+    "en/text/quests/test quests/test_crisis_objectives_quest.stringtable"
+  ],
+  "notes": "Do not treat old 2026-10-20 layout measurements as validation of new translations; no save manipulation. Missing developer test quest references are not grounds to invent new shipped text."
+}

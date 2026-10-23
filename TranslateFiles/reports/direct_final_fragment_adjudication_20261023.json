@@ -1,0 +1,13 @@
+{
+  "report_hash": "862f605f3634351eadd38cc74339f35ec506062c9f2885d9638a69855dcdaf42",
+  "reviewer": "main:user-authorized-small-review",
+  "user_authorization": "用户明确允许少量剩余问题直接解决",
+  "summary": "复核唯一剩余原文截断备注，原版备份确认同样残缺。",
+  "decisions": [
+    {
+      "id": "R0006517_160fcf99f8",
+      "disposition": "contextual",
+      "reason": "原始英文ID91确为Who wo后接after all my expenses are paid，缺失无法可靠恢复。现译已去掉无意义英文wo，以中文省略号保留残句和其余确定语义，不凭空补写；属于源文问题，保留于已知问题。"
+    }
+  ]
+}

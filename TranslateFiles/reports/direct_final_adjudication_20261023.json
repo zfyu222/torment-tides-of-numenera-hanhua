@@ -1,0 +1,73 @@
+{
+  "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+  "reviewer": "main:user-authorized-small-review",
+  "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧",
+  "summary": "实际逐条阅读13条原译文和备注，核对原版字符串表的ID108/221性别变体、ID91残句和ID48漏否定，并读取冻结人名/复合词；只对明确问题派定向修复，源文无法判定的不编造内容。",
+  "decisions": [
+    {
+      "id": "R0001076_97b213c466",
+      "disposition": "repair",
+      "reason": "此原文在6处复用，you不标单复数，不应固定成你们。改用不限定数量的自然问句，例如“能再介绍一下自己吗？”，保留again的再次含义。"
+    },
+    {
+      "id": "R0001101_c86bb95546",
+      "disposition": "repair",
+      "reason": "已核对原英文备份同ID108的DefaultText与FemaleText：女性变体前文已改she/her，但help him, guide him残留男性模板；对阿利格恩所说的帮忙对象仍是本句女性变易之神候选。将这一处“你该帮他，引导他”修为“你该帮她，引导她”，其他含义与强调标记不动。"
+    },
+    {
+      "id": "R0006517_160fcf99f8",
+      "disposition": "repair",
+      "reason": "原英文备份ID91确实也是Who wo...残句。不要猜补完整原句，但中文正文不应残留无意义的wo；用中文省略号标明截断，保留可确定的谁、开销付清之后、喜欢多赚等信息。不得凭空编造残缺部分。"
+    },
+    {
+      "id": "R0020374_1419169418",
+      "disposition": "repair",
+      "reason": "核对原英文ID221：男性DefaultText首尾均brother，FemaleText首段sister而末段仍brother，属于性别变体漏改。FemaleText末段称呼改为姐妹，与首段sister及女性分支一致；其他叙述和CRLF段落不改。"
+    },
+    {
+      "id": "R0028836_de69924fa4",
+      "disposition": "contextual",
+      "reason": "原句自身同时写dead companion与how much longer he will make it，缺乏足够证据把死人改成濒死或推断复活。译文忠实保留原句矛盾，不把源文缺陷当汉化新增剧情；记为原始资源问题。"
+    },
+    {
+      "id": "R0032300_fd983259d2",
+      "disposition": "pass",
+      "reason": "实际中文首段为“里亚斯特拉德微笑着说道”，未出现“她”，后文照原句He译他。审校备注所说中文先她后他与实际译文不符，现译已通过使用人名避开源文首句she/后句He矛盾，无需改文。"
+    },
+    {
+      "id": "R0034989_69aeb241ef",
+      "disposition": "repair",
+      "reason": "单条语音无先行词，不能固定为“他们”或擅判资源/敌人。用汉语省略主语的自然表达保留耗不尽的含义，例如“似乎永远也耗不尽。”；不要新增物品或人物指代。"
+    },
+    {
+      "id": "R0036199_dae690f193",
+      "disposition": "pass",
+      "reason": "本条原文只问Order of Truth中的朋友，中文为“你在真理教团里有个朋友？”，原译均没有Orth。该条Orth译名警告来自同包其他记录，不适用于本条；问题在含Orth的记录单独修复。"
+    },
+    {
+      "id": "R0036200_5acdbb2e13",
+      "disposition": "repair",
+      "reason": "Orth与Orth Faung是同一位研究阿利格恩纹身和框架的祭司。以冻结全名奥思·方的首名为准，将此处简称奥尔斯统一为奥思。冻结表简称冲突不全局修改；本句为Orth增加明确语境例外，说明同一人物全名/简称一致性的依据，避免机械改回。"
+    },
+    {
+      "id": "R0047777_20285741c5",
+      "disposition": "contextual",
+      "reason": "原文是East加换行及! point，没有可验证数字1。现译东及! 点保留原标点、换行，未擅自把感叹号改数值，属于源文疑似笔误，不构成新增译错。"
+    },
+    {
+      "id": "R0050237_a254ec3826",
+      "disposition": "contextual",
+      "reason": "此句Neng按冻结人物表译能，本条本身准确。Neng的完整地点/属性词条另有内恩、奈恩异写，须在相关复合词出现处定向统一为能；本句保持，不替换全局人物名造成二次漂移。"
+    },
+    {
+      "id": "R0052837_2f69379214",
+      "disposition": "contextual",
+      "reason": "核对原始备份ID48确为does move, not even a little bit，未否定与后续not even a little bit直接冲突。现译采取后半句明确的完全未动，符合用力拉却丝毫不动的完整情景，不改成已经移动；列作原文漏写否定。末尾空格保持。"
+    },
+    {
+      "id": "R0064744_2077f62113",
+      "disposition": "repair",
+      "reason": "冻结人物表Rhin为莱茵，而物品复合词Rhin的劲弩写琳。统一此物品名为莱茵的劲弩，沿用人物主译；若完整复合术语匹配阻止一致性修正，对Rhin's Arbalest记录明确语境例外，保留真实一致性依据。"
+    }
+  ]
+}

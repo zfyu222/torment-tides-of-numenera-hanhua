@@ -1,0 +1,57 @@
+{
+  "actual_reviewer": "main:user-authorized-ui-reflow",
+  "records": [
+    {
+      "id": "R0068056_ca3e830cff",
+      "before": "要更轻松地移动面前的碗，请用 [Control: lmb] 消耗力量来提升努力等级。\r\n不必担心这次检定会失败。\r\n在《折磨》中，失败往往会带来有趣的结果。",
+      "after": "要更轻松地移动面前的碗，请用 [Control: lmb]\r\n消耗力量来提升努力等级。不必担心这次检定会失败。\r\n在《折磨》中，失败往往会带来有趣的结果。",
+      "line_lengths": [
+        29,
+        24,
+        20
+      ]
+    },
+    {
+      "id": "R0068080_c71c9a7b37",
+      "before": "要更轻松地移动你面前的碗，可使用 [Control: leftstick] 花费力量来提高努力等级。\r\n即使这项检定失败也不必担心。\r\n在《折磨》中，失败往往会带来有趣的结果。",
+      "after": "要更轻松地移动你面前的碗，可使用 [Control: leftstick]\r\n花费力量来提高努力等级。即使这项检定失败也不必担心。\r\n在《折磨》中，失败往往会带来有趣的结果。",
+      "line_lengths": [
+        37,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "R0068082_0dd0a62f31",
+      "before": "第一项是装备，其中包含当前角色已装备的所有物品。\r\n装备包括近战武器和远程武器、盾牌、护甲，以及戒指和护符等饰品，\r\n还包括绑定物品。",
+      "after": "第一项是装备，其中包含当前角色已装备的所有物品。\r\n装备包括近战武器和远程武器、盾牌、护甲，\r\n以及戒指和护符等饰品，还包括绑定物品。",
+      "line_lengths": [
+        24,
+        20,
+        19
+      ]
+    }
+  ],
+  "receipts": [
+    {
+      "status": "submitted",
+      "session_id": "22e140bd343648e9bc5641b46b8f07a5",
+      "task_id": "review-round-5e8e4718851f4b3a",
+      "records": 3,
+      "summary": {
+        "records": {
+          "review": 70160,
+          "translate": 3
+        },
+        "tasks": {
+          "done": 6295
+        }
+      },
+      "quality": "review_saved; wait for the whole round before review-scan",
+      "remaining_round_batches": 0,
+      "next_action": "review-scan --stage review --prepare-repairs"
+    }
+  ],
+  "new_in_game_check": "pending",
+  "paid_api_requests": 0
+}

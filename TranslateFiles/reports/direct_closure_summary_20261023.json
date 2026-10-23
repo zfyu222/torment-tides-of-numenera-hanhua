@@ -1,0 +1,24 @@
+{
+  "layout_only_restorations": 2,
+  "direct_semantic_revisions": 3,
+  "final_issues_adjudicated": 13,
+  "api_targeted_records": 7,
+  "name_alias_followup_records": 29,
+  "tests": {
+    "layout_direct_quality_record_constraints": 11,
+    "existing_quality_regressions": 25,
+    "total_distinct": 36
+  },
+  "user_authorization": "继续，对于剩余的，如果东西比较少的话，你就直接解决了吧",
+  "actual_manual_reviewer": "main:user-authorized-small-review",
+  "api_repair_receipts": [
+    "8ac1b0241d66447b96593cb5457b07d6",
+    "4cead424f148474d8cfa227a0ef9c436"
+  ],
+  "raw_model_replies_preserved": true,
+  "attempts_reset": false,
+  "glossary_global_changes": false,
+  "notes": "Scoped consistency corrections use explicit per-record exceptions supported by the identified same-person aliases. Original source defects retained where no reliable reconstruction exists.",
+  "tutorial_reflows": 3,
+  "export_scope_fix": "Export uses the same source-hash-bound record protection as preparation/review, cache separated by actual protection rules. No new exemption."
+}

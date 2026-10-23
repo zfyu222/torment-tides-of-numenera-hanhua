@@ -1,0 +1,13 @@
+{
+  "files": 2250,
+  "mapping_records": 70163,
+  "replaced_fields": 89239,
+  "changed_fields": 79708,
+  "verified_nonempty_fields": 89239,
+  "fields_containing_cjk": 79576,
+  "tree_sha256": "827DFF03956663949D08C1195A358F7B5877805184A0C2ECF3DD2782F483DE02",
+  "translation_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "output": "repack/custom_api_20261023/localized/en",
+  "missing_mappings": 0,
+  "all_xml_parsed": true
+}

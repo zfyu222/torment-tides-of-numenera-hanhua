@@ -1,0 +1,48 @@
+{
+  "actual_reviewer": "main:user-authorized-direct",
+  "user_authorization": "继续，对于剩余的，如果东西比较少的话，你就直接解决了吧",
+  "paid_api_requests": 0,
+  "records": [
+    {
+      "id": "R0001076_97b213c466",
+      "before": "“你能再跟我说一遍你是谁吗？”",
+      "after": "“能再介绍一下自己吗？”",
+      "reviewer": "main:user-authorized-direct",
+      "reason": "you无单复数形式区分，改用中文省略数量的自我介绍问句；再对应again，不新增受话人数。"
+    },
+    {
+      "id": "R0001101_c86bb95546",
+      "before": "她轻蔑地笑了。“就算她*真是*变易之神，你也不太可能靠那么简单的问题绊倒她。你该帮他，引导他。无论如何，这才是最明智的路。至少，这是*我*认为最好的做法，阿利格恩。”她的笑容里滴着毒液。",
+      "after": "她轻蔑地笑了。“就算她*真是*变易之神，你也不太可能靠那么简单的问题绊倒她。你该帮她，引导她。无论如何，这才是最明智的路。至少，这是*我*认为最好的做法，阿利格恩。”她的笑容里滴着毒液。",
+      "reviewer": "main:user-authorized-direct",
+      "reason": "核对原版ID108男女变体：FemaleText前文she/her已指女性最后遗弃者，后文him是同一男性模板的残留；按女性分支恢复她，其他正文不变。"
+    },
+    {
+      "id": "R0020374_1419169418",
+      "before": "伊尼菲尔挑起一边眉毛。“我听过更难听的话，姐妹，威胁过我的还有比女人更可怕的东西。我在刀锋上流过血，那些刀剥开、剔下我污浊的躯体；我被火焰焚烧，痛得超出知觉；我眼看着自己的血肉与皮肤重新长合。”\r\n\r\n他掀起衬衫，露出松弛的肚腹，上面斑斑驳驳，满是撑开的纹路和伤疤。“想割就割，若你在意；想开膛就开膛，若你敢。”片刻之后，他放下了那块破布。\r\n\r\n“还有更值得打的仗，兄弟，你现在招惹的是一种苦涩的命运。”",
+      "after": "伊尼菲尔挑起一边眉毛。“我听过更难听的话，姐妹，威胁过我的还有比女人更可怕的东西。我在刀锋上流过血，那些刀剥开、剔下我污浊的躯体；我被火焰焚烧，痛得超出知觉；我眼看着自己的血肉与皮肤重新长合。”\r\n\r\n他掀起衬衫，露出松弛的肚腹，上面斑斑驳驳，满是撑开的纹路和伤疤。“想割就割，若你在意；想开膛就开膛，若你敢。”片刻之后，他放下了那块破布。\r\n\r\n“还有更值得打的仗，姐妹，你现在招惹的是一种苦涩的命运。”",
+      "reviewer": "main:user-authorized-direct",
+      "reason": "核对原版ID221：男性首尾brother，女性首段sister但结尾残留brother。仅修正女性分支末段称呼为姐妹，与首段一致。"
+    }
+  ],
+  "receipts": [
+    {
+      "status": "submitted",
+      "session_id": "7b831a005b5e4f528b58a3815d20fc13",
+      "task_id": "review-round-e00e3f16d45043c7",
+      "records": 3,
+      "summary": {
+        "records": {
+          "review": 70160,
+          "translate": 3
+        },
+        "tasks": {
+          "done": 6294
+        }
+      },
+      "quality": "review_saved; wait for the whole round before review-scan",
+      "remaining_round_batches": 0,
+      "next_action": "review-scan --stage review --prepare-repairs"
+    }
+  ]
+}

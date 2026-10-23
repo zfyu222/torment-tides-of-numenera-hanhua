@@ -1,0 +1,196 @@
+{
+  "schema": 2,
+  "kind": "final",
+  "pilot_key": "28151d042a81db57b1e8e6e0e8b17e024be44594d85a3e33f35a0a4948b4e5c1",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "glossary": {
+    "hash": "bbbf5c47c8ffaf2d3efdcae8af7bbc4fe3fa4410101750873f68f30cd925046a",
+    "path": "glossary\\r6\\freeze_f4315a10\\built\\glossary_reviewed.json",
+    "revision": 6
+  },
+  "snapshot_hash": "15332c03c09ff3db46e0fbe98db8f379586ed048cba633a6abaa713956e3cbf8",
+  "coverage": {
+    "records": 70163,
+    "text_types": {
+      "对白或叙述（具体类型以本句为准）": 56466,
+      "系统或界面文本": 11695,
+      "任务文本": 2002
+    },
+    "missing_context": 0,
+    "risk_records": 44699,
+    "ordinary_sample": 0,
+    "sol_records": 7
+  },
+  "risk_detection": "Heuristic candidates plus reviewer findings; absence of flags is not proof of correctness.",
+  "records_to_check": [
+    {
+      "id": "R0006517_160fcf99f8",
+      "ordinal": 6517,
+      "source": "\"Because people will pay it,\" he says promptly. \"I could charge half the amount and live very comfortably, but I'd rather be rich. Who wo after all my expenses are paid, but I'm afraid I just like getting the extra money",
+      "translation": "“因为有人愿意付这个价，”他立刻说。“我本可以只收一半，照样过得很舒坦，但我宁愿发财。谁……等我的所有开销付清之后，可我怕我就是喜欢多赚那笔钱。”",
+      "metadata": {
+        "group": "conversations/a_sagus",
+        "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+        "resource": "en/text/conversations/a_sagus/a2201_jernaugh.stringtable#ID=91/DefaultText",
+        "scene": "a_sagus/a2201_jernaugh.stringtable",
+        "text_type": "对白或叙述（具体类型以本句为准）"
+      },
+      "risk_reasons": [
+        "conditions",
+        "term_exception",
+        "review_correction",
+        "review_warning"
+      ],
+      "review": {
+        "task_id": "review-round-9251f026f212495c",
+        "instance": "api-review-08be0c76c2054560a8ee6947be2a8a24",
+        "stage": "review",
+        "before": "“因为有人愿意付这个价，”他立刻说。“我本可以只收一半，照样过得很舒坦，但我宁愿发财。谁 wo……等我的所有开销付清之后，可我怕我就是喜欢多赚那笔钱。”",
+        "translation": "“因为有人愿意付这个价，”他立刻说。“我本可以只收一半，照样过得很舒坦，但我宁愿发财。谁……等我的所有开销付清之后，可我怕我就是喜欢多赚那笔钱。”",
+        "changes": [
+          {
+            "after": "“因为有人愿意付这个价，”他立刻说。“我本可以只收一半，照样过得很舒坦，但我宁愿发财。谁……等我的所有开销付清之后，可我怕我就是喜欢多赚那笔钱。”",
+            "before": "“因为有人愿意付这个价，”他立刻说。“我本可以只收一半，照样过得很舒坦，但我宁愿发财。谁 wo……等我的所有开销付清之后，可我怕我就是喜欢多赚那笔钱。”",
+            "category": "accuracy",
+            "reason": "原文在 Who wo 处截断，wo 是无意义残片；中文不应保留半截英文，改为“谁……”标示残缺，不猜测缺失部分。",
+            "severity": "minor",
+            "source_excerpt": "Who wo after all my expenses are paid"
+          }
+        ],
+        "checks": {
+          "accuracy": {
+            "evidence": "原文在 Who wo 后截断；将无意义残片 wo 改为省略号，保留可确定的 Who 和 after all my expenses are paid，不补全未知句意。",
+            "status": "corrected"
+          },
+          "completeness": {
+            "evidence": "引语、收半价也舒适、宁愿发财、开销付清、怕自己喜欢多赚均保留；截断处仅标示不增补。",
+            "status": "pass"
+          },
+          "logic": {
+            "evidence": "after all my expenses are paid 作时间从句，but 转折保留，无否定或数量关系误置。",
+            "status": "pass"
+          },
+          "placeholders": {
+            "evidence": "无变量、标签或占位符。",
+            "status": "not_applicable"
+          },
+          "terminology": {
+            "evidence": "like 译“喜欢”；I/MONEY 按既有例外译“我/钱”，不套用保留原文。",
+            "status": "pass"
+          },
+          "tone": {
+            "evidence": "直率、自嘲口吻保持，残缺处以省略号标示。",
+            "status": "pass"
+          }
+        },
+        "exceptions": [
+          {
+            "reason": "原句中的“money”是普通名词，指的是“钱”或“费用”，并非需要保留原文的大写标记“MONEY”，因此译作“钱”。",
+            "source": "MONEY"
+          },
+          {
+            "reason": "原句中的“I”是普通的第一人称代词，出现在“I'd rather”和“I just like”中，并非需要保留原文的标记，因此译作“我”。",
+            "source": "i"
+          }
+        ],
+        "id": "R0006517_160fcf99f8",
+        "issues": [
+          {
+            "reason": "原文在“Who wo”后疑似截断，无法确定完整句意；译文以“谁……”保留残缺，未强行补全。",
+            "severity": "warning"
+          }
+        ],
+        "reason": "原文在 Who wo 处截断，wo 是无意义残片；保留“谁……”标示残缺，去除半截英文，其余信息照原译不动。",
+        "reviewed": true,
+        "source_excerpt": "\"Because people will pay it,\" he says promptly. \"I could charge half the amount and live very comfortably, but I'd rather be rich. Who wo after all my expenses are paid, but I'm afraid I just like getting the extra money"
+      }
+    }
+  ],
+  "consistency": [],
+  "glossary_checks": [],
+  "pilot_batch_summaries": {},
+  "check_signatures": {
+    "R0006517_160fcf99f8": "ee5e0ac5e9e24c3adb54a55e40fe525e616360d7ec4303820ea0911221737d77",
+    "R0028836_de69924fa4": "30d71f381382fdafe5fed54bbab46d82f613995d8f01a0c96a46158280f68902",
+    "R0032300_fd983259d2": "266213a8fd4e248942655fd4352aafa81ffe3461a1bf5741225160a3e045a04f",
+    "R0036199_dae690f193": "ef086952700027ccbbbb68d24f5b819ad08930cba4e16fa3fc2dc0820d47097f",
+    "R0047777_20285741c5": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33",
+    "R0050237_a254ec3826": "776581d24bb8aeb75cf464c3b940f9c87605d981c4072f1145857bae883f7f0a",
+    "R0052837_2f69379214": "662119e9e4b2d99335625f5a6d94affd19e29444d0e25d4e0792bf8086775797"
+  },
+  "reused_decisions": {
+    "R0028836_de69924fa4": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0028836_de69924fa4",
+        "reason": "原句自身同时写dead companion与how much longer he will make it，缺乏足够证据把死人改成濒死或推断复活。译文忠实保留原句矛盾，不把源文缺陷当汉化新增剧情；记为原始资源问题。",
+        "reviewer": "main:user-authorized-small-review",
+        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+      },
+      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+      "signature": "30d71f381382fdafe5fed54bbab46d82f613995d8f01a0c96a46158280f68902"
+    },
+    "R0032300_fd983259d2": {
+      "decision": {
+        "disposition": "pass",
+        "id": "R0032300_fd983259d2",
+        "reason": "实际中文首段为“里亚斯特拉德微笑着说道”，未出现“她”，后文照原句He译他。审校备注所说中文先她后他与实际译文不符，现译已通过使用人名避开源文首句she/后句He矛盾，无需改文。",
+        "reviewer": "main:user-authorized-small-review",
+        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+      },
+      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+      "signature": "266213a8fd4e248942655fd4352aafa81ffe3461a1bf5741225160a3e045a04f"
+    },
+    "R0036199_dae690f193": {
+      "decision": {
+        "disposition": "pass",
+        "id": "R0036199_dae690f193",
+        "reason": "本条原文只问Order of Truth中的朋友，中文为“你在真理教团里有个朋友？”，原译均没有Orth。该条Orth译名警告来自同包其他记录，不适用于本条；问题在含Orth的记录单独修复。",
+        "reviewer": "main:user-authorized-small-review",
+        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+      },
+      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+      "signature": "ef086952700027ccbbbb68d24f5b819ad08930cba4e16fa3fc2dc0820d47097f"
+    },
+    "R0047777_20285741c5": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0047777_20285741c5",
+        "reason": "原文是East加换行及! point，没有可验证数字1。现译东及! 点保留原标点、换行，未擅自把感叹号改数值，属于源文疑似笔误，不构成新增译错。",
+        "reviewer": "main:user-authorized-small-review",
+        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+      },
+      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+      "signature": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33"
+    },
+    "R0050237_a254ec3826": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0050237_a254ec3826",
+        "reason": "此句Neng按冻结人物表译能，本条本身准确。Neng的完整地点/属性词条另有内恩、奈恩异写，须在相关复合词出现处定向统一为能；本句保持，不替换全局人物名造成二次漂移。",
+        "reviewer": "main:user-authorized-small-review",
+        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+      },
+      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+      "signature": "776581d24bb8aeb75cf464c3b940f9c87605d981c4072f1145857bae883f7f0a"
+    },
+    "R0052837_2f69379214": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0052837_2f69379214",
+        "reason": "核对原始备份ID48确为does move, not even a little bit，未否定与后续not even a little bit直接冲突。现译采取后半句明确的完全未动，符合用力拉却丝毫不动的完整情景，不改成已经移动；列作原文漏写否定。末尾空格保持。",
+        "reviewer": "main:user-authorized-small-review",
+        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+      },
+      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+      "signature": "662119e9e4b2d99335625f5a6d94affd19e29444d0e25d4e0792bf8086775797"
+    }
+  },
+  "required_decisions": [
+    "R0006517_160fcf99f8"
+  ],
+  "sol_scope_policy": "disputes_only_v1",
+  "carried_findings": {},
+  "selection_explanation": "Only explicit unresolved reviewer issues need Sol adjudication. Risk flags, corrections, ordinary samples, duplicate-source groups and speaker groups do not trigger Sol. Known Sol repair findings are carried to standard repair without re-reading; exhausted or regressing repairs use the existing targeted Sol escalation route.",
+  "report_hash": "fb1477f4be375a894b888f500eedb118e99fe6e6c8edd445efe51d43342d60c0"
+}

@@ -1,0 +1,56 @@
+{
+  "stage": "review",
+  "phase": "round_checked",
+  "scope": "review_round",
+  "checked_records": 3,
+  "checks": [
+    {
+      "id": "R0068056_ca3e830cff",
+      "instance": "main:user-authorized-ui-reflow-d28696597d6c4e0292c0504e1121da20",
+      "task_id": "review-round-5e8e4718851f4b3a",
+      "result": "passed",
+      "diagnostic": null,
+      "diagnostic_detail": null,
+      "regressed_terms": []
+    },
+    {
+      "id": "R0068080_c71c9a7b37",
+      "instance": "main:user-authorized-ui-reflow-d28696597d6c4e0292c0504e1121da20",
+      "task_id": "review-round-5e8e4718851f4b3a",
+      "result": "passed",
+      "diagnostic": null,
+      "diagnostic_detail": null,
+      "regressed_terms": []
+    },
+    {
+      "id": "R0068082_0dd0a62f31",
+      "instance": "main:user-authorized-ui-reflow-d28696597d6c4e0292c0504e1121da20",
+      "task_id": "review-round-5e8e4718851f4b3a",
+      "result": "passed",
+      "diagnostic": null,
+      "diagnostic_detail": null,
+      "regressed_terms": []
+    }
+  ],
+  "passed_ids": [
+    "R0068056_ca3e830cff",
+    "R0068080_c71c9a7b37",
+    "R0068082_0dd0a62f31"
+  ],
+  "failure_summary": {
+    "basis": "first_failing_gate_in_this_scan; later checks may be blocked; not translation accuracy",
+    "checked_failures": {},
+    "outstanding_failures": {},
+    "regression_overlap": 0
+  },
+  "failed_records": 0,
+  "problems": {},
+  "repair_tasks": [],
+  "repair_dispatch": [],
+  "needs_attention_ids": [],
+  "clean": true,
+  "repair_stop_reasons": {},
+  "status": "clean",
+  "round": 13,
+  "round_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\reports\\review_rounds\\review_00013.json"
+}

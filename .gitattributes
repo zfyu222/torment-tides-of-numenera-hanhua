@@ -1,0 +1,4 @@
+# Preserve embedded CSV CRLF, outer record separators and source/export hashes.
+torment-tides-of-numenera_text.csv -text
+torment-tides-of-numenera_text_translated.csv -text
+TranslateFiles/glossary/** -text

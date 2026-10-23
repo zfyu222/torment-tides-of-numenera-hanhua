@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "translation_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "records": 70163,
+  "semantic_review": "full",
+  "polish": false,
+  "revision": 7,
+  "glossary": {
+    "hash": "bbbf5c47c8ffaf2d3efdcae8af7bbc4fe3fa4410101750873f68f30cd925046a",
+    "path": "glossary\\r6\\freeze_f4315a10\\built\\glossary_reviewed.json",
+    "revision": 6
+  },
+  "ainiee": {
+    "actual_commit": "c50570c1dee7df7bd51316a253f0b42d10a8ca4c",
+    "expected_commit": "c50570c1dee7df7bd51316a253f0b42d10a8ca4c",
+    "license": "AGPL-3.0; Tools/AINiee/LICENSE",
+    "modules": {
+      "Domain/PromptBuilder/GlossaryHelper.py": "6b3072989b77c84787774439c79aaea7d4727fcda104667d8833b53bb490446f",
+      "Domain/TextProcessor/TextProcessor.py": "805f49f68302fab2c5832aad8c7597fb4c3382cea131618765248f30a5963eed",
+      "Infrastructure/LLMRequester/LLMClientFactory.py": "70d43af749640604813887241604edf0472a75afbbf106fb5e69cfd3753a1a4b",
+      "Infrastructure/LLMRequester/OpenaiRequester.py": "b2b1f5e6fd3a31727b2e1d2597e1bcca3e5e4db2cfec550ff6cfcd6a6cff3f79"
+    }
+  },
+  "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_text_translated.csv",
+  "quality_review": {
+    "report_hash": "fb1477f4be375a894b888f500eedb118e99fe6e6c8edd445efe51d43342d60c0",
+    "reviewer": "main:user-authorized-small-review"
+  },
+  "in_game_check": "pending_repack"
+}

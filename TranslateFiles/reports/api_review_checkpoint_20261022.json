@@ -1,19 +1,19 @@
 {
   "revision": 7,
-  "stage": "review",
-  "status": "quality_needs_attention",
+  "stage": "exported_and_deployed",
+  "status": "translation_complete_runtime_checks_pending",
   "paused": false,
   "review_tasks": {
-    "done": 6276
+    "done": 6293
   },
   "body_drafts": 70163,
   "draft_check_clean": true,
-  "review_complete": false,
-  "request_count": 15431,
-  "request_budget_used": 13208,
+  "review_complete": true,
+  "request_count": 15447,
+  "request_budget_used": 13224,
   "max_requests": 100000,
   "concurrency_policy": "use api.local.jsonc as configured without overrides",
-  "latest_review_receipt": "0a59b86732c04e06945a9e4a28bedccd",
+  "latest_review_receipt": "4cead424f148474d8cfa227a0ef9c436",
   "latest_run_tokens": {
     "prompt_tokens": 621803,
     "completion_tokens": 1203669,
@@ -23,18 +23,14 @@
     "reported_requests": 84,
     "unknown_requests": 0
   },
-  "next_action": "Investigate why model repeatedly normalizes required CRLF/trailing spaces; preserve stop history and do not blindly dispatch more attempts.",
+  "next_action": "Verify current tutorial runtime layout; dialogue and quest gameplay checks remain pending.",
   "schedule_automation_id": null,
-  "old_csv_unchanged": true,
+  "old_csv_unchanged": false,
   "review_output_tokens": 32768,
   "records": {
-    "review": 70161,
-    "translate": 2
+    "review": 70163
   },
-  "remaining_quality_ids": [
-    "R0043769_c80ba23b80",
-    "R0046604_6cf462f2bf"
-  ],
+  "remaining_quality_ids": [],
   "connection_retry_rule": {
     "additional_retries": 3,
     "delays_seconds": [
@@ -43,5 +39,13 @@
       8
     ],
     "local_fault_budget_charge": false
-  }
+  },
+  "latest_run_tokens_scope": "Historical run before direct closure; not cumulative project usage",
+  "translation_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "quality_approval": {
+    "report_hash": "fb1477f4be375a894b888f500eedb118e99fe6e6c8edd445efe51d43342d60c0",
+    "reviewer": "main:user-authorized-small-review"
+  },
+  "deployment_report": "TranslateFiles/reports/deployment_custom_api_20261023.json",
+  "external_requests_running": 0
 }
