@@ -1,0 +1,47 @@
+[
+  {
+    "status": "ready",
+    "session_id": "e9dc7405be7341e990a3102afaa6081e",
+    "task_id": "review-r8-00034-c6ed90d7",
+    "records": 1,
+    "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\e9dc7405be7341e990a3102afaa6081e\\input.md",
+    "input_tokens": 3230,
+    "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\e9dc7405be7341e990a3102afaa6081e\\result.json",
+    "result_template_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\e9dc7405be7341e990a3102afaa6081e\\result.template.json",
+    "task_ready": true,
+    "repair_part": 1,
+    "repair_parts": 2,
+    "pending_repair_parts": 1,
+    "repair_parent_session": "f5e8ca32a39842e3875d288386f015db"
+  },
+  {
+    "status": "ready",
+    "session_id": "ad707fb8975d45bc9ee7a01603e18d52",
+    "task_id": "review-r8-00058-7de54ba0",
+    "records": 1,
+    "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00058-7de54ba0\\handoffs\\ad707fb8975d45bc9ee7a01603e18d52\\input.md",
+    "input_tokens": 3495,
+    "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00058-7de54ba0\\handoffs\\ad707fb8975d45bc9ee7a01603e18d52\\result.json",
+    "result_template_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00058-7de54ba0\\handoffs\\ad707fb8975d45bc9ee7a01603e18d52\\result.template.json",
+    "task_ready": true,
+    "repair_part": 1,
+    "repair_parts": 1,
+    "pending_repair_parts": 0,
+    "repair_parent_session": "df73af41b67e4fc48f09526dc6d485eb"
+  },
+  {
+    "status": "ready",
+    "session_id": "ccaf70e2b7654de6af855b550484e253",
+    "task_id": "review-r8-00034-c6ed90d7",
+    "records": 1,
+    "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\ccaf70e2b7654de6af855b550484e253\\input.md",
+    "input_tokens": 3210,
+    "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\ccaf70e2b7654de6af855b550484e253\\result.json",
+    "result_template_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\ccaf70e2b7654de6af855b550484e253\\result.template.json",
+    "task_ready": true,
+    "repair_part": 2,
+    "repair_parts": 2,
+    "pending_repair_parts": 0,
+    "repair_parent_session": "f5e8ca32a39842e3875d288386f015db"
+  }
+]

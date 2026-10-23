@@ -1,0 +1,13 @@
+{
+  "reason": "本次Numenera局部修订错误回退了先前已经确认的人名一致性。R0015921_f38a623571、R0043657_5a5ddd680e、R0043658_8d5954dbe2 的Orth为Orth Faung简称，同一位阿利格恩/真理教团同事；既有交付已统一简称“奥思”、全名“奥思·方”，不能在本次改成“奥尔斯”。请仅将这三句中的奥尔斯恢复奥思，保留扭蒙拉和其他已正确内容。冻结表Orth旧单名译法与已核实全名冲突，必须对本句实际命中的Orth（API用term_ref）记录有依据的语境例外说明简称身份；不要修改冻结表，不撤销其他已有例外，六维独立复核完整。",
+  "receipt": {
+    "repair_tasks": [
+      "review-round-346f852652164dc3",
+      "review-round-4c1f29c4b56c40e6",
+      "review-round-e40a7b003e304650"
+    ],
+    "repair_records": 3,
+    "needs_attention_ids": [],
+    "preserved_records": 70160
+  }
+}

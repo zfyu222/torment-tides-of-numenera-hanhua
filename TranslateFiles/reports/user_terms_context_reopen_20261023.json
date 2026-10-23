@@ -1,0 +1,24 @@
+{
+  "ids": [
+    "R0042709_5bfe9fc929",
+    "R0042771_9881a6b12d",
+    "R0042935_1e674cfde3",
+    "R0050793_2edc5dcdec",
+    "R0050795_8d6fbfb0aa",
+    "R0050797_04bf6eac7b",
+    "R0050799_62c5c66d45",
+    "R0067433_ed02e3e16a"
+  ],
+  "reason": "用户截图及实际原文确认的术语语境错误，局部修复：R0067433_ed02e3e16a 的 Bonded 是ttongui.stringtable ID696装备槽位分类（截图显示两件绑定装备），必须为“绑定物品”，不得使用指人的“结契者”“结合伴侣”。R0042709_5bfe9fc929、R0042771_9881a6b12d、R0042935_1e674cfde3 的bonded是配偶称谓，请用“伴侣”，最后一句保留原文自我改口“呃，我的丈夫”。R0050793_2edc5dcdec、R0050795_8d6fbfb0aa、R0050797_04bf6eac7b、R0050799_62c5c66d45 是与绽华建立特殊联结，并非配偶，请改为“未与绽华建立联结”，保持did not/didn’t的否定、人物主语、存活/死亡及愤世嫉俗/并非愤世嫉俗条件全部不变。仅修改上述明确错误，其余内容不做风格改写；必须输出完整translation及真实六维证据。",
+  "receipt": {
+    "repair_tasks": [
+      "review-round-87042eeb405e4850",
+      "review-round-80b5c37f365344a7",
+      "review-round-aa6ef157a0df4bf7",
+      "review-round-f68908d588c94def"
+    ],
+    "repair_records": 8,
+    "needs_attention_ids": [],
+    "preserved_records": 70155
+  }
+}

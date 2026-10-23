@@ -1,0 +1,24 @@
+{
+  "actual_reviewer": "main:user-authorized-small-context-20261023",
+  "user_authorization": "继续，对于剩余的，如果东西比较少的话，你就直接解决了吧",
+  "before": "伊尔乌什犹豫了一下，然后望向那片坟墓。“我的结合伴侣……呃，我的丈夫，在上一次事情发展到这个地步时被杀死了。他是一名守卫。杰波同胞会在沉没市场的一场暴乱中把他打死了。”\r\n\r\n她咽了口唾沫。“从那以后，我一直为杰波人的平等以及和平解决这场冲突而努力。”",
+  "after": "伊尔乌什犹豫了一下，然后望向那片坟墓。“我的伴侣……呃，我的丈夫，在上一次事情发展到这个地步时被杀死了。他是一名守卫。杰波同胞会在沉没市场的一场暴乱中把他打死了。”\r\n\r\n她咽了口唾沫。“从那以后，我一直为杰波人的平等以及和平解决这场冲突而努力。”",
+  "receipt": {
+    "status": "submitted",
+    "session_id": "abea4d1a6e45411b8d6dd3cbafde0096",
+    "task_id": "review-round-72378a62725244bb",
+    "records": 1,
+    "summary": {
+      "records": {
+        "review": 70162,
+        "translate": 1
+      },
+      "tasks": {
+        "done": 117
+      }
+    },
+    "quality": "review_saved; wait for the whole round before review-scan",
+    "remaining_round_batches": 0,
+    "next_action": "review-scan --stage review --prepare-repairs"
+  }
+}

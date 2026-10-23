@@ -1,148 +1,33 @@
 {
-  "status": "paused_service_unavailable",
+  "status": "completed_local_deployment_pending_visual_check",
   "revision": 8,
-  "stage": "review",
-  "reason": "Resumed after user confirmed recovery; 18 more batches saved, then 8 HTTP 503 service failures. Paused with zero reserved requests.",
+  "stage": "exported_and_deployed",
+  "reason": "All targeted terminology fixes closed, official export passed, locale rebuilt and installed; no runtime program changes.",
   "receipt_file": "TranslateFiles/reports/api_runs/a29fb514c84c4a119c01984e1b27ac3a.json",
-  "accepted_batches": 31,
-  "saved_review_candidates": 165,
+  "accepted_batches": 65,
+  "saved_review_candidates": 358,
   "review_total_batches": 65,
-  "pending_handoffs": [
-    {
-      "session_id": "e87ab0bbcd974affb572bcc0c3407419",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00008-4838cc6e\\handoffs\\e87ab0bbcd974affb572bcc0c3407419\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00008-4838cc6e\\handoffs\\e87ab0bbcd974affb572bcc0c3407419\\result.json"
-    },
-    {
-      "session_id": "6d95683a719f4529a87b5eae47d86921",
-      "status": "repair_required",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00020-3c059acd\\handoffs\\6d95683a719f4529a87b5eae47d86921\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00020-3c059acd\\handoffs\\6d95683a719f4529a87b5eae47d86921\\result.json"
-    },
-    {
-      "session_id": "913fb65c30544d6c8809b52f7fde9623",
-      "status": "repair_required",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00025-eda20b73\\handoffs\\913fb65c30544d6c8809b52f7fde9623\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00025-eda20b73\\handoffs\\913fb65c30544d6c8809b52f7fde9623\\result.json"
-    },
-    {
-      "session_id": "5f32ae854404467fadb5f40912153ea6",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00025-eda20b73\\handoffs\\5f32ae854404467fadb5f40912153ea6\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00025-eda20b73\\handoffs\\5f32ae854404467fadb5f40912153ea6\\result.json"
-    },
-    {
-      "session_id": "46bd654db6184905963df0258865ebd9",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00029-74b14b21\\handoffs\\46bd654db6184905963df0258865ebd9\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00029-74b14b21\\handoffs\\46bd654db6184905963df0258865ebd9\\result.json"
-    },
-    {
-      "session_id": "412873f5785244a9918ef07067f8d403",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00030-223b6863\\handoffs\\412873f5785244a9918ef07067f8d403\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00030-223b6863\\handoffs\\412873f5785244a9918ef07067f8d403\\result.json"
-    },
-    {
-      "session_id": "4078728fc30c4451945daf241bc97460",
-      "status": "repair_required",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00033-d2dcaac2\\handoffs\\4078728fc30c4451945daf241bc97460\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00033-d2dcaac2\\handoffs\\4078728fc30c4451945daf241bc97460\\result.json"
-    },
-    {
-      "session_id": "a47d80804af9409a9ab2f75f7e353836",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\a47d80804af9409a9ab2f75f7e353836\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00034-c6ed90d7\\handoffs\\a47d80804af9409a9ab2f75f7e353836\\result.json"
-    },
-    {
-      "session_id": "55ed16a1bc5d4fc09499be9bdebecbea",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00035-d0bdf3e5\\handoffs\\55ed16a1bc5d4fc09499be9bdebecbea\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00035-d0bdf3e5\\handoffs\\55ed16a1bc5d4fc09499be9bdebecbea\\result.json"
-    },
-    {
-      "session_id": "cfa13050e13d466fa186a20634b574b0",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00036-b3a05401\\handoffs\\cfa13050e13d466fa186a20634b574b0\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00036-b3a05401\\handoffs\\cfa13050e13d466fa186a20634b574b0\\result.json"
-    },
-    {
-      "session_id": "f998e8a02c0c423b9d0acf0aab8b258b",
-      "status": "waiting",
-      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00041-38606f93\\handoffs\\f998e8a02c0c423b9d0acf0aab8b258b\\input.md",
-      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00041-38606f93\\handoffs\\f998e8a02c0c423b9d0acf0aab8b258b\\result.json"
-    }
-  ],
-  "needs_attention": [
-    {
-      "session_id": "e87ab0bbcd974affb572bcc0c3407419",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    },
-    {
-      "session_id": "5f32ae854404467fadb5f40912153ea6",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    },
-    {
-      "session_id": "46bd654db6184905963df0258865ebd9",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    },
-    {
-      "session_id": "a47d80804af9409a9ab2f75f7e353836",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    },
-    {
-      "session_id": "412873f5785244a9918ef07067f8d403",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    },
-    {
-      "session_id": "cfa13050e13d466fa186a20634b574b0",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    },
-    {
-      "session_id": "55ed16a1bc5d4fc09499be9bdebecbea",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    },
-    {
-      "session_id": "f998e8a02c0c423b9d0acf0aab8b258b",
-      "error": "InternalServerError:503",
-      "service_failure": true,
-      "consumes_request_budget": false
-    }
-  ],
+  "pending_handoffs": [],
+  "needs_attention": [],
   "reserved_requests": 0,
   "record_stages": {
-    "review": 69805,
-    "translate": 358
+    "review": 70163
   },
-  "formal_csv_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
-  "formal_export_updated": false,
-  "game_deployed": false,
+  "formal_csv_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "formal_export_updated": true,
+  "game_deployed": true,
   "release_v1_2_updated": false,
   "glossary": "TranslateFiles/glossary/revision_8_9ceef451/built/glossary_reviewed.json",
   "glossary_sha256": "c10d12abdc0db2bf5e44e15dc5cffd26c364e4c022f8f596c02f3483e066598e",
-  "remaining_semantic_corrections": "22 original 结合伴侣 contexts require explicit equipment/spouse/Bloom/Oom disambiguation after review; recheck actual candidates before reopen",
-  "resume": "Verify old runner ended and no reserved requests; public pause(False), official review runner --resume; retain accepted candidates, attempts and repair budgets. No concurrency override. After clean, targeted reopen only remaining wrong contexts, final quality closure, official export, repack and deployment. Do not publish automatically.",
+  "remaining_semantic_corrections": [],
+  "resume": "Local correction complete. New visual confirmation remains pending. Public v1.2 unchanged; do not publish a new release without user instruction.",
   "latest_resume": {
     "accepted_batches": 18,
     "saved_review_candidates": 95,
     "service_failures": 8,
     "consumes_request_budget": false,
     "concurrency_changed": false
-  }
+  },
+  "actual_changed_records": 338,
+  "final_quality_report_hash": "23a56a45a2b6fd1d4bd6333fa1989f6a51c1ce67187cc3cdc7be1c49b4b97a32"
 }

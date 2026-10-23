@@ -1,0 +1,27 @@
+{
+  "status": "ready",
+  "session_id": "abea4d1a6e45411b8d6dd3cbafde0096",
+  "task_id": "review-round-72378a62725244bb",
+  "records": 1,
+  "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-round-72378a62725244bb\\handoffs\\abea4d1a6e45411b8d6dd3cbafde0096\\input.md",
+  "input_tokens": 4339,
+  "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-round-72378a62725244bb\\handoffs\\abea4d1a6e45411b8d6dd3cbafde0096\\result.json",
+  "result_template_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-round-72378a62725244bb\\handoffs\\abea4d1a6e45411b8d6dd3cbafde0096\\result.template.json",
+  "task_ready": true,
+  "repair_tier": "standard",
+  "required_model": null,
+  "repair_counts": {
+    "R0042935_1e674cfde3": 3
+  },
+  "automatic_escalation": false,
+  "summary": {
+    "records": {
+      "review": 70162,
+      "translate": 1
+    },
+    "tasks": {
+      "done": 116,
+      "running": 1
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "report_hash": "a69662361fd9ef138351711ed45f55d354dc9138d8dc4b1a0bec24874bac6f41",
+  "reviewer": "main:user-authorized-small-review",
+  "user_authorization": "继续，对于剩余的，如果东西比较少的话，你就直接解决了吧",
+  "summary": "实际复核唯一新增角色代词备注；按各条原文明确he/it保留，不凭储存次序推断连续说话或统一原文差异。",
+  "decisions": [
+    {
+      "id": "R0017271_049add9262",
+      "disposition": "contextual",
+      "reason": "本句原文which he pours明确采用he，译文他忠实。其他句原文用it只能证明源文指代不同，缺乏译文错误证据，不宜在这次术语修订中擅自改源文性别/物种指代；同批不代表连续剧情。正文动作顺序、十件奇物、脚本150%均完整，接受现译。"
+    }
+  ]
+}

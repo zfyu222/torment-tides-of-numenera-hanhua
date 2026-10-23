@@ -1,0 +1,10 @@
+{
+  "files": 2250,
+  "mapping_records": 70163,
+  "replaced_fields": 89239,
+  "changed_fields": 79708,
+  "verified_nonempty_fields": 89239,
+  "fields_containing_cjk": 79576,
+  "tree_sha256": "EDC7ACBA971D38DBEAB88271ADFB252C37DF8ADD1C65A3FE3D5F5CB03B2D9356",
+  "output": "repack\\user_terms_20261023\\localized\\en"
+}

@@ -1,15 +1,15 @@
 {
   "status": "passed",
   "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
-  "translation_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
   "records": 70163,
   "semantic_review": "full",
   "polish": false,
-  "revision": 7,
+  "revision": 8,
   "glossary": {
-    "hash": "bbbf5c47c8ffaf2d3efdcae8af7bbc4fe3fa4410101750873f68f30cd925046a",
-    "path": "glossary\\r6\\freeze_f4315a10\\built\\glossary_reviewed.json",
-    "revision": 6
+    "hash": "c10d12abdc0db2bf5e44e15dc5cffd26c364e4c022f8f596c02f3483e066598e",
+    "path": "glossary\\revision_8_9ceef451\\built\\glossary_reviewed.json",
+    "revision": 8
   },
   "ainiee": {
     "actual_commit": "c50570c1dee7df7bd51316a253f0b42d10a8ca4c",
@@ -24,7 +24,7 @@
   },
   "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_text_translated.csv",
   "quality_review": {
-    "report_hash": "fb1477f4be375a894b888f500eedb118e99fe6e6c8edd445efe51d43342d60c0",
+    "report_hash": "23a56a45a2b6fd1d4bd6333fa1989f6a51c1ce67187cc3cdc7be1c49b4b97a32",
     "reviewer": "main:user-authorized-small-review"
   },
   "in_game_check": "pending_repack"
