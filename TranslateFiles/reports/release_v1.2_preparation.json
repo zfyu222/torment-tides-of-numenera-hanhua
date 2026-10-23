@@ -1,5 +1,5 @@
 {
-  "status": "packaged_verified_ready_to_publish",
+  "status": "published",
   "version": "1.2",
   "date": "2026-10-23",
   "payload_files": 2251,
@@ -15,9 +15,10 @@
   "dry_run": "passed",
   "release_check": "Current in-game validation required before release",
   "zip_created": true,
-  "github_published": false,
+  "github_published": true,
   "repository": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua",
-  "remaining": "Push release commit and publish validated asset to the independent public GitHub repository.",
+  "remaining": null,
   "quality_release_check": "passed",
-  "runtime_confirmation": "release_v1.2_user_runtime_confirmation.json"
+  "runtime_confirmation": "release_v1.2_user_runtime_confirmation.json",
+  "github_release": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.2"
 }

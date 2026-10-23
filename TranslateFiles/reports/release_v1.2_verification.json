@@ -16,5 +16,11 @@
   ],
   "game_and_credentials_absent_from_git_index": true,
   "runtime_evidence": "release_v1.2_user_runtime_confirmation.json",
-  "public_release": "pending"
+  "public_release": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.2",
+  "github_download_verified": true,
+  "github_asset_sha256": "48e08b21ceca7b866b71afeeefff1aef46f52a0f28a8f97958619a9fc9e95a22",
+  "github_asset_name": "torment-tides-of-numenera_.1.2.zip",
+  "github_asset_label": "torment-tides-of-numenera_子非鱼汉化1.2.zip",
+  "github_note": "GitHub normalizes the Chinese asset filename; the displayed asset label retains the required Chinese ZIP name. Downloaded bytes match the local ZIP exactly.",
+  "latest_stable": true
 }
