@@ -1,0 +1,83 @@
+{
+  "user_authorization": "行，那修复吧",
+  "changes": [
+    {
+      "ref": "terms:52",
+      "source": "numenera",
+      "before": "努曼内拉",
+      "after": "扭蒙拉"
+    },
+    {
+      "ref": "terms:78",
+      "source": "Torment: Tides of Numenera",
+      "before": "折磨：努曼内拉之潮",
+      "after": "折磨：扭蒙拉之潮"
+    },
+    {
+      "ref": "terms:399",
+      "source": "Numenera Analyzer",
+      "before": "努曼内拉分析器",
+      "after": "扭蒙拉分析器"
+    },
+    {
+      "ref": "terms:1614",
+      "source": "numenera hunter",
+      "before": "努曼内拉猎人",
+      "after": "扭蒙拉猎人"
+    },
+    {
+      "ref": "terms:1617",
+      "source": "numenera-picker",
+      "before": "努曼内拉拾荒者",
+      "after": "扭蒙拉拾荒者"
+    },
+    {
+      "ref": "terms:1724",
+      "source": "numenera chamber",
+      "before": "努曼内拉腔室",
+      "after": "扭蒙拉腔室"
+    },
+    {
+      "ref": "terms:2074",
+      "source": "shield-generating numenera",
+      "before": "生成护盾的努曼内拉造物",
+      "after": "生成护盾的扭蒙拉造物"
+    },
+    {
+      "ref": "terms:2304",
+      "source": "numenera dealer",
+      "before": "努曼内拉商人",
+      "after": "扭蒙拉商人"
+    },
+    {
+      "ref": "terms:2549",
+      "source": "numenera eye",
+      "before": "努曼内拉之眼",
+      "after": "扭蒙拉之眼"
+    },
+    {
+      "ref": "terms:3813",
+      "source": "Locksmith: Numenera",
+      "before": "开锁：努曼内拉",
+      "after": "开锁：扭蒙拉"
+    },
+    {
+      "ref": "terms:4078",
+      "source": "water-breathing numenera",
+      "before": "水下呼吸努曼内拉",
+      "after": "水下呼吸扭蒙拉"
+    },
+    {
+      "ref": "terms:4140",
+      "source": "numenera artifacts",
+      "before": "努曼内拉神器",
+      "after": "扭蒙拉神器"
+    }
+  ],
+  "quarantined_multisense": {
+    "source": "bonded",
+    "reason": "源词bonded存在配偶、与绽华/乌姆建立联结及物品绑定等多个语境。原审校已提示UI例外，但全局身份译名仍误传播。隔离这一无范围限定的多义词条；保留明确的Bonded Items→绑定物品，其他逐句按语境处理。"
+  },
+  "unmodified_reviews": "Retained verbatim with original review_instances; only listed terms have new main provenance",
+  "old_frozen_glossary_preserved": true
+}

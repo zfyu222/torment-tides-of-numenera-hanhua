@@ -1,0 +1,177 @@
+{
+  "status": "paused_service_unavailable",
+  "revision": 8,
+  "stage": "review",
+  "reason": "11 HTTP 503 service failures; do not loop retry without service recovery",
+  "receipt_file": "TranslateFiles/reports/api_runs/03f6e36651bc4ff58971ab0ccc519148.json",
+  "accepted_batches": 13,
+  "saved_review_candidates": 70,
+  "review_total_batches": 65,
+  "pending_handoffs": [
+    {
+      "session_id": "94f3ea14eddc452e9873650c50e4b79c",
+      "status": "repair_required",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00002-777c1300\\handoffs\\94f3ea14eddc452e9873650c50e4b79c\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00002-777c1300\\handoffs\\94f3ea14eddc452e9873650c50e4b79c\\result.json"
+    },
+    {
+      "session_id": "c3278f44e51e4a9d8d6416ddb9a1c2f7",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00004-b2f54575\\handoffs\\c3278f44e51e4a9d8d6416ddb9a1c2f7\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00004-b2f54575\\handoffs\\c3278f44e51e4a9d8d6416ddb9a1c2f7\\result.json"
+    },
+    {
+      "session_id": "12afbc9d57d44237a613e9d4e9d40f37",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00008-4838cc6e\\handoffs\\12afbc9d57d44237a613e9d4e9d40f37\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00008-4838cc6e\\handoffs\\12afbc9d57d44237a613e9d4e9d40f37\\result.json"
+    },
+    {
+      "session_id": "39b7749ac337495482a39f7077e7f557",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00010-89fbba9c\\handoffs\\39b7749ac337495482a39f7077e7f557\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00010-89fbba9c\\handoffs\\39b7749ac337495482a39f7077e7f557\\result.json"
+    },
+    {
+      "session_id": "00b6c1dfba6343c48f78d52a2965fd4a",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00011-42246731\\handoffs\\00b6c1dfba6343c48f78d52a2965fd4a\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00011-42246731\\handoffs\\00b6c1dfba6343c48f78d52a2965fd4a\\result.json"
+    },
+    {
+      "session_id": "145ff6bce7c3458db8710fb0edc23c57",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00012-802ea596\\handoffs\\145ff6bce7c3458db8710fb0edc23c57\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00012-802ea596\\handoffs\\145ff6bce7c3458db8710fb0edc23c57\\result.json"
+    },
+    {
+      "session_id": "c65ff3b6d76040a88ca9acd00eb092a8",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00015-924417fa\\handoffs\\c65ff3b6d76040a88ca9acd00eb092a8\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00015-924417fa\\handoffs\\c65ff3b6d76040a88ca9acd00eb092a8\\result.json"
+    },
+    {
+      "session_id": "5dca816388944fa1bffe86653951b6aa",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00016-f6607ca7\\handoffs\\5dca816388944fa1bffe86653951b6aa\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00016-f6607ca7\\handoffs\\5dca816388944fa1bffe86653951b6aa\\result.json"
+    },
+    {
+      "session_id": "471879bbcae649598736c41f7be09f97",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00020-3c059acd\\handoffs\\471879bbcae649598736c41f7be09f97\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00020-3c059acd\\handoffs\\471879bbcae649598736c41f7be09f97\\result.json"
+    },
+    {
+      "session_id": "acb33b4ea0524938b08fc225af3fd99b",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00022-5a894775\\handoffs\\acb33b4ea0524938b08fc225af3fd99b\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00022-5a894775\\handoffs\\acb33b4ea0524938b08fc225af3fd99b\\result.json"
+    },
+    {
+      "session_id": "c0248ac64fa74055aefd7ef3f0ed2e56",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00023-0a43dd68\\handoffs\\c0248ac64fa74055aefd7ef3f0ed2e56\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00023-0a43dd68\\handoffs\\c0248ac64fa74055aefd7ef3f0ed2e56\\result.json"
+    },
+    {
+      "session_id": "73cb504868dd42eabd3273debaf6d2a3",
+      "status": "waiting",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00024-3fdc4d76\\handoffs\\73cb504868dd42eabd3273debaf6d2a3\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00024-3fdc4d76\\handoffs\\73cb504868dd42eabd3273debaf6d2a3\\result.json"
+    },
+    {
+      "session_id": "913fb65c30544d6c8809b52f7fde9623",
+      "status": "repair_required",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00025-eda20b73\\handoffs\\913fb65c30544d6c8809b52f7fde9623\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00025-eda20b73\\handoffs\\913fb65c30544d6c8809b52f7fde9623\\result.json"
+    },
+    {
+      "session_id": "63324028b5b4421785eef478c0a73e58",
+      "status": "repair_required",
+      "input_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00027-411498f6\\handoffs\\63324028b5b4421785eef478c0a73e58\\input.md",
+      "result_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\tasks\\review-r8-00027-411498f6\\handoffs\\63324028b5b4421785eef478c0a73e58\\result.json"
+    }
+  ],
+  "needs_attention": [
+    {
+      "session_id": "471879bbcae649598736c41f7be09f97",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "5dca816388944fa1bffe86653951b6aa",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "acb33b4ea0524938b08fc225af3fd99b",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "c3278f44e51e4a9d8d6416ddb9a1c2f7",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "12afbc9d57d44237a613e9d4e9d40f37",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "00b6c1dfba6343c48f78d52a2965fd4a",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "73cb504868dd42eabd3273debaf6d2a3",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "c65ff3b6d76040a88ca9acd00eb092a8",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "39b7749ac337495482a39f7077e7f557",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "c0248ac64fa74055aefd7ef3f0ed2e56",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    },
+    {
+      "session_id": "145ff6bce7c3458db8710fb0edc23c57",
+      "error": "InternalServerError:503",
+      "service_failure": true,
+      "consumes_request_budget": false
+    }
+  ],
+  "reserved_requests": 0,
+  "record_stages": {
+    "review": 69805,
+    "translate": 358
+  },
+  "formal_csv_sha256": "dcb507abb9d7f1704362396c663fab8330fe48745ea1801a950ec010909915a3",
+  "formal_export_updated": false,
+  "game_deployed": false,
+  "release_v1_2_updated": false,
+  "glossary": "TranslateFiles/glossary/revision_8_9ceef451/built/glossary_reviewed.json",
+  "glossary_sha256": "c10d12abdc0db2bf5e44e15dc5cffd26c364e4c022f8f596c02f3483e066598e",
+  "remaining_semantic_corrections": "22 original 结合伴侣 contexts require explicit equipment/spouse/Bloom/Oom disambiguation after review; recheck actual candidates before reopen",
+  "resume": "Verify old runner ended and no reserved requests; public pause(False), official review runner --resume; retain accepted candidates, attempts and repair budgets. No concurrency override. After clean, targeted reopen only remaining wrong contexts, final quality closure, official export, repack and deployment. Do not publish automatically."
+}

@@ -1,0 +1,2179 @@
+[
+  {
+    "id": "F0365",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2597",
+      "terms:4152"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Weapon Attack/weapon attacks为单复数同义，均为武器攻击。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "出自 abilities.stringtable 的攻击类型条目，归“技能”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "已核对 f2：与跨批 weapon attacks 为单复数变体，共用“武器攻击”符合协议允许的单复数共用，不视为冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文为两词通用攻击类型名，未见专名化语境。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“武器攻击”为通行且自然的中文表述，可直接嵌入数值说明。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56684
+        ],
+        "reason": "通用界面术语，译“武器攻击”准确。",
+        "ref": "terms:2597",
+        "source_excerpt": "Weapon Attack"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "作为属性说明中的短语片段，归“其他”，与 e13 的“技能”分类差异反映来源不同。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "核对 audit f1：e13 Weapon Attack（技能名单数）与本条复数片段共用“武器攻击”；中文不区分单复数，两处均指武器发动的攻击，属可共用译名，不作隔离或改写。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "出处 68111 中 weapon attacks 为复数普通名词短语，作 critical hit chance 的限定语，非独立技能名。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“武器攻击”与前半句“暴击率”连读通顺，符合数值说明的紧凑表达。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          68111
+        ],
+        "reason": "weapon attacks 在句中指武器发动的攻击，译“武器攻击”，与技能名 Weapon Attack 共用译名不构成错误。",
+        "ref": "terms:4152",
+        "source_excerpt": "to critical hit chance on weapon attacks"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0366",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2600",
+      "terms:2790"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "旧审校已区分Bash重击与Smashing砸击，原始候选的同译不再存在。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "category_path 为“技能”，与技能表来源一致。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "以“重击”与 Smashing 的“猛击”区分，共享译名冲突解除。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "56688 原文为技能名 Bash，位于 abilities.stringtable。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Bash 表示强力打击，改译“重击”比共用“猛击”更精确。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          56688
+        ],
+        "reason": "技能名；为避免与 Smashing 共用“猛击”，改译“重击”。",
+        "ref": "terms:2600",
+        "source_excerpt": "Bash"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "66816 为技能/界面名称，57007 等描述提及 Smashing task，归“技能”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "按 f2 核对，Bash 已用“猛击”；Smashing 改“砸击”后避免同名冲突。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "66816 原文为 Smashing；其余行均作技能/任务名使用。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "由“猛击”改为“砸击”，更贴合 Smashing 技能名并与 Bash 区分。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          66816,
+          57007
+        ],
+        "reason": "将 Smashing 修正为“砸击”，避免与 Bash 的“猛击”混淆。",
+        "ref": "terms:2790",
+        "source_excerpt": "Smashing"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0367",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2624",
+      "terms:3058"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Electricity/Electric在伤害类别语境均对应电击。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "该词为伤害类型/数值词，归入“其他”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "related e16 Electric 为同伤害类型形容词形式，共用“电击”合理；在“Electric and Acid damage”中可译“电击和酸蚀伤害”。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "57340 原文含 +2 Electricity damage；56729 伤害类型列表含 Electricity。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“电击”作为伤害类型名简洁，句中可自然作“电击伤害”。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56729,
+          57340
+        ],
+        "reason": "Electricity 为伤害类型，确认取“电击”；与 Electric 形容词形式共用“电击”在伤害语境可接受。分类保持“其他”。",
+        "ref": "terms:2624",
+        "source_excerpt": "All attack difficulty reduced by 3 and +2 Electricity damage for next 3 attacks."
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "条目为伤害类型/规则文本，分类“其他”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "已核对 f2：e14 Electricity=电击 为名词/资源名，e10 Electric 为形容词修饰 damage；同指电击伤害，不强制区分。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "57837 将 Electric 与 Physical/Heat/Cold/Acid 并列为伤害类型。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“电击”可作“电击伤害”的类型名，简洁且符合规则文本。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57837
+        ],
+        "reason": "保留“电击”：Electric 在此作伤害类型形容词；与 Electricity=电击 同属电击伤害，共享译名可接受。",
+        "ref": "terms:3058",
+        "source_excerpt": "Armor +3 versus Physical, Heat, Cold, Electric and Acid damage."
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0368",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2634",
+      "terms:4134"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "round/Rounds为回合单复数。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "属计量/系统用词而非具体技能或物品，归“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 指出与 e15 Rounds 共用“回合”，属单复数变体，非冲突；括号格式“ ({0} 回合)”应保留前置空格与括号。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 56715“for 1 round”、67952“for 1 round”、67964“ ({0} Round)”均为持续时间单位，含义统一。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“回合”是 round 在回合制战斗中的标准译法，与“持续 1 回合”读法自然。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56715,
+          67952,
+          67964
+        ],
+        "reason": "round 在技能持续说明与 GUI 括号中均指战斗回合，译“回合”符合 CRPG 术语惯例，分类“其他”可保留（时间单位）。",
+        "ref": "terms:2634",
+        "source_excerpt": "Goad an enemy into attacking you, and only you, for 1 round."
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "通用 UI 文本，归入“其他”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e13 的 round 同义，单复数均译“回合”，符合 f1 核对结论。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文为带占位符的“ ({0} Rounds)”，Rounds 即回合数。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“回合”准确且适合界面显示。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67963
+        ],
+        "reason": "Rounds 为回合数显示，译“回合”正确；单复数不另立术语。",
+        "ref": "terms:4134",
+        "source_excerpt": " ({0} Rounds)"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0369",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2641",
+      "terms:3755"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Unarmed Attack/unarmed attacks为徒手攻击单复数。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "来自 abilities.stringtable，与同表技能名同列，归“技能”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f3 指出与 e14 unarmed attacks 共用“徒手攻击”，属词形/大小写变体，同一技能在不同条目中的正常共用，无需拆分。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 56754 技能名“Unarmed Attack”，56755 为“Unarmed Attack long desc”描述条目，同指一个技能。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“徒手攻击”是 unarmed attack 的通用译法，简洁可用于技能条与描述标题。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56754,
+          56755
+        ],
+        "reason": "Unarmed Attack 为技能名，译“徒手攻击”为固定搭配，分类“技能”正确；56755 为同名长描述条目，须共用同一译名。",
+        "ref": "terms:2641",
+        "source_excerpt": "Unarmed Attack"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "条目指攻击类型/技能效果，归技能可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 所指 e6/e13 共用“徒手攻击”属单复数与技能名变体，非冲突；保留。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "64772、64839 均以 unarmed attacks 指徒手攻击方式，语义一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "unarmed→徒手、attacks→攻击；与 e13“徒手攻击”一致。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          64772,
+          64839
+        ],
+        "reason": "确认“徒手攻击”：unarmed attacks 与 e13 Unarmed Attack 的单复数/技能名变体共用译名；分类技能可保留。",
+        "ref": "terms:3755",
+        "source_excerpt": "Upgrades your unarmed attacks with retractable blades that deal [Damage]."
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0370",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2682",
+      "terms:3901"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Enraged/Rages为同组暴怒状态表达，沿用已有语义审校。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "状态标签，归入“其他”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 指出的共用译名问题已按语境区分：状态用“暴怒”，不再与“狂怒”技能/资源名混同。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "56848 原文为“Enraged”，与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "暂定“狂怒”与另一技能/资源术语重名；按状态语境改为“暴怒”，更明确。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          56848
+        ],
+        "reason": "状态标签；按 f1 调整译名以区别于技能/资源词。",
+        "ref": "terms:2682",
+        "source_excerpt": "Enraged"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "按 ttongui 技能名语境归入“技能”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "Rages 与 Enraged 词形/类别不同，改后不再共用“狂怒”；与 Rage“狂暴”保留词形差异而非机械统一。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "67107 原文为 Rages，与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "原“狂怒”与关联 Enraged 共用易混；改“暴怒”更适合作独立技能名并保留怒意。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          67107
+        ],
+        "reason": "Rages 原暂译“狂怒”与关联 Enraged 共用，且与 Rage“狂暴”词形相近；改“暴怒”以区分技能名并保留怒意。",
+        "ref": "terms:3901",
+        "source_excerpt": "Rages"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0371",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2730",
+      "terms:2731"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "MutationRoulette/Mutation Roulette为空格不同的同一突变轮盘。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "资源为 abilities.stringtable，归类“技能”与能力名用途一致。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与只读关联项 Mutation Roulette 仅空格差异，共用“突变轮盘”合理；f1 已核对。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 56900 原文为 MutationRoulette，与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“突变轮盘”准确拆分 mutation+roulette，保留随机转盘意象。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56900
+        ],
+        "reason": "暂定译名可保留，无需修改。",
+        "ref": "terms:2730",
+        "source_excerpt": "MutationRoulette"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "资源位于 abilities.stringtable，归“技能”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与无空格变体 MutationRoulette 属同一术语，统一译“突变轮盘”合理；与 mutation 译“突变”一致。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "56901 原文为 Mutation Roulette，属界面能力名。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“突变轮盘”对应 Mutation（突变）+ Roulette（轮盘），保留隐喻。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56901
+        ],
+        "reason": "Mutation Roulette 为技能/能力名；“突变轮盘”保留轮盘隐喻，分类技能。",
+        "ref": "terms:2731",
+        "source_excerpt": "Mutation Roulette"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0372",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2734",
+      "terms:3887"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Brief Rest/Brief Rests为短暂休息单复数。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "首批候选标“技能”，但合并证据显示它主要作为物品描述与界面计数中的机制名词（非单一技能条目），维持“其他”可接受，避免把跨表机制误作角色能力。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与只读关联项 e13（Brief Rests，67045“Brief Rests: {0}”、67416“Brief Rests”）为单复数变体，共用“短暂休息”属预期，中文不区分单复数；f1 提示的共用译名经核对为同一术语，无需拆分。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "abilities.stringtable 有“Brief Rest”（56905），items.stringtable 描述“Consumes a Brief Rest. +3 to recovery roll.”（64176）、“Perform a Recovery Roll without consuming a Brief Rest.”（64574），均为同一机制名词，语义一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“短暂休息”对应 brief=短暂、rest=休息，作为能力/资源标签中文简洁可读，也可直接用于“消耗一次短暂休息”等句子。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56905,
+          64176,
+          64574
+        ],
+        "reason": "译“短暂休息”正确，“其他”分类按合并后的机制性用法确认；与 e13 属单复数变体共用译名，不算冲突。",
+        "ref": "terms:2734",
+        "source_excerpt": "Brief Rest"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "此处为数值/资源标签条目，归“其他”合理；其机制定义文本见 67633，另行处理",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f3 已核对：与 e15 Brief Rest“短暂休息”为单复数变体，机制同一，统一译名；另有 67633 说明文本中的 Recovery Bonus 已按 e10 统一为“恢复加成”",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67045“Brief Rests: {0}”为带数值的资源标签，67416 为同一机制的复数形式，词条 source 一致",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“短暂休息”准确、简洁，作为资源计数标签可直接嵌入界面",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67045,
+          67416
+        ],
+        "reason": "“短暂休息”对应游戏机制名，单复数不改变译名，分类“其他”适合资源计数标签。",
+        "ref": "terms:3887",
+        "source_excerpt": "Brief Rests: {0}"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0373",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2738",
+      "terms:3055"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "旧审校已区分Fear恐惧和Terrified惊恐。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "57214、57215 显示其为 fettle 状态，归入“其他”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 已核对：本条 Fear 译“恐惧”正确；关联 Terrified 更强，不在本批修改。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 56912 原文为 Fear；57214、57215 将其列为可移除的 fettle，指同一状态。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“恐惧”是 Fear 的标准状态名，语义准确且界面简洁。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          56912,
+          57214,
+          57215
+        ],
+        "reason": "暂定译名可保留，无需修改。",
+        "ref": "terms:2738",
+        "source_excerpt": "Fear"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "metadata_refs 指向 p2 afflictions.stringtable，归“其他”。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 已核对：与 e13 Fear“恐惧”区分；e9 的 {terrified, urgent} 是语音标签，不译，不混同。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "57822 原文为 Terrified。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "原“恐惧”会与 e13 Fear 共用；Terrified 程度更强，改为“惊恐”。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          57822
+        ],
+        "reason": "Terrified 程度强于 Fear；改“惊恐”以避免与 e13 Fear“恐惧”共用译名。",
+        "ref": "terms:3055",
+        "source_excerpt": "Terrified"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0374",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2813",
+      "terms:3060"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "旧审校已区分Byste拜斯特与Bystre拜斯特雷。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "57061 位于能力/物品词条序列，现有物品分类无反向证据。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 提示与只读 e13 Bystre 同译；核对拼写为 Byste 对 Bystre，语境不同，不能据此合并或改动 e13，本项保留“拜斯特”。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "57061 原文为 Byste，与推荐译名对应。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Byste 为专名，音译“拜斯特”无更可靠释义；保留。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57061
+        ],
+        "reason": "专名音译“拜斯特”可保留，物品分类沿用现有出处；与只读 Bystre 同译仅为音译结果，不作同词合并。",
+        "ref": "terms:2813",
+        "source_excerpt": "Byste"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "metadata_refs 指向 p2 afflictions.stringtable，归“其他”与同表状态/效果条目一致。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 已核对：e14 Byste 物品名保留“拜斯特”，本词改“拜斯特雷”，避免不同源词混同。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "57845 原文为 Bystre。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "原“拜斯特”与 e14 Byste 共用；Bystre 为不同专名，改为“拜斯特雷”以区分。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          57845
+        ],
+        "reason": "Bystre 与 e14 Byste 为不同专名；改“拜斯特雷”以区分 Byste“拜斯特”。",
+        "ref": "terms:3060",
+        "source_excerpt": "Bystre"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0375",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2827",
+      "terms:3378"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Firey/Fiery为原文拼写变体，同为炽热之心。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "出自技能表，分类“技能”正确，与物品表条目分属不同表。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e13“Fiery Heart=炽热之心”仅拼写差异，且一为技能一为物品，共用译名不产生同表歧义（对应 f1，已核对）。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 57106 原文为 Firey Heart（Firey 系 Fiery 的拼写变体），记录与 abilities.stringtable#ID=689 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Heart 取“之心”、Firey 取“炽热”，符合技能名风格；拼写变体不改变含义。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57106
+        ],
+        "reason": "技能名，与只读条目 e13 共用“炽热之心”经核为拼写变体，可用。",
+        "ref": "terms:2827",
+        "source_excerpt": "Firey Heart"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "证据行位于物品表，category_path 物品正确。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "已核对 f1：Firey Heart 为技能条目拼写变体，与 Fiery Heart 分属不同类别，共享“炽热之心”不构成错误。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "63809 原文为 Fiery Heart，拼写与条目一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "炽热之心自然对应 Fiery Heart，保留核心意象。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          63809
+        ],
+        "reason": "“炽热之心”准确对应 Fiery Heart，物品分类正确；f1 提示的 Firey Heart 属拼写变体且类别不同，共享译名可接受。",
+        "ref": "terms:3378",
+        "source_excerpt": "Fiery Heart"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0376",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2848",
+      "terms:3366"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Steel Seed Pod/Steel Seed-pod为连字符变体，同为钢铁种荚。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "名词为容器或植物状物件，归“物品”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "已核对审计项 f1：e13“Steel Seed-pod”共用“钢铁种荚”，该共用来自同一术语的单复数或连字符变体，不属误合并，标准译名确认为“钢铁种荚”。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 57169 原文 Steel Seed Pod，位于 abilities.stringtable（#ID=755）。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "steel=钢铁、seed pod=种荚，译名完整，保留金属质感物名。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57169
+        ],
+        "reason": "“钢铁种荚”与只读关联 e13“Steel Seed-pod”的译名一致，连字符与名词连写属同一术语变体；分类“物品”成立。",
+        "ref": "terms:2848",
+        "source_excerpt": "Steel Seed Pod"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "原文为物品短名，归入物品。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "审计发现 f1 指 e11/e13 共用译名：经核为同一英文词形的两种拼写，共用「钢铁种荚」正确，属应保持一致的同一术语变体，不构成冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "证据行 63779 原文为 Steel Seed-pod，界面短名，与 e13 仅词形差异。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "「钢铁种荚」逐词对译，seed-pod 译「种荚」贴切。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          63779
+        ],
+        "reason": "与 e13「Steel Seed Pod」为同一物品的连字符/大小写变体，统一译「钢铁种荚」；分类物品正确。",
+        "ref": "terms:3366",
+        "source_excerpt": "Steel Seed-pod"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0377",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2859",
+      "terms:4025"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Skill/Skills单复数同译技能。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "归入技能；Skill 的基础术语分类正确。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1：Skill 与 Skills 单复数同译“技能”属可接受变体；与“技能等级”明确区分。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文 Skill 为大写术语；证据行 Select a Skill to increase. 中含同一术语。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“技能”对应 Skill，作为系统术语准确且简洁。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67412
+        ],
+        "reason": "源文、译名、分类与一致性均通过；f1 确认为单复数同译，不构成冲突。",
+        "ref": "terms:2859",
+        "source_excerpt": "Skill"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "指技能系统/技能项，技能分类合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "相关 e14 Skill 单数同译“技能”，单复数不另立译名；f2 核对无误。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67935、68064 等均在角色成长语境出现 Skills。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“技能”准确。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67935,
+          68064,
+          68067,
+          68070,
+          68086,
+          68090,
+          68091
+        ],
+        "reason": "Skills 指技能系统/技能项；“技能”准确，分类技能。",
+        "ref": "terms:4025",
+        "source_excerpt": "Skills"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0378",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2861",
+      "terms:3923"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Task/Tasks单复数同译检定。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "条目为规则机制词，归“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与同表单数形式统一为“检定”；f2 属单复数变体共用译名，不是不同术语冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinals 57203/57778/57810 均出现“Tasks”；57203 原文为“+2 bonus to all Tasks.”。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“检定”在 CRPG 规则语境中准确表达 task/check，且避免与任务（quest）混淆。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57203,
+          57778,
+          57810
+        ],
+        "reason": "确认 Tasks 为规则检定用语，译“检定”合适；与单数变体统一。",
+        "ref": "terms:2861",
+        "source_excerpt": "+2 bonus to all Tasks."
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "规则机制词归“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与同词复数形式统一为“检定”；f2 核对为正当共用译名。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinals 67182/67183 原文为“Attack Task”/“Defense Task”，均含条目 source 的单数 Task。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Task 译“检定”，可自然组合为“攻击检定”/“防御检定”。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67182,
+          67183
+        ],
+        "reason": "Attack/Defense Task 中 Task 为检定，“检定”与复数形式一致。",
+        "ref": "terms:3923",
+        "source_excerpt": "Attack Task"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0379",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2867",
+      "terms:4005"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "stat/Stats单复数同译属性。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "规则属性词归“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与同词复数形式统一为“属性”；f3 为单复数变体共用译名。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 57212 原文“...in a stat of your choice.”含单数“stat”，与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“属性”可作 Might/Speed/Intellect 等 Stat 的统称，简洁明确。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57212
+        ],
+        "reason": "确认 stat 为属性池/属性值用语，译“属性”与复数形式一致。",
+        "ref": "terms:2867",
+        "source_excerpt": "in a stat of your choice"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "规则属性词归“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与同词单数形式统一为“属性”；f3 核对为正当共用译名。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinals 67743/67744 均含“Stats”；67744 原文“...and Stats.”与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“属性”适合 Stats 在角色创建说明中的含义。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67743,
+          67744
+        ],
+        "reason": "确认 Stats 指角色属性，译“属性”与单数形式一致。",
+        "ref": "terms:4005",
+        "source_excerpt": "Your Type determines your character Abilities, bonus Skills, and Stats."
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0380",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2874",
+      "terms:3657"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Abtrucense/abtrucenses为生物名的单复数，沿用已有审校。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "出处为 abilities.stringtable，按技能/能力名归入“技能”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 已核对：与 e2 为单复数变体，中文不区分单复数，共用“阿布特鲁森斯”合理。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文为 abilities.stringtable 中的 Abtrucense，单数形式与 e2 的 abtrucenses 对应。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“阿布特鲁森斯”按音译处理，作为该生物/能力名的中文形式可读。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57226
+        ],
+        "reason": "单数条目，与 e2 复数同源；保留音译。",
+        "ref": "terms:2874",
+        "source_excerpt": "Abtrucense"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "原文描述一个半智能深海头足类种族，归入“种族”恰当。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 已核对：与 e1 为单复数变体，中文共用译名不构成冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "64551 的 lore 原文出现 abtrucenses，指深海头足类生物。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“阿布特鲁森斯”保留 e1 音译，作为种族名可读。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          64551
+        ],
+        "reason": "种族名与 e1 同源，保留统一音译。",
+        "ref": "terms:3657",
+        "source_excerpt": "abtrucenses"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0381",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2906",
+      "terms:3052"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "旧审校已区分Dawdle拖沓和Slow迟缓。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "出处为 abilities.stringtable，归入“技能”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 已核对：e12 的 Dawdle 与只读关联 e13 的 Slow desc/“迟缓”不是同一词，改译后避免不当共用。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "原文为 abilities.stringtable 中的 Dawdle，动词性能力名。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Dawdle 意为拖沓/磨蹭，原译“迟缓”更接近 Slow；改译“拖沓”保留动作感。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          57341
+        ],
+        "reason": "将 Dawdle 从“迟缓”改为“拖沓”，与 Slow 的“迟缓”区分。",
+        "ref": "terms:2906",
+        "source_excerpt": "Dawdle"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "metadata_refs 指向 p2 afflictions.stringtable，归“其他”。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f3 已核对：Slow=迟缓成立；e15 Dawdle 宜作“拖延/磨蹭”，但属跨批只读项，本批保留 e5。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "57808 原文为 Slow desc，包含术语 Slow，属于描述键证据。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“迟缓”对应 Slow，状态名简洁自然。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57808
+        ],
+        "reason": "保留“迟缓”；f3 中 Dawdle 为跨批只读项，本批不改 Slow。",
+        "ref": "terms:3052",
+        "source_excerpt": "Slow"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0382",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2935",
+      "terms:3261"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "旧审校已区分Maelstrom大漩涡和Whirlpool漩涡。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "category_path 为“技能”，与 57393 的伤害效果说明相符。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "原名与地名类“漩涡”同译易跨类混淆；改译“大漩涡”后保留强度差异并降低冲突。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "57392 原文为 Maelstrom；57393 为伤害效果说明，确认是技能名。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Maelstrom 指强烈旋流，原暂译“漩涡”区分度不足；改为“大漩涡”更准确。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          57392,
+          57393
+        ],
+        "reason": "原名强度高于普通“漩涡”，改译“大漩涡”以区分。",
+        "ref": "terms:2935",
+        "source_excerpt": "Maelstrom"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "界面位置名归入地名合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 已核对：Whirlpool 为具体地点名；与技能类同名译法语境不同，保留“漩涡”。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 62812 原文即 Whirlpool，与条目源词一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“漩涡”忠实且适合作地图/地点标签。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          62812
+        ],
+        "reason": "Whirlpool 作为地点名直译“漩涡”，保留地名陌生感；与技能语境同译不构成冲突。",
+        "ref": "terms:3261",
+        "source_excerpt": "Whirlpool"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0383",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3067",
+      "terms:3676"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "lore skills/Lore skill为学识技能单复数。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "lore skills 属技能类别。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 指出与 e13“Lore skill/学识技能”共用译名；这是单复数变体，语义一致，不构成冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 57859 原文含 lore skills，为技能类别。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“学识技能”对应 lore skills，单复数不另译。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          57859
+        ],
+        "reason": "lore skills 为技能类别，译“学识技能”；与 e13 的单复数变体共用译名不构成冲突。",
+        "ref": "terms:3067",
+        "source_excerpt": "All lore skills +1 training level."
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "两处均描述技能/成长系统，归技能正确。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e13“lore skills”同译“学识技能”，属单复数变体共用译名，符合审计项 f1 所述情形，无需分开。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "64602“Permanently increase your training level in 1 Lore skill.”为技能奖励说明；67771“…Can pick 1 lore Skill at Tier 1”同指该技能类别，仅大小写不同。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Lore=学识，skill=技能；界面说明中“学识技能”清楚，未添加原文没有的限定。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          64602,
+          67771
+        ],
+        "reason": "技能类别名“学识技能”成立，大小写与单复数差异不构成异译。",
+        "ref": "terms:3676",
+        "source_excerpt": "Permanently increase your training level in 1 Lore skill."
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0384",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3087",
+      "terms:3103"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Archmage/Arch-Magus为大法师称谓，沿用原逐项上下文审校，不新增全局合并。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "身份/头衔分类与出处中的称号用法一致。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2：与 e8 的 Arch-Magus 共用“大法师”，二者为近义头衔变体，无冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "58059 原文为“Archmage Silver”，条目抽取 Archmage，来源明确。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Archmage 作法师头衔译“大法师”，简洁且符合身份类术语。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          58059
+        ],
+        "reason": "Archmage 作头衔译“大法师”准确；与 e8 的 Arch-Magus 为近义头衔变体，共用译名可接受。",
+        "ref": "terms:3087",
+        "source_excerpt": "\"Archmage Silver\""
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "头衔归入身份类，符合出处。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2：与 e1 的 Archmage 共用“大法师”，二者为近义头衔变体，可接受。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "58532 原文含“Arch-Magus of the South Confederation”，为明确头衔。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Arch-Magus 译“大法师”符合法师头衔语义。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          58532
+        ],
+        "reason": "Arch-Magus 作头衔译“大法师”，与 e1 的 Archmage 为近义变体；出处明确为南邦联法师头衔。",
+        "ref": "terms:3103",
+        "source_excerpt": "Arch-Magus of the South Confederation"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0385",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3243",
+      "terms:4113"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Tutorials/Tutorial单复数同译教程。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "界面栏目/说明归入“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 已核对：Tutorials 与单数 Tutorial 共享“教程”，属单复数变体，中文不另加复数。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 62775 原文即 Tutorials，与条目源词一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“教程”准确且为界面常用词。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          62775
+        ],
+        "reason": "复数 Tutorials 作为界面栏目名，中文“教程”不另加复数，符合界面简洁要求。",
+        "ref": "terms:3243",
+        "source_excerpt": "Tutorials"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "教程标题属界面/说明文本，归入“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 已核对：Tutorial 与复数 Tutorials 统一为“教程”，无冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 67936 标题以 Tutorial 开头，源词拼写一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“教程”符合标题前缀用法。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67936
+        ],
+        "reason": "Tutorial 作标题前缀，译“教程”可与复数形式统一。",
+        "ref": "terms:4113",
+        "source_excerpt": "Tutorial: Low Stat Pools"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0386",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3391",
+      "terms:3494"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Stillness Cage/Stillness Cages单复数同译静滞笼。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "category_path 为物品，源文为笼具类物品名。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e6 的 Stillness Cages 为同一术语单复数变体，中文均作“静滞笼”，共享译名合理。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "63848 原文为 Stillness Cage，与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“静滞笼”传达 stillness 的静止、静滞效果与 cage 的笼体，符合物品名。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          63848
+        ],
+        "reason": "物品名准确，并与 e6 的复数形式统一。",
+        "ref": "terms:3391",
+        "source_excerpt": "Stillness Cage"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "category_path 为物品，64179 语境描述用于保存宠物的笼具。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e5 的 Stillness Cage 为单复数变体；f1 所指共享译名已核对，非别名冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "64179 原文含 Stillness Cages，复数形式与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "中文不区分单复数，“静滞笼”同时覆盖单数 e5 与本条复数。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          64179
+        ],
+        "reason": "复数形式与 e5 统一，中文不加复数标记。",
+        "ref": "terms:3494",
+        "source_excerpt": "Stillness Cages"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0387",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3608",
+      "terms:3686"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Metabolism Fleshbud/Metabolic buds均为代谢肉芽相关名称，保留既有逐项审校。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "category_path 为“物品”，与 items.stringtable 物品名相符。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1核对：只读关联项“Metabolic buds”为描述中的泛称/复数，本条为物品名“Metabolism Fleshbud”且含 Negative 变体；同译“代谢肉芽”在各自语境可接受，未发现需改的冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 64432 原文为“Metabolism Fleshbud”，与 source 一致；64641 为带 Negative 的变体。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“代谢肉芽”对应 Metabolism Fleshbud，简洁保留 metabolism 与 fleshbud 的构词；不改。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          64432,
+          64641
+        ],
+        "reason": "确认现译，无修改。",
+        "ref": "terms:3608",
+        "source_excerpt": "Metabolism Fleshbud"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "该词在物品描述中指向物品/实体，归入“物品”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与同源物品名共用核心译名属单复数/词形变体对应，不构成别名冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 64640 原文首句为 Metabolic buds，与 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“代谢肉芽”结合同段 this fleshbud 的语境，能表达该代谢性肉芽实体，中文不标复数。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          64640
+        ],
+        "reason": "经查与同源物品名词形对应，保留共用核心译名。",
+        "ref": "terms:3686",
+        "source_excerpt": "Metabolic buds"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0388",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3810",
+      "terms:3889"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Carrying/Encumbrance在负重机制中同译，保留已有语义审校。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "列为技能，分类符合技能表语境。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 已核对：e6 Carrying 为技能，e14 Encumbrance: {0} 为 UI 负重数值；共用“负重”在各自语境可区分，不构成改译依据。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "row 66808 为单独技能标签 Carrying。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“负重”可表达 carrying 作为负重/承载技能的含义。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          66808
+        ],
+        "reason": "保留“负重”，技能分类正确；与 Encumbrance 的共用译名按技能/UI 语境处理。",
+        "ref": "terms:3810",
+        "source_excerpt": "Carrying"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "作为属性/状态类界面词归入“其他”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f1 已核对：e13 的 Carrying 为只读关联技能类词，本条 Encumbrance 为负重显示；共享中文“负重”在各自语境成立，不作盲目合并或误改。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67051 原文为 Encumbrance: {0}，词条取 Encumbrance 部分。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Encumbrance 译作“负重”，完整 UI 可呈现为“负重：{0}”。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67051
+        ],
+        "reason": "负重显示术语；核对共享译名后保留“负重”。",
+        "ref": "terms:3889",
+        "source_excerpt": "Encumbrance: {0}"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0389",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3835",
+      "terms:3837"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Recovery/Recover为恢复的名词和动词形式，中文同形成立。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "“其他”用于恢复机制标签可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 核对：e15 Recover 为按钮动词，中文同作“恢复”不构成误译；与 e12/e24 的“恢复”词干一致。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 66850 原文为 Recovery，与条目 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“恢复”对应 Recovery 名词/机制标签。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          66850
+        ],
+        "reason": "译名匹配；与按钮动词 Recover 共用“恢复”不构成冲突。",
+        "ref": "terms:3835",
+        "source_excerpt": "Recovery"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "系统界面文本，归入“其他”兜底分类，无更细分类依据可改",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e14 Recovery“恢复”一致；f2 所述共用译名属名词/动词同源，不是多义冲突",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "第66852行 ttongui.stringtable#ID=64 原文为单词 Recover，拼写与词义核对无误",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“恢复”对应 Recover 的动作义，界面短标签简洁可读",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          66852
+        ],
+        "reason": "确认 Recover 译作“恢复”，为界面动作标签；与 e14 Recovery 同属“恢复”概念的名词/动词形态，保持统一译名。",
+        "ref": "terms:3837",
+        "source_excerpt": "Recover"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0390",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3911",
+      "terms:4007"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Exploration Skills/Exploration Skill单复数同译探索技能。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "该条与 67772「Choose an Exploration Skill」同为技能类别名称，归“技能”恰当。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e14「Exploration Skill＝探索技能」仅单复数差异，同一术语共用译名正确；related_terms 中 e18 为复合词前缀，不改变核心译名。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67155 原文为复数名词短语 Exploration Skills，属技能类别标题。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "Exploration 译“探索”、Skills 译“技能”，为通用游戏译法，简洁可作列标题。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67155
+        ],
+        "reason": "“探索技能”准确，分类“技能”正确；与 e14 单数形式共用同一译名，属同术语变体，不构成冲突。",
+        "ref": "terms:3911",
+        "source_excerpt": "Exploration Skills"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "属于角色技能类别，归“技能”正确。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e13 的 Exploration Skills 仅单复数差异，统一为“探索技能”；确认 f1 不构成两个不同名称的冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文 67772 为“Choose an Exploration Skill”，67779 为单数技能名“Exploration Skill”。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“探索技能”准确对应 Exploration Skill，符合技能名表达。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67772,
+          67779
+        ],
+        "reason": "Exploration Skill 是技能类别名，译作“探索技能”；分类“技能”正确。与 related_entries e13 的 Exploration Skills 仅为单复数差异，统一译名即可。",
+        "ref": "terms:4007",
+        "source_excerpt": "Choose an Exploration Skill"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0391",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3929",
+      "terms:3930"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Activation Cost/Costs已由旧审校统一激活消耗。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "UI 资源消耗术语，归其他类可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 Activation Costs 为单复数变体，共用“激活消耗”；f1 不构成错误。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67257 是 UI 提示，Activation Cost 表示激活所需消耗。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "原译“启用消耗”生硬且“启用”不如“激活”贴合 Activation，改为“激活消耗”。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          67257
+        ],
+        "reason": "UI 术语应译“激活消耗”；确认与 e5 为单复数变体，共用译名合理。",
+        "ref": "terms:3929",
+        "source_excerpt": "Activation Cost:"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "UI 资源消耗术语，归其他类可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 Activation Cost 单复数对应，共用“激活消耗”；f1 为正常单复数共用。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67259 是 UI 提示，Activation Costs 表示激活所需消耗。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "原译“启用消耗”不自然，改为“激活消耗”。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          67259
+        ],
+        "reason": "Activation Costs 为 Activation Cost 的复数变体，统一译“激活消耗”。",
+        "ref": "terms:3930",
+        "source_excerpt": "Activation Costs:"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0392",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3955",
+      "terms:4014"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Quest Item/quest items单复数同译任务物品。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "任务专用物品，归“物品”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e15 Quest Items/quest items 同译“任务物品”；f3 核对为单复数变体，可共用译名。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67441 原文 Quest Item，与词条一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“任务物品”准确。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67441
+        ],
+        "reason": "Quest Item 译“任务物品”，物品类目合适；与 Quest Items 单复数变体共用译名。",
+        "ref": "terms:3955",
+        "source_excerpt": "Quest Item"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "属于物品类别，归“物品”正确。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e14 的 Quest Item 仅单复数差异，统一为“任务物品”；确认 f2 不构成两个不同名称的冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文 67793 说明显示队伍拥有的 quest items，68084 说明 Quest Items 包含任务所需特殊物品。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“任务物品”准确对应 Quest Items，符合物品分类名。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67793,
+          68084
+        ],
+        "reason": "Quest Items 是任务相关特殊物品的类别名，译作“任务物品”；分类“物品”正确。与 related_entries e14 的 Quest Item 仅为单复数差异，统一译名即可。",
+        "ref": "terms:4014",
+        "source_excerpt": "Quest Items contains any special items required for quests."
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0393",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3974",
+      "terms:4116"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "advancement step/Advancement steps单复数同译进阶步骤。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "属角色成长系统机制，归入“其他”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "e13 Advancement steps=进阶步骤 仅为单复数与大小写变体；f1 已核对，不构成别名冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67626 原文多次出现 advancement step(s)，语义为进阶单位。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "进阶步骤对应 advancement step，并保留 step 的“步骤”义。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67626
+        ],
+        "reason": "advancement step 指花费经验购买的进阶单位；译“进阶步骤”与复数条 e13 同词，f1 为单复数变体而非异名冲突；分类为其他系统机制。",
+        "ref": "terms:3974",
+        "source_excerpt": "Spend XP to purchase advancement steps"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "成长系统用语，归入“其他”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f2 提示与 advancement step 共用译名：单数与复数指同一机制单位，保留“进阶步骤”。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67939、68081 两处同句说明可从 4 个 Advancement steps 中选择，满 4 个提升 Tier。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“进阶步骤”贴合“购买进阶、满四进阶提升阶层”的机制描述。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67939,
+          68081
+        ],
+        "reason": "Advancement steps 指花费经验购买的进阶次数，译“进阶步骤”；与单数 advancement step（e14）为同一术语的单复数变体，统一即可。",
+        "ref": "terms:4116",
+        "source_excerpt": "You can choose between 4 Advancement steps."
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0394",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3998",
+      "terms:4122"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Party Member/party members单复数同译队友。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "队伍中的角色身份，归入“身份”成立；e13 中同词亦有“其他”候选，属界面标签与身份表述的分批差异，不影响本条。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "audit f1 指向与 e13（party members）共用“队友”：二者为同词单复数形式，非不同名字共用译名，共用“队友”正确，无需改动；e13 为只读关联项，未提交动作。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67742 原文即 “Party Member”；67920 “Talk to Party Member” 为同术语的界面句用法。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“队友”简洁对应 Party Member，适合按钮“与队友交谈”等界面场景。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67742,
+          67920
+        ],
+        "reason": "身份/队伍术语，译名与分类维持；对 audit f1 给出结论。",
+        "ref": "terms:3998",
+        "source_excerpt": "Party Member"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "本条按效果说明语境归入“其他”；68109、69599 偏身份指称，但属同一泛指用法，分类差异不影响译名。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f3 提示与 Party Member（e15）共用译名：单数/复数及界面标签与角色指称均为同一术语，统一“队友”。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "67951、68109、69599 分别为效果范围、规则说明、任务步骤，均指玩家队伍中的成员。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“队友”在 UI 与任务文本中均通顺（“不同队友”），比“队伍成员”更简洁。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67951,
+          68109,
+          69599
+        ],
+        "reason": "三处 party members 均指队伍成员：67951 为治疗效果覆盖范围，68109 为危机中换装规则，69599 为“与不同队友交谈”的任务提示，统一译“队友”自然。",
+        "ref": "terms:4122",
+        "source_excerpt": "all party members [Color: Heal]heal an additional {1} to {2} Health[/Color]"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0395",
+    "code": "shared_translation",
+    "refs": [
+      "terms:4008",
+      "terms:4143"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "Weapon Skill/Weapon Skills单复数同译武器技能。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "属于角色技能类别，归“技能”正确。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e15 的 Weapon Skills 仅单复数差异，统一为“武器技能”；确认 f3 不构成两个不同名称的冲突。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文 67773 为“Choose a Weapon Skill”，67775 说明只有 Glaives 接受 Weapon Skills 训练。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“武器技能”准确对应 Weapon Skill，符合技能名表达。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67773,
+          67775
+        ],
+        "reason": "Weapon Skill 是武器技能类别名，译作“武器技能”；分类“技能”正确。与 related_entries e15 的 Weapon Skills 仅为单复数差异，统一译名即可。",
+        "ref": "terms:4008",
+        "source_excerpt": "Choose a Weapon Skill"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "属于角色技能系统，归入“技能”合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e14 单数 Weapon Skill 同指，均译“武器技能”，符合 f2 核对结论。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文 68091 明确解释 Weapon Skills 为武器命中相关技能。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“武器技能”为自然且准确的技能名。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          68091
+        ],
+        "reason": "Weapon Skills 译“武器技能”准确；归“技能”合理，单复数不另立术语。",
+        "ref": "terms:4143",
+        "source_excerpt": "Weapon Skills increase a character's chance to hit with specific kinds of weapons. Like other Skills, they start at [Skill: Untrained]Novice and can be upgraded to [Skill: Trained]Trained and [Skill: Specialized]Specialized."
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0396",
+    "code": "shared_translation",
+    "refs": [
+      "terms:4020",
+      "terms:4023"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "旧审校已区分Movement移动力和Move移动。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "指可消耗的移动资源，其他合适。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "相关 e15 Move 为“移动”；此处区分 Movement=移动力，f3 的共用译名问题已按语境拆开。",
+            "status": "corrected"
+          },
+          "source": {
+            "evidence": "67881 的 Consumes Movement 明确给出 Movement 语义。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "改为“移动力”，与“消耗”搭配自然，避免读作“消耗移动”。",
+            "status": "corrected"
+          }
+        },
+        "evidence_rows": [
+          67881
+        ],
+        "reason": "Movement 在 Consumes Movement 中作可消耗的移动资源，改译“移动力”以区别于 Move（移动）；分类其他。",
+        "ref": "terms:4020",
+        "source_excerpt": "Consumes Movement"
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "作为规则/界面动作名，归入“其他”可接受。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "已核对共用译名告警：Move 为动作，Movement 为资源/消耗义，二者语境不同，本条“移动”成立，不应机械统一。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "第67927、68061行均以 Move 指回合内可执行的移动动作，与本条 source 一致。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "在“make one Move”语境中译“移动”自然、简洁。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          67927,
+          68061
+        ],
+        "reason": "Move 指回合内可执行的一次移动，译“移动”符合规则/界面语境；与资源义需区分。",
+        "ref": "terms:4023",
+        "source_excerpt": "Move"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  },
+  {
+    "id": "F0397",
+    "code": "shared_translation",
+    "refs": [
+      "terms:4141",
+      "terms:4223"
+    ],
+    "message": "Different names share a translation; verify aliases/context.",
+    "reason": "bridge controls/bridge control device为桥梁控制装置的表达变体。",
+    "prior_reviews": [
+      {
+        "checks": {
+          "category": {
+            "evidence": "作为可交互装置，归入“物品”合理。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "与 e15“bridge control device”同指 Qorro 尸体上的控制装置，共用“桥梁控制装置”可接受，符合 f3 核对结论。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "原文 68072 中 bridge controls 指会过载爆炸的桥梁控制装置。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“桥梁控制装置”自然且能覆盖 controls 在此处的装置义。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          68072
+        ],
+        "reason": "bridge controls 译“桥梁控制装置”符合可过载爆炸的装置语境；分类保留“物品”。",
+        "ref": "terms:4141",
+        "source_excerpt": "During a Crisis, events sometimes occur that can change your objective. Killing Qorro has caused the bridge controls to overload, and they will explode if you don't disable them quickly.\\n\\nTo get out of this Crisis unscathed, you will need to interact with Qorro's corpse to reactivate the light bridges."
+      },
+      {
+        "checks": {
+          "category": {
+            "evidence": "可交互、可关闭的装置，归入“物品”正确。",
+            "status": "pass"
+          },
+          "consistency": {
+            "evidence": "f3 已核对：e18 bridge controls 与 e5 bridge control device 为同一光桥控制机构的单数/复数及 device 变体；共用“桥梁控制装置”不冲突，e24 light bridges 的“光桥”是相关组件但非同一词。",
+            "status": "pass"
+          },
+          "source": {
+            "evidence": "ordinal 69600 原文为“Disable the bridge control device on Qorro's corpse”，source 完全对应。",
+            "status": "pass"
+          },
+          "translation": {
+            "evidence": "“桥梁控制装置”对应 bridge control device；与 e18 bridge controls 的同一装置译名一致，保留。",
+            "status": "pass"
+          }
+        },
+        "evidence_rows": [
+          69600
+        ],
+        "reason": "bridge control device 指 Qorro 尸体上的光桥控制装置；与 e18 bridge controls 为同一装置的单复数/device 变体，保留共用译名。分类为物品正确。",
+        "ref": "terms:4223",
+        "source_excerpt": "Disable the bridge control device on Qorro's corpse"
+      }
+    ],
+    "mutation": "none; existing decisions retained"
+  }
+]

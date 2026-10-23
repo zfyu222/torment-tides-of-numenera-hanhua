@@ -1,0 +1,299 @@
+[
+  {
+    "id": "F0365",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2597",
+      "terms:4152"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0366",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2600",
+      "terms:2790"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0367",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2624",
+      "terms:3058"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0368",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2634",
+      "terms:4134"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0369",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2641",
+      "terms:3755"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0370",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2682",
+      "terms:3901"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0371",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2730",
+      "terms:2731"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0372",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2734",
+      "terms:3887"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0373",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2738",
+      "terms:3055"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0374",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2813",
+      "terms:3060"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0375",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2827",
+      "terms:3378"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0376",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2848",
+      "terms:3366"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0377",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2859",
+      "terms:4025"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0378",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2861",
+      "terms:3923"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0379",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2867",
+      "terms:4005"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0380",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2874",
+      "terms:3657"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0381",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2906",
+      "terms:3052"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0382",
+    "code": "shared_translation",
+    "refs": [
+      "terms:2935",
+      "terms:3261"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0383",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3067",
+      "terms:3676"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0384",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3087",
+      "terms:3103"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0385",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3243",
+      "terms:4113"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0386",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3391",
+      "terms:3494"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0387",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3608",
+      "terms:3686"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0388",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3810",
+      "terms:3889"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0389",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3835",
+      "terms:3837"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0390",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3911",
+      "terms:4007"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0391",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3929",
+      "terms:3930"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0392",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3955",
+      "terms:4014"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0393",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3974",
+      "terms:4116"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0394",
+    "code": "shared_translation",
+    "refs": [
+      "terms:3998",
+      "terms:4122"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0395",
+    "code": "shared_translation",
+    "refs": [
+      "terms:4008",
+      "terms:4143"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0396",
+    "code": "shared_translation",
+    "refs": [
+      "terms:4020",
+      "terms:4023"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  },
+  {
+    "id": "F0397",
+    "code": "shared_translation",
+    "refs": [
+      "terms:4141",
+      "terms:4223"
+    ],
+    "message": "Different names share a translation; verify aliases/context."
+  }
+]
