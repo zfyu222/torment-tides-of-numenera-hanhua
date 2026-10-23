@@ -1,0 +1,21 @@
+{
+  "status": "prepared_waiting_for_runtime_confirmation",
+  "version": "1.2",
+  "date": "2026-10-23",
+  "payload_files": 2251,
+  "stringtables": 2250,
+  "managed_display_patch": 1,
+  "staged_payload_hashes_verified": true,
+  "unexpected_files": [],
+  "guide_encoding": "UTF-8 BOM",
+  "previous_changelog_preserved": [
+    "1.0",
+    "1.1"
+  ],
+  "dry_run": "passed",
+  "release_check": "Current in-game validation required before release",
+  "zip_created": false,
+  "github_published": false,
+  "repository": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua",
+  "remaining": "Current installed build: normal launch, menus, representative dialogue/options, quest journal, corrected tutorial display; then record current payload/evidence hashes and rerun official release-check."
+}

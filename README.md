@@ -102,6 +102,8 @@
 
 ## 对外发布
 
+- 2026-10-23 v1.2 发布准备：2,250个新译字符串表及1个教程显示修复DLL已按安装路径复制到 `Dispatch/Files/`，2,251个载荷SHA-256通过，说明书保留v1.0/v1.1日志并追加v1.2。官方dry-run通过；release-check因缺当前实机记录未通过，故尚未生成正式ZIP、推送或创建GitHub Release。待当前安装版正常启动、对白/选项、任务日志和教程页确认后继续。候选清单见 `TranslateFiles/reports/release_v1.2_payload.json`，准备摘要见 `release_v1.2_preparation.json`。
+
 - 补丁：`Dispatch/torment-tides-of-numenera_子非鱼汉化1.1.zip`
 - 标题：`《Torment: Tides of Numenera》子非鱼AI汉化补丁 v1.1`
 - 支持版本/平台：Steam v1.1.0（Windows）。
