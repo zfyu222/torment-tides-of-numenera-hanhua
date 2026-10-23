@@ -10,7 +10,7 @@
   "platform": "Steam（Windows）",
   "install": "完全退出游戏。先备份 WIN/TidesOfNumenera_Data/Managed/Assembly-CSharp.dll 和 WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/。将压缩包中的 WIN 文件夹复制到含 WIN 子目录的游戏根目录，选择合并并覆盖；不要放进 WIN 目录形成 WIN/WIN。游戏语言选择 English（英语），该语言槽会显示中文。本版包含程序显示修复DLL，仅适用于上述支持版本，无需安装Mod加载器。",
   "uninstall": "退出游戏，用安装前备份恢复 Assembly-CSharp.dll 及整个 en/text 目录。没有备份时，使用 Steam 的“验证游戏文件完整性”恢复原版；该操作也会移除汉化覆盖。",
-  "verification": "本版70,163条正式译文全量结构、占位符和术语校验通过；2,250个字符串表全部XML可解析，安装载荷逐一SHA-256一致。v1.2曾通过代表性实机测试；本次338条术语修订后的当前载荷仍待实机确认，确认前不公开发布。",
+  "verification": "全文独立审校、结构/占位符/术语校验通过，全部XML可解析。用户已用当前术语修订版实机确认正常启动，装备栏“绑定物品”、含“扭蒙拉”的对白、主菜单、代表性对白/选项、任务日志和教程页均正常，无崩溃、缺字或遮挡。2,251个载荷与实机安装版SHA-256逐一一致。以上为代表性场景验收，未逐场景通关。",
   "known_issues": "AI汉化可能仍有措辞、专名或遗漏问题；未逐场景通关验证。标题Logo保留英文，部分中文自动断行可能将标点留在行首。物理手柄、其他分辨率和不同游戏构建尚未完整验证。Steam更新或验证文件完整性可能恢复原文件。仅将本补丁覆盖到支持的游戏版本。反馈及后续更新：https://github.com/zfyu222/torment-tides-of-numenera-hanhua/issues；请关注或订阅 https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases 获取新版。",
   "changes": "Numenera及派生名称统一为“扭蒙拉”；装备栏Bonded改为“绑定物品”，配偶称谓改为“伴侣”，绽华/乌姆关系按语境修正；恢复3处奥思简称一致性；保留v1.2教程字号修复。"
 }

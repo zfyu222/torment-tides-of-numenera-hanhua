@@ -105,6 +105,8 @@
 
 ## 对外发布
 
+- 2026-10-23 v1.3 已生成并通过本地校验：`Dispatch/torment-tides-of-numenera_子非鱼汉化1.3.zip`，9174225字节，SHA-256 `e663c31fccd7f66542443b6cc942e2088dfb378e5ceb3ec9fd6d4ece90b772f2`。适用Steam v1.1.0（Windows），包含2,250个完整字符串表与原教程显示修复DLL。用户已确认当前术语修订版实机正常，record-game-check及release-check通过；ZIP共2,254项，全部载荷/清单/校验和及解压路径验证通过，更新日志保留v1.0至v1.2并追加v1.3。正在上传GitHub，正式公开链接待发布后补记。
+
 - 2026-10-23 v1.3 发布准备：最新术语修订的2,250个字符串表与原教程修复DLL共2,251个载荷已复制至 `Dispatch/Files/`；安装版、项目副本、暂存文件SHA-256一致，官方dry-run通过。`release-check` 当前因实机记录仍绑定v1.2译文而拒绝发布（Current in-game validation required before release）；未创建ZIP、推送或发布Release。已准备保留v1.0/v1.1/v1.2更新日志的v1.3说明预览及完整载荷清单，待用户确认当前安装版后记录新哈希并正式打包。见 `TranslateFiles/reports/release_v1.3_preparation.json`、`release_v1.3_payload.json`、`Dispatch/v1.3_补丁说明预览.txt`。
 
 - 2026-10-23 v1.2 已生成并校验：`Dispatch/torment-tides-of-numenera_子非鱼汉化1.2.zip`，9,174,610字节，SHA-256 `48e08b21ceca7b866b71afeeefff1aef46f52a0f28a8f97958619a9fc9e95a22`。适用Steam v1.1.0（Windows）；包含2,250个中文字符串表及1个教程显示修复DLL。玩家已确认当前安装版正常启动、主菜单、代表性对白/选项、任务日志和修复后的教程页正常；本次实测确认与2,251个载荷哈希已绑定，record-game-check及release-check通过。ZIP共2,254项，载荷/清单/校验和及解压安装路径均通过。未逐场景通关，手柄和多分辨率仍待扩展测试。GitHub正式发布并设为最新版本：[v1.2 下载页](https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.2)；重新下载的ZIP哈希与本地一致，旧版发布记录保留。
