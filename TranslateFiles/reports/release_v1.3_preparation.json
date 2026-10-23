@@ -1,0 +1,12 @@
+{
+  "version": "1.3",
+  "status": "prepared_pending_current_game_check",
+  "verified_payload_files": 2251,
+  "installed_and_staged_hashes_match": true,
+  "release_check": {
+    "status": "not_passed",
+    "reason": "Current in-game validation required before release"
+  },
+  "zip_created": false,
+  "published": false
+}
