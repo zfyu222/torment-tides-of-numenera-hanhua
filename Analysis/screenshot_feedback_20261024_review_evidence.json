@@ -1,0 +1,182 @@
+[
+  {
+    "id": "R0004147_abbc502838",
+    "ordinal": 4147,
+    "source": "But despite his hard words, his eyes settle on yours. Studying. Deciding. His mouth settles into an irritated line.  \r\n\r\n\"Look,\" he says, running a hand over his stubbled scalp. \"You hide it well, but I can tell you're new here. I ent trying to offend you, but I... don't like leaving folk new to Sagus on their own. If you have questions about the city - or Circus Minor in particular - I'll answer 'em, free of charge.\"",
+    "translation": "但尽管他话说得硬，他的目光却落在你身上。端详。斟酌。他的嘴抿成一条烦躁的直线。  \r\n\r\n“听着，”他说，一只手抚过布满胡茬的头皮。“你掩饰得很好，但我看得出来你是新来的。我不是想冒犯你，只是我……不喜欢让初到萨古斯的人独自待着。如果你对这座城市——或者尤其是小竞技场——有什么问题，我会回答，不收钱。”",
+    "review_task": "review-r7-00326-e6901794",
+    "review_instance": "api-review-f82e36f53b964272baff06167e3bf016",
+    "review_reason": "动作、否定条件和专名均准确，已有语境例外成立，无需修改。",
+    "checks": {
+      "accuracy": {
+        "evidence": "“his eyes settle on yours”“Studying. Deciding.”“running a hand over his stubbled scalp”“hide it well”“ent trying to offend you”等均准确译出。",
+        "status": "pass"
+      },
+      "completeness": {
+        "evidence": "硬话、目光、手抚头皮、初到萨古斯者、免费回答等均译出，无漏译增译。",
+        "status": "pass"
+      },
+      "logic": {
+        "evidence": "“我不是想冒犯你”“不喜欢让……独自待着”“不收钱”等否定与条件关系一致。",
+        "status": "pass"
+      },
+      "placeholders": {
+        "evidence": "本句无变量、标签或占位符。",
+        "status": "not_applicable"
+      },
+      "terminology": {
+        "evidence": "Sagus 译“萨古斯”，Circus Minor 译“小竞技场”；running/hide/folk/the city/I 均按已有例外处理。",
+        "status": "pass"
+      },
+      "tone": {
+        "evidence": "“听着”“话说得硬”“独自待着”“不收钱”保留告诫而善意的口吻。",
+        "status": "pass"
+      }
+    },
+    "changes": []
+  },
+  {
+    "id": "R0004257_58abdf6a8a",
+    "ordinal": 4257,
+    "source": "He stares at her, chewing his lip, clearly trying to work up the courage to talk to her... to convince her of something. Finally, with a wry twist of his mouth, he turns back at you. \r\n\r\n\"Look,\" he says, running a hand over his stubbled scalp. \"You hide it well, but I can tell you're new here. I ent trying to offend you, but I... don't like leaving folk new to Sagus on their own. If you have questions about the city - or Circus Minor in particular - I'll answer 'em, free of charge.\"",
+    "translation": "他盯着她，咬着嘴唇，显然正努力鼓起勇气跟她说话……想说服她什么。最后，他嘴角一歪，露出苦笑，重新转向你。\r\n\r\n“听着，”他说着，用手抚过满是胡茬的头皮，“你掩饰得很好，但我看得出你是新来的。我不是想冒犯你，只是我……不喜欢把初到萨古斯的人丢下不管。如果你对这座城市——尤其是小竞技场——有什么疑问，我会免费回答。”",
+    "review_task": "review-r7-00334-71e4d52f",
+    "review_instance": "api-review-2441187966d04bf1beca814ac06e36d1",
+    "review_reason": "整段叙事与对白的动作、人物关系、条件承诺和既有术语例外均准确保留，无需改动。",
+    "checks": {
+      "accuracy": {
+        "evidence": "他咬唇盯着她、鼓起勇气想说或说服、苦笑转向你；随后抚头说明掩饰得好但看得出你是新来的，并承诺免费回答关于城市或小竞技场的问题，语义完整。",
+        "status": "pass"
+      },
+      "completeness": {
+        "evidence": "chewing lip、work up courage、wry twist、turn back、running hand、hide it well、new here、ent trying to offend、don't like leaving folk new to Sagus、city、Circus Minor、free of charge均有对应。",
+        "status": "pass"
+      },
+      "logic": {
+        "evidence": "否定不是想冒犯、不喜欢及条件如果均保留，无数量关系改变。",
+        "status": "pass"
+      },
+      "placeholders": {
+        "evidence": "原文无变量、标签或占位符。",
+        "status": "not_applicable"
+      },
+      "terminology": {
+        "evidence": "back、running、hide、folk、the city、I均按既有例外处理；Circus Minor译小竞技场，Sagus译萨古斯，like在don't like中自然译作不喜欢。",
+        "status": "pass"
+      },
+      "tone": {
+        "evidence": "叙述带观察细节，人物口语含犹豫和善意，译文保留。",
+        "status": "pass"
+      }
+    },
+    "changes": []
+  },
+  {
+    "id": "R0057207_c590bc54b8",
+    "ordinal": 57207,
+    "source": "Hardened",
+    "translation": "硬化",
+    "review_task": "review-r7-05467-c07304cc",
+    "review_instance": "api-review-8d0bda80886c4a6a9e4d26008f39f3ab",
+    "review_reason": "状态名与冻结术语一致，保持现译。",
+    "checks": {
+      "accuracy": {
+        "evidence": "原文 Hardened 为状态或能力名，译文“硬化”准确对应。",
+        "status": "pass"
+      },
+      "completeness": {
+        "evidence": "名称完整译出，无增删。",
+        "status": "pass"
+      },
+      "logic": {
+        "evidence": "单一名称，无逻辑关系。",
+        "status": "pass"
+      },
+      "placeholders": {
+        "evidence": "原文无变量、标签或占位符，译文未新增。",
+        "status": "pass"
+      },
+      "terminology": {
+        "evidence": "使用 t36“硬化”。",
+        "status": "pass"
+      },
+      "tone": {
+        "evidence": "界面名称简洁中性。",
+        "status": "pass"
+      }
+    },
+    "changes": []
+  },
+  {
+    "id": "R0062257_36da9ea8c7",
+    "ordinal": 62257,
+    "source": "Child {Female}",
+    "translation": "孩童（{Female}）",
+    "review_task": "review-r7-05682-b6cc6a5f",
+    "review_instance": "api-review-efc59e262e1a41778f17b725e7da752c",
+    "review_reason": "界面体貌标签；现译符合冻结术语并依既有例外保留 {Female} 占位。",
+    "checks": {
+      "accuracy": {
+        "evidence": "‘孩童’对应 Child，{Female} 保留为性别占位。",
+        "status": "pass"
+      },
+      "completeness": {
+        "evidence": "Child 与 {Female} 均已体现。",
+        "status": "pass"
+      },
+      "logic": {
+        "evidence": "无否定、条件或数量关系。",
+        "status": "pass"
+      },
+      "placeholders": {
+        "evidence": "{Female} 原样保留在括号内。",
+        "status": "pass"
+      },
+      "terminology": {
+        "evidence": "符合 t9‘孩童（女性）’；依既有例外保留 {Female} 占位，不写成静态‘女性’。",
+        "status": "pass"
+      },
+      "tone": {
+        "evidence": "界面短标签，简洁。",
+        "status": "pass"
+      }
+    },
+    "changes": []
+  },
+  {
+    "id": "R0063811_a0ea110547",
+    "ordinal": 63811,
+    "source": "Heavy and solid, this brown orb feels like a rock that has been worn smooth by a constant flow of water. On one side, there's an indentation that just fits a human hand. When activated, the bounder absorbs the user and teleports them to a nearby location within line of sight.",
+    "translation": "这枚棕色圆球沉重而坚实，摸起来像一块被源源不断的水流磨得光滑的岩石。球体一侧有一处恰好贴合人类手掌的凹槽。激活后，这件跃迁会吸收用户，并将其传送至视线范围内的附近地点。",
+    "review_task": "review-r7-05785-de0e19dd",
+    "review_instance": "api-review-ad7c0e48e4fc42928fa3f58a1f6e9975",
+    "review_reason": "译文忠实于原文，已有语境例外均正确沿用，无需改动。",
+    "checks": {
+      "accuracy": {
+        "evidence": "沉重坚实、水流磨圆的触感、贴合人手的凹槽、激活后吸收用户并传送至视线内附近地点，均与原文对应。",
+        "status": "pass"
+      },
+      "completeness": {
+        "evidence": "三句信息完整，“within line of sight”“absorbs the user”等均译出，无增删。",
+        "status": "pass"
+      },
+      "logic": {
+        "evidence": "“激活→吸收用户→传送至视线范围内附近地点”的条件与结果关系清楚，无否定或数量改变。",
+        "status": "pass"
+      },
+      "placeholders": {
+        "evidence": "原文无变量、标签或占位符。",
+        "status": "not_applicable"
+      },
+      "terminology": {
+        "evidence": "Heavy→沉重、human→人类、bounder→跃迁、user→用户；like作“像”、orb作实体“圆球”沿用已有例外x1、x2，未误套“喜欢/光球”。",
+        "status": "pass"
+      },
+      "tone": {
+        "evidence": "物品说明的中性描述口吻保持，未增删评价。",
+        "status": "pass"
+      }
+    },
+    "changes": []
+  }
+]
