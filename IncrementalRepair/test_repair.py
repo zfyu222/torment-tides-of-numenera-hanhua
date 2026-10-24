@@ -243,6 +243,14 @@ class StateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Formal translation changed'):
             self.r.snapshot()
 
+    def test_same_size_formal_edit_invalidates_verified_hash_cache(self):
+        self.r.prepare(); self.r.snapshot()
+        data=self.target.read_bytes(); stat=self.target.stat()
+        self.target.write_bytes((b'X' if data[:1]!=b'X' else b'Y')+data[1:])
+        repair.os.utime(self.target, ns=(stat.st_atime_ns,stat.st_mtime_ns+1000000000))
+        with self.assertRaisesRegex(ValueError, 'Formal translation changed'):
+            self.r.snapshot()
+
     def test_service_failure_stops_and_is_not_a_model_budget_charge(self):
         self.r.prepare(); self.r.prepare_terms()
         settings = {**repair.w.DEFAULT['api'], 'think_switch': True, 'concurrency': 25}

@@ -161,12 +161,22 @@ class Repair:
 
     def snapshot(self):
         value = w.read_json(self.work / 'baseline.json')
-        if sha(self.project / value['translation_file']) != value['translation_sha256']:
-            raise ValueError('Formal translation changed; repair baseline is stale')
-        if sha(self.project / value['source_file']) != value['source_sha256']:
-            raise ValueError('Original source changed; repair baseline is stale')
-        if sha(self.project / value['glossary_file']) != value['glossary_sha256']:
-            raise ValueError('Parent frozen glossary changed')
+        bindings = [(self.project / value[file_key], value[hash_key], error)
+            for file_key, hash_key, error in (
+                ('translation_file','translation_sha256','Formal translation changed; repair baseline is stale'),
+                ('source_file','source_sha256','Original source changed; repair baseline is stale'),
+                ('glossary_file','glossary_sha256','Parent frozen glossary changed'))]
+        signature = []
+        for path, expected, _ in bindings:
+            stat = path.stat()
+            signature.append((str(path), expected, stat.st_mtime_ns, stat.st_ctime_ns, stat.st_size))
+        signature = tuple(signature)
+        if getattr(self, '_verified_file_bindings', None) != signature:
+            for path, expected, error in bindings:
+                if sha(path) != expected: raise ValueError(error)
+            self._verified_file_bindings = signature
+        # Always read the live database revision, including writes in an open
+        # WAL. Only unchanged files' repeated full hashes are cached.
         with self.db() as db:
             revision = json.loads(db.execute('SELECT value FROM meta WHERE key="revision"').fetchone()[0])
             if revision != value['parent_revision']:
@@ -287,6 +297,9 @@ class Repair:
             text, binding = self.render(payload, glossary)
             estimate = sum(Renderer(self.project, config, glossary).estimate_review_output(r, stage, config)
                            for r in payload['records']) if stage == 'review' else 0
+            source_limit = config.get('review_batch_tokens' if stage == 'review' else 'batch_tokens', 1024)
+            if stage in ('translate', 'review') and len(part) > 1 and sum(count_tokens(r['source']) for r in payload['records']) > source_limit:
+                middle = len(part) // 2; partition(part[:middle]); partition(part[middle:]); return
             if count_tokens(text) > config.get('task_input_tokens', 16384) or estimate > config.get('review_output_tokens', 16384) * .8:
                 if len(part) < 2:
                     raise ValueError('One full item exceeds input/output budget; no truncation allowed')
@@ -414,6 +427,10 @@ class Repair:
         if stage == 'glossary_review':
             term_snapshot = w.read_json(self.work / 'term_audit/glossary_original.json')
             corpus_rows = {r['ordinal']: r for r in w.read_json(self.work / 'records.json')}
+        else:
+            import scope_match
+            scope_match.prepare(glossary, config, bridge.patterns(config['protect_named_curly'] is not False,
+                config['exclusions'], config.get('placeholder_family_overrides')))
         stopped = threading.Event()
         ledger_path = self.work / 'calls.json'; ledger = w.read_json(ledger_path) if ledger_path.exists() else []
         grant_file = self.work / 'retry_grants.json'
@@ -447,12 +464,15 @@ class Repair:
                 raise ValueError('Job payload hash mismatch')
             if stage == 'glossary_review': payload = self.term_payload(payload)
             scope = [r['id'] for r in payload['records']]; failures = 0; connection_retries = 0
-            prior = [c for c in ledger if c['job'] == folder.name and c['status'] != 'cancelled' and not service_failure(c['status'])]
+            attempt_jobs = {folder.name, payload.get('attempt_parent_job', folder.name)}
+            prior = [c for c in ledger if c['job'] in attempt_jobs and c['status'] != 'cancelled' and not service_failure(c['status'])]
             grant = grants.get(folder.name, {})
             extra = grant.get('extra_attempts', 0) if grant.get('api') == selected_api else 0
             if type(extra) is not int or extra < 0:
                 raise ValueError('Invalid explicit retry grant')
             attempt_limit = config.get('max_attempts', 3) + extra
+            if stage != 'glossary_review':
+                attempt_limit = min(attempt_limit, len(prior) + config.get('agent_attempt_limit', 2))
             if grant.get('api') == selected_api and 'max_total_attempts' in grant:
                 if type(grant['max_total_attempts']) is not int or grant['max_total_attempts'] < 1:
                     raise ValueError('Invalid absolute retry cap')
@@ -728,6 +748,8 @@ class Repair:
         baseline = self.snapshot(); plan = w.read_json(self.work / 'repair_plan.json')
         glossary = w.read_json(self.work / 'new_glossary.json'); config = baseline['config']
         rules = bridge.patterns(config['protect_named_curly'] is not False, config['exclusions'], config.get('placeholder_family_overrides'))
+        import scope_match
+        scope_match.prepare(glossary, config, rules)
         affected = set(plan['term_affected_ids'])
         rows = [r for r in w.read_json(self.work / 'records.json') if r['id'] in affected]
         def build(group):
@@ -764,6 +786,8 @@ class Repair:
             raise ValueError('Affected-ID translation coverage incomplete')
         structural = {r['id']: r for r in w.read_json(self.work / 'structural_findings.json')}
         rules = bridge.patterns(config['protect_named_curly'] is not False, config['exclusions'], config.get('placeholder_family_overrides'))
+        import scope_match
+        scope_match.prepare(glossary, config, rules)
         scope = set(plan['scope_ids']); rows = [r for r in w.read_json(self.work / 'records.json') if r['id'] in scope]
         def build(group):
             payload = self.base_payload('review', baseline); payload['records'] = []
