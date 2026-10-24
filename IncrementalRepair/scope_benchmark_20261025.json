@@ -1,0 +1,12 @@
+{
+  "sample_rows": 200,
+  "same_compiled_patterns_and_empty_result_caches": true,
+  "one_time_setup_seconds": 3.09,
+  "seconds_before_after_guard": [
+    7.599,
+    0.971
+  ],
+  "identical_decisions": true,
+  "comparison_runtime_suffix_removed": true,
+  "api_requests": 0
+}

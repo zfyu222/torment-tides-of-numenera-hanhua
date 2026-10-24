@@ -94,6 +94,18 @@ def matched_meaning(matches):
     return sorted((m['src'], m['dst'], m.get('enforcement', 'required')) for m in matches)
 
 
+def comparison_glossaries(old, new):
+    """Unchanged keep-original rows cannot change a term-policy comparison.
+
+    The shared matcher appends these independently after overlap resolution.
+    Keep real snapshots/protection rules intact; omit only this identical suffix
+    from the two local comparison views.
+    """
+    if old['non_translate'] != new['non_translate']:
+        return old, new
+    return ({**old, 'non_translate': []}, {**new, 'non_translate': []})
+
+
 def policy_change_affects_record(before, after, exceptions):
     """A removed constraint already exempted in this approved row changes nothing.
 
@@ -678,15 +690,21 @@ class Repair:
             old_probe[t] = [r for r in old[t] if (t, r['source']) in changed_keys]
             new_probe[t] = [r for r in new[t] if (t, r['source']) in changed_keys]
         rules = bridge.patterns(config['protect_named_curly'] is not False, config['exclusions'], config.get('placeholder_family_overrides'))
+        old_comparison, new_comparison = comparison_glossaries(old, new)
+        import scope_match
+        for view in (old_probe, new_probe, old_comparison, new_comparison):
+            scope_match.prepare(view, config, rules)
         affected, preserved_exemptions = [], []
         rows = w.read_json(self.work / 'records.json')
-        for row in rows:
+        for number, row in enumerate(rows, 1):
+            if number % 5000 == 0:
+                print(json.dumps({'scope_scan': number, 'total': len(rows)}, ensure_ascii=False), flush=True)
             actual_rules = bridge.record_rules(row, config, rules)
             texts = [row['source'], row['metadata'].get('speaker', '')]
             if not bridge.matched_terms(old_probe, texts, config, rules=actual_rules) and not bridge.matched_terms(new_probe, texts, config, rules=actual_rules):
                 continue
-            before = bridge.matched_terms(old, texts, config, rules=actual_rules)
-            after = bridge.matched_terms(new, texts, config, rules=actual_rules)
+            before = bridge.matched_terms(old_comparison, texts, config, rules=actual_rules)
+            after = bridge.matched_terms(new_comparison, texts, config, rules=actual_rules)
             if policy_change_affects_record(before, after, row.get('exceptions', [])):
                 if row['locked']:
                     raise ValueError('Affected confirmed record is locked: ' + row['id'])

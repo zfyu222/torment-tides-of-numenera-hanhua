@@ -13,6 +13,14 @@ repair = importlib.util.module_from_spec(spec); spec.loader.exec_module(repair)
 
 
 class ScopeTests(unittest.TestCase):
+    def test_literal_guard_keeps_original_boundary_and_non_ascii_behavior(self):
+        import scope_match
+        import re
+        guarded = scope_match.LiteralGuard(re.compile(r'\buser\b', re.I), 'user')
+        for text in ('the USER waits', 'superuser', 'no matching noun', 'the üser waits', 'ſuser'):
+            self.assertEqual([m.span() for m in guarded.finditer(text)],
+                             [m.span() for m in guarded.wrapped.finditer(text)])
+
     def setUp(self):
         self.config = copy.deepcopy(repair.w.DEFAULT)
         self.old = {'characters': [{'source': 'Matkina', 'recommended_translation': '玛特金娜', 'gender': '女性'}],
