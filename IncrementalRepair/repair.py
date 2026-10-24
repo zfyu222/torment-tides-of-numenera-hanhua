@@ -55,7 +55,7 @@ def read_column(path):
 
 def effective_term(row, table, config):
     """Ignore newly added labels/reasons that do not change translation policy."""
-    scope = row.get('applicability', {})
+    scope = row.get('applicability') or {}
     return {'source': row['source'], 'translation': row.get('recommended_translation'),
             'table': 'protected' if table == 'non_translate' else 'translated',
             'enforcement': row.get('enforcement', 'required'),
@@ -364,6 +364,29 @@ class Repair:
                     raise ValueError('Unresolved semantic issue needs attention')
         return result
 
+    def term_payload(self, payload):
+        path = self.work / 'term_source_supplements.json'
+        if not path.exists(): return payload
+        supplement = w.read_json(path)
+        if supplement['source_sha256'] != self.snapshot()['source_sha256']:
+            raise ValueError('Supplemental term sources changed')
+        additions = supplement['jobs'].get(payload['task_id'])
+        if not additions: return payload
+        if additions['input_hash'] != payload['input_hash']:
+            raise ValueError('Supplemental term job binding mismatch')
+        value = copy.deepcopy(payload)
+        texts = read_column(self.work / 'source.csv')
+        existing = {row['ordinal'] for row in value['records']}
+        for entry in value['entries']:
+            for row in additions['entries'].get(entry['ref'], []):
+                if texts[row['ordinal'] - 1] != row['source'] or entry['row']['source'] not in row['source']:
+                    raise ValueError('Supplemental term citation differs from immutable source')
+                entry['row'].setdefault('corpus_evidence_rows', []).append(row['ordinal'])
+                if row['ordinal'] not in existing:
+                    value['records'].append(row); existing.add(row['ordinal'])
+        value['supplemental_evidence_sha256'] = sha(path)
+        return value
+
     def run_jobs(self, stage, api_name=None, max_jobs=None, manifest=None):
         baseline = self.snapshot(); config = baseline['config']
         settings, key = w.load_api_settings(config, name=api_name)
@@ -376,8 +399,13 @@ class Repair:
         if max_jobs is not None:
             jobs = jobs[:max_jobs]
         glossary = w.read_json(self.work / ('new_glossary.json' if (self.work / 'new_glossary.json').exists() else 'old_glossary.json'))
+        if stage == 'glossary_review':
+            term_snapshot = w.read_json(self.work / 'term_audit/glossary_original.json')
+            corpus_rows = {r['ordinal']: r for r in w.read_json(self.work / 'records.json')}
         stopped = threading.Event()
         ledger_path = self.work / 'calls.json'; ledger = w.read_json(ledger_path) if ledger_path.exists() else []
+        grant_file = self.work / 'retry_grants.json'
+        grants = w.read_json(grant_file) if grant_file.exists() else {}
         if any(c['status'] == 'reserved' for c in ledger):
             raise ValueError('Unknown previous in-flight requests; inspect before explicit recovery')
         if not jobs:
@@ -405,8 +433,18 @@ class Repair:
             payload = w.read_json(folder / 'payload.json'); binding = w.read_json(folder / 'binding.json')
             if w.fingerprint({k: v for k, v in payload.items() if k != 'input_hash'}) != payload['input_hash']:
                 raise ValueError('Job payload hash mismatch')
+            if stage == 'glossary_review': payload = self.term_payload(payload)
             scope = [r['id'] for r in payload['records']]; failures = 0; connection_retries = 0
             prior = [c for c in ledger if c['job'] == folder.name and c['status'] != 'cancelled' and not service_failure(c['status'])]
+            grant = grants.get(folder.name, {})
+            extra = grant.get('extra_attempts', 0) if grant.get('api') == selected_api else 0
+            if type(extra) is not int or extra < 0:
+                raise ValueError('Invalid explicit retry grant')
+            attempt_limit = config.get('max_attempts', 3) + extra
+            if grant.get('api') == selected_api and 'max_total_attempts' in grant:
+                if type(grant['max_total_attempts']) is not int or grant['max_total_attempts'] < 1:
+                    raise ValueError('Invalid absolute retry cap')
+                attempt_limit = min(attempt_limit, grant['max_total_attempts'])
             # A received raw reply can survive a crash before collection. Recover
             # it first, keeping the original call identity and budget history.
             for old_call in prior:
@@ -423,17 +461,22 @@ class Repair:
                         result = canonical_api_partial_result(parsed, prior_binding, payload['task_id'], payload['task_id'], payload['input_hash'], prior_scope)
                         self.save_body_parts(folder, payload, prior_payload, result, glossary, 'api:' + old_call['id'], sha(raw_file))
                         return folder.name
-                    result = canonical_api_result(parsed, binding, payload['task_id'], payload['task_id'], payload['input_hash'], scope)
-                    self.validate_result(payload, result, glossary)
+                    import term_parts
+                    term_parts.save(self, folder, payload,
+                        w.read_json(raw_file.parent / 'payload.json') if (raw_file.parent / 'payload.json').exists() else payload,
+                        parsed, w.read_json(raw_file.parent / 'binding.json') if (raw_file.parent / 'binding.json').exists() else binding,
+                        'api:' + old_call['id'], raw_file)
                 except (ValueError, KeyError, TypeError):
                     continue
-                w.write_json(folder / 'accepted.json', {'result': result, 'instance': 'api:' + old_call['id'],
-                    'input_hash': payload['input_hash'], 'response_sha256': sha(raw_file)})
                 return folder.name
+            if stage == 'glossary_review':
+                import term_parts
+                if term_parts.finish(self, folder, payload):
+                    return folder.name
             if stage != 'glossary_review' and len(self.partial_body_rows(folder, payload)) == len(scope):
                 self.finish_partial_body(folder, payload, self.partial_body_rows(folder, payload))
                 return folder.name
-            while len(prior) + failures < config.get('max_attempts', 3) and not stopped.is_set():
+            while len(prior) + failures < attempt_limit and not stopped.is_set():
                 request_payload = payload
                 if stage != 'glossary_review':
                     saved_rows = self.partial_body_rows(folder, payload)
@@ -441,10 +484,31 @@ class Repair:
                         self.finish_partial_body(folder, payload, saved_rows)
                         return folder.name
                     request_payload = {**payload, 'records': [r for r in payload['records'] if r['id'] not in saved_rows]}
+                else:
+                    saved_terms = term_parts.rows(folder, payload)
+                    if term_parts.finish(self, folder, payload):
+                        return folder.name
+                    unacked = {f['id'] for f in payload['audit']['findings']} - term_parts.acknowledgments(folder, payload)
+                    ack_refs = {ref for f in payload['audit']['findings'] if f['id'] in unacked for ref in f['refs']}
+                    remaining = [e for e in payload['entries'] if e['ref'] not in saved_terms or e['ref'] in ack_refs][:20]
+                    refs = {e['ref'] for e in remaining}
+                    findings = [f for f in payload['audit']['findings'] if refs.intersection(f['refs'])]
+                    related = []
+                    for ref in sorted({ref for f in findings for ref in f['refs']} - refs):
+                        table, index = ref.split(':')
+                        related.append({'ref': ref, 'table': table, 'index': int(index), 'row': term_snapshot[table][int(index)]})
+                    ordinals = {n for e in remaining + related for n in review_evidence_rows(e['row'])}
+                    request_payload = {**payload, 'entries': remaining,
+                        'related_entries': related,
+                        'records': [{'id': corpus_rows[n]['id'], 'ordinal': n, 'source': corpus_rows[n]['source'],
+                                     'metadata': corpus_rows[n]['metadata']} for n in sorted(ordinals)],
+                        'audit': {**payload['audit'], 'findings': findings}}
                 text, request_binding = self.render(request_payload, glossary)
                 previous = [c.get('error') for c in ledger if c['job'] == folder.name and c.get('error')]
                 if previous:
                     text += '\n程序拒收诊断：' + previous[-1] + '\n按原文和真实证据补全本批，不能机械填通过。'
+                if grant.get('diagnostic'):
+                    text += '\n补交说明：' + grant['diagnostic']
                 if count_tokens(text) > config.get('task_input_tokens', 16384):
                     raise ValueError('Retry input exceeds configured budget; no request issued')
                 throttle()
@@ -473,11 +537,9 @@ class Repair:
                         result = canonical_api_partial_result(parsed, request_binding, payload['task_id'], payload['task_id'], payload['input_hash'], request_scope)
                         self.save_body_parts(folder, payload, request_payload, result, glossary, 'api:' + call['id'], sha(out / 'response.raw.txt'))
                         return folder.name
-                    result = canonical_api_result(parsed, request_binding, payload['task_id'], payload['task_id'], payload['input_hash'], request_scope)
-                    self.validate_result(payload, result, glossary)
-                    w.write_json(out / 'result.json', result)
-                    w.write_json(folder / 'accepted.json', {'result': result, 'instance': 'api:' + call['id'],
-                        'input_hash': payload['input_hash'], 'response_sha256': sha(out / 'response.raw.txt')})
+                    term_parts.save(self, folder, payload, request_payload, parsed, request_binding,
+                        'api:' + call['id'], out / 'response.raw.txt')
+                    w.write_json(out / 'result.json', w.read_json(folder / 'accepted.json')['result'])
                     return folder.name
                 except bridge.ApiFailure as exc:
                     call.update(status='cancelled' if str(exc) == 'validation_wire_limit' else str(exc), usage=exc.usage)
@@ -504,7 +566,11 @@ class Repair:
                     try:
                         print(json.dumps({'accepted': future.result()}, ensure_ascii=False), flush=True)
                     except Exception as exc:
-                        errors.append(str(exc)); stopped.set()
+                        errors.append(str(exc))
+                        # A bounded format/semantic retry exhaustion belongs to
+                        # this job; independent queued jobs can still finish.
+                        if not str(exc).startswith('Job retry limit reached:'):
+                            stopped.set()
         finally:
             client.close()
         return {'stage': stage, 'remaining': sum(not (p / 'accepted.json').exists() for p in
@@ -557,13 +623,18 @@ class Repair:
         for relative in w.read_json(self.work / 'glossary_review_jobs.json'):
             folder = self.work / relative; saved = w.read_json(folder / 'accepted.json')
             payload = w.read_json(folder / 'payload.json')
+            payload = self.term_payload(payload)
             if saved['input_hash'] != payload['input_hash']:
                 raise ValueError('Accepted term result binding changed')
-            d = saved['result']['decisions']; validate_glossary_reviews(d, payload)
+            d = saved['result']['decisions']
+            if 'entry_instances' in saved:
+                import term_parts
+                payload = term_parts.validation_payload(self, folder, payload)
+            validate_glossary_reviews(d, payload)
             for key in ('reviewed_refs', 'entry_reviews', 'acknowledged_findings', 'edits', 'quarantine', 'additions', 'allow_no_match'):
                 decisions[key].extend(d.get(key, []))
             for entry in payload['entries']:
-                instances[entry['ref']] = saved['instance']
+                instances[entry['ref']] = saved.get('entry_instances', {}).get(entry['ref']) or saved['instance']
         decisions['review_instances'] = instances
         decisions['acknowledged_findings'] = list(dict.fromkeys(decisions['acknowledged_findings']))
         snapshot = w.read_json(self.work / 'term_audit/glossary_original.json')
@@ -584,6 +655,15 @@ class Repair:
         # do not pretend it received new classification or semantic review.
         revised.pop('terminology_policy', None)
         revised['non_translate'] = copy.deepcopy(old['non_translate'])
+        null_scopes = []
+        for table in TABLES:
+            for row in revised[table]:
+                if 'applicability' in row and row['applicability'] is None:
+                    # Shared scope validation treats null as absent/default;
+                    # the matcher requires an omitted key rather than null.
+                    row.pop('applicability'); null_scopes.append([table, row['source']])
+        w.write_json(self.work / 'term_representation_normalizations.json',
+            {'null_scope_to_absent_default': null_scopes})
         glossary_tool.refresh_stats(revised); glossary_tool.validate_shape(revised)
         w.write_json(self.work / 'new_glossary.json', revised)
         return self.plan()

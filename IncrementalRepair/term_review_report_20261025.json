@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-25",
+  "status": "terminology_collected_affected_scope_computing",
+  "source_records": 70163,
+  "reviewed_existing_terms": 5579,
+  "accepted_term_jobs": 93,
+  "excluded_terms": 992,
+  "required_terms": 3936,
+  "reference_terms": 651,
+  "preserved_runtime_entries": 6565,
+  "api_calls": 255,
+  "reported_tokens": 11349543,
+  "unknown_usage_calls": 3,
+  "current_selected_api_calls": 64,
+  "current_selected_api_reported_tokens": 2260169,
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "new_glossary_sha256": "f44427b4c935414bf1dad3e9eb093d0a3e5215de056d3ae84b633dc184cd10c1",
+  "term_decisions_sha256": "cc2a61c300ec801af8a39b3d097dde73743d5ab4cab3c6f342898b6cc6ff2890",
+  "tests_passed": 18,
+  "formal_translation_modified": false,
+  "game_modified": false,
+  "released_patch_modified": false,
+  "limitations": [
+    "Program and semantic evidence checks do not guarantee perfect terminology or prose.",
+    "The new API and revised resubmission/collection instructions changed together; this is not a controlled provider quality comparison.",
+    "Source-only translation and independent review of the affected scope have not run yet."
+  ]
+}

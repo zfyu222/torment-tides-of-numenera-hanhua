@@ -1,0 +1,404 @@
+{
+  "payload": {
+    "stage": "glossary_review",
+    "revision": 8,
+    "source_hash": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+    "language": {
+      "source": "英语",
+      "target": "简体中文"
+    },
+    "style": "忠实原意，使用自然、成熟、可读的简体中文。保留第九世界的陌生感、哲学意味、黑色幽默及人物各自口吻，避免生硬直译、网络梗、过度文言和无依据解释。叙述中you通常译为“你”。术语冻结后保持一致，普通词的语境例外在协议字段说明，绝不把翻译分析、术语争论、道歉或输出说明混入正文。<...>中的自然语言是心灵对白，保留尖括号并翻译其内容；普通[...]中的动作、判定、对白也需翻译。只有实际运行时标记和渲染标签保留。开发占位与虚构语言须按出处判断，不因含括号或英文就整体禁翻；测试/开发说明保持可辨识，不杜撰成正式剧情。界面文字简洁清楚；有明确排版元数据时按要求分行。",
+    "game_background": "## 游戏信息\n- 原名：Torment: Tides of Numenera\n- 中文名：折磨：努曼内拉之潮（暂译）\n- 开发商：inXile Entertainment\n- 发行平台：Steam（Windows；商店页亦列出 macOS、SteamOS + Linux）\n- 引擎：Unity 5.4.1p3（Mono；版本取自 `globalgamemanagers` 文件头）\n- 原语言：英语（Steam 同时提供法语、德语、西班牙语、波兰语、俄语）\n\n## 游戏简介\n\n本作是《异域镇魂曲》的精神续作，属于单人等距视角、以叙事与抉择为核心的 CRPG，背景设定在 Monte Cook 创作的努曼内拉“第九世界”。玩家扮演从轨道坠落、曾被“变易之神”占据躯体的新意识，需要躲避名为“悲伤”的古老追猎者，并回答“一个生命有何意义”。资料来源：[Steam 商店页](https://store.steampowered.com/app/272270/Torment_Tides_of_Numenera/)。\n\n## 汉化目标\n- 范围：英文字符串表中的剧情、对话、任务、系统与 UI 文本\n- 目标语言：简体中文",
+    "context": [],
+    "layout_policy": "off",
+    "snapshot_sha256": "ffea3dc86e77dbe68135d12f72b40e39ec29b4356086afbc5f9173a2e5acb174",
+    "terminology_policy": 1,
+    "applicability_policy": 0,
+    "revision_request": "这是已发布译文的增量术语治理：普通词移出术语表，多义游戏词按出处确认范围和遵守等级；确证词义不合适时修正译名。已有专名译名无明确错误就保留，不为音译或同义偏好改名，不扩充无关新术语。本轮只审characters/terms，运行保护non_translate沿用原有通过记录，不新增或改动运行保护条目。",
+    "entries": [
+      {
+        "ref": "characters:360",
+        "table": "characters",
+        "index": 360,
+        "row": {
+          "gender": "女性",
+          "recommended_translation": "玛蒂",
+          "source": "Mattie",
+          "evidence_rows": [
+            26753,
+            26760,
+            26812,
+            34337,
+            34371,
+            34912,
+            36511,
+            37857,
+            37860,
+            37861,
+            37865,
+            37866,
+            37869,
+            37997,
+            38255,
+            38258,
+            39500,
+            42394
+          ],
+          "corpus_evidence_rows": [
+            37861
+          ]
+        }
+      },
+      {
+        "ref": "characters:361",
+        "table": "characters",
+        "index": 361,
+        "row": {
+          "gender": "男性",
+          "recommended_translation": "拉纳德",
+          "source": "Ranard",
+          "evidence_rows": [
+            26803,
+            27375,
+            27392,
+            28109,
+            28111,
+            28124,
+            28174,
+            43360,
+            43362,
+            43646,
+            43653,
+            50891,
+            50892,
+            62061,
+            62640
+          ]
+        }
+      }
+    ],
+    "related_entries": [],
+    "term_families": [],
+    "audit": {
+      "format_version": 1,
+      "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+      "snapshot_sha256": "ffea3dc86e77dbe68135d12f72b40e39ec29b4356086afbc5f9173a2e5acb174",
+      "original_counts": {
+        "characters": 1354,
+        "terms": 4225,
+        "non_translate": 0
+      },
+      "findings": []
+    },
+    "records": [
+      {
+        "id": "R0026753_338d82712c",
+        "ordinal": 26753,
+        "source": "He has been watching her, concern growing on his face, and at last he gasps. \"Mattie!\" He turns and grabs you. \"The Bloom is hurting her, and even if she has done those horrible things and killed people, they deserved it... well, probably deserved it. Might have deserved it? Maybe they didn't.\" He wrenches himself away from that chain of thought. \"But the point is that she's our friend, and friends help each other!\"\r\n\r\n{ERRITIS}",
+        "metadata": {
+          "group": "conversations/c_bloom",
+          "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+          "resource": "en/text/conversations/c_bloom/c4121_secret_maw.stringtable#ID=67/DefaultText",
+          "scene": "c_bloom/c4121_secret_maw.stringtable",
+          "text_type": "对白或叙述（具体类型以本句为准）"
+        }
+      },
+      {
+        "id": "R0026760_2ff0b03d5f",
+        "ordinal": 26760,
+        "source": "He puts his hands on his hips and scowls at you. \"I would like to inform you that when *I* scream like that, I'm not fine. And letting Mattie scream like that is not fine either.\" He crosses his arms. \"Not fine at *all*.\"",
+        "metadata": {
+          "group": "conversations/c_bloom",
+          "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+          "resource": "en/text/conversations/c_bloom/c4121_secret_maw.stringtable#ID=74/DefaultText",
+          "scene": "c_bloom/c4121_secret_maw.stringtable",
+          "text_type": "对白或叙述（具体类型以本句为准）"
+        }
+      },
+      {
+        "id": "R0026803_1fbeec2e3b",
+        "ordinal": 26803,
+        "source": "His sergeant, Ranard, bows his head in loyalty to you, secretly too terrified of you and your brethren to refuse anything you'd ask.",
+        "metadata": {
+          "group": "conversations/c_bloom",
+          "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+          "resource": "en/text/conversations/c_bloom/c4121_secret_maw.stringtable#ID=121/DefaultText",
+          "scene": "c_bloom/c4121_secret_maw.stringtable",
+          "text_type": "对白或叙述（具体类型以本句为准）"
+        }
+      },
+      {
+        "id": "R0027375_80029e287f",
+        "ordinal": 27375,
+        "source": "\"Shut up, Ranard. I'm telling a story!\"",
+        "metadata": {
+          "group": "conversations/c_bloom",
+          "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。同一原文共有2处引用。",
+          "resource": "en/text/conversations/c_bloom/c4211_artaglio.stringtable#ID=203/DefaultText",
+          "scene": "c_bloom/c4211_artaglio.stringtable",
+          "text_type": "对白或叙述（具体类型以本句为准）"
+        }
+      },
+      {
+        "id": "R0037861_1e3b028837",
+        "ordinal": 37861,
+        "source": "\"No one's called me Mattie in a long time. No one alive, that is.\"",
+        "metadata": {
+          "group": "conversations/companions",
+          "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+          "resource": "en/text/conversations/companions/companion_master_banter.stringtable#ID=182/DefaultText",
+          "scene": "companions/companion_master_banter.stringtable",
+          "text_type": "对白或叙述（具体类型以本句为准）"
+        }
+      }
+    ],
+    "task_id": "inc-glossary_review-51b0544650f748d3fd20",
+    "input_hash": "b96efe7effadf1b2d71140692b3be21a3e06d18798524ddb31f2ec1a44e2fe6c"
+  },
+  "binding": {
+    "version": 2,
+    "session_id": "inc-glossary_review-51b0544650f748d3fd20",
+    "task_id": "inc-glossary_review-51b0544650f748d3fd20",
+    "input_hash": "b96efe7effadf1b2d71140692b3be21a3e06d18798524ddb31f2ec1a44e2fe6c",
+    "short_to_canonical": {
+      "1": "R0026753_338d82712c",
+      "2": "R0026760_2ff0b03d5f",
+      "3": "R0026803_1fbeec2e3b",
+      "4": "R0027375_80029e287f",
+      "5": "R0037861_1e3b028837"
+    },
+    "stage": "glossary_review",
+    "glossary": {
+      "entry_refs": {
+        "e1": "characters:360",
+        "e2": "characters:361",
+        "e3": "characters:362",
+        "e4": "characters:363",
+        "e5": "characters:364",
+        "e6": "characters:365",
+        "e7": "characters:366",
+        "e8": "characters:367",
+        "e9": "characters:368",
+        "e10": "characters:369",
+        "e11": "characters:370",
+        "e12": "characters:371",
+        "e13": "characters:372",
+        "e14": "characters:373",
+        "e15": "characters:374",
+        "e16": "characters:375",
+        "e17": "characters:376",
+        "e18": "characters:377",
+        "e19": "characters:378",
+        "e20": "characters:379",
+        "e21": "characters:380",
+        "e22": "characters:381",
+        "e23": "characters:382",
+        "e24": "characters:383",
+        "e25": "characters:384",
+        "e26": "characters:385",
+        "e27": "characters:386",
+        "e28": "characters:387",
+        "e29": "characters:388",
+        "e30": "characters:389",
+        "e31": "characters:390",
+        "e32": "characters:391",
+        "e33": "characters:392",
+        "e34": "characters:393",
+        "e35": "characters:394",
+        "e36": "characters:395",
+        "e37": "characters:396",
+        "e38": "characters:397",
+        "e39": "characters:398",
+        "e40": "characters:399",
+        "e41": "characters:400",
+        "e42": "characters:401",
+        "e43": "characters:402",
+        "e44": "characters:403",
+        "e45": "characters:404",
+        "e46": "characters:405",
+        "e47": "characters:406",
+        "e48": "characters:407",
+        "e49": "characters:408",
+        "e50": "characters:409",
+        "e51": "characters:410",
+        "e52": "characters:411",
+        "e53": "characters:412",
+        "e54": "characters:413",
+        "e55": "characters:414",
+        "e56": "characters:415",
+        "e57": "characters:416",
+        "e58": "characters:417",
+        "e59": "characters:418",
+        "e60": "characters:419",
+        "e61": "characters:0",
+        "e62": "characters:434",
+        "e63": "characters:1110",
+        "e64": "terms:1535"
+      },
+      "assigned_refs": [
+        "characters:360",
+        "characters:361"
+      ],
+      "finding_refs": {
+        "f1": "F0019",
+        "f2": "F0051",
+        "f3": "F0052",
+        "f4": "F0053"
+      },
+      "snapshot_sha256": "ffea3dc86e77dbe68135d12f72b40e39ec29b4356086afbc5f9173a2e5acb174",
+      "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+      "entry_sources": {
+        "characters:360": "Mattie",
+        "characters:361": "Ranard",
+        "characters:362": "Clockmaker",
+        "characters:363": "Demeray",
+        "characters:364": "Maralel",
+        "characters:365": "Sheen",
+        "characters:366": "Doctor Demeray",
+        "characters:367": "Doctor Obervich",
+        "characters:368": "Ali",
+        "characters:369": "Faung",
+        "characters:370": "Vander",
+        "characters:371": "Laarna",
+        "characters:372": "Laarma",
+        "characters:373": "Shinwise",
+        "characters:374": "translator",
+        "characters:375": "young woman",
+        "characters:376": "Pehle",
+        "characters:377": "Aen-tozon",
+        "characters:378": "Wondor",
+        "characters:379": "Cassie",
+        "characters:380": "Antuggar",
+        "characters:381": "Sauyen",
+        "characters:382": "Kwherezimian",
+        "characters:383": "Crimper",
+        "characters:384": "Alopo",
+        "characters:385": "Auwren",
+        "characters:386": "Jemadar Arechi",
+        "characters:387": "Achilli",
+        "characters:388": "Haranar",
+        "characters:389": "Amiken",
+        "characters:390": "Pilot-Major Genjes",
+        "characters:391": "Jemadar Achilli",
+        "characters:392": "Lascar Intanduul",
+        "characters:393": "Lascar Savanol",
+        "characters:394": "Lascar Doruul",
+        "characters:395": "Jemadar Salunda",
+        "characters:396": "Jemadar Norala",
+        "characters:397": "Intanduul",
+        "characters:398": "Doruul",
+        "characters:399": "Savanol",
+        "characters:400": "Salunda",
+        "characters:401": "Norala",
+        "characters:402": "Jijabai",
+        "characters:403": "Rambir",
+        "characters:404": "Sivaj",
+        "characters:405": "Sanjeev",
+        "characters:406": "Ahn",
+        "characters:407": "Torcra",
+        "characters:408": "Bndari",
+        "characters:409": "Methanwi",
+        "characters:410": "Ceredig",
+        "characters:411": "Anstoll",
+        "characters:412": "catena's intelligence",
+        "characters:413": "Vonetian",
+        "characters:414": "Siowan",
+        "characters:415": "Dakore",
+        "characters:416": "Maktina",
+        "characters:417": "Vonetion",
+        "characters:418": "Roobin",
+        "characters:419": "Thom"
+      }
+    }
+  },
+  "reply": {
+    "decisions": {
+      "review_complete": true,
+      "review_summary": "本批共审60个characters条目：58个保留为proper_name/required，并补齐term_kind、enforcement、term_reason；translator、young woman属普通职业或泛称描述，移入quarantine；e42 Norala统一为“诺拉”。f1-f4均核对，因对端条目不在本批，未作跨批合并或改动。",
+      "acknowledged_findings": [],
+      "edits": [
+        {
+          "ref": "e1",
+          "patch": {
+            "term_kind": "proper_name",
+            "enforcement": "required",
+            "term_reason": "原文以 Mattie 称呼该角色（37861），为人物专名。"
+          },
+          "reason": "补齐专名分类与强制级别，保留“玛蒂”。",
+          "evidence_rows": [
+            37861
+          ]
+        },
+        {
+          "ref": "e2",
+          "patch": {
+            "term_kind": "proper_name",
+            "enforcement": "required",
+            "term_reason": "原文称其军士为 Ranard（26803），并在对白中直呼（27375）。"
+          },
+          "reason": "补齐专名分类与强制级别，保留“拉纳德”。",
+          "evidence_rows": [
+            26803
+          ]
+        }
+      ],
+      "quarantine": [],
+      "additions": [],
+      "allow_no_match": [],
+      "entry_reviews": [
+        {
+          "ref": "e1",
+          "evidence_rows": [
+            37861
+          ],
+          "source_excerpt": "called me Mattie",
+          "reason": "核对 Mattie 为角色称呼，保留“玛蒂”。",
+          "checks": {
+            "source": [
+              "pass",
+              "37861 出现 called me Mattie。"
+            ],
+            "translation": [
+              "pass",
+              "玛蒂与该昵称称呼一致。"
+            ],
+            "category": [
+              "pass",
+              "characters 人物专名；term_kind=proper_name。"
+            ],
+            "consistency": [
+              "pass",
+              "本批无同源异译冲突。"
+            ]
+          }
+        },
+        {
+          "ref": "e2",
+          "evidence_rows": [
+            26803
+          ],
+          "source_excerpt": "His sergeant, Ranard, bows his head",
+          "reason": "核对 Ranard 为军士名，保留“拉纳德”。",
+          "checks": {
+            "source": [
+              "pass",
+              "26803 出现 His sergeant, Ranard。"
+            ],
+            "translation": [
+              "pass",
+              "拉纳德为 Ranard 的音译，保留。"
+            ],
+            "category": [
+              "pass",
+              "characters 人物专名；term_kind=proper_name。"
+            ],
+            "consistency": [
+              "pass",
+              "27375 直呼 Ranard，译名一致。"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

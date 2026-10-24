@@ -67,6 +67,12 @@ class ScopeTests(unittest.TestCase):
         new = [{'src': 'Matkina', 'dst': '玛特金娜', 'ref': 'characters:2', 'term_reason': 'new', 'enforcement': 'required'}]
         self.assertEqual(repair.matched_meaning(old), repair.matched_meaning(new))
 
+    def test_null_optional_scope_has_same_default_meaning_as_absence(self):
+        row = copy.deepcopy(self.old['terms'][0])
+        expected = repair.effective_term(row, 'terms', self.config)
+        row['applicability'] = None
+        self.assertEqual(repair.effective_term(row, 'terms', self.config), expected)
+
     def test_current_term_view_keeps_accepted_meaning_and_original_history(self):
         old = copy.deepcopy(self.old)
         old['characters'][0].update(note='Current accepted character context',
@@ -91,6 +97,62 @@ class ScopeTests(unittest.TestCase):
 
 
 class EvidenceTests(unittest.TestCase):
+    def test_explicit_finding_notes_normalize_but_unknown_refs_are_rejected(self):
+        import term_parts
+        binding = {'glossary': {'finding_refs': {'f1': 'F0012', 'f2': 'F0013'}}}
+        d = {'acknowledged_findings': [{'id': 'f1', 'reason': 'Actual alias comparison'}, 'f2：实际核对来源', 'f1']}
+        self.assertEqual(term_parts.normalize_acknowledgments(d, binding)['acknowledged_findings'], ['f1', 'f2'])
+        with self.assertRaisesRegex(ValueError, 'Unknown explicit'):
+            term_parts.normalize_acknowledgments({'acknowledged_findings': ['f999']}, binding)
+
+    def test_stray_empty_check_does_not_hide_missing_semantic_dimension(self):
+        import term_parts
+        fixture = repair.w.read_json(Path(__file__).parent / 'test_fixtures/real_term_parts.json')
+        bad = copy.deepcopy(fixture['reply'])
+        bad['decisions']['entry_reviews'][0]['checks']['.'] = []
+        bad['decisions']['entry_reviews'][0]['checks'].pop('source')
+        r = object.__new__(repair.Repair)
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp); raw = folder/'raw.txt'; raw.write_text(__import__('json').dumps(bad), encoding='utf8')
+            with self.assertRaises(ValueError):
+                term_parts.save(r, folder, fixture['payload'], fixture['payload'], bad, fixture['binding'], 'api:bad', raw)
+            self.assertEqual(len(term_parts.rows(folder, fixture['payload'])), 1)
+            self.assertFalse((folder/'accepted.json').exists())
+
+    def test_actual_term_reply_reuses_valid_entries_without_defaulting_policy(self):
+        import term_parts
+        fixture = repair.w.read_json(Path(__file__).parent / 'test_fixtures/real_term_parts.json')
+        payload = fixture['payload']; binding = fixture['binding']; reply = fixture['reply']
+        base = copy.deepcopy(payload)
+        cited = set(reply['decisions']['entry_reviews'][0]['evidence_rows'])
+        base['records'] = [row for row in base['records'] if row['ordinal'] not in cited]
+        bad = copy.deepcopy(reply)
+        bad['decisions']['edits'][1]['patch'].pop('term_reason', None)
+        r = object.__new__(repair.Repair)
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp); raw = folder / 'raw.txt'
+            raw.write_text(__import__('json').dumps(bad), encoding='utf8')
+            with self.assertRaisesRegex(ValueError, 'Only missing/invalid term'):
+                term_parts.save(r, folder, base, payload, bad, binding, 'api:first', raw)
+            parts = term_parts.rows(folder, base)
+            self.assertEqual(len(parts), 1)
+            self.assertFalse((folder / 'accepted.json').exists())
+            missing = next(e for e in payload['entries'] if e['ref'] not in parts)
+            short = next(k for k,v in binding['glossary']['entry_refs'].items() if v == missing['ref'])
+            request = {**payload, 'entries': [missing]}
+            second = copy.deepcopy(reply)
+            second['decisions']['entry_reviews'] = [x for x in second['decisions']['entry_reviews'] if x['ref'] == short]
+            second['decisions']['edits'] = [x for x in second['decisions']['edits'] if x['ref'] == short]
+            second_binding = copy.deepcopy(binding); second_binding['glossary']['assigned_refs'] = [missing['ref']]
+            raw.write_text(__import__('json').dumps(second), encoding='utf8')
+            term_parts.save(r, folder, base, request, second, second_binding, 'api:second', raw)
+            saved = repair.w.read_json(folder / 'accepted.json')
+            self.assertEqual(set(saved['entry_instances'].values()), {'api:first', 'api:second'})
+            self.assertEqual(len(saved['result']['decisions']['entry_reviews']), 2)
+            with self.assertRaises(ValueError):
+                r.validate_result(base, saved['result'], None)
+            r.validate_result(term_parts.validation_payload(r, folder, base), saved['result'], None)
+
     def test_actual_review_omission_inherits_existing_exception_without_api_retry(self):
         fixture = repair.w.read_json(Path(__file__).parent / 'test_fixtures/inherited_like_exception.json')
         b = fixture['binding']; payload = fixture['payload']
