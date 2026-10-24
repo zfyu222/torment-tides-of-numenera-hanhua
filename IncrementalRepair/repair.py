@@ -368,10 +368,22 @@ class Repair:
             item.clear(); item.update(inherited)
             item['translation'] = bridge.restore(item['translation'], original.get('protection', []), allow_original=True)
             raw_source = bridge.restore(original['source'], original.get('protection', []), allow_original=True)
+            policy = payload.get('layout_policy')
+            if policy is None:
+                policy = config.get('layout_normalization', w.DEFAULT['layout_normalization'])
+            elif policy == 'off' and 'layout_normalization' not in config:
+                # These legacy tasks were made by this project adapter, whose
+                # fallback incorrectly used off rather than the shared default.
+                # Preserve their identity and history; resolve the missing
+                # configuration using the real shared default at collection.
+                policy = w.DEFAULT['layout_normalization']
             normalized, audit = normalize_body_item(item, original,
-                {'id': item['id'], 'source': raw_source, 'locked': bool(original.get('locked'))}, config, payload.get('layout_policy'))
+                {'id': item['id'], 'source': raw_source, 'locked': bool(original.get('locked'))}, config,
+                policy)
             item.clear(); item.update(normalized)
             if audit:
+                audit['declared_policy'] = payload.get('layout_policy')
+                audit['effective_policy'] = policy
                 item['_layout_audit'] = audit
             issues = bridge.record_structural_issues({'id': item['id'], 'source': raw_source}, item['translation'], rules, config)
             if issues:
@@ -589,6 +601,8 @@ class Repair:
                     with self.lock:
                         w.write_json(ledger_path, ledger)
             if not (folder / 'accepted.json').exists():
+                if stopped.is_set():
+                    raise ValueError('Stage stopped before job completed: ' + folder.name)
                 raise ValueError('Job retry limit reached: ' + folder.name)
         errors = []
         try:
@@ -601,7 +615,7 @@ class Repair:
                         errors.append(str(exc))
                         # A bounded format/semantic retry exhaustion belongs to
                         # this job; independent queued jobs can still finish.
-                        if not str(exc).startswith('Job retry limit reached:'):
+                        if not str(exc).startswith(('Job retry limit reached:', 'Stage stopped before job completed:')):
                             stopped.set()
         finally:
             client.close()

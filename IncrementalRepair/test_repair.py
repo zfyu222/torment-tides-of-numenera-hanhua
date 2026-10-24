@@ -105,6 +105,44 @@ class ScopeTests(unittest.TestCase):
 
 
 class EvidenceTests(unittest.TestCase):
+    def test_actual_null_policy_replies_restore_only_equivalent_layout(self):
+        fixture=repair.w.read_json(Path(__file__).parent/'test_fixtures/real_body_layout.json')
+        r=object.__new__(repair.Repair);r.snapshot=lambda:{'config':copy.deepcopy(repair.w.DEFAULT)}
+        glossary={'characters':[],'terms':[],'non_translate':[]}
+        for example in fixture:
+            before=example['item']['translation']; item=copy.deepcopy(example['item'])
+            payload={'stage':'translate','layout_policy':None,'records':[example['original']]}
+            r.validate_result(payload,{'records':[item]},glossary)
+            self.assertEqual(item['translation'].strip().replace('\r\n','\n'),before.strip().replace('\r\n','\n'))
+            self.assertFalse(item['_layout_audit']['semantic_checks_created'])
+            self.assertEqual(__import__('re').findall(r'\r\n|\r|\n',item['translation']),
+                             __import__('re').findall(r'\r\n|\r|\n',example['original']['source']))
+            with self.assertRaisesRegex(ValueError,'structural'):
+                r.validate_result({**payload,'layout_policy':'off'},
+                    {'records':[copy.deepcopy(example['item'])]},glossary)
+
+    def test_layout_recovery_rejects_actual_removed_paragraph(self):
+        example=repair.w.read_json(Path(__file__).parent/'test_fixtures/real_body_layout.json')[0]
+        r=object.__new__(repair.Repair);r.snapshot=lambda:{'config':copy.deepcopy(repair.w.DEFAULT)}
+        item=copy.deepcopy(example['item'])
+        item['translation']=item['translation'].replace('\r\n\r\n','\r\n',1).replace('\n\n','\n',1)
+        with self.assertRaisesRegex(ValueError,'physical_newlines'):
+            r.validate_result({'stage':'translate','layout_policy':None,'records':[example['original']]},
+                {'records':[item]},{'characters':[],'terms':[],'non_translate':[]})
+
+    def test_legacy_missing_config_uses_shared_default_but_explicit_off_is_respected(self):
+        example=repair.w.read_json(Path(__file__).parent/'test_fixtures/real_body_layout.json')[0]
+        config=copy.deepcopy(repair.w.DEFAULT);config.pop('layout_normalization',None)
+        r=object.__new__(repair.Repair);r.snapshot=lambda:{'config':config}
+        payload={'stage':'translate','layout_policy':'off','records':[example['original']]}
+        result={'records':[copy.deepcopy(example['item'])]}
+        glossary={'characters':[],'terms':[],'non_translate':[]}
+        r.validate_result(payload,result,glossary)
+        self.assertEqual(result['records'][0]['_layout_audit']['effective_policy'],'exact_v1')
+        config['layout_normalization']='off'
+        with self.assertRaisesRegex(ValueError,'structural'):
+            r.validate_result(payload,{'records':[copy.deepcopy(example['item'])]},glossary)
+
     def test_explicit_finding_notes_normalize_but_unknown_refs_are_rejected(self):
         import term_parts
         binding = {'glossary': {'finding_refs': {'f1': 'F0012', 'f2': 'F0013'}}}

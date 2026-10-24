@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-25",
+  "status": "requests_stopped_after_http502_waiting_api_selection_clarification",
+  "terms_reviewed": 5579,
+  "term_jobs_accepted": 93,
+  "required_terms": 3937,
+  "reference_terms": 650,
+  "excluded_terms": 992,
+  "scope_records": 25134,
+  "preserved_records": 45029,
+  "translation_scope": 25126,
+  "translation_drafts_saved": 1962,
+  "translation_jobs_completed": 115,
+  "translation_jobs_remaining": 1628,
+  "independent_review_started": false,
+  "offline_recovered_jobs": 32,
+  "api_requests_during_offline_recovery": 0,
+  "formal_stage_api_calls": 465,
+  "model_requests": 435,
+  "service_failures_excluded": 30,
+  "reported_tokens": 13451536,
+  "usage_unknown_calls": 30,
+  "by_local_api_name": {
+    "acy7": {
+      "calls": 191,
+      "reported_tokens": 9089374,
+      "usage_unknown": 3
+    },
+    "deepseek": {
+      "calls": 64,
+      "reported_tokens": 2260169,
+      "usage_unknown": 0
+    },
+    "yjapi": {
+      "calls": 210,
+      "reported_tokens": 2101993,
+      "usage_unknown": 27
+    }
+  },
+  "isolated_validation_costs": "separate, see live_validation_report_20261024.json",
+  "new_glossary_sha256": "9272200bce5e1168acbe1986e785d5dcb94c4a797f1ee0d09cae9828aca6d007",
+  "repair_plan_sha256": "ac4d6cc53e9cf89145c5ff3678f54705c22dfb8b832c8320a59751f4b26be7c0",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "formal_files_modified": false,
+  "tests_passed": 23,
+  "live_api_validation_after_layout_fix": "not_run_service_failure",
+  "note": "Existing failed replies were replayed without editing semantic evidence or retry counters. Known descriptor changed by actual follow-up API decision; no claim of universal detection."
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "original": {
+      "id": "R0001446_e3a0f61984",
+      "ordinal": 1446,
+      "source": "The padded interior beneath the coffin's cracked lid looks like it was made for a human body. Despite the damage, you don't see any way to open it and get inside. \r\n\r\nYou glance between the sarcophagus and the needle-like protrusions at the ends of the arms above. It seems likely that using this chamber would not be a pleasant experience. ",
+      "protection": [],
+      "translation": null,
+      "metadata": {
+        "group": "conversations/a_sagus",
+        "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+        "resource": "en/text/conversations/a_sagus/a1101_resonance_chamber.stringtable#ID=40/DefaultText",
+        "scene": "a_sagus/a1101_resonance_chamber.stringtable",
+        "text_type": "对白或叙述（具体类型以本句为准）"
+      },
+      "exceptions": [],
+      "locked": false
+    },
+    "item": {
+      "id": "R0001446_e3a0f61984",
+      "translation": "棺材开裂的盖子下方，铺着衬垫的内壁看起来是为人类躯体量身打造的。尽管已经破损，你也看不出有什么办法能把它打开并钻进去。\r\n\r\n你来回打量着石棺和上方那些手臂末端的针状突起。使用这个舱室恐怕不会是什么愉快的经历。"
+    },
+    "raw_sha256": "e393ff62bd0c0995a3621cd54e6815287c922630b8b99dee68c99f5ce7b520bb",
+    "original_rejection": "Only failed/missing records need retry: R0001446_e3a0f61984: structural ['boundary_whitespace']; R0001447_7ed4cba597: structural ['boundary_whitespace']"
+  },
+  {
+    "original": {
+      "id": "R0001129_4308810558",
+      "ordinal": 1129,
+      "source": " \"Ugh. What *was* that? What did you do, Callistege?\" His tone has become accusatory, suspicious. You open your eyes.\r\n\r\nThe first thing you notice is this man's kaleidoscope of tattoos, writhing across his forearms. He wears a long, dark coat, belted at the waist, supplies filling the pockets. His boots are worn and stained with years of travel.",
+      "protection": [],
+      "translation": null,
+      "metadata": {
+        "group": "conversations/a_sagus",
+        "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+        "resource": "en/text/conversations/a_sagus/a1101_aligern_and_callistege.stringtable#ID=132/DefaultText",
+        "scene": "a_sagus/a1101_aligern_and_callistege.stringtable",
+        "text_type": "对白或叙述（具体类型以本句为准）"
+      },
+      "exceptions": [],
+      "locked": false
+    },
+    "item": {
+      "id": "R0001129_4308810558",
+      "translation": "“呃。那到底*是*什么？你做了什么，卡莉丝蒂吉？”他的语气变得充满指责和怀疑。你睁开双眼。\n\n你首先注意到的是这个男人万花筒般的纹身，它们在前臂上扭动。他身穿一件深色长外套，腰间束带，口袋里塞满了补给品。他的靴子已经磨损，沾着多年旅行留下的污渍。",
+      "exceptions": []
+    },
+    "raw_sha256": "dbdf9e18fd06e709535788513532371205d3c13e89776d5ada9fb0c779221206",
+    "original_rejection": "Only failed/missing records need retry: R0001129_4308810558: structural ['boundary_whitespace', 'physical_newlines']; R0001130_66ddbb293f: structural ['physical_newlines']"
+  }
+]
