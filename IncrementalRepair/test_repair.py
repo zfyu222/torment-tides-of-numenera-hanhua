@@ -79,8 +79,28 @@ class ScopeTests(unittest.TestCase):
         self.assertEqual(view['non_translate'], [])
         self.assertEqual(old['non_translate'], self.old['non_translate'])
 
+    def test_removed_term_with_existing_exception_does_not_retranslate_correct_row(self):
+        before = [{'src': 'like', 'dst': '喜欢'}, {'src': 'Sagus', 'dst': '萨古斯'}]
+        after = [{'src': 'Sagus', 'dst': '萨古斯'}]
+        exception = [{'source': 'like', 'reason': 'Source uses feels like for a comparison, already reviewed.'}]
+        self.assertFalse(repair.policy_change_affects_record(before, after, exception))
+        self.assertTrue(repair.policy_change_affects_record(before, after, []))
+        self.assertTrue(repair.policy_change_affects_record(before, [{'src': 'Sagus', 'dst': '另一个译名'}], exception))
+        self.assertTrue(repair.policy_change_affects_record(before,
+            after + [{'src': 'like', 'dst': '像', 'enforcement': 'reference'}], exception))
+
 
 class EvidenceTests(unittest.TestCase):
+    def test_actual_review_omission_inherits_existing_exception_without_api_retry(self):
+        fixture = repair.w.read_json(Path(__file__).parent / 'test_fixtures/inherited_like_exception.json')
+        b = fixture['binding']; payload = fixture['payload']
+        result = repair.canonical_api_result(fixture['reply'], b, b['session_id'], b['task_id'], b['input_hash'], list(b['short_to_canonical'].values()))
+        r = object.__new__(repair.Repair); r.snapshot = lambda: {'config': copy.deepcopy(repair.w.DEFAULT)}
+        glossary = {'characters': [], 'terms': [{'source': 'like', 'recommended_translation': '喜欢', 'category_path': '其他'}], 'non_translate': []}
+        r.validate_result(payload, result, glossary)
+        self.assertEqual(result['records'][0]['exceptions'], payload['records'][0]['exceptions'])
+        self.assertNotIn('喜欢', result['records'][0]['translation'])
+
     def test_real_api_full_correction_passes_and_missing_translation_still_rejects(self):
         fixture = repair.w.read_json(repair.REPO / 'Tools/localization/test_fixtures/source_reference_missing_translation.json')
         complete = fixture['repair']; b = complete['binding']; ids = list(b['short_to_canonical'].values())

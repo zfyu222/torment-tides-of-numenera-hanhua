@@ -94,6 +94,21 @@ def matched_meaning(matches):
     return sorted((m['src'], m['dst'], m.get('enforcement', 'required')) for m in matches)
 
 
+def policy_change_affects_record(before, after, exceptions):
+    """A removed constraint already exempted in this approved row changes nothing.
+
+    Do not hide a still-matching revised term or newly exposed nested name.
+    Reasons are inherited source-bound evidence, never generated here.
+    """
+    if isinstance(exceptions, str):
+        exceptions = json.loads(exceptions)
+    removed_exempt = {e['source'].casefold() for e in exceptions
+                      if isinstance(e, dict) and isinstance(e.get('source'), str) and e.get('reason')}
+    removed_exempt.difference_update(m['src'].casefold() for m in after)
+    active_before = [m for m in before if m['src'].casefold() not in removed_exempt]
+    return matched_meaning(active_before) != matched_meaning(after)
+
+
 def repair_hidden_wrappers(source, translation):
     proposed = translation
     for token in ('{Female}', '{Male}'):
@@ -324,6 +339,8 @@ class Repair:
             config['exclusions'], config.get('placeholder_family_overrides'))
         for item in result['records']:
             original = originals[item['id']]
+            inherited = w.Workflow.inherit_exceptions(item, original)
+            item.clear(); item.update(inherited)
             item['translation'] = bridge.restore(item['translation'], original.get('protection', []), allow_original=True)
             raw_source = bridge.restore(original['source'], original.get('protection', []), allow_original=True)
             normalized, audit = normalize_body_item(item, original,
@@ -365,6 +382,10 @@ class Repair:
             raise ValueError('Unknown previous in-flight requests; inspect before explicit recovery')
         if not jobs:
             return {'stage': stage, 'remaining': 0, 'errors': []}
+        # Prepared jobs may run in a fresh process without queue() first. Seed
+        # the filesystem-backed tokenizer before concurrent first use; its lazy
+        # lru_cache initialization is not a single-flight lock.
+        count_tokens('')
         client = bridge.AINieeAPI(settings, key)
         request_times = deque()
         def throttle():
@@ -577,7 +598,7 @@ class Repair:
             old_probe[t] = [r for r in old[t] if (t, r['source']) in changed_keys]
             new_probe[t] = [r for r in new[t] if (t, r['source']) in changed_keys]
         rules = bridge.patterns(config['protect_named_curly'] is not False, config['exclusions'], config.get('placeholder_family_overrides'))
-        affected = []
+        affected, preserved_exemptions = [], []
         rows = w.read_json(self.work / 'records.json')
         for row in rows:
             actual_rules = bridge.record_rules(row, config, rules)
@@ -586,15 +607,18 @@ class Repair:
                 continue
             before = bridge.matched_terms(old, texts, config, rules=actual_rules)
             after = bridge.matched_terms(new, texts, config, rules=actual_rules)
-            if matched_meaning(before) != matched_meaning(after):
+            if policy_change_affects_record(before, after, row.get('exceptions', [])):
                 if row['locked']:
                     raise ValueError('Affected confirmed record is locked: ' + row['id'])
                 affected.append(row['id'])
+            elif matched_meaning(before) != matched_meaning(after):
+                preserved_exemptions.append(row['id'])
         structural = w.read_json(self.work / 'structural_findings.json'); individual = w.read_json(self.work / 'individual_cases.json')
         union = sorted(set(affected) | {r['id'] for r in structural} | set(individual))
         if any(r['locked'] and r['id'] in union for r in rows):
             raise ValueError('An incremental-scope record is locked')
         plan = {'term_changes': changes, 'annotation_only': annotations, 'term_affected_ids': affected,
+            'preserved_by_existing_exceptions': preserved_exemptions,
             'structural_ids': [r['id'] for r in structural], 'individual_ids': individual,
             'scope_ids': union, 'preserved_records': len(rows) - len(union),
             'baseline_translation_sha256': baseline['translation_sha256'], 'new_glossary_sha256': sha(self.work / 'new_glossary.json')}

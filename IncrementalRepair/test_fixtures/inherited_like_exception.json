@@ -1,0 +1,1937 @@
+{
+  "note": "Unchanged single-record projection of actual review reply; full original session binding retained. No synthetic exception inserted.",
+  "binding": {
+    "version": 2,
+    "session_id": "inc-review-7285b9dafa0419a13282",
+    "task_id": "inc-review-7285b9dafa0419a13282",
+    "input_hash": "b31324522ac2b36b711eb2db2a0333b086c493f744cd621aefeb7397a0418b29",
+    "short_to_canonical": {
+      "1": "R0004147_abbc502838",
+      "2": "R0004257_58abdf6a8a",
+      "3": "R0057207_c590bc54b8",
+      "4": "R0057530_9546a1921f",
+      "5": "R0062250_a090906b3e",
+      "6": "R0062251_1e4a8c1875",
+      "7": "R0062252_62f84bdc07",
+      "8": "R0062253_254323587a",
+      "9": "R0062254_a1a5378dba",
+      "10": "R0062255_9385f314d4",
+      "11": "R0062256_13de21ff90",
+      "12": "R0062257_36da9ea8c7",
+      "13": "R0063811_a0ea110547"
+    },
+    "stage": "review",
+    "original_translations": {
+      "R0004147_abbc502838": "但尽管他话说得硬，他的目光却落在你身上。端详。斟酌。他的嘴抿成一条烦躁的直线。  \r\n\r\n“听着，”他说，一只手抚过布满胡茬的头皮。“你掩饰得很好，但我看得出来你是新来的。我不是想冒犯你，只是我……不喜欢让初到萨古斯的人独自待着。如果你对这座城市——或者尤其是小竞技场——有什么问题，我会回答，不收钱。”",
+      "R0004257_58abdf6a8a": "他盯着她，咬着嘴唇，显然正努力鼓起勇气跟她说话……想说服她什么。最后，他嘴角一歪，露出苦笑，重新转向你。\r\n\r\n“听着，”他说着，用手抚过满是胡茬的头皮，“你掩饰得很好，但我看得出你是新来的。我不是想冒犯你，只是我……不喜欢把初到萨古斯的人丢下不管。如果你对这座城市——尤其是小竞技场——有什么疑问，我会免费回答。”",
+      "R0057207_c590bc54b8": "坚韧",
+      "R0057530_9546a1921f": "由“坚韧”描述符提供的一组加成。",
+      "R0062250_a090906b3e": "矮胖{Female}",
+      "R0062251_1e4a8c1875": "瘦削{Female}",
+      "R0062252_62f84bdc07": "高瘦{Female}",
+      "R0062253_254323587a": "矮瘦{Female}",
+      "R0062254_a1a5378dba": "强壮{Female}",
+      "R0062255_9385f314d4": "高壮{Female}",
+      "R0062256_13de21ff90": "矮壮{Female}",
+      "R0062257_36da9ea8c7": "孩子 {Female}",
+      "R0063811_a0ea110547": "这枚棕色光球沉重而坚实，摸起来像一块被持续水流磨得光滑的石头。它的一侧有一处恰好贴合人类手掌的凹痕。激活后，跃迁会吸收使用者，并将其传送到视线范围内的一处附近地点。"
+    },
+    "original_sources": {
+      "R0004147_abbc502838": "But despite his hard words, his eyes settle on yours. Studying. Deciding. His mouth settles into an irritated line.  \r\n\r\n\"Look,\" he says, running a hand over his stubbled scalp. \"You hide it well, but I can tell you're new here. I ent trying to offend you, but I... don't like leaving folk new to Sagus on their own. If you have questions about the city - or Circus Minor in particular - I'll answer 'em, free of charge.\"",
+      "R0004257_58abdf6a8a": "He stares at her, chewing his lip, clearly trying to work up the courage to talk to her... to convince her of something. Finally, with a wry twist of his mouth, he turns back at you. \r\n\r\n\"Look,\" he says, running a hand over his stubbled scalp. \"You hide it well, but I can tell you're new here. I ent trying to offend you, but I... don't like leaving folk new to Sagus on their own. If you have questions about the city - or Circus Minor in particular - I'll answer 'em, free of charge.\"",
+      "R0057207_c590bc54b8": "Hardened",
+      "R0057530_9546a1921f": "A set of bonuses granted by the Hardened descriptor.",
+      "R0062250_a090906b3e": "Chubby Short {Female}",
+      "R0062251_1e4a8c1875": "Thin {Female}",
+      "R0062252_62f84bdc07": "Thin Tall {Female}",
+      "R0062253_254323587a": "Thin Short {Female}",
+      "R0062254_a1a5378dba": "Strong {Female}",
+      "R0062255_9385f314d4": "Strong Tall {Female}",
+      "R0062256_13de21ff90": "Strong Short {Female}",
+      "R0062257_36da9ea8c7": "Child {Female}",
+      "R0063811_a0ea110547": "Heavy and solid, this brown orb feels like a rock that has been worn smooth by a constant flow of water. On one side, there's an indentation that just fits a human hand. When activated, the bounder absorbs the user and teleports them to a nearby location within line of sight."
+    },
+    "record_terms": {
+      "R0004147_abbc502838": {
+        "t1": "running",
+        "t2": "hide",
+        "t3": "like",
+        "t4": "folk",
+        "t5": "Sagus",
+        "t6": "the city",
+        "t7": "Circus Minor",
+        "t8": "i"
+      },
+      "R0004257_58abdf6a8a": {
+        "t9": "back",
+        "t1": "running",
+        "t2": "hide",
+        "t3": "like",
+        "t4": "folk",
+        "t5": "Sagus",
+        "t6": "the city",
+        "t7": "Circus Minor",
+        "t8": "i"
+      },
+      "R0057207_c590bc54b8": {
+        "t10": "Hardened"
+      },
+      "R0057530_9546a1921f": {
+        "t11": "descriptor"
+      },
+      "R0062250_a090906b3e": {
+        "t12": "Chubby Short {Female}"
+      },
+      "R0062251_1e4a8c1875": {
+        "t13": "Thin {Female}"
+      },
+      "R0062252_62f84bdc07": {
+        "t14": "Thin Tall {Female}"
+      },
+      "R0062253_254323587a": {
+        "t15": "Thin Short {Female}"
+      },
+      "R0062254_a1a5378dba": {
+        "t16": "Strong {Female}"
+      },
+      "R0062255_9385f314d4": {
+        "t17": "Strong Tall {Female}"
+      },
+      "R0062256_13de21ff90": {
+        "t18": "Strong Short {Female}"
+      },
+      "R0062257_36da9ea8c7": {},
+      "R0063811_a0ea110547": {
+        "t19": "Heavy",
+        "t20": "orb",
+        "t3": "like",
+        "t21": "human",
+        "t22": "bounder"
+      }
+    },
+    "record_exceptions": {
+      "R0004147_abbc502838": {},
+      "R0004257_58abdf6a8a": {},
+      "R0057207_c590bc54b8": {},
+      "R0057530_9546a1921f": {},
+      "R0062250_a090906b3e": {},
+      "R0062251_1e4a8c1875": {},
+      "R0062252_62f84bdc07": {},
+      "R0062253_254323587a": {},
+      "R0062254_a1a5378dba": {},
+      "R0062255_9385f314d4": {},
+      "R0062256_13de21ff90": {},
+      "R0062257_36da9ea8c7": {},
+      "R0063811_a0ea110547": {
+        "x1": "like"
+      }
+    },
+    "require_explicit_translation": []
+  },
+  "payload": {
+    "stage": "review",
+    "revision": 8,
+    "source_hash": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+    "language": {
+      "source": "英语",
+      "target": "简体中文"
+    },
+    "style": "忠实原意，使用自然、成熟、可读的简体中文。保留第九世界的陌生感、哲学意味、黑色幽默及人物各自口吻，避免生硬直译、网络梗、过度文言和无依据解释。叙述中you通常译为“你”。术语冻结后保持一致，普通词的语境例外在协议字段说明，绝不把翻译分析、术语争论、道歉或输出说明混入正文。<...>中的自然语言是心灵对白，保留尖括号并翻译其内容；普通[...]中的动作、判定、对白也需翻译。只有实际运行时标记和渲染标签保留。开发占位与虚构语言须按出处判断，不因含括号或英文就整体禁翻；测试/开发说明保持可辨识，不杜撰成正式剧情。界面文字简洁清楚；有明确排版元数据时按要求分行。",
+    "game_background": "## 游戏信息\n- 原名：Torment: Tides of Numenera\n- 中文名：折磨：努曼内拉之潮（暂译）\n- 开发商：inXile Entertainment\n- 发行平台：Steam（Windows；商店页亦列出 macOS、SteamOS + Linux）\n- 引擎：Unity 5.4.1p3（Mono；版本取自 `globalgamemanagers` 文件头）\n- 原语言：英语（Steam 同时提供法语、德语、西班牙语、波兰语、俄语）\n\n## 游戏简介\n\n本作是《异域镇魂曲》的精神续作，属于单人等距视角、以叙事与抉择为核心的 CRPG，背景设定在 Monte Cook 创作的努曼内拉“第九世界”。玩家扮演从轨道坠落、曾被“变易之神”占据躯体的新意识，需要躲避名为“悲伤”的古老追猎者，并回答“一个生命有何意义”。资料来源：[Steam 商店页](https://store.steampowered.com/app/272270/Torment_Tides_of_Numenera/)。\n\n## 汉化目标\n- 范围：英文字符串表中的剧情、对话、任务、系统与 UI 文本\n- 目标语言：简体中文",
+    "context": [],
+    "layout_policy": "off",
+    "records": [
+      {
+        "id": "R0063811_a0ea110547",
+        "ordinal": 63811,
+        "source": "Heavy and solid, this brown orb feels like a rock that has been worn smooth by a constant flow of water. On one side, there's an indentation that just fits a human hand. When activated, the bounder absorbs the user and teleports them to a nearby location within line of sight.",
+        "translation": "这枚棕色光球沉重而坚实，摸起来像一块被持续水流磨得光滑的石头。它的一侧有一处恰好贴合人类手掌的凹痕。激活后，跃迁会吸收使用者，并将其传送到视线范围内的一处附近地点。",
+        "protection": [],
+        "metadata": {
+          "group": "game",
+          "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。界面文本，注意长度、按钮用途和中文阅读。",
+          "resource": "en/text/game/items.stringtable#ID=220/DefaultText",
+          "scene": "",
+          "text_type": "系统或界面文本"
+        },
+        "exceptions": [
+          {
+            "reason": "此处的 like 是介词，构成 feels like a rock（摸起来像一块石头）的明喻；若按“喜欢”理解会破坏句意，故译为“像”。",
+            "source": "like"
+          }
+        ],
+        "locked": false
+      }
+    ],
+    "terms": [
+      {
+        "category_path": "技能",
+        "recommended_translation": "奔跑",
+        "source": "Running",
+        "evidence_rows": [
+          66814
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "技能",
+              "recommended_translation": "奔跑",
+              "source": "Running"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              66814
+            ],
+            "extraction_tasks": [
+              "extract-r2-01238-288c2d77-s331e7610"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:3812",
+        "src": "running",
+        "dst": "奔跑",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "技能",
+        "recommended_translation": "躲藏",
+        "source": "Hide",
+        "evidence_rows": [
+          56853,
+          67525
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "技能",
+              "recommended_translation": "躲藏",
+              "source": "Hide"
+            },
+            "extraction_count": 2,
+            "evidence_rows": [
+              56853,
+              67525
+            ],
+            "extraction_tasks": [
+              "extract-r2-01095-10019343-s02395413",
+              "extract-r2-01238-288c2d77-s2c47f941"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:2685",
+        "src": "hide",
+        "dst": "躲藏",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "其他",
+        "recommended_translation": "喜欢",
+        "source": "Like",
+        "evidence_rows": [
+          50609,
+          50617
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "其他",
+              "recommended_translation": "喜欢",
+              "source": "Like"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              50609,
+              50617
+            ],
+            "extraction_tasks": [
+              "extract-r2-00969-bb7d7200-s3a4354c2"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:2321",
+        "src": "like",
+        "dst": "喜欢",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "组织",
+        "recommended_translation": "族民",
+        "source": "Folk",
+        "evidence_rows": [
+          46913,
+          46921,
+          46932,
+          47003,
+          47004,
+          47016,
+          47018,
+          47021,
+          47055,
+          47057,
+          47059,
+          47064,
+          47067,
+          47068,
+          47071,
+          47078,
+          47092,
+          47094,
+          47113
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "组织",
+              "recommended_translation": "福克人",
+              "source": "Folk"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              46913
+            ],
+            "extraction_tasks": [
+              "extract-r2-00902-72517528-s44a83add"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "组织",
+              "recommended_translation": "族民",
+              "source": "Folk"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              46921,
+              46932
+            ],
+            "extraction_tasks": [
+              "extract-r2-00902-72517528-s8bbd480f"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "种族",
+              "recommended_translation": "族民",
+              "source": "Folk"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              47003,
+              47004,
+              47016,
+              47018,
+              47021
+            ],
+            "extraction_tasks": [
+              "extract-r2-00906-76b74f03-s6cf41f5a"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "组织",
+              "recommended_translation": "福克族",
+              "source": "Folk"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              47055,
+              47057,
+              47059,
+              47064,
+              47067,
+              47068,
+              47071,
+              47078
+            ],
+            "extraction_tasks": [
+              "extract-r2-00906-76b74f03-s27e77336"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "种族",
+              "recommended_translation": "族人",
+              "source": "Folk"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              47092,
+              47094,
+              47113
+            ],
+            "extraction_tasks": [
+              "extract-r2-00910-4988cd1a-sc175e79c"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:2068",
+        "src": "folk",
+        "dst": "族民",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "地名",
+        "recommended_translation": "萨古斯",
+        "source": "Sagus",
+        "evidence_rows": [
+          2245,
+          4147,
+          4175,
+          4180,
+          4181,
+          4257,
+          4338,
+          4693,
+          5377,
+          7235,
+          7444,
+          7476,
+          9855,
+          10302,
+          10542,
+          10550,
+          10633,
+          11013,
+          11710,
+          11870,
+          11984,
+          12094,
+          12422,
+          12777,
+          13286,
+          13596,
+          13604,
+          13731,
+          13740,
+          13742,
+          13893,
+          13940,
+          13943,
+          13959,
+          14555,
+          14568,
+          14578,
+          14655,
+          14696,
+          15199,
+          15200,
+          15211,
+          15212,
+          15344,
+          15345,
+          15500,
+          15596,
+          15877,
+          15929,
+          15930,
+          16014,
+          16025,
+          19484,
+          23987,
+          24004,
+          25453,
+          25971,
+          25972,
+          26445,
+          26452,
+          26454,
+          26468,
+          27150,
+          29110,
+          34269,
+          34317,
+          34338,
+          34343,
+          36634,
+          36635,
+          36639,
+          36693,
+          36694,
+          36709,
+          36710,
+          36738,
+          36891,
+          36985,
+          36986,
+          37166,
+          39072,
+          40127,
+          40382,
+          43337,
+          43460,
+          43461,
+          43610,
+          43612,
+          43614,
+          43623,
+          43650,
+          48115,
+          48116,
+          48117,
+          54286,
+          54299,
+          54327,
+          54414,
+          54433,
+          55808,
+          62215,
+          62216,
+          62217,
+          62218,
+          62358,
+          62359,
+          62360,
+          62361,
+          63919,
+          63921,
+          65387,
+          65845,
+          66583,
+          68274,
+          68275,
+          68295,
+          68327,
+          68328,
+          68362,
+          68376,
+          68413,
+          68420,
+          68434,
+          68493,
+          68544,
+          68545,
+          68562,
+          69097
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "地名",
+              "recommended_translation": "萨古斯",
+              "source": "Sagus"
+            },
+            "extraction_count": 23,
+            "evidence_rows": [
+              2245,
+              4147,
+              4175,
+              4180,
+              4181,
+              9855,
+              10633,
+              12422,
+              12777,
+              13286,
+              13893,
+              13940,
+              13943,
+              13959,
+              14555,
+              14655,
+              14696,
+              15199,
+              15200,
+              15211,
+              15212,
+              15500,
+              25971,
+              25972,
+              34338,
+              34343,
+              36693,
+              36694,
+              36709,
+              36710,
+              37166,
+              39072,
+              40127,
+              43460,
+              43461,
+              54286,
+              54299,
+              54327,
+              68274,
+              68275,
+              68295,
+              68327,
+              68328,
+              69097
+            ],
+            "extraction_tasks": [
+              "extract-r2-00037-9f85ab49-s263adeaa",
+              "extract-r2-00079-3421e122-s8990bcbd",
+              "extract-r2-00182-382cf705-s311c60cd",
+              "extract-r2-00198-59e516e5-s8d011c26",
+              "extract-r2-00230-173efd4f-s1f5414ce",
+              "extract-r2-00234-411384be-sb7839aa5",
+              "extract-r2-00249-af157664-s3a16b99a",
+              "extract-r2-00257-26478b08-see2f5d3f",
+              "extract-r2-00261-1954cc00-s5d50a7e1",
+              "extract-r2-00266-0aaa3658-s2bcc764d",
+              "extract-r2-00274-fea8c37d-s37266a00",
+              "extract-r2-00282-b6a2dfbd-sf035ad51",
+              "extract-r2-00290-2d48d1ea-s9b6397ff",
+              "extract-r2-00512-20fb3158-sa6ccaf1a",
+              "extract-r2-00647-77a370a0-s847a365d",
+              "extract-r2-00682-c32db90c-s63f821bb",
+              "extract-r2-00694-107e1128-sd26f4450",
+              "extract-r2-00729-5638dd07-sc1655d38",
+              "extract-r2-00750-edbc7141-sa12cb130",
+              "extract-r2-00809-e822e870-sbfb341b8",
+              "extract-r2-01053-bf744a0b-s4db7dc2e",
+              "extract-r2-01258-b8b4738d-s56c1999b",
+              "extract-r2-01266-e93b1bcd-sfe08f463"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "地名",
+              "recommended_translation": "萨格斯",
+              "source": "Sagus"
+            },
+            "extraction_count": 53,
+            "evidence_rows": [
+              4257,
+              4338,
+              4693,
+              5377,
+              7235,
+              7444,
+              7476,
+              10302,
+              10542,
+              10550,
+              11013,
+              11710,
+              11870,
+              11984,
+              12094,
+              13596,
+              13604,
+              13731,
+              13740,
+              13742,
+              14568,
+              14578,
+              15344,
+              15345,
+              15596,
+              15877,
+              15929,
+              15930,
+              16014,
+              16025,
+              19484,
+              23987,
+              24004,
+              25453,
+              26445,
+              26452,
+              26454,
+              26468,
+              27150,
+              29110,
+              34269,
+              34317,
+              36634,
+              36635,
+              36639,
+              36738,
+              36891,
+              36985,
+              36986,
+              40382,
+              43337,
+              43610,
+              43612,
+              43614,
+              43623,
+              43650,
+              48115,
+              48116,
+              48117,
+              54414,
+              54433,
+              55808,
+              62215,
+              62216,
+              62217,
+              62218,
+              62358,
+              62359,
+              62360,
+              62361,
+              63919,
+              63921,
+              65387,
+              65845,
+              66583,
+              68362,
+              68376,
+              68413,
+              68420,
+              68434,
+              68493,
+              68544,
+              68545,
+              68562
+            ],
+            "extraction_tasks": [
+              "extract-r2-00079-3421e122-s2ee177d1",
+              "extract-r2-00079-3421e122-s4052ceac",
+              "extract-r2-00087-9693c3c3-se4c54d78",
+              "extract-r2-00098-0171f8e4-s6eb6ee62",
+              "extract-r2-00133-2c9a3bf4-s4823588d",
+              "extract-r2-00140-29035441-s22e85e88",
+              "extract-r2-00190-29fc7fd0-sa8456c48",
+              "extract-r2-00198-59e516e5-s44d1a1d4",
+              "extract-r2-00206-79657c5a-s8b24c437",
+              "extract-r2-00221-faab7e0d-s10155775",
+              "extract-r2-00221-faab7e0d-s3b81410d",
+              "extract-r2-00225-ac378c7b-s6fe7f43e",
+              "extract-r2-00225-ac378c7b-s811f5e39",
+              "extract-r2-00249-af157664-sf6a37362",
+              "extract-r2-00257-26478b08-s15669c03",
+              "extract-r2-00274-fea8c37d-s8e6c411b",
+              "extract-r2-00282-b6a2dfbd-s2b118a90",
+              "extract-r2-00290-2d48d1ea-s0df6149d",
+              "extract-r2-00298-ab917654-s781ea755",
+              "extract-r2-00298-ab917654-sd2d3700b",
+              "extract-r2-00298-ab917654-s8dc02dfd",
+              "extract-r2-00371-819c2e8e-s4b8d051f",
+              "extract-r2-00477-ee8a5720-s9273840a",
+              "extract-r2-00504-a4a7f7ad-s0efd357a",
+              "extract-r2-00516-072780b3-s1720dd92",
+              "extract-r2-00520-d1adb3de-s0619ec23",
+              "extract-r2-00528-6a10a04b-s40cd5106",
+              "extract-r2-00560-a9051321-s18e2818c",
+              "extract-r2-00647-77a370a0-s3a8a1ecf",
+              "extract-r2-00682-c32db90c-s88309736",
+              "extract-r2-00690-320f45fc-s79809486",
+              "extract-r2-00690-320f45fc-s52b37670",
+              "extract-r2-00690-320f45fc-s8e153e67",
+              "extract-r2-00750-edbc7141-s35d89d72",
+              "extract-r2-00809-e822e870-sfc591f2e",
+              "extract-r2-00820-3ad293f9-s384fa1a9",
+              "extract-r2-00820-3ad293f9-s83f22ff3",
+              "extract-r2-00934-f064a031-s51e885fc",
+              "extract-r2-01053-bf744a0b-sf7a805f0",
+              "extract-r2-01083-d065d96f-se95e5795",
+              "extract-r2-01166-64faeb2f-s429b0457",
+              "extract-r2-01166-64faeb2f-s6ee7245a",
+              "extract-r2-01198-14fd2358-s83e3526d",
+              "extract-r2-01214-f009767b-se0245605",
+              "extract-r2-01222-28c8f37f-s3bddd9de",
+              "extract-r2-01230-63fc3059-s6d535889",
+              "extract-r2-01258-b8b4738d-sb60f444b-sad504311",
+              "extract-r2-01258-b8b4738d-sb60f444b-sd6136e2d",
+              "extract-r2-01258-b8b4738d-sb60f444b-s00301018",
+              "extract-r2-01258-b8b4738d-sb60f444b-scba4045c",
+              "extract-r2-01258-b8b4738d-s8c808896-s1238bf49",
+              "extract-r2-01262-97032e5f-s2e3246ef-sf5794e4f",
+              "extract-r2-01262-97032e5f-s2e3246ef-s47eb3768"
+            ]
+          },
+          {
+            "table": "characters",
+            "row": {
+              "category_path": "地名",
+              "recommended_translation": "萨格斯",
+              "source": "Sagus"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              7235
+            ],
+            "extraction_tasks": [
+              "extract-r2-00133-2c9a3bf4-s4823588d"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:145",
+        "src": "Sagus",
+        "dst": "萨古斯",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "地名",
+        "recommended_translation": "城中",
+        "source": "the city",
+        "evidence_rows": [
+          5875
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "地名",
+              "recommended_translation": "城中",
+              "source": "the city"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              5875
+            ],
+            "extraction_tasks": [
+              "extract-r2-00112-e0bf2472-sf8189bcf"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:377",
+        "src": "the city",
+        "dst": "城中",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "地名",
+        "recommended_translation": "小竞技场",
+        "source": "Circus Minor",
+        "evidence_rows": [
+          2932,
+          2934,
+          2935,
+          2938,
+          2963,
+          2964,
+          2965,
+          2976,
+          2979,
+          2981,
+          2988,
+          3011,
+          3026,
+          3031,
+          3032,
+          3091,
+          3115,
+          3117,
+          3125,
+          4147,
+          4149,
+          4150,
+          4162,
+          4167,
+          4257,
+          5253,
+          5875,
+          5876,
+          7786,
+          8036,
+          8037,
+          10023,
+          10060,
+          11705,
+          11739,
+          11758,
+          11770,
+          12132,
+          12154,
+          12359,
+          12965,
+          12966,
+          13115,
+          13156,
+          13717,
+          13771,
+          13780,
+          14194,
+          14237,
+          14542,
+          14548,
+          14754,
+          14755,
+          15270,
+          15456,
+          15665,
+          15676,
+          15888,
+          16031,
+          16270,
+          16271,
+          16272,
+          16275,
+          16277,
+          16306,
+          16327,
+          16354,
+          18507,
+          29112,
+          29628,
+          36214,
+          36215,
+          36216,
+          36261,
+          36332,
+          37431,
+          37432,
+          39980,
+          40016,
+          40174,
+          43365,
+          62655,
+          62685,
+          62767,
+          63446,
+          64923,
+          68276,
+          68309,
+          68329,
+          68351,
+          68363,
+          68365,
+          68401,
+          68406,
+          68461,
+          68469,
+          68471,
+          68475,
+          68755,
+          68758,
+          68881,
+          68884
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "地名",
+              "recommended_translation": "小竞技场",
+              "source": "Circus Minor"
+            },
+            "extraction_count": 52,
+            "evidence_rows": [
+              2932,
+              2934,
+              2935,
+              2938,
+              2963,
+              2964,
+              2965,
+              2976,
+              2979,
+              2981,
+              2988,
+              3011,
+              3026,
+              3031,
+              3032,
+              3091,
+              3115,
+              3117,
+              3125,
+              4147,
+              4149,
+              4150,
+              4162,
+              4167,
+              4257,
+              5253,
+              5875,
+              5876,
+              7786,
+              10023,
+              10060,
+              11705,
+              11739,
+              11758,
+              11770,
+              12132,
+              12154,
+              12359,
+              12965,
+              12966,
+              13115,
+              13156,
+              13717,
+              13771,
+              13780,
+              14194,
+              14237,
+              14542,
+              14548,
+              14754,
+              14755,
+              15270,
+              15456,
+              15665,
+              15676,
+              15888,
+              16031,
+              16270,
+              16271,
+              16272,
+              16275,
+              16277,
+              16306,
+              16327,
+              16354,
+              18507,
+              29112,
+              29628,
+              36214,
+              36215,
+              36216,
+              36261,
+              36332,
+              37431,
+              37432,
+              39980,
+              40016,
+              40174,
+              43365,
+              62767,
+              63446,
+              68276,
+              68309,
+              68329,
+              68351,
+              68363,
+              68365,
+              68401,
+              68406,
+              68461,
+              68469,
+              68471,
+              68475,
+              68755,
+              68758,
+              68881,
+              68884
+            ],
+            "extraction_tasks": [
+              "extract-r2-00051-c7c4295c-s32b758f0",
+              "extract-r2-00051-c7c4295c-s047f875f",
+              "extract-r2-00055-13ba5f37-see4f8111",
+              "extract-r2-00055-13ba5f37-sd328c2cd",
+              "extract-r2-00055-13ba5f37-s6eccb141",
+              "extract-r2-00079-3421e122-s8990bcbd",
+              "extract-r2-00079-3421e122-s2ee177d1",
+              "extract-r2-00098-0171f8e4-s0605a6a6",
+              "extract-r2-00112-e0bf2472-sf8189bcf",
+              "extract-r2-00145-b55d7a40-s9979bdb6",
+              "extract-r2-00190-29fc7fd0-s87fc2536",
+              "extract-r2-00221-faab7e0d-s10155775",
+              "extract-r2-00221-faab7e0d-s89caf106",
+              "extract-r2-00225-ac378c7b-s3aa03d4e",
+              "extract-r2-00230-173efd4f-sc995879b",
+              "extract-r2-00242-d92ad8f5-s2ebc7ca9",
+              "extract-r2-00242-d92ad8f5-sfc86f149",
+              "extract-r2-00242-d92ad8f5-s8f89af35",
+              "extract-r2-00257-26478b08-s15669c03",
+              "extract-r2-00257-26478b08-s4b2431eb",
+              "extract-r2-00261-1954cc00-s238e22de",
+              "extract-r2-00266-0aaa3658-s415ec854",
+              "extract-r2-00266-0aaa3658-s2bcc764d",
+              "extract-r2-00274-fea8c37d-s97de6f2b",
+              "extract-r2-00282-b6a2dfbd-sfd2298cb",
+              "extract-r2-00282-b6a2dfbd-s859fb976",
+              "extract-r2-00290-2d48d1ea-sb1023f34",
+              "extract-r2-00298-ab917654-s781ea755",
+              "extract-r2-00298-ab917654-s8dc02dfd",
+              "extract-r2-00305-1d0fdaae-s1a5415fc",
+              "extract-r2-00305-1d0fdaae-s6936d0cc",
+              "extract-r2-00354-beee56d5-s51f10b51",
+              "extract-r2-00560-a9051321-s18e2818c",
+              "extract-r2-00569-68d525e5-s4f7ead1c",
+              "extract-r2-00674-7778f04a-s5434ff18",
+              "extract-r2-00674-7778f04a-s0fea5eb8",
+              "extract-r2-00674-7778f04a-s641d54e4",
+              "extract-r2-00702-16d496ad-sd5d83c9b",
+              "extract-r2-00746-63422575-s1129d595",
+              "extract-r2-00746-63422575-sbc3cbd94",
+              "extract-r2-00750-edbc7141-s2d5a3520",
+              "extract-r2-00809-e822e870-sfc591f2e",
+              "extract-r2-01182-66d82de9-s300e5274",
+              "extract-r2-01190-10d1a1de-s6ad08c9c",
+              "extract-r2-01258-b8b4738d-s56c1999b",
+              "extract-r2-01262-97032e5f-s969f968f",
+              "extract-r2-01262-97032e5f-se5843d35",
+              "extract-r2-01258-b8b4738d-sb60f444b-sc4ae7152",
+              "extract-r2-01258-b8b4738d-sb60f444b-sad504311",
+              "extract-r2-01258-b8b4738d-sb60f444b-sa637e9b5",
+              "extract-r2-01258-b8b4738d-s8c808896-s97c7e89e",
+              "extract-r2-01258-b8b4738d-s8c808896-sb24a2879"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "地名",
+              "recommended_translation": "小马戏团",
+              "source": "Circus Minor"
+            },
+            "extraction_count": 2,
+            "evidence_rows": [
+              8036,
+              8037,
+              64923
+            ],
+            "extraction_tasks": [
+              "extract-r2-00150-571d3cb1-s3e396d1a",
+              "extract-r2-01214-f009767b-s298965c9"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "地名",
+              "recommended_translation": "小马戏广场",
+              "source": "Circus Minor"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62655,
+              62685
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-s0dd73f62"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:198",
+        "src": "Circus Minor",
+        "dst": "小竞技场",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "source": "i",
+        "evidence_rows": [
+          51174
+        ],
+        "extraction_candidates": [
+          {
+            "table": "non_translate",
+            "row": {
+              "source": "i"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              51174
+            ],
+            "extraction_tasks": [
+              "extract-r2-00977-4766dad7-s92812268"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "non_translate:2724",
+        "src": "i",
+        "dst": "保留原文",
+        "src_state": "valid"
+      },
+      {
+        "category_path": "其他",
+        "recommended_translation": "返回",
+        "source": "Back",
+        "evidence_rows": [
+          67903
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "其他",
+              "recommended_translation": "返回",
+              "source": "Back"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              67903
+            ],
+            "extraction_tasks": [
+              "extract-r2-01254-25d4c9fc-sb942b0a4-s7d7af44c"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:4099",
+        "src": "back",
+        "dst": "返回",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "其他",
+        "recommended_translation": "坚韧",
+        "source": "Hardened",
+        "evidence_rows": [
+          57207
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "其他",
+              "recommended_translation": "硬化",
+              "source": "Hardened"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              57207
+            ],
+            "extraction_tasks": [
+              "extract-r2-01095-10019343-s43fd7daf"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "term_kind": "game_term",
+        "enforcement": "required",
+        "term_reason": "57207 为独立词条 Hardened；57530 说明它是授予加值的 descriptor，67743 说明 Descriptor 为角色起始属性/技能修正，故 Hardened 是角色描述符名，非普通“硬化”。",
+        "applicability": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "reason": "原文以完整词条 Hardened 作为描述符名；whole_record 仅匹配完整标签，避免把正文普通形容词 hardened 全局替换。"
+        },
+        "ref": "terms:2861",
+        "src": "Hardened",
+        "dst": "坚韧",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "其他",
+        "recommended_translation": "描述符",
+        "source": "Descriptor",
+        "evidence_rows": [
+          52708,
+          52710,
+          53113,
+          53115,
+          57530,
+          57531,
+          57532,
+          57533,
+          57534,
+          57535,
+          57536,
+          57537,
+          57538,
+          57539,
+          57540,
+          57541,
+          57542,
+          57543,
+          57544,
+          57545,
+          57546,
+          57547,
+          57548,
+          57549,
+          57550,
+          57551,
+          57552,
+          66966,
+          67645,
+          67710,
+          67743,
+          67757,
+          67776,
+          67777,
+          68012,
+          68087,
+          68090
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "其他",
+              "recommended_translation": "描述词",
+              "source": "Descriptor"
+            },
+            "extraction_count": 2,
+            "evidence_rows": [
+              52708,
+              52710,
+              53113,
+              53115
+            ],
+            "extraction_tasks": [
+              "extract-r2-01028-c8b4d6d2-s1e4201ff",
+              "extract-r2-01036-2d25d8d9-sc3ceb2eb"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "其他",
+              "recommended_translation": "描述词",
+              "source": "descriptor"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              57530,
+              57531,
+              57532,
+              57533,
+              57534,
+              57535,
+              57536,
+              57537,
+              57538,
+              57539,
+              57540,
+              57541,
+              57542,
+              57543,
+              57544,
+              57545,
+              57546,
+              57547,
+              57548,
+              57549,
+              57550,
+              57551,
+              57552
+            ],
+            "extraction_tasks": [
+              "extract-r2-01095-10019343-s71b26b2b"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "其他",
+              "recommended_translation": "描述符",
+              "source": "Descriptor"
+            },
+            "extraction_count": 4,
+            "evidence_rows": [
+              66966,
+              67710,
+              68012,
+              68087,
+              68090
+            ],
+            "extraction_tasks": [
+              "extract-r2-01238-288c2d77-s6c6f25fc",
+              "extract-r2-01238-288c2d77-s20d14187",
+              "extract-r2-01254-25d4c9fc-s2ff304a3",
+              "extract-r2-01254-25d4c9fc-sf8fe8e6e-s720df9c6"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "身份",
+              "recommended_translation": "描述符",
+              "source": "Descriptor"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              67645
+            ],
+            "extraction_tasks": [
+              "extract-r2-01238-288c2d77-s6872f8e9"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "身份",
+              "recommended_translation": "特质",
+              "source": "Descriptor"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              67743,
+              67757,
+              67776,
+              67777
+            ],
+            "extraction_tasks": [
+              "extract-r2-01238-288c2d77-s422b3925"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:2456",
+        "src": "descriptor",
+        "dst": "描述符",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "gender": "女性",
+        "recommended_translation": "矮胖（女性）",
+        "source": "Chubby Short {Female}",
+        "evidence_rows": [
+          62250
+        ],
+        "extraction_candidates": [
+          {
+            "table": "characters",
+            "row": {
+              "gender": "女性",
+              "recommended_translation": "矮胖（女性）",
+              "source": "Chubby Short {Female}"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62250
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-sdbbf2e01"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "characters:1144",
+        "src": "Chubby Short {Female}",
+        "dst": "矮胖（女性）",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "gender": "女性",
+        "recommended_translation": "瘦削（女性）",
+        "source": "Thin {Female}",
+        "evidence_rows": [
+          62251
+        ],
+        "extraction_candidates": [
+          {
+            "table": "characters",
+            "row": {
+              "gender": "女性",
+              "recommended_translation": "瘦削（女性）",
+              "source": "Thin {Female}"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62251
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-sdbbf2e01"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "characters:1145",
+        "src": "Thin {Female}",
+        "dst": "瘦削（女性）",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "gender": "女性",
+        "recommended_translation": "高瘦（女性）",
+        "source": "Thin Tall {Female}",
+        "evidence_rows": [
+          62252
+        ],
+        "extraction_candidates": [
+          {
+            "table": "characters",
+            "row": {
+              "gender": "女性",
+              "recommended_translation": "高瘦（女性）",
+              "source": "Thin Tall {Female}"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62252
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-sdbbf2e01"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "characters:1146",
+        "src": "Thin Tall {Female}",
+        "dst": "高瘦（女性）",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "gender": "女性",
+        "recommended_translation": "矮瘦（女性）",
+        "source": "Thin Short {Female}",
+        "evidence_rows": [
+          62253
+        ],
+        "extraction_candidates": [
+          {
+            "table": "characters",
+            "row": {
+              "gender": "女性",
+              "recommended_translation": "矮瘦（女性）",
+              "source": "Thin Short {Female}"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62253
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-sdbbf2e01"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "characters:1147",
+        "src": "Thin Short {Female}",
+        "dst": "矮瘦（女性）",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "gender": "女性",
+        "recommended_translation": "强壮（女性）",
+        "source": "Strong {Female}",
+        "evidence_rows": [
+          62254
+        ],
+        "extraction_candidates": [
+          {
+            "table": "characters",
+            "row": {
+              "gender": "女性",
+              "recommended_translation": "强壮（女性）",
+              "source": "Strong {Female}"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62254
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-sdbbf2e01"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "characters:1148",
+        "src": "Strong {Female}",
+        "dst": "强壮（女性）",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "gender": "女性",
+        "recommended_translation": "高壮（女性）",
+        "source": "Strong Tall {Female}",
+        "evidence_rows": [
+          62255
+        ],
+        "extraction_candidates": [
+          {
+            "table": "characters",
+            "row": {
+              "gender": "女性",
+              "recommended_translation": "高壮（女性）",
+              "source": "Strong Tall {Female}"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62255
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-sdbbf2e01"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "characters:1149",
+        "src": "Strong Tall {Female}",
+        "dst": "高壮（女性）",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "gender": "女性",
+        "recommended_translation": "矮壮（女性）",
+        "source": "Strong Short {Female}",
+        "evidence_rows": [
+          62256
+        ],
+        "extraction_candidates": [
+          {
+            "table": "characters",
+            "row": {
+              "gender": "女性",
+              "recommended_translation": "矮壮（女性）",
+              "source": "Strong Short {Female}"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              62256
+            ],
+            "extraction_tasks": [
+              "extract-r2-01166-64faeb2f-sdbbf2e01"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "characters:1150",
+        "src": "Strong Short {Female}",
+        "dst": "矮壮（女性）",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "物品",
+        "recommended_translation": "重",
+        "source": "Heavy",
+        "evidence_rows": [
+          67967
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "物品",
+              "recommended_translation": "重",
+              "source": "Heavy"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              67967
+            ],
+            "extraction_tasks": [
+              "extract-r2-01254-25d4c9fc-sb942b0a4-s06271671"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:4135",
+        "src": "Heavy",
+        "dst": "重",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "物品",
+        "recommended_translation": "光球",
+        "source": "orb",
+        "evidence_rows": [
+          51354,
+          51361,
+          51362,
+          51365,
+          51367,
+          51368,
+          51370,
+          51375,
+          51380,
+          51383,
+          51412,
+          51413,
+          51416,
+          51417,
+          51418,
+          51419,
+          51420,
+          51421,
+          51422,
+          51423,
+          51424,
+          51425,
+          51426,
+          51428,
+          51432,
+          51433,
+          51434,
+          51435,
+          51436,
+          51438,
+          51440,
+          51441,
+          51442,
+          51443,
+          51445,
+          51446,
+          51447,
+          52210,
+          52211,
+          52968,
+          52969,
+          52971,
+          52973,
+          52974,
+          52976
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "物品",
+              "recommended_translation": "球体",
+              "source": "orb"
+            },
+            "extraction_count": 2,
+            "evidence_rows": [
+              51354,
+              51368
+            ],
+            "extraction_tasks": [
+              "extract-r2-00992-429eccbb",
+              "extract-r2-00994-71f8a053"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "物品",
+              "recommended_translation": "光球",
+              "source": "orb"
+            },
+            "extraction_count": 3,
+            "evidence_rows": [
+              51361,
+              51362,
+              51365,
+              51367,
+              51370,
+              51375,
+              51380,
+              51383,
+              51412,
+              51413,
+              51416,
+              51417,
+              51418,
+              51419,
+              51420,
+              51421,
+              51422,
+              51423,
+              51424,
+              51425,
+              51426,
+              51428,
+              51432,
+              51433,
+              51434,
+              51435,
+              51436,
+              51438,
+              51440,
+              51441,
+              51442,
+              51443,
+              51445,
+              51446,
+              51447
+            ],
+            "extraction_tasks": [
+              "extract-r2-00993-12ad3ad2",
+              "extract-r2-00995-b1efa6b7",
+              "extract-r2-00998-46aa6f75-s0b77e3bb"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "物品",
+              "recommended_translation": "宝珠",
+              "source": "orb"
+            },
+            "extraction_count": 2,
+            "evidence_rows": [
+              52210,
+              52211,
+              52968,
+              52969,
+              52971,
+              52973,
+              52974,
+              52976
+            ],
+            "extraction_tasks": [
+              "extract-r2-01021-722bfe0a-sa9d02114",
+              "extract-r2-01032-ace61cc0-s5e6d62c2"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:2369",
+        "src": "orb",
+        "dst": "光球",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "种族",
+        "recommended_translation": "人类",
+        "source": "human",
+        "evidence_rows": [
+          13270,
+          14410,
+          29769,
+          29770,
+          29843,
+          29847,
+          29855,
+          29856,
+          29857
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "种族",
+              "recommended_translation": "人类",
+              "source": "human"
+            },
+            "extraction_count": 4,
+            "evidence_rows": [
+              13270,
+              14410,
+              29769,
+              29770,
+              29843,
+              29847,
+              29855,
+              29856,
+              29857
+            ],
+            "extraction_tasks": [
+              "extract-r2-00249-af157664-s3a16b99a",
+              "extract-r2-00266-0aaa3658-s856fc506",
+              "extract-r2-00573-a849155c-s4d59d9da",
+              "extract-r2-00573-a849155c-sf8ce508c"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:694",
+        "src": "human",
+        "dst": "人类",
+        "src_state": "valid",
+        "info": ""
+      },
+      {
+        "category_path": "技能",
+        "recommended_translation": "跃迁",
+        "source": "Bounder",
+        "evidence_rows": [
+          56946,
+          63811
+        ],
+        "extraction_candidates": [
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "技能",
+              "recommended_translation": "跃迁",
+              "source": "Bounder"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              56946
+            ],
+            "extraction_tasks": [
+              "extract-r2-01095-10019343-s33469064"
+            ]
+          },
+          {
+            "table": "terms",
+            "row": {
+              "category_path": "物品",
+              "recommended_translation": "跃迁球",
+              "source": "bounder"
+            },
+            "extraction_count": 1,
+            "evidence_rows": [
+              63811
+            ],
+            "extraction_tasks": [
+              "extract-r2-01198-14fd2358-s119c3187"
+            ]
+          }
+        ],
+        "provisional_selection": "most_extraction_proposals_then_first_seen",
+        "ref": "terms:2758",
+        "src": "bounder",
+        "dst": "跃迁",
+        "src_state": "valid",
+        "info": ""
+      }
+    ],
+    "task_id": "inc-review-7285b9dafa0419a13282",
+    "input_hash": "b31324522ac2b36b711eb2db2a0333b086c493f744cd621aefeb7397a0418b29"
+  },
+  "reply": {
+    "records": [
+      {
+        "id": "13",
+        "reason": {
+          "ref": "e1"
+        },
+        "checks": {
+          "accuracy": [
+            "pass",
+            {
+              "ref": "e1"
+            }
+          ],
+          "completeness": [
+            "pass",
+            {
+              "ref": "e1"
+            }
+          ],
+          "terminology": [
+            "pass",
+            {
+              "ref": "e2"
+            }
+          ],
+          "tone": [
+            "pass",
+            {
+              "ref": "e3"
+            }
+          ],
+          "logic": [
+            "pass",
+            {
+              "ref": "e1"
+            }
+          ],
+          "placeholders": [
+            "not_applicable",
+            {
+              "ref": "e4"
+            }
+          ]
+        },
+        "changes": [],
+        "issues": [],
+        "keep": true,
+        "source_ref": "whole",
+        "evidence": {
+          "e1": "沉重坚实、棕色光球、被常流水磨滑、凹痕合手、激活后吸收使用者并传送至视线范围内附近地点，动作与对象均对应。",
+          "e2": "orb=光球、human=人类、bounder=跃迁一致；Heavy 在句中为普通形容词“沉重”，与“重”同义，不构成专名冲突；既有 like 明喻例外保留。",
+          "e3": "物品描述口吻自然，中文搭配可读。",
+          "e4": "原文无变量、运行时标签或保护标记。"
+        }
+      }
+    ]
+  }
+}

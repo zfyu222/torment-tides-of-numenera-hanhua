@@ -1,0 +1,380 @@
+{
+  "date": "2026-10-24",
+  "status": "isolated_live_validation_passed",
+  "actual_reviewed_terms": 4,
+  "sample_selection_note": "Exact source matching selected four terms; lowercase numenera did not match preset Numenera. Formal audit covers all entries.",
+  "term_decisions": {
+    "quarantine": [
+      [
+        "characters",
+        1151
+      ],
+      [
+        "terms",
+        1452
+      ]
+    ],
+    "edits": [
+      {
+        "table": "characters",
+        "index": 0,
+        "patch": {
+          "term_kind": "proper_name",
+          "enforcement": "required",
+          "term_reason": "67134 明确称 Matkina 为 Protectorate 最致命刺客，1/5/21293 均用作人物称呼，属人物专名。"
+        }
+      },
+      {
+        "table": "terms",
+        "index": 2862,
+        "patch": {
+          "recommended_translation": "坚韧",
+          "term_kind": "game_term",
+          "enforcement": "required",
+          "term_reason": "57207 为独立词条 Hardened；57530 说明它是授予加值的 descriptor，67743 说明 Descriptor 为角色起始属性/技能修正，故 Hardened 是角色描述符名，非普通“硬化”。",
+          "applicability": {
+            "mode": "whole_record",
+            "case_sensitive": true,
+            "reason": "原文以完整词条 Hardened 作为描述符名；whole_record 仅匹配完整标签，避免把正文普通形容词 hardened 全局替换。"
+          }
+        }
+      }
+    ],
+    "judgments": [
+      {
+        "ref": "characters:0",
+        "evidence_rows": [
+          67134,
+          1,
+          5,
+          21293
+        ],
+        "source_excerpt": "Matkina is the deadliest assassin in the Protectorate and known as such.",
+        "reason": "人物专名，保留现有音译并补齐 required 元数据。",
+        "checks": {
+          "source": {
+            "status": "pass",
+            "evidence": "67134 明确以 Matkina 称呼该角色；1/5/21293 亦用作人物称呼。"
+          },
+          "translation": {
+            "status": "pass",
+            "evidence": "玛特金娜为现有音译，未发现明确错误；保留不改名。"
+          },
+          "category": {
+            "status": "pass",
+            "evidence": "characters 表人物专名，term_kind=proper_name；女性与上下文不冲突。"
+          },
+          "consistency": {
+            "status": "pass",
+            "evidence": "本批内 Matkina 拼写与现有译名一致，未发现同条目译名变体。"
+          }
+        }
+      },
+      {
+        "ref": "characters:1151",
+        "evidence_rows": [
+          62257
+        ],
+        "source_excerpt": "Child {Female}",
+        "reason": "普通 NPC 称谓加性别控制标记，应隔离，不作为专名。",
+        "checks": {
+          "source": {
+            "status": "pass",
+            "evidence": "原文为通用称谓 Child 与性别标记 {Female} 的组合，非人物专名。"
+          },
+          "translation": {
+            "status": "not_applicable",
+            "evidence": "该条应隔离，不评价专名译名；若作为界面标签可按普通称谓处理。"
+          },
+          "category": {
+            "status": "corrected",
+            "evidence": "characters 表应收录专名；此条为普通称谓加性别标记，应移出术语表。"
+          },
+          "consistency": {
+            "status": "not_applicable",
+            "evidence": "隔离后不参与专名一致性；未发现需保留的专名变体。"
+          }
+        }
+      },
+      {
+        "ref": "terms:1452",
+        "evidence_rows": [
+          30579,
+          30583,
+          63808
+        ],
+        "source_excerpt": "Good luck, user.",
+        "reason": "普通名词 user，应隔离，不作为术语冻结。",
+        "checks": {
+          "source": {
+            "status": "pass",
+            "evidence": "30579/30583 中 user 指系统或挑战的使用者，63808 中指设备使用者，均为普通名词。"
+          },
+          "translation": {
+            "status": "not_applicable",
+            "evidence": "条目应隔离，不保留术语译名；普通语境可按句译“用户/使用者”。"
+          },
+          "category": {
+            "status": "corrected",
+            "evidence": "将普通名词归入“身份”术语不成立，应移出术语表。"
+          },
+          "consistency": {
+            "status": "not_applicable",
+            "evidence": "隔离后不参与术语一致性；普通词按句译。"
+          }
+        }
+      },
+      {
+        "ref": "terms:2862",
+        "evidence_rows": [
+          57207,
+          57530,
+          67743
+        ],
+        "source_excerpt": "A set of bonuses granted by the Hardened descriptor.",
+        "reason": "Hardened 是角色描述符名，修正译名并限定 whole_record 匹配。",
+        "checks": {
+          "source": {
+            "status": "pass",
+            "evidence": "57207 为单独词条 Hardened；57530 说明其为 descriptor，67743 解释 Descriptor 机制，确认为游戏描述符名。"
+          },
+          "translation": {
+            "status": "corrected",
+            "evidence": "将“硬化”改为“坚韧”，符合角色描述符作为人物特质的含义，避免物质硬化误读。"
+          },
+          "category": {
+            "status": "pass",
+            "evidence": "保留 category_path=其他；角色描述符不属于物品/地名/组织/技能/种族，归其他合法。"
+          },
+          "consistency": {
+            "status": "corrected",
+            "evidence": "此前无范围限制且“硬化”易与普通词混淆；现统一为描述符名“坚韧”，applicability=whole_record。"
+          }
+        }
+      }
+    ]
+  },
+  "candidate": {
+    "status": "validation_candidate_only",
+    "formal_translation_unchanged": true,
+    "baseline_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+    "candidate_sha256": "3e9b1b5749be9b896e92ccc78dac1d1e9e7cf0d1d39225600f825300e71d97fe",
+    "new_glossary_sha256": "10aa611826f5fd2afefc01c42b0ea26552b04b5ae495fc7e6a17a24100a9171c",
+    "scope_records": 13,
+    "changed_records": 13,
+    "preserved_outside_scope": 70150,
+    "not_done": [
+      "formal workflow integration",
+      "engine repack",
+      "in-game verification",
+      "publication"
+    ]
+  },
+  "feedback_outputs": [
+    {
+      "ordinal": 4147,
+      "source": "But despite his hard words, his eyes settle on yours. Studying. Deciding. His mouth settles into an irritated line.  \r\n\r\n\"Look,\" he says, running a hand over his stubbled scalp. \"You hide it well, but I can tell you're new here. I ent trying to offend you, but I... don't like leaving folk new to Sagus on their own. If you have questions about the city - or Circus Minor in particular - I'll answer 'em, free of charge.\"",
+      "translation": "但尽管他话说得硬，他的目光却落在你身上。端详。斟酌。他的嘴抿成一条烦躁的直线。  \r\n\r\n“听着，”他说，一只手抚过自己覆着短发茬的头皮。“你掩饰得很好，但我看得出来你是新来的。我不是想冒犯你，只是我……不喜欢让初到萨古斯的人独自待着。如果你对这座城市——或者尤其是小竞技场——有什么问题，我会回答，不收钱。”"
+    },
+    {
+      "ordinal": 4257,
+      "source": "He stares at her, chewing his lip, clearly trying to work up the courage to talk to her... to convince her of something. Finally, with a wry twist of his mouth, he turns back at you. \r\n\r\n\"Look,\" he says, running a hand over his stubbled scalp. \"You hide it well, but I can tell you're new here. I ent trying to offend you, but I... don't like leaving folk new to Sagus on their own. If you have questions about the city - or Circus Minor in particular - I'll answer 'em, free of charge.\"",
+      "translation": "他盯着她，咬着嘴唇，显然正努力鼓起勇气跟她说话……想说服她什么。最后，他嘴角一歪，露出苦笑，重新转向你。\r\n\r\n“听着，”他说着，用手抚过自己覆着短发茬的头皮，“你掩饰得很好，但我看得出你是新来的。我不是想冒犯你，只是我……不喜欢把初到萨古斯的人丢下不管。如果你对这座城市——尤其是小竞技场——有什么疑问，我会免费回答。”"
+    },
+    {
+      "ordinal": 57207,
+      "source": "Hardened",
+      "translation": "坚韧"
+    },
+    {
+      "ordinal": 57530,
+      "source": "A set of bonuses granted by the Hardened descriptor.",
+      "translation": "由“坚韧”描述符提供的一组加成。"
+    },
+    {
+      "ordinal": 62250,
+      "source": "Chubby Short {Female}",
+      "translation": "矮胖{Female}"
+    },
+    {
+      "ordinal": 62251,
+      "source": "Thin {Female}",
+      "translation": "瘦削{Female}"
+    },
+    {
+      "ordinal": 62252,
+      "source": "Thin Tall {Female}",
+      "translation": "高瘦{Female}"
+    },
+    {
+      "ordinal": 62253,
+      "source": "Thin Short {Female}",
+      "translation": "矮瘦{Female}"
+    },
+    {
+      "ordinal": 62254,
+      "source": "Strong {Female}",
+      "translation": "强壮{Female}"
+    },
+    {
+      "ordinal": 62255,
+      "source": "Strong Tall {Female}",
+      "translation": "高壮{Female}"
+    },
+    {
+      "ordinal": 62256,
+      "source": "Strong Short {Female}",
+      "translation": "矮壮{Female}"
+    },
+    {
+      "ordinal": 62257,
+      "source": "Child {Female}",
+      "translation": "孩子 {Female}"
+    },
+    {
+      "ordinal": 63811,
+      "source": "Heavy and solid, this brown orb feels like a rock that has been worn smooth by a constant flow of water. On one side, there's an indentation that just fits a human hand. When activated, the bounder absorbs the user and teleports them to a nearby location within line of sight.",
+      "translation": "这枚棕色光球沉重而坚实，摸起来像一块被持续水流磨得光滑的石头。它的一侧有一处恰好贴合人类手掌的凹痕。激活后，跃迁会吸收使用者，并将其传送到视线范围内的一处附近地点。"
+    }
+  ],
+  "wire_requests_total_including_old_503": 5,
+  "new_wire_requests": 4,
+  "reported_tokens": 44545,
+  "calls": [
+    {
+      "id": "9f6270532e224a9fb605bdc511f0a243",
+      "stage": "glossary_review",
+      "status": "received",
+      "api": "acy7",
+      "requested_model": "deepseek-v4.1-flash",
+      "usage": {
+        "usage_reported": true,
+        "finish_reason": "stop",
+        "response_model": "deepseek-v4.1-flash",
+        "response_transport": "stream",
+        "prompt_tokens": 4063,
+        "completion_tokens": 11326,
+        "total_tokens": 15389,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 9986,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "06386f59427f4971ac3b212b30fa9981",
+      "stage": "translate",
+      "status": "received",
+      "api": "acy7",
+      "requested_model": "deepseek-v4.1-flash",
+      "usage": {
+        "usage_reported": true,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "response_transport": "stream",
+        "prompt_tokens": 2181,
+        "completion_tokens": 2334,
+        "total_tokens": 4515,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "text_tokens": 0,
+          "image_tokens": 0,
+          "video_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 2171,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": 0,
+          "image_tokens": 0,
+          "video_tokens": 0
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "61ba1ed96545469d8ca9afcfdc43ebc6",
+      "stage": "review",
+      "status": "rejected",
+      "api": "acy7",
+      "requested_model": "deepseek-v4.1-flash",
+      "usage": {
+        "usage_reported": true,
+        "finish_reason": "stop",
+        "response_model": "deepseek-v4.1-flash",
+        "response_transport": "stream",
+        "prompt_tokens": 5877,
+        "completion_tokens": 14257,
+        "total_tokens": 20134,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 9948,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "error": "Only failed/missing records need retry: Required term/exception missing: ['like']"
+    },
+    {
+      "id": "9e1f8c556a1d45ddbb973a3bb5e240a7",
+      "stage": "review",
+      "status": "received",
+      "api": "acy7",
+      "requested_model": "deepseek-v4.1-flash",
+      "usage": {
+        "usage_reported": true,
+        "finish_reason": "stop",
+        "response_model": "deepseek/deepseek-v4.1-flash",
+        "response_transport": "stream",
+        "prompt_tokens": 3259,
+        "completion_tokens": 1248,
+        "total_tokens": 4507,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "text_tokens": 0,
+          "image_tokens": 0,
+          "video_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 875,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": 0,
+          "image_tokens": 0,
+          "video_tokens": 0
+        }
+      },
+      "error": null
+    }
+  ],
+  "collector_fix": "Review omission now inherits existing source-bound exceptions via shared inherit_exceptions; actual like record replayed and accepted without inventing evidence.",
+  "scope_filter_fix": "Removed terms with existing approved exceptions and no still-matching new term do not reopen that record; other/nested changed names still counted.",
+  "cold_start_fix": "Tokenizer warmup runs in the main thread before the configured thread pool. First cold-start failure issued no requests; same prepared jobs resumed.",
+  "local_regressions_passed": 14,
+  "production_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "production_changed": false,
+  "formal_term_audit_status": "started; final counts not included in this isolated validation report"
+}
