@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-24",
+  "status": "program_prepared_live_validation_blocked_by_service",
+  "scope": "Game-specific incremental repair only; no shared workflow changes or full retranslation.",
+  "source_records": 70163,
+  "terms_to_review": 5579,
+  "preserved_previously_reviewed_runtime_entries": 6565,
+  "term_batches_prepared": 93,
+  "structural_findings": [
+    {
+      "id": "R0062250_a090906b3e",
+      "ordinal": 62250,
+      "source": "Chubby Short {Female}",
+      "before": "矮胖（{Female}）",
+      "proposal": "矮胖{Female}"
+    },
+    {
+      "id": "R0062251_1e4a8c1875",
+      "ordinal": 62251,
+      "source": "Thin {Female}",
+      "before": "瘦削（{Female}）",
+      "proposal": "瘦削{Female}"
+    },
+    {
+      "id": "R0062252_62f84bdc07",
+      "ordinal": 62252,
+      "source": "Thin Tall {Female}",
+      "before": "高瘦（{Female}）",
+      "proposal": "高瘦{Female}"
+    },
+    {
+      "id": "R0062253_254323587a",
+      "ordinal": 62253,
+      "source": "Thin Short {Female}",
+      "before": "矮瘦（{Female}）",
+      "proposal": "矮瘦{Female}"
+    },
+    {
+      "id": "R0062254_a1a5378dba",
+      "ordinal": 62254,
+      "source": "Strong {Female}",
+      "before": "强壮（{Female}）",
+      "proposal": "强壮{Female}"
+    },
+    {
+      "id": "R0062255_9385f314d4",
+      "ordinal": 62255,
+      "source": "Strong Tall {Female}",
+      "before": "高壮（{Female}）",
+      "proposal": "高壮{Female}"
+    },
+    {
+      "id": "R0062256_13de21ff90",
+      "ordinal": 62256,
+      "source": "Strong Short {Female}",
+      "before": "矮壮（{Female}）",
+      "proposal": "矮壮{Female}"
+    },
+    {
+      "id": "R0062257_36da9ea8c7",
+      "ordinal": 62257,
+      "source": "Child {Female}",
+      "before": "孩童（{Female}）",
+      "proposal": "孩童{Female}"
+    }
+  ],
+  "individual_case_ids": [
+    "R0004147_abbc502838",
+    "R0004257_58abdf6a8a"
+  ],
+  "effective_term_changes": null,
+  "actual_affected_sentence_count": null,
+  "reason_counts_unknown": "No valid new terminology decisions have yet been received.",
+  "local_input_token_estimate": {
+    "before_resolved_extraction_history_removed": 2621094,
+    "current": 1505712,
+    "minimum_batch": 8590,
+    "maximum_batch": 25161,
+    "is_billed_usage": false,
+    "excludes": "Model output and thinking; not equal-quality API comparison."
+  },
+  "validation": {
+    "local_tests_passed": 12,
+    "real_api_requests": 1,
+    "real_api_status": "InternalServerError:503",
+    "api": "yjapi",
+    "usage_reported": false,
+    "model_request_budget_charge": 0,
+    "full_round_started": false,
+    "candidate_generated": false,
+    "evidence_note": "Historical real full repair accepted and missing-translation rejected in local replay; new live term-to-body path not completed."
+  },
+  "production": {
+    "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+    "translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+    "glossary_sha256": "c10d12abdc0db2bf5e44e15dc5cffd26c364e4c022f8f596c02f3483e066598e",
+    "changed": false
+  },
+  "resume": "First rerun IncrementalRepair/validate_live.py on compact v2 input within the same total six-call cap; only after it passes run repair.py run."
+}

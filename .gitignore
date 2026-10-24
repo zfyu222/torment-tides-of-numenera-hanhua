@@ -22,6 +22,10 @@
 __pycache__/
 *.pyc
 
+# 本游戏专项增量修复状态、原始API回复和不可提交的运行快照
+/TranslateFiles/incremental_repair_20261024*/
+/TranslateFiles/incremental_repair_20261024*.log
+
 # 本地逆向副本、反编译输出与临时实机诊断程序
 /Analysis/input/
 /Analysis/decompiled/
