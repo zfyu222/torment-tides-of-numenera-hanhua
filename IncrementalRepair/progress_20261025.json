@@ -1,6 +1,6 @@
 {
   "date": "2026-10-25",
-  "status": "api_priority_enabled_bounded_live_validation_complete",
+  "status": "api_cooldown_recovery_enabled_isolated_live_validation_complete",
   "terms_reviewed": 5579,
   "term_jobs_accepted": 93,
   "required_terms": 3937,
@@ -46,7 +46,7 @@
   "tests_passed": 23,
   "live_api_validation_after_layout_fix": "20 actual records collected on yjapi; no live failover observed",
   "note": "Existing failed replies were replayed without editing semantic evidence or retry counters. Known descriptor changed by actual follow-up API decision; no claim of universal detection.",
-  "shared_api_regression_tests_passed": 98,
+  "shared_api_regression_tests_passed": 106,
   "api_priority": [
     "yjapi",
     "vortex",
@@ -56,5 +56,14 @@
   "last_live_api": "yjapi",
   "last_live_records": 20,
   "last_live_tokens": 3693,
-  "api_provider_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\incremental_repair_20261024\\reports\\api_stability_summary.json"
+  "api_provider_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\reports\\api_stability_summary.json",
+  "api_failure_threshold": 5,
+  "api_cooldown_seconds": 60,
+  "isolated_cooldown_validation": {
+    "sdk_calls": 2,
+    "reported_tokens": 3319,
+    "initial_outage_simulated": true,
+    "real_recovery_verified": true,
+    "production_progress_unchanged": true
+  }
 }

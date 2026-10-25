@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-25",
+  "policy": {
+    "enabled": true,
+    "priority": [
+      "yjapi",
+      "vortex",
+      "acy7",
+      "deepseek"
+    ],
+    "failure_threshold": 5,
+    "cooldown_seconds": 60
+  },
+  "shared_regression_tests_passed": 106,
+  "project_regression_tests_passed": 23,
+  "live_test": "initial provider cooldown injected deliberately, not a real API outage; real 60-second clock and real SDK calls",
+  "failure_threshold_at_live_start": 4,
+  "five_failure_threshold_validation": "mock service faults with real shared workflow budgets/handoffs",
+  "actual_sdk_calls": 2,
+  "actual_api_attempts": [
+    {
+      "api": "vortex",
+      "status": "received",
+      "total_tokens": 1681
+    },
+    {
+      "api": "yjapi",
+      "status": "received",
+      "total_tokens": 1638
+    }
+  ],
+  "live_reported_tokens": 3319,
+  "recovery_probe_success_observed": true,
+  "next_dispatch_is_primary": true,
+  "state_changes": [
+    {
+      "event": "provider_state_changed",
+      "run_id": "e21e2a6eb02c42b28fcf6c019c536b53",
+      "stage": "cooldown_live_validation",
+      "time_utc": "2026-10-25T04:37:53.249790+00:00",
+      "api": "yjapi",
+      "from_state": "normal",
+      "to_state": "disabled",
+      "reason": "validation_injected_cooldown_not_real_api_failure",
+      "consecutive_failures": 0,
+      "cooldown_seconds": 60
+    },
+    {
+      "event": "provider_state_changed",
+      "run_id": "e21e2a6eb02c42b28fcf6c019c536b53",
+      "stage": "cooldown_live_validation",
+      "time_utc": "2026-10-25T04:38:58.411545+00:00",
+      "api": "yjapi",
+      "from_state": "disabled",
+      "to_state": "retry_ready",
+      "reason": "cooldown_elapsed",
+      "consecutive_failures": 0,
+      "cooldown_seconds": null
+    },
+    {
+      "event": "provider_state_changed",
+      "run_id": "e21e2a6eb02c42b28fcf6c019c536b53",
+      "stage": "cooldown_live_validation",
+      "time_utc": "2026-10-25T04:38:58.413039+00:00",
+      "api": "yjapi",
+      "from_state": "retry_ready",
+      "to_state": "awaiting_retry",
+      "reason": "single_probe_dispatched",
+      "consecutive_failures": 0,
+      "cooldown_seconds": null
+    },
+    {
+      "event": "provider_state_changed",
+      "run_id": "e21e2a6eb02c42b28fcf6c019c536b53",
+      "stage": "cooldown_live_validation",
+      "time_utc": "2026-10-25T04:39:01.397962+00:00",
+      "api": "yjapi",
+      "from_state": "awaiting_retry",
+      "to_state": "normal",
+      "reason": "probe_succeeded",
+      "consecutive_failures": 0,
+      "cooldown_seconds": null
+    }
+  ],
+  "formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "production_state_modified": false,
+  "production_saved_drafts": 1982,
+  "no_bulk_body_execution": true,
+  "audit_log": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\api_cooldown_live_validation_20261025\\logs\\api_failover\\e21e2a6eb02c42b28fcf6c019c536b53.jsonl",
+  "audit_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\api_cooldown_live_validation_20261025\\reports\\api_failover\\e21e2a6eb02c42b28fcf6c019c536b53.json",
+  "combined_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\reports\\api_stability_summary.json"
+}

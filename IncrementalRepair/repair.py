@@ -612,16 +612,22 @@ class Repair:
         errors = []
         try:
             with ThreadPoolExecutor(max_workers=pool.max_workers) as executor:
-                futures = [executor.submit(work, p) for p in jobs]
-                for future in as_completed(futures):
-                    try:
-                        print(json.dumps({'accepted': future.result()}, ensure_ascii=False), flush=True)
-                    except Exception as exc:
-                        errors.append(str(exc))
-                        # A bounded format/semantic retry exhaustion belongs to
-                        # this job; independent queued jobs can still finish.
-                        if not str(exc).startswith(('Job retry limit reached:', 'Stage stopped before job completed:')):
-                            stopped.set()
+                try:
+                    futures = [executor.submit(work, p) for p in jobs]
+                    for future in as_completed(futures):
+                        try:
+                            print(json.dumps({'accepted': future.result()}, ensure_ascii=False), flush=True)
+                        except Exception as exc:
+                            errors.append(str(exc))
+                            # A bounded format/semantic retry exhaustion belongs to
+                            # this job; independent queued jobs can still finish.
+                            if not str(exc).startswith(('Job retry limit reached:', 'Stage stopped before job completed:')):
+                                stopped.set()
+                except BaseException:
+                    stopped.set()
+                    with pool.cv:
+                        pool.closed = True; pool.cv.notify_all()
+                    raise
         finally:
             pool.close()
         return {'stage': stage, 'remaining': sum(not (p / 'accepted.json').exists() for p in
