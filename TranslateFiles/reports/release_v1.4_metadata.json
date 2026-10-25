@@ -1,0 +1,16 @@
+{
+  "project": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera",
+  "game_name": "torment-tides-of-numenera",
+  "version": "1.4",
+  "title": "《Torment: Tides of Numenera》子非鱼AI汉化补丁 v1.4",
+  "release_date": "2026-10-25",
+  "introduction": "为Steam Windows版制作的简体中文汉化补丁。本版调整术语收录与遵守等级，并对受影响文本独立重译和审校，改善普通词被固定译名套用的问题。保留既有教程字号修复。",
+  "coverage": "包含70,163条去重文本对应的2,250个字符串表，覆盖剧情、对白、任务、物品、系统提示与UI；另含仅作用于中文教程窗口的显示修复。标题Logo仍为英文。",
+  "game_version": "Steam v1.1.0",
+  "platform": "Steam（Windows）",
+  "install": "完全退出游戏。先备份 WIN/TidesOfNumenera_Data/Managed/Assembly-CSharp.dll 和 WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/。将压缩包中的 WIN 文件夹复制到含 WIN 子目录的游戏根目录，选择合并并覆盖；不要放进 WIN 目录形成 WIN/WIN。游戏语言选择 English（英语），该语言槽会显示中文。本版包含程序显示修复DLL，仅适用于上述支持版本，无需安装Mod加载器。 已安装v1.0至v1.3的玩家同样直接覆盖，无需先卸载；本包为完整补丁，新玩家无需先装旧版。",
+  "uninstall": "退出游戏，用安装前备份恢复 Assembly-CSharp.dll 及整个 en/text 目录。没有备份时，使用 Steam 的“验证游戏文件完整性”恢复原版；该操作也会移除汉化覆盖。",
+  "verification": "70,163条正式文本通过结构、占位符、术语与质量闭环校验；2,250个字符串表全部XML可解析，89,239个非空字段零缺失映射。启动、主菜单及选项中文显示和操作已实际检查，用户确认当前版“没问题，直接发布”。本次实机冒烟未追加对白、任务、教程专项及完整通关测试。发布载荷与安装版SHA-256逐一一致。",
+  "known_issues": "AI辅助汉化仍可能存在词义、措辞、专名或遗漏问题，请适当降低预期；本次仅完成启动及菜单/选项实机冒烟，未逐场景通关，也未追加对白/任务/教程专项、物理手柄及多分辨率回归。标题Logo保持英文，中文自动断行可能将标点留在行首。仅支持Steam v1.1.0 Windows，更新或验证文件完整性后可能需重装。反馈：https://github.com/zfyu222/torment-tides-of-numenera-hanhua/issues；补丁后续可能会更新，建议关注或订阅 https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases 。",
+  "changes": "复核5,579项术语，移出992项普通词并区分必须遵守与参考译名；对25,134条增量范围完成独立审校，实际更新22,688条译文，范围外45,029条保持不变。修正人物特质Hardened的生硬用词、user等日常词套用固定译名的问题，修复隐藏性别标记形成的空括号，以及两处分支中stubbled scalp的词义；保留扭蒙拉、绑定物品译名和既有教程字号修复。"
+}

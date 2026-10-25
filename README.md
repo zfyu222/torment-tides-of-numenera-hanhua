@@ -88,6 +88,7 @@
 - 2026-08-22 重新翻译与术语校准：导入用户完成的全量重译稿后，70,163 条记录全部对齐且无空译文，68,374 条与原文不同；译文 SHA-256：`9113E17BBC059DDDD86F1EB34E9BEC6F1051C6BD5C80BC1CDB5719F478202B55`。复检仅恢复上一已验证版本的换行和字面 `\n` 布局，不改动措辞；修复 4 处可确证的机器标记问题（`FettleIcon`、颜色关闭标签和两个 `{01}` / `{02}` 编号）。颜色/图标/全局变量、`<quad>` / `<a>`、数字花括号、美元变量和唯一的 `%%` 格式符均逐项匹配。通用校验器的其余 949 条方括号报告为玩家可见技能判定、编辑说明或自然语言方括号文本的既有误判。
 
 ## 回填
+- 2026-10-25 revision9已回填并安装：从原英文备份重建2,250个字符串表，89,239个非空字段零缺失映射，全部XML可解析。安装前备份1,466个变化文件，安装后2,251个文件逐一哈希一致，教程修复DLL保持既有哈希。树SHA256：9402B16F36D19C867D3B2AB758DE4438F1ADD31EFCE930153F4AC49BE1B459AC。实机完成启动/主菜单/选项冒烟，用户要求“没问题，直接发布”；未追加对白、任务、教程专项或通关实测。详见TranslateFiles/reports/deployment_incremental_revision9_20261025.json与Analysis/revision9_runtime_20261025/verification.md。
 - 2026-10-23 术语修订已回填并安装：从原英文重新生成2,250个字符串表，89,239个字段零缺失映射，全部XML可解析；输出树SHA-256：`EDC7ACBA971D38DBEAB88271ADFB252C37DF8ADD1C65A3FE3D5F5CB03B2D9356`。备份149个变化文件至 `backups/localized_en_before_user_terms_36d5b3a85f63.zip` 后覆盖，安装后2,251个文件哈希全部一致。教程修复DLL保持 `fdc889090036407c7625cb847e2ebc9827cd6bbe47ae6e50ac2461cf00056b88`，本次未再修改程序。报告见 `TranslateFiles/reports/repack_user_terms_20261023.json`、`deployment_user_terms_20261023.json`。本次新术语尚未实机截图确认，旧v1.2实测不冒充新译文实测，公开补丁未更新。
 - 2026-10-23 已安装教程中文缩字程序补丁：仅修改 `Assembly-CSharp.dll` 中 MessageWindow.SetMessage 两处入口，条件限定教程窗口及中文正文，关闭自动缩字并由原有 ContentSizeFitter 自动增高。45,469个方法逐一核对，其余方法不变、无新增依赖。正式译文和所有字符串表保持安装前哈希。受控实机测试1920×1080中，秘器教程字号7→44、正文高度48→290，整段文字与按钮完整；原版英文同页自动增高，无滚动条。图标长教程也验证正常。载荷、原版备份、安装恢复方式及测试边界见 `Analysis/tutorial_bestfit_20261023/validation.md`、`TranslateFiles/reports/tutorial_bestfit_patch_20261023.json`。未进行完整存读档、手柄和多分辨率回归；旧发布ZIP未更新。
 - 2026-10-23 新译实机测试未完成：临时入口未取得有效教程指标/截图，未据此宣称字号已实测通过；测试后原游戏程序集哈希确认恢复，临时 DLL 已移除。主剧情、任务与手柄操作仍待实机验证，见 `TranslateFiles/reports/runtime_validation_attempt_20261023.json`。
@@ -104,6 +105,7 @@
 - 2026-08-22 回填：从原版英文备份重建 2,250 个字符串表，89,239 个非空字段全部映射，84,331 个字段发生本地化改动，84,284 个字段含中日韩统一表意文字；输出树 SHA-256：`DF7B5023612437701628F8F5850AC53969C5294EA63EB58BE616986C6D4333C2`。部署前备份为 `backups/localized_en_pre_v1.1_20260822.zip`；部署后 2,251 个文件逐一 SHA-256 一致。已在 Steam Windows v1.1.0 实测启动、主菜单、性别选择与首段剧情，中文字体、换行和“继续”按钮均正常。
 
 ## 对外发布
+- 2026-10-25 v1.4发布准备：完整ZIP `Dispatch/torment-tides-of-numenera_子非鱼汉化1.4.zip`，9189754字节，SHA256 `f3a84751f7e4159ffe30d683d4147794bbb9df48e236eedc99334a755500d6bf`。适用Steam v1.1.0 Windows；2,251个载荷与当前安装版一致，ZIP共2,254条目，XML/清单/校验和/解压路径通过；历史更新日志保留至v1.4，旧版可直接覆盖更新。实机范围限于启动/主菜单/选项，用户确认直接发布；对白/任务专项未追加，未声称全剧情实测。正式release-check通过，GitHub发布待核实。
 
 - 2026-10-23 v1.3 已生成并通过本地校验：`Dispatch/torment-tides-of-numenera_子非鱼汉化1.3.zip`，9174225字节，SHA-256 `e663c31fccd7f66542443b6cc942e2088dfb378e5ceb3ec9fd6d4ece90b772f2`。适用Steam v1.1.0（Windows），包含2,250个完整字符串表与原教程显示修复DLL。用户已确认当前术语修订版实机正常，record-game-check及release-check通过；ZIP共2,254项，全部载荷/清单/校验和及解压路径验证通过，更新日志保留v1.0至v1.2并追加v1.3。GitHub已正式公开并设为最新稳定版：[v1.3 下载页](https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.3)；重新下载的ZIP SHA-256与本地一致，v1.2及更早版本保留。
 

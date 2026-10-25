@@ -1,0 +1,15 @@
+{
+  "status": "package_verified_pending_publication",
+  "archive": "torment-tides-of-numenera_子非鱼汉化1.4.zip",
+  "size": 9189754,
+  "sha256": "f3a84751f7e4159ffe30d683d4147794bbb9df48e236eedc99334a755500d6bf",
+  "archive_entries": 2254,
+  "payload_files": 2251,
+  "manifest_and_checksums": "passed",
+  "installed_and_staged_hashes": "passed",
+  "xml_files_parsed": 2250,
+  "historical_changelog": "v1.0 through v1.4 preserved",
+  "published": false,
+  "in_game_scope": "startup/menu/options; dialogue/quest/tutorial not additionally retested",
+  "user_confirmation": "没问题，直接发布"
+}

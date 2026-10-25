@@ -1,6 +1,6 @@
 {
   "date": "2026-10-25",
-  "status": "integrated_formal_revision_9_pending_repack",
+  "status": "v1.4_packaged_pending_publication",
   "terms_reviewed": 5579,
   "term_jobs_accepted": 93,
   "required_terms": 3937,
@@ -77,7 +77,11 @@
   "candidate_sha256": "b6ba89fe81b464a2abcdb683f690506fb4b140dbb3ce0d24d964e7673fa432ae",
   "changed_records": 22688,
   "candidate_exported": true,
-  "next_action": "engine repack then in-game verification",
+  "next_action": "publish verified v1.4 archive",
   "formal_workflow_revision": 9,
-  "baseline_formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f"
+  "baseline_formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "engine_repacked": true,
+  "game_files_modified": true,
+  "in_game_validation_scope": "startup/menu/options; no additional dialogue/quest/tutorial checks",
+  "user_release_confirmation": "没问题，直接发布"
 }
