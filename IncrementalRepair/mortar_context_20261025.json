@@ -1,0 +1,15 @@
+{
+  "record_id": "R0062568_7b2f3ee48e",
+  "resource": "characters.stringtable#636",
+  "source": "Sanatorium Mortar",
+  "same_key_other_locales": {
+    "es": "Sanatorium Mortar",
+    "pl": "Sanatorium Mortar",
+    "fr": "Mortier du sanatorium",
+    "de": "Sanatorium-Mörser",
+    "ru": "Мортира Санатория"
+  },
+  "exact_name_hits_in_english_corpus": 1,
+  "same_object_definition_found": false,
+  "historical_attempts_preserved": true
+}

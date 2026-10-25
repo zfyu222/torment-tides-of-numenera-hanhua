@@ -390,7 +390,7 @@ class Repair:
             # Restored comments may contain names (even in a malformed brace
             # block). Keep the exact protection spans used by this task hidden
             # from terminology enforcement, just as in the API input.
-            term_rules = list(rules) + [
+            term_rules = list(bridge.record_rules({'id': item['id'], 'source': raw_source}, config, rules)) + [
                 ('task_protection_' + str(n), re.compile(re.escape(p['original'])))
                 for n, p in enumerate(original.get('protection', [])) if p.get('original')]
             terms = bridge.matched_terms(glossary, [raw_source], config, rules=term_rules)
@@ -544,6 +544,17 @@ class Repair:
                 previous = [c.get('error') for c in ledger if c['job'] == folder.name and c.get('error')]
                 if previous:
                     text += '\n程序拒收诊断：' + previous[-1] + '\n按原文和真实证据补全本批，不能机械填通过。'
+                    if 'structural' in previous[-1]:
+                        short_ids = {v: k for k, v in request_binding['short_to_canonical'].items()}
+                        protected = []
+                        for r in request_payload['records']:
+                            raw_source = bridge.restore(r['source'], r.get('protection', []), allow_original=True)
+                            literals = list(dict.fromkeys(m.group() for _, pattern in
+                                bridge.record_rules({'id': r['id'], 'source': raw_source}, config,
+                                    bridge.patterns(config['protect_named_curly'] is not False, config['exclusions'], config.get('placeholder_family_overrides')))
+                                for m in pattern.finditer(raw_source)))
+                            if literals: protected.append({'id': short_ids[r['id']], 'immutable_literals': literals})
+                        text += '\n保护补交：以下是程序已确定必须逐字保留的运行标记/开发注释，不是待翻译内容，内部英文也保持原样；其余正文仍须独立审校。' + json.dumps(protected, ensure_ascii=False)
                     if 'physical_newlines' in previous[-1] or 'boundary_whitespace' in previous[-1]:
                         short_ids = {v: k for k, v in request_binding['short_to_canonical'].items()}
                         layout = [{'id': short_ids[r['id']],

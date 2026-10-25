@@ -1,6 +1,6 @@
 {
   "date": "2026-10-25",
-  "status": "incremental_translation_complete_review_pending",
+  "status": "incremental_candidate_validated",
   "terms_reviewed": 5579,
   "term_jobs_accepted": 93,
   "required_terms": 3937,
@@ -12,18 +12,18 @@
   "translation_drafts_saved": 25126,
   "translation_jobs_completed": 1743,
   "translation_jobs_remaining": 0,
-  "independent_review_started": false,
+  "independent_review_started": true,
   "offline_recovered_jobs": 32,
   "api_requests_during_offline_recovery": 0,
-  "formal_stage_api_calls": 2390,
-  "model_requests": 2344,
-  "service_failures_excluded": 46,
-  "reported_tokens": 36619191,
-  "usage_unknown_calls": 103,
+  "formal_stage_api_calls": 4362,
+  "model_requests": 4242,
+  "service_failures_excluded": 120,
+  "reported_tokens": 79551851,
+  "usage_unknown_calls": 237,
   "by_local_api_name": {
     "acy7": {
-      "calls": 191,
-      "reported_tokens": 9089374,
+      "calls": 241,
+      "reported_tokens": 10047644,
       "usage_unknown": 3
     },
     "deepseek": {
@@ -32,9 +32,14 @@
       "usage_unknown": 0
     },
     "yjapi": {
-      "calls": 2135,
-      "reported_tokens": 25269648,
-      "usage_unknown": 100
+      "calls": 4027,
+      "reported_tokens": 67167841,
+      "usage_unknown": 209
+    },
+    "vortex": {
+      "calls": 30,
+      "reported_tokens": 76197,
+      "usage_unknown": 25
     }
   },
   "isolated_validation_costs": "separate, see live_validation_report_20261024.json",
@@ -45,7 +50,7 @@
   "formal_files_modified": false,
   "tests_passed": 24,
   "live_api_validation_after_layout_fix": "20 actual records collected on yjapi; no live failover observed",
-  "note": "All incremental translation jobs collected. Protected comments excluded from terminology checking under exact task protection. Explicit layout diagnostics supplied to API. Original replies, attempts and budgets retained. Independent review not started yet.",
+  "note": "All incremental translation and independent review collected and candidate exported with full structural and scope preservation validation. Formal CSV/parent DB/game/release unchanged.",
   "shared_api_regression_tests_passed": 106,
   "api_priority": [
     "yjapi",
@@ -65,5 +70,12 @@
     "initial_outage_simulated": true,
     "real_recovery_verified": true,
     "production_progress_unchanged": true
-  }
+  },
+  "review_jobs_completed": 1703,
+  "review_jobs_remaining": 0,
+  "independently_reviewed_records": 25134,
+  "candidate_sha256": "b6ba89fe81b464a2abcdb683f690506fb4b140dbb3ce0d24d964e7673fa432ae",
+  "changed_records": 22688,
+  "candidate_exported": true,
+  "next_action": "formal workflow integration before repack"
 }

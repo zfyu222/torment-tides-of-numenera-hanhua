@@ -1,0 +1,30 @@
+{
+  "review_jobs": 1703,
+  "records": 25134,
+  "all_records_reviewed": true,
+  "unresolved_issues": 0,
+  "by_api": {
+    "acy7": {
+      "calls": 241,
+      "reported_tokens": 10047644,
+      "usage_unknown": 3
+    },
+    "deepseek": {
+      "calls": 64,
+      "reported_tokens": 2260169,
+      "usage_unknown": 0
+    },
+    "yjapi": {
+      "calls": 4027,
+      "reported_tokens": 67167841,
+      "usage_unknown": 209
+    },
+    "vortex": {
+      "calls": 30,
+      "reported_tokens": 76197,
+      "usage_unknown": 25
+    }
+  },
+  "original_csv_unchanged": true,
+  "source_context_followup": "mortar_context_20261025.json"
+}

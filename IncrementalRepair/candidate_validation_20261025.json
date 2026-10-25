@@ -1,0 +1,20 @@
+{
+  "status": "incremental_candidate_validated",
+  "formal_translation_unchanged": true,
+  "baseline_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "candidate_sha256": "b6ba89fe81b464a2abcdb683f690506fb4b140dbb3ce0d24d964e7673fa432ae",
+  "new_glossary_sha256": "9272200bce5e1168acbe1986e785d5dcb94c4a797f1ee0d09cae9828aca6d007",
+  "scope_records": 25134,
+  "changed_records": 22688,
+  "preserved_outside_scope": 45029,
+  "not_done": [
+    "formal workflow integration",
+    "engine repack",
+    "in-game verification",
+    "publication"
+  ],
+  "unchanged_preexisting_structural_findings_count": 0,
+  "review_jobs_completed": 1703,
+  "tests_passed": 24,
+  "candidate_file": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\incremental_repair_20261024\\torment-tides-of-numenera_text_translated_candidate.csv"
+}
