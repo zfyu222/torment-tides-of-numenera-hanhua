@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-25",
+  "feature": "Configured provider priority plus per-attempt stability/token journals",
+  "priority": [
+    "yjapi",
+    "vortex",
+    "acy7",
+    "deepseek"
+  ],
+  "retry_delays_seconds": [
+    2,
+    4,
+    8
+  ],
+  "all_configured_concurrency": 25,
+  "all_thinking_enabled": true,
+  "shared_regression_tests_passed": 98,
+  "project_regression_tests_passed": 23,
+  "live_actual_wire_calls": 1,
+  "live_records_saved": 20,
+  "live_api": [
+    "yjapi"
+  ],
+  "live_reported_tokens": 3693,
+  "live_failover_observed": false,
+  "fault_chain_validation": "simulated providers plus actual shared workflow handoffs, not a claim of all four live services verified",
+  "actual_log": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\incremental_repair_20261024\\logs\\api_failover\\4272d6619e484b10904e77bc1e7ec520.jsonl",
+  "actual_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\incremental_repair_20261024\\reports\\api_failover\\4272d6619e484b10904e77bc1e7ec520.json",
+  "aggregate_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\incremental_repair_20261024\\reports\\api_stability_summary.json",
+  "current_stages": {
+    "glossary_review": {
+      "total": 93,
+      "accepted": 93,
+      "remaining": 0
+    },
+    "translate": {
+      "total": 1743,
+      "accepted": 116,
+      "remaining": 1627
+    }
+  },
+  "saved_draft_records": 1982,
+  "scope_records": 25134,
+  "formal_stage_calls": 466,
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
+  "formal_files_modified": false,
+  "bulk_body_launched_this_development_run": false,
+  "credentials_in_version_control": false
+}

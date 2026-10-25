@@ -1,6 +1,6 @@
 {
   "date": "2026-10-25",
-  "status": "requests_stopped_after_http502_waiting_api_selection_clarification",
+  "status": "api_priority_enabled_bounded_live_validation_complete",
   "terms_reviewed": 5579,
   "term_jobs_accepted": 93,
   "required_terms": 3937,
@@ -9,16 +9,16 @@
   "scope_records": 25134,
   "preserved_records": 45029,
   "translation_scope": 25126,
-  "translation_drafts_saved": 1962,
-  "translation_jobs_completed": 115,
-  "translation_jobs_remaining": 1628,
+  "translation_drafts_saved": 1982,
+  "translation_jobs_completed": 116,
+  "translation_jobs_remaining": 1627,
   "independent_review_started": false,
   "offline_recovered_jobs": 32,
   "api_requests_during_offline_recovery": 0,
-  "formal_stage_api_calls": 465,
-  "model_requests": 435,
+  "formal_stage_api_calls": 466,
+  "model_requests": 436,
   "service_failures_excluded": 30,
-  "reported_tokens": 13451536,
+  "reported_tokens": 13455229,
   "usage_unknown_calls": 30,
   "by_local_api_name": {
     "acy7": {
@@ -32,8 +32,8 @@
       "usage_unknown": 0
     },
     "yjapi": {
-      "calls": 210,
-      "reported_tokens": 2101993,
+      "calls": 211,
+      "reported_tokens": 2105686,
       "usage_unknown": 27
     }
   },
@@ -44,6 +44,17 @@
   "formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
   "formal_files_modified": false,
   "tests_passed": 23,
-  "live_api_validation_after_layout_fix": "not_run_service_failure",
-  "note": "Existing failed replies were replayed without editing semantic evidence or retry counters. Known descriptor changed by actual follow-up API decision; no claim of universal detection."
+  "live_api_validation_after_layout_fix": "20 actual records collected on yjapi; no live failover observed",
+  "note": "Existing failed replies were replayed without editing semantic evidence or retry counters. Known descriptor changed by actual follow-up API decision; no claim of universal detection.",
+  "shared_api_regression_tests_passed": 98,
+  "api_priority": [
+    "yjapi",
+    "vortex",
+    "acy7",
+    "deepseek"
+  ],
+  "last_live_api": "yjapi",
+  "last_live_records": 20,
+  "last_live_tokens": 3693,
+  "api_provider_report": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\incremental_repair_20261024\\reports\\api_stability_summary.json"
 }

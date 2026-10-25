@@ -19,7 +19,6 @@ import sys
 import threading
 import time
 import uuid
-from collections import deque
 
 PROJECT = Path(__file__).resolve().parents[1]
 REPO = PROJECT.parents[1]
@@ -455,21 +454,9 @@ class Repair:
         # the filesystem-backed tokenizer before concurrent first use; its lazy
         # lru_cache initialization is not a single-flight lock.
         count_tokens('')
-        client = bridge.AINieeAPI(settings, key)
-        request_times = deque()
-        def throttle():
-            limit = settings.get('requests_per_minute', 0)
-            while limit:
-                with self.lock:
-                    now = time.monotonic()
-                    while request_times and request_times[0] <= now - 60:
-                        request_times.popleft()
-                    if len(request_times) < limit:
-                        request_times.append(now); return
-                    delay = min(1, 60 - (now - request_times[0]))
-                time.sleep(max(.01, delay))
-                if stopped.is_set():
-                    raise ValueError('Stopped before throttled request')
+        pool = w.make_api_pool(config, self.work, stage, name=api_name)
+        if any(not s['settings']['think_switch'] for s in pool.specs):
+            raise ValueError('Keep thinking enabled on every priority API for this repair')
         def work(folder):
             payload = w.read_json(folder / 'payload.json'); binding = w.read_json(folder / 'binding.json')
             if w.fingerprint({k: v for k, v in payload.items() if k != 'input_hash'}) != payload['input_hash']:
@@ -555,7 +542,6 @@ class Repair:
                     text += '\n补交说明：' + grant['diagnostic']
                 if count_tokens(text) > config.get('task_input_tokens', 16384):
                     raise ValueError('Retry input exceeds configured budget; no request issued')
-                throttle()
                 with self.lock:
                     if stopped.is_set():
                         raise ValueError('Stopped before issuing another request')
@@ -568,11 +554,22 @@ class Repair:
                             'api': selected_api, 'requested_model': settings['model_name'], 'issued_at': time.time()}
                     ledger.append(call); w.write_json(ledger_path, ledger)
                 out = folder / call['id']; out.mkdir()
+                route = None
                 try:
+                    route = pool.acquire(stopped.is_set)
+                    with self.lock:
+                        with self.db() as db:
+                            current_parent = max(baseline['parent_budget_requests'], budget_requests(db))
+                        used_now = current_parent + sum(c['status'] != 'cancelled' and not service_failure(c['status']) for c in ledger)
+                        if used_now > min(settings['max_requests'], route.spec['settings']['max_requests']):
+                            raise bridge.ApiFailure('APIStatusError:request_budget_exhausted', False,
+                                {'usage_reported': False, 'request_issued': False})
+                        call.update(api=route.spec['name'], requested_model=route.spec['settings']['model_name'])
+                        w.write_json(ledger_path, ledger)
                     w.atomic_write(out / 'request.md', text)
                     w.write_json(out / 'binding.json', request_binding)
                     w.write_json(out / 'payload.json', request_payload)
-                    raw, usage = client.request('', text)
+                    raw, usage = pool.execute(route, '', text, call['id'], task_id=payload['task_id'], job=folder.name)
                     w.atomic_write(out / 'response.raw.txt', raw); w.write_json(out / 'usage.json', usage)
                     call.update(status='received', usage=usage)
                     parsed = bridge.parse_response(raw, out / 'normalization.json')
@@ -580,23 +577,31 @@ class Repair:
                     if stage != 'glossary_review':
                         result = canonical_api_partial_result(parsed, request_binding, payload['task_id'], payload['task_id'], payload['input_hash'], request_scope)
                         self.save_body_parts(folder, payload, request_payload, result, glossary, 'api:' + call['id'], sha(out / 'response.raw.txt'))
+                        pool.audit.outcome(call['id'], 'saved')
                         return folder.name
                     term_parts.save(self, folder, payload, request_payload, parsed, request_binding,
                         'api:' + call['id'], out / 'response.raw.txt')
                     w.write_json(out / 'result.json', w.read_json(folder / 'accepted.json')['result'])
+                    pool.audit.outcome(call['id'], 'saved')
                     return folder.name
                 except bridge.ApiFailure as exc:
-                    call.update(status='cancelled' if str(exc) == 'validation_wire_limit' else str(exc), usage=exc.usage)
-                    delay = connection_retry_delay(str(exc), connection_retries)
+                    not_issued = (exc.usage or {}).get('request_issued') is False
+                    call.update(status='cancelled' if not_issued or str(exc) == 'validation_wire_limit' else str(exc), usage=exc.usage)
+                    if not_issued: call['transport_status'] = str(exc)
+                    if pool.should_retry(str(exc)):
+                        continue
+                    delay = connection_retry_delay(str(exc), connection_retries) if not pool.managed else None
                     if delay is None:
                         stopped.set(); raise
                     connection_retries += 1; time.sleep(delay)
                 except Exception as exc:
                     call.update(status='rejected', error=str(exc)[:1500]); failures += 1
+                    pool.audit.outcome(call['id'], 'rejected')
                     w.write_json(out / 'rejection.json', {'reason': str(exc)})
                     if (call.get('usage') or {}).get('finish_reason') == 'length':
                         stopped.set(); raise
                 finally:
+                    if route is not None: pool.release(route)
                     call['elapsed_seconds'] = round(time.time() - call['issued_at'], 3)
                     with self.lock:
                         w.write_json(ledger_path, ledger)
@@ -606,8 +611,8 @@ class Repair:
                 raise ValueError('Job retry limit reached: ' + folder.name)
         errors = []
         try:
-            with ThreadPoolExecutor(max_workers=settings['concurrency']) as pool:
-                futures = [pool.submit(work, p) for p in jobs]
+            with ThreadPoolExecutor(max_workers=pool.max_workers) as executor:
+                futures = [executor.submit(work, p) for p in jobs]
                 for future in as_completed(futures):
                     try:
                         print(json.dumps({'accepted': future.result()}, ensure_ascii=False), flush=True)
@@ -618,9 +623,10 @@ class Repair:
                         if not str(exc).startswith(('Job retry limit reached:', 'Stage stopped before job completed:')):
                             stopped.set()
         finally:
-            client.close()
+            pool.close()
         return {'stage': stage, 'remaining': sum(not (p / 'accepted.json').exists() for p in
-            [self.work / s for s in w.read_json(self.work / job_manifest)]), 'errors': errors}
+            [self.work / s for s in w.read_json(self.work / job_manifest)]), 'errors': errors,
+            'api_provider_report': str(pool.audit.report), 'api_provider_log': str(pool.audit.log)}
 
     def partial_body_rows(self, folder, payload):
         rows = {}
