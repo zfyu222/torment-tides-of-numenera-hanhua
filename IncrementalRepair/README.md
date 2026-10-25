@@ -95,3 +95,5 @@ $script = 'D:/StaticHanHua/Projects/torment-tides-of-numenera/IncrementalRepair/
 本机`api.local.jsonc`已设`failure_threshold=5`、`cooldown_seconds=60`，删除旧`retry_delays_seconds`字段。状态转换、失败数、冷却时间、单探测与回切继续写入原逐请求日志，跨阶段统计新增每次运行的状态轨迹，不把不同运行的接口状态混为实时全局状态。
 
 验证：106项共用回归与23项专项回归通过，包含5次阈值、成功清零、59/60秒边界、探测失败再冷却、并发只放一个探测、旧失败不能打坏已恢复接口、取消未发探测不能恢复、全部冷却等待及公共pause中断。隔离真实演练主动注入YJ冷却状态（并非真实服务故障），实际等待60秒，先由Vortex处理一条，再由YJ单探测处理一条，随后调度确实选回YJ。两个真实请求服务端报告1,681+1,638=3,319 Token；原始回复、绑定、收集和状态日志保留。演练启动时阈值仍为4，冷却由测试直接设置，因此它验证的是冷却/回切，最新5次阈值由模拟/共用流程验证；未篡改历史配置日志。生产CSV、DB及1,982条既有草稿均未改动，也未启动全量正文。详见`api_cooldown_validation_20261025.json`；完整复盘可用项目`TranslateFiles/reports/api_stability_summary.json`。
+
+- 2026-10-25 增量正文已收齐1,743/1,743批、25,126条，独立审校待启动。已通过记录不重派；专项收集器改为遵守任务明确保护的注释范围，避免要求翻译注释内部术语，原回复离线恢复1批；其余排版问题由API依据明确换行/尾部空白诊断修复，未代写译文。24项专项回归通过，正式CSV/主DB/游戏未改。详见IncrementalRepair/body_complete_20261025.json。

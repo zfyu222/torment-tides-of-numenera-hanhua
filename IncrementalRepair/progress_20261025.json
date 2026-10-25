@@ -1,6 +1,6 @@
 {
   "date": "2026-10-25",
-  "status": "api_cooldown_recovery_enabled_isolated_live_validation_complete",
+  "status": "incremental_translation_complete_review_pending",
   "terms_reviewed": 5579,
   "term_jobs_accepted": 93,
   "required_terms": 3937,
@@ -9,17 +9,17 @@
   "scope_records": 25134,
   "preserved_records": 45029,
   "translation_scope": 25126,
-  "translation_drafts_saved": 1982,
-  "translation_jobs_completed": 116,
-  "translation_jobs_remaining": 1627,
+  "translation_drafts_saved": 25126,
+  "translation_jobs_completed": 1743,
+  "translation_jobs_remaining": 0,
   "independent_review_started": false,
   "offline_recovered_jobs": 32,
   "api_requests_during_offline_recovery": 0,
-  "formal_stage_api_calls": 466,
-  "model_requests": 436,
-  "service_failures_excluded": 30,
-  "reported_tokens": 13455229,
-  "usage_unknown_calls": 30,
+  "formal_stage_api_calls": 2390,
+  "model_requests": 2344,
+  "service_failures_excluded": 46,
+  "reported_tokens": 36619191,
+  "usage_unknown_calls": 103,
   "by_local_api_name": {
     "acy7": {
       "calls": 191,
@@ -32,9 +32,9 @@
       "usage_unknown": 0
     },
     "yjapi": {
-      "calls": 211,
-      "reported_tokens": 2105686,
-      "usage_unknown": 27
+      "calls": 2135,
+      "reported_tokens": 25269648,
+      "usage_unknown": 100
     }
   },
   "isolated_validation_costs": "separate, see live_validation_report_20261024.json",
@@ -43,9 +43,9 @@
   "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
   "formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
   "formal_files_modified": false,
-  "tests_passed": 23,
+  "tests_passed": 24,
   "live_api_validation_after_layout_fix": "20 actual records collected on yjapi; no live failover observed",
-  "note": "Existing failed replies were replayed without editing semantic evidence or retry counters. Known descriptor changed by actual follow-up API decision; no claim of universal detection.",
+  "note": "All incremental translation jobs collected. Protected comments excluded from terminology checking under exact task protection. Explicit layout diagnostics supplied to API. Original replies, attempts and budgets retained. Independent review not started yet.",
   "shared_api_regression_tests_passed": 106,
   "api_priority": [
     "yjapi",

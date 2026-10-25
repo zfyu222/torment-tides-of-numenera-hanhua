@@ -387,7 +387,13 @@ class Repair:
             issues = bridge.record_structural_issues({'id': item['id'], 'source': raw_source}, item['translation'], rules, config)
             if issues:
                 raise ValueError(item['id'] + ': structural ' + repr(issues))
-            terms = bridge.matched_terms(glossary, [raw_source], config, rules=rules)
+            # Restored comments may contain names (even in a malformed brace
+            # block). Keep the exact protection spans used by this task hidden
+            # from terminology enforcement, just as in the API input.
+            term_rules = list(rules) + [
+                ('task_protection_' + str(n), re.compile(re.escape(p['original'])))
+                for n, p in enumerate(original.get('protection', [])) if p.get('original')]
+            terms = bridge.matched_terms(glossary, [raw_source], config, rules=term_rules)
             exceptions = item.get('exceptions', [])
             exempt = {e['source'].casefold() for e in exceptions if isinstance(e, dict) and e.get('reason')}
             missing = [t['src'] for t in terms if bridge.term_required(t) and not bridge.helper().is_keep_original_translation(t['dst'])
@@ -538,6 +544,13 @@ class Repair:
                 previous = [c.get('error') for c in ledger if c['job'] == folder.name and c.get('error')]
                 if previous:
                     text += '\n程序拒收诊断：' + previous[-1] + '\n按原文和真实证据补全本批，不能机械填通过。'
+                    if 'physical_newlines' in previous[-1] or 'boundary_whitespace' in previous[-1]:
+                        short_ids = {v: k for k, v in request_binding['short_to_canonical'].items()}
+                        layout = [{'id': short_ids[r['id']],
+                            'physical_newlines': re.findall(r'\r\n|\r|\n', r['source']),
+                            'trailing_whitespace': r['source'][len(r['source'].rstrip()):]}
+                            for r in request_payload['records']]
+                        text += '\n排版补交：保留原文所有物理换行，包括连续空白行和句末空行、尾部空白；JSON字符串用转义表示。逐条原文排版：' + json.dumps(layout, ensure_ascii=False)
                 if grant.get('diagnostic'):
                     text += '\n补交说明：' + grant['diagnostic']
                 if count_tokens(text) > config.get('task_input_tokens', 16384):

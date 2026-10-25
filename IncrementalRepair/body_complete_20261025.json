@@ -1,0 +1,27 @@
+{
+  "stage": "translate",
+  "completed_jobs": 1743,
+  "draft_records": 25126,
+  "formal_csv_unchanged": true,
+  "production_db_revision_unchanged": true,
+  "tests_passed": 24,
+  "by_api": {
+    "acy7": {
+      "calls": 191,
+      "reported_tokens": 9089374,
+      "usage_unknown": 3
+    },
+    "deepseek": {
+      "calls": 64,
+      "reported_tokens": 2260169,
+      "usage_unknown": 0
+    },
+    "yjapi": {
+      "calls": 2135,
+      "reported_tokens": 25269648,
+      "usage_unknown": 100
+    }
+  },
+  "ledger_entries": 2390,
+  "review_started": false
+}

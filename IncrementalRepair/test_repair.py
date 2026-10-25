@@ -130,6 +130,23 @@ class EvidenceTests(unittest.TestCase):
             r.validate_result({'stage':'translate','layout_policy':None,'records':[example['original']]},
                 {'records':[item]},{'characters':[],'terms':[],'non_translate':[]})
 
+    def test_protected_unclosed_comment_does_not_require_hidden_terms(self):
+        r=object.__new__(repair.Repair);r.snapshot=lambda:{'config':copy.deepcopy(repair.w.DEFAULT)}
+        comment='{NATHAN: Meres uses numenera to make ice.'
+        original={'id':'test','source':'Water freezes. [P1]',
+                  'protection':[{'placeholder':'[P1]','original':comment}]}
+        glossary={'characters':[], 'non_translate':[], 'terms':[
+            {'source':'Meres','recommended_translation':'密境'},
+            {'source':'numenera','recommended_translation':'扭蒙拉'}]}
+        result={'records':[{'id':'test','translation':'水结冰了。[P1]'}]}
+        r.validate_result({'stage':'translate','records':[original]},result,glossary)
+        self.assertTrue(result['records'][0]['translation'].endswith(comment))
+        # The same term outside the protected comment must still be enforced.
+        original['source']='numenera freezes water. [P1]'
+        with self.assertRaisesRegex(ValueError,'Required term'):
+            r.validate_result({'stage':'translate','records':[original]},
+                {'records':[{'id':'test','translation':'水结冰了。[P1]'}]},glossary)
+
     def test_legacy_missing_config_uses_shared_default_but_explicit_off_is_respected(self):
         example=repair.w.read_json(Path(__file__).parent/'test_fixtures/real_body_layout.json')[0]
         config=copy.deepcopy(repair.w.DEFAULT);config.pop('layout_normalization',None)
