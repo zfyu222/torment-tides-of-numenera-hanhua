@@ -1,5 +1,5 @@
 {
-  "status": "package_verified_pending_publication",
+  "status": "published_and_download_verified",
   "archive": "torment-tides-of-numenera_子非鱼汉化1.4.zip",
   "size": 9189754,
   "sha256": "f3a84751f7e4159ffe30d683d4147794bbb9df48e236eedc99334a755500d6bf",
@@ -9,7 +9,14 @@
   "installed_and_staged_hashes": "passed",
   "xml_files_parsed": 2250,
   "historical_changelog": "v1.0 through v1.4 preserved",
-  "published": false,
+  "published": true,
   "in_game_scope": "startup/menu/options; dialogue/quest/tutorial not additionally retested",
-  "user_confirmation": "没问题，直接发布"
+  "user_confirmation": "没问题，直接发布",
+  "release_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.4",
+  "asset_name": "torment-tides-of-numenera_.1.4.zip",
+  "asset_label": "torment-tides-of-numenera_子非鱼汉化1.4.zip",
+  "asset_download_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/download/v1.4/torment-tides-of-numenera_.1.4.zip",
+  "downloaded_sha256": "f3a84751f7e4159ffe30d683d4147794bbb9df48e236eedc99334a755500d6bf",
+  "latest_stable": true,
+  "repository_public": true
 }

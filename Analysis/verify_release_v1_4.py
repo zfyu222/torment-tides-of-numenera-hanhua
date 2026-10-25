@@ -54,7 +54,7 @@ def main():
               'in_game_scope':'startup/menu/options; dialogue/quest/tutorial not additionally retested',
               'user_confirmation':'没问题，直接发布'}
     (p/'TranslateFiles/reports/release_v1.4_preparation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    (p/'Dispatch/v1.4_补丁说明预览.txt').write_text(guide,encoding='utf-8-sig')
+    (p/'Dispatch/v1.4_补丁说明预览.txt').write_bytes(raw)
     print(json.dumps(report,ensure_ascii=True))
 
 
