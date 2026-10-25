@@ -1,14 +1,14 @@
 {
   "schema": 2,
   "kind": "final",
-  "pilot_key": "afe1efe22d69f5a57e189f5a886a1568ccc3fc157116f1c9cf6ef6060df7c59a",
+  "pilot_key": "a4593e53cd9dc1f05f8b3f3970331615ccd241ef305629d248bd237c98630e20",
   "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
   "glossary": {
-    "hash": "c10d12abdc0db2bf5e44e15dc5cffd26c364e4c022f8f596c02f3483e066598e",
-    "path": "glossary\\revision_8_9ceef451\\built\\glossary_reviewed.json",
-    "revision": 8
+    "hash": "9272200bce5e1168acbe1986e785d5dcb94c4a797f1ee0d09cae9828aca6d007",
+    "path": "glossary\\incremental_revision_9\\glossary_reviewed.json",
+    "revision": 9
   },
-  "snapshot_hash": "8bdf608354629a1e21b579637c00d2c5faefbf64f9079e22eacd6a94fa0f6197",
+  "snapshot_hash": "3c499e2019cf109e12e0fbe05e1eb7ada662d2dbebe5e2b2dc351e2e1ffb7265",
   "coverage": {
     "records": 70163,
     "text_types": {
@@ -17,123 +17,32 @@
       "任务文本": 2002
     },
     "missing_context": 0,
-    "risk_records": 44699,
+    "risk_records": 42653,
     "ordinary_sample": 0,
-    "sol_records": 8
+    "sol_records": 4
   },
   "risk_detection": "Heuristic candidates plus reviewer findings; absence of flags is not proof of correctness.",
-  "records_to_check": [
-    {
-      "id": "R0017271_049add9262",
-      "ordinal": 17271,
-      "source": "Quickly plucking ten of your oddities from your pack, Urmpfh dances in place excitedly, throwing the numenera up in the air where they disappear in an instant.\r\n\r\n\"Much good.\" A pool of shins grows in the palms of Urmpfh's hands, which he pours into your pack before handing it back to you. \"Business concluded.\"\r\n\r\n{SCRIPT: removes ten most valuable oddities from inventory, adds 150% of full value in shins to inventory}\r\n{SCRIPT: I'm open to different ways to do this, perhaps it can open up a barter interface but limit what the player can sell or how much shins Urmpfh has? Maybe it'd be easier to do with cyphers. Whichever way it's easiest to do, design can be flexible}",
-      "translation": "乌尔姆普夫迅速从你的背包里拈出十件奇物，兴奋地原地起舞，把那些扭蒙拉抛向空中，它们转瞬便消失了。\r\n\r\n“很好。”乌尔姆普夫的掌心积起一堆辛币，他把辛币倒进你的背包，然后将背包递还给你。“买卖成交。”\r\n\r\n{SCRIPT: removes ten most valuable oddities from inventory, adds 150% of full value in shins to inventory}\r\n{SCRIPT: I'm open to different ways to do this, perhaps it can open up a barter interface but limit what the player can sell or how much shins Urmpfh has? Maybe it'd be easier to do with cyphers. Whichever way it's easiest to do, design can be flexible}",
-      "metadata": {
-        "group": "conversations/a_sagus",
-        "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
-        "resource": "en/text/conversations/a_sagus/item_shadowpeddler.stringtable#ID=46/DefaultText",
-        "scene": "a_sagus/item_shadowpeddler.stringtable",
-        "text_type": "对白或叙述（具体类型以本句为准）"
-      },
-      "risk_reasons": [
-        "numbers",
-        "conditions",
-        "variables",
-        "long_text",
-        "term_exception",
-        "review_warning"
-      ],
-      "review": {
-        "task_id": "review-r8-00016-f6607ca7",
-        "instance": "api-review-b8a2df355b5845498c5c1961180d6337",
-        "stage": "review",
-        "before": "乌尔姆普夫迅速从你的背包里拈出十件奇物，兴奋地原地起舞，把那些扭蒙拉抛向空中，它们转瞬便消失了。\r\n\r\n“很好。”乌尔姆普夫的掌心积起一堆辛币，他把辛币倒进你的背包，然后将背包递还给你。“买卖成交。”\r\n\r\n{SCRIPT: removes ten most valuable oddities from inventory, adds 150% of full value in shins to inventory}\r\n{SCRIPT: I'm open to different ways to do this, perhaps it can open up a barter interface but limit what the player can sell or how much shins Urmpfh has? Maybe it'd be easier to do with cyphers. Whichever way it's easiest to do, design can be flexible}",
-        "translation": "乌尔姆普夫迅速从你的背包里拈出十件奇物，兴奋地原地起舞，把那些扭蒙拉抛向空中，它们转瞬便消失了。\r\n\r\n“很好。”乌尔姆普夫的掌心积起一堆辛币，他把辛币倒进你的背包，然后将背包递还给你。“买卖成交。”\r\n\r\n{SCRIPT: removes ten most valuable oddities from inventory, adds 150% of full value in shins to inventory}\r\n{SCRIPT: I'm open to different ways to do this, perhaps it can open up a barter interface but limit what the player can sell or how much shins Urmpfh has? Maybe it'd be easier to do with cyphers. Whichever way it's easiest to do, design can be flexible}",
-        "changes": [],
-        "checks": {
-          "accuracy": {
-            "evidence": "“迅速从你的背包里拈出十件奇物”“兴奋地原地起舞”“把那些扭蒙拉抛向空中，转瞬便消失了”对应 plucking ten of your oddities、dances in place excitedly、disappear in an instant；“掌心积起一堆辛币……倒进你的背包，然后将背包递还给你”与 pours into your pack before handing it back to you 的动作顺序一致；“很好。”“买卖成交。”对应 Much good 与 Business concluded。",
-            "status": "pass"
-          },
-          "completeness": {
-            "evidence": "“迅速从你的背包里拈出十件奇物”“兴奋地原地起舞”“把那些扭蒙拉抛向空中，转瞬便消失了”对应 plucking ten of your oddities、dances in place excitedly、disappear in an instant；“掌心积起一堆辛币……倒进你的背包，然后将背包递还给你”与 pours into your pack before handing it back to you 的动作顺序一致；“很好。”“买卖成交。”对应 Much good 与 Business concluded。",
-            "status": "pass"
-          },
-          "logic": {
-            "evidence": "“迅速从你的背包里拈出十件奇物”“兴奋地原地起舞”“把那些扭蒙拉抛向空中，转瞬便消失了”对应 plucking ten of your oddities、dances in place excitedly、disappear in an instant；“掌心积起一堆辛币……倒进你的背包，然后将背包递还给你”与 pours into your pack before handing it back to you 的动作顺序一致；“很好。”“买卖成交。”对应 Much good 与 Business concluded。",
-            "status": "pass"
-          },
-          "placeholders": {
-            "evidence": "两段 {SCRIPT: ...} 均完整保留，其中 ten most valuable oddities、150% of full value、shins 以及第二段开发说明未被翻译、增删或改写。",
-            "status": "pass"
-          },
-          "terminology": {
-            "evidence": "奇物（oddities）、乌尔姆普夫（Urmpfh）、扭蒙拉（numenera）、辛币（shins）均按术语表；pool 与 back 分别按既有语境例外译作“一堆辛币”和“递还给你”，未套用“池”“返回”。",
-            "status": "pass"
-          },
-          "tone": {
-            "evidence": "“很好。”的简短赞许和“买卖成交”的生意腔保留了乌尔姆普夫生硬而满意的口吻；原文此处用 he，译文照作用“他”，未自行统一成“它”。",
-            "status": "pass"
-          }
-        },
-        "exceptions": [
-          {
-            "reason": "原句“A pool of shins grows in the palms”中 pool 指掌心积聚的一堆/一捧辛币，是普通比喻，并非固定术语“池”；现译“一堆辛币”贴合语境。",
-            "source": "pool"
-          },
-          {
-            "reason": "原句“handing it back to you”中 back 是表示归还方向的副词，不是界面用语“返回”；现译“递还给你”正确。",
-            "source": "back"
-          }
-        ],
-        "id": "R0017271_049add9262",
-        "issues": [
-          {
-            "reason": "本条原文用 he 指代乌尔姆普夫（“which he pours into your pack”），译文作“他”；同批第 1、2 条原文用 it，译文作“它”。这是按各条原文如实处理，但同一角色在连续对白中出现“它/他”混用，影响指代一致性，建议由术语或文风负责人统一，本条不擅自改动。",
-            "severity": "warning"
-          }
-        ],
-        "reason": "译文准确还原取出奇物、抛掷扭蒙拉、支付辛币和交还背包的动作链；术语按表，语境例外保持，脚本标记原样保留。",
-        "reviewed": true,
-        "source_excerpt": "Quickly plucking ten of your oddities from your pack, Urmpfh dances in place excitedly, throwing the numenera up in the air where they disappear in an instant.\r\n\r\n\"Much good.\" A pool of shins grows in the palms of Urmpfh's hands, which he pours into your pack before handing it back to you. \"Business concluded.\"\r\n\r\n{SCRIPT: removes ten most valuable oddities from inventory, adds 150% of full value in shins to inventory}\r\n{SCRIPT: I'm open to different ways to do this, perhaps it can open up a barter interface but limit what the player can sell or how much shins Urmpfh has? Maybe it'd be easier to do with cyphers. Whichever way it's easiest to do, design can be flexible}"
-      }
-    }
-  ],
+  "records_to_check": [],
   "consistency": [],
   "glossary_checks": [],
   "pilot_batch_summaries": {},
   "check_signatures": {
-    "R0006517_160fcf99f8": "ee5e0ac5e9e24c3adb54a55e40fe525e616360d7ec4303820ea0911221737d77",
     "R0017271_049add9262": "c71902ea36f9c17e6611dd8ca7e6536d12ca390a2107bec7b9cd3e754eedcff3",
-    "R0028836_de69924fa4": "30d71f381382fdafe5fed54bbab46d82f613995d8f01a0c96a46158280f68902",
     "R0032300_fd983259d2": "266213a8fd4e248942655fd4352aafa81ffe3461a1bf5741225160a3e045a04f",
     "R0036199_dae690f193": "ef086952700027ccbbbb68d24f5b819ad08930cba4e16fa3fc2dc0820d47097f",
-    "R0047777_20285741c5": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33",
-    "R0050237_a254ec3826": "776581d24bb8aeb75cf464c3b940f9c87605d981c4072f1145857bae883f7f0a",
-    "R0052837_2f69379214": "662119e9e4b2d99335625f5a6d94affd19e29444d0e25d4e0792bf8086775797"
+    "R0047777_20285741c5": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33"
   },
   "reused_decisions": {
-    "R0006517_160fcf99f8": {
+    "R0017271_049add9262": {
       "decision": {
         "disposition": "contextual",
-        "id": "R0006517_160fcf99f8",
-        "reason": "原始英文ID91确为Who wo后接after all my expenses are paid，缺失无法可靠恢复。现译已去掉无意义英文wo，以中文省略号保留残句和其余确定语义，不凭空补写；属于源文问题，保留于已知问题。",
+        "id": "R0017271_049add9262",
+        "reason": "本句原文which he pours明确采用he，译文他忠实。其他句原文用it只能证明源文指代不同，缺乏译文错误证据，不宜在这次术语修订中擅自改源文性别/物种指代；同批不代表连续剧情。正文动作顺序、十件奇物、脚本150%均完整，接受现译。",
         "reviewer": "main:user-authorized-small-review",
-        "user_authorization": "用户明确允许少量剩余问题直接解决"
+        "user_authorization": "继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
       },
-      "report_hash": "fb1477f4be375a894b888f500eedb118e99fe6e6c8edd445efe51d43342d60c0",
-      "signature": "ee5e0ac5e9e24c3adb54a55e40fe525e616360d7ec4303820ea0911221737d77"
-    },
-    "R0028836_de69924fa4": {
-      "decision": {
-        "disposition": "contextual",
-        "id": "R0028836_de69924fa4",
-        "reason": "原句自身同时写dead companion与how much longer he will make it，缺乏足够证据把死人改成濒死或推断复活。译文忠实保留原句矛盾，不把源文缺陷当汉化新增剧情；记为原始资源问题。",
-        "reviewer": "main:user-authorized-small-review",
-        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
-      },
-      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
-      "signature": "30d71f381382fdafe5fed54bbab46d82f613995d8f01a0c96a46158280f68902"
+      "report_hash": "23a56a45a2b6fd1d4bd6333fa1989f6a51c1ce67187cc3cdc7be1c49b4b97a32",
+      "signature": "c71902ea36f9c17e6611dd8ca7e6536d12ca390a2107bec7b9cd3e754eedcff3"
     },
     "R0032300_fd983259d2": {
       "decision": {
@@ -167,38 +76,12 @@
       },
       "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
       "signature": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33"
-    },
-    "R0050237_a254ec3826": {
-      "decision": {
-        "disposition": "contextual",
-        "id": "R0050237_a254ec3826",
-        "reason": "此句Neng按冻结人物表译能，本条本身准确。Neng的完整地点/属性词条另有内恩、奈恩异写，须在相关复合词出现处定向统一为能；本句保持，不替换全局人物名造成二次漂移。",
-        "reviewer": "main:user-authorized-small-review",
-        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
-      },
-      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
-      "signature": "776581d24bb8aeb75cf464c3b940f9c87605d981c4072f1145857bae883f7f0a"
-    },
-    "R0052837_2f69379214": {
-      "decision": {
-        "disposition": "contextual",
-        "id": "R0052837_2f69379214",
-        "reason": "核对原始备份ID48确为does move, not even a little bit，未否定与后续not even a little bit直接冲突。现译采取后半句明确的完全未动，符合用力拉却丝毫不动的完整情景，不改成已经移动；列作原文漏写否定。末尾空格保持。",
-        "reviewer": "main:user-authorized-small-review",
-        "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
-      },
-      "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
-      "signature": "662119e9e4b2d99335625f5a6d94affd19e29444d0e25d4e0792bf8086775797"
     }
   },
-  "required_decisions": [
-    "R0017271_049add9262"
-  ],
+  "required_decisions": [],
   "sol_scope_policy": "disputes_only_v1",
   "carried_findings": {},
   "selection_explanation": "Only explicit unresolved reviewer issues need Sol adjudication. Risk flags, corrections, ordinary samples, duplicate-source groups and speaker groups do not trigger Sol. Known Sol repair findings are carried to standard repair without re-reading; exhausted or regressing repairs use the existing targeted Sol escalation route.",
-  "report_hash": "23a56a45a2b6fd1d4bd6333fa1989f6a51c1ce67187cc3cdc7be1c49b4b97a32",
-  "round_scope": [
-    "R0017271_049add9262"
-  ]
+  "report_hash": "82667571ce7ea6e1e08e96c6f827d99618cdf30df53fca1786d6aae9c103a73e",
+  "round_scope": []
 }

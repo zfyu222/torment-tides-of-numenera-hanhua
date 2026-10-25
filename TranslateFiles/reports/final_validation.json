@@ -1,16 +1,4 @@
 {
-  "status": "passed",
-  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
-  "translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
-  "records": 70163,
-  "semantic_review": "full",
-  "polish": false,
-  "revision": 8,
-  "glossary": {
-    "hash": "c10d12abdc0db2bf5e44e15dc5cffd26c364e4c022f8f596c02f3483e066598e",
-    "path": "glossary\\revision_8_9ceef451\\built\\glossary_reviewed.json",
-    "revision": 8
-  },
   "ainiee": {
     "actual_commit": "c50570c1dee7df7bd51316a253f0b42d10a8ca4c",
     "expected_commit": "c50570c1dee7df7bd51316a253f0b42d10a8ca4c",
@@ -22,10 +10,22 @@
       "Infrastructure/LLMRequester/OpenaiRequester.py": "b2b1f5e6fd3a31727b2e1d2597e1bcca3e5e4db2cfec550ff6cfcd6a6cff3f79"
     }
   },
-  "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_text_translated.csv",
-  "quality_review": {
-    "report_hash": "23a56a45a2b6fd1d4bd6333fa1989f6a51c1ce67187cc3cdc7be1c49b4b97a32",
-    "reviewer": "main:user-authorized-small-review"
+  "glossary": {
+    "hash": "9272200bce5e1168acbe1986e785d5dcb94c4a797f1ee0d09cae9828aca6d007",
+    "path": "glossary\\incremental_revision_9\\glossary_reviewed.json",
+    "revision": 9
   },
-  "in_game_check": "pending_repack"
+  "in_game_check": "pending_repack",
+  "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_text_translated.csv",
+  "polish": false,
+  "quality_review": {
+    "report_hash": "82667571ce7ea6e1e08e96c6f827d99618cdf30df53fca1786d6aae9c103a73e",
+    "reviewer": "workflow:no-disputes"
+  },
+  "records": 70163,
+  "revision": 9,
+  "semantic_review": "full",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "status": "passed",
+  "translation_sha256": "074e4cdee16947f1fe5b4bcd3669f6ce1d91fa2027d4cd6055a0b351166c67b6"
 }

@@ -1,0 +1,32 @@
+{
+  "status": "integrated",
+  "revision": 9,
+  "changed_records": 22688,
+  "scope_records": 25134,
+  "preserved_outside_scope": 45029,
+  "formal_translation_sha256": "074e4cdee16947f1fe5b4bcd3669f6ce1d91fa2027d4cd6055a0b351166c67b6",
+  "previous_history_preserved": true,
+  "model_request_budget_before": 13372,
+  "model_request_budget_after": 17614,
+  "incremental_model_requests_added": 4242,
+  "api_requests_issued": 0,
+  "backup": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\backups\\before_incremental_integration_af7c31ff97884eb0a75563312719da50",
+  "not_done": [
+    "engine repack",
+    "in-game verification",
+    "publication"
+  ],
+  "records": 70163,
+  "formal_export_values_equal_candidate": true,
+  "glossary": {
+    "hash": "9272200bce5e1168acbe1986e785d5dcb94c4a797f1ee0d09cae9828aca6d007",
+    "path": "glossary\\incremental_revision_9\\glossary_reviewed.json",
+    "revision": 9
+  },
+  "quality_review": {
+    "report_hash": "82667571ce7ea6e1e08e96c6f827d99618cdf30df53fca1786d6aae9c103a73e",
+    "reviewer": "workflow:no-disputes"
+  },
+  "tests_passed": 5,
+  "game_files_modified": false
+}

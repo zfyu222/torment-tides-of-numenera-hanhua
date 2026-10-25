@@ -1,6 +1,6 @@
 {
   "date": "2026-10-25",
-  "status": "incremental_candidate_validated",
+  "status": "integrated_formal_revision_9_pending_repack",
   "terms_reviewed": 5579,
   "term_jobs_accepted": 93,
   "required_terms": 3937,
@@ -46,11 +46,11 @@
   "new_glossary_sha256": "9272200bce5e1168acbe1986e785d5dcb94c4a797f1ee0d09cae9828aca6d007",
   "repair_plan_sha256": "ac4d6cc53e9cf89145c5ff3678f54705c22dfb8b832c8320a59751f4b26be7c0",
   "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
-  "formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f",
-  "formal_files_modified": false,
+  "formal_translation_sha256": "074e4cdee16947f1fe5b4bcd3669f6ce1d91fa2027d4cd6055a0b351166c67b6",
+  "formal_files_modified": true,
   "tests_passed": 24,
   "live_api_validation_after_layout_fix": "20 actual records collected on yjapi; no live failover observed",
-  "note": "All incremental translation and independent review collected and candidate exported with full structural and scope preservation validation. Formal CSV/parent DB/game/release unchanged.",
+  "note": "Integrated validated candidate, actual independent API provenance and ledger into revision9. No new API requests. Old histories/attempts/budgets retained. Formal export equals candidate by CSV values; byte digest differs because shared exporter writes BOM and LF record separators. Game and release unchanged.",
   "shared_api_regression_tests_passed": 106,
   "api_priority": [
     "yjapi",
@@ -77,5 +77,7 @@
   "candidate_sha256": "b6ba89fe81b464a2abcdb683f690506fb4b140dbb3ce0d24d964e7673fa432ae",
   "changed_records": 22688,
   "candidate_exported": true,
-  "next_action": "formal workflow integration before repack"
+  "next_action": "engine repack then in-game verification",
+  "formal_workflow_revision": 9,
+  "baseline_formal_translation_sha256": "36d5b3a85f6353f67fbe23b7726b57861dcd0b64195461b984dfadd969db0f9f"
 }

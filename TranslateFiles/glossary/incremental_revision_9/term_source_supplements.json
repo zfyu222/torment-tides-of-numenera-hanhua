@@ -1,0 +1,39 @@
+{
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "reason": "Two previously frozen quoted aliases had no attached representative citations; supplement exact original corpus matches without changing task identities or attempts.",
+  "jobs": {
+    "inc-glossary_review-0425ff0265b507129450": {
+      "input_hash": "a95abeb366b064a76f87f4a7ab00d8422107c1d8bebd065b346b113957cc49f2",
+      "entries": {
+        "characters:1352": [
+          {
+            "id": "R0058375_2c4e4a2c22",
+            "ordinal": 58375,
+            "source": "\"Obsidian Razor\"",
+            "metadata": {
+              "group": "game",
+              "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。界面文本，注意长度、按钮用途和中文阅读。",
+              "resource": "en/text/game/backerepitaphnames.stringtable#ID=473/DefaultText",
+              "scene": "",
+              "text_type": "系统或界面文本"
+            }
+          }
+        ],
+        "characters:1353": [
+          {
+            "id": "R0061409_d3ede7d362",
+            "ordinal": 61409,
+            "source": "\"Lailoken Lockhart\"",
+            "metadata": {
+              "group": "game",
+              "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。界面文本，注意长度、按钮用途和中文阅读。",
+              "resource": "en/text/game/backertombstonenames.stringtable#ID=2293/DefaultText",
+              "scene": "",
+              "text_type": "系统或界面文本"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
