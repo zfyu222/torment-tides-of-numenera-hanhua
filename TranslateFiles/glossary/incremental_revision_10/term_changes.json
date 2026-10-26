@@ -1,0 +1,222 @@
+[
+  {
+    "source": "shield-generating numenera",
+    "before": {
+      "category_path": "物品",
+      "recommended_translation": "生成护盾的努曼内拉装置",
+      "source": "shield-generating numenera",
+      "evidence_rows": [
+        46919,
+        46921
+      ],
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "原文指维持护盾的 numenera 装置，46919、46921 同一机器；按本作背景统一努曼内拉。"
+    },
+    "after": {
+      "category_path": "物品",
+      "recommended_translation": "生成护盾的扭蒙拉装置",
+      "source": "shield-generating numenera",
+      "evidence_rows": [
+        46919,
+        46921
+      ],
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "原文指维持护盾的 numenera 装置，46919、46921 同一机器；按本作背景统一扭蒙拉。"
+    },
+    "authority": "User previously fixed Numenera as 扭蒙拉; spelling normalization, not a new semantic review."
+  },
+  {
+    "source": "Locksmith: Numenera",
+    "before": {
+      "category_path": "技能",
+      "recommended_translation": "开锁：努曼内拉",
+      "source": "Locksmith: Numenera",
+      "evidence_rows": [
+        66812
+      ],
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "66812为技能专精条目Locksmith: Numenera；Numenera为游戏世界名称。"
+    },
+    "after": {
+      "category_path": "技能",
+      "recommended_translation": "开锁：扭蒙拉",
+      "source": "Locksmith: Numenera",
+      "evidence_rows": [
+        66812
+      ],
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "66812为技能专精条目Locksmith: Numenera；Numenera为游戏世界名称。"
+    },
+    "authority": "User previously fixed Numenera as 扭蒙拉; spelling normalization, not a new semantic review."
+  },
+  {
+    "source": "water-breathing numenera",
+    "before": {
+      "category_path": "物品",
+      "recommended_translation": "水下呼吸努曼内拉",
+      "source": "water-breathing numenera",
+      "evidence_rows": [
+        69720,
+        69722,
+        69730,
+        69734
+      ],
+      "term_kind": "game_term",
+      "enforcement": "reference",
+      "term_reason": "提供水下呼吸的 numenera 器物（69720、69722、69730）；numenera 统一作“努曼内拉”。"
+    },
+    "after": {
+      "category_path": "物品",
+      "recommended_translation": "水下呼吸扭蒙拉",
+      "source": "water-breathing numenera",
+      "evidence_rows": [
+        69720,
+        69722,
+        69730,
+        69734
+      ],
+      "term_kind": "game_term",
+      "enforcement": "reference",
+      "term_reason": "提供水下呼吸的 numenera 器物（69720、69722、69730）；numenera 统一作“扭蒙拉”。"
+    },
+    "authority": "User previously fixed Numenera as 扭蒙拉; spelling normalization, not a new semantic review."
+  },
+  {
+    "source": "numenera artifacts",
+    "before": {
+      "category_path": "物品",
+      "recommended_translation": "努曼内拉神器",
+      "source": "numenera artifacts",
+      "evidence_rows": [
+        68071
+      ],
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "第九世界中可交互的numenera远古遗物/装置；68071为使用numenera artifacts的玩法提示。"
+    },
+    "after": {
+      "category_path": "物品",
+      "recommended_translation": "扭蒙拉神器",
+      "source": "numenera artifacts",
+      "evidence_rows": [
+        68071
+      ],
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "第九世界中可交互的numenera远古遗物/装置；68071为使用numenera artifacts的玩法提示。"
+    },
+    "authority": "User previously fixed Numenera as 扭蒙拉; spelling normalization, not a new semantic review."
+  },
+  {
+    "source": "test",
+    "before": {
+      "source": "test",
+      "evidence_rows": [
+        1150,
+        21093
+      ],
+      "extraction_candidates": [
+        {
+          "table": "non_translate",
+          "row": {
+            "source": "test"
+          },
+          "extraction_count": 1,
+          "evidence_rows": [
+            1150
+          ],
+          "extraction_tasks": [
+            "extract-r2-00017-74deaa20-s6196880a"
+          ]
+        },
+        {
+          "table": "non_translate",
+          "row": {
+            "source": "Test"
+          },
+          "extraction_count": 1,
+          "evidence_rows": [
+            21093
+          ],
+          "extraction_tasks": [
+            "extract-r2-00401-f6e50bae-sedd77e04"
+          ]
+        }
+      ],
+      "provisional_selection": "most_extraction_proposals_then_first_seen"
+    },
+    "after": {
+      "source": "test",
+      "evidence_rows": [
+        1150,
+        21093
+      ],
+      "extraction_candidates": [
+        {
+          "table": "non_translate",
+          "row": {
+            "source": "test"
+          },
+          "extraction_count": 1,
+          "evidence_rows": [
+            1150
+          ],
+          "extraction_tasks": [
+            "extract-r2-00017-74deaa20-s6196880a"
+          ]
+        },
+        {
+          "table": "non_translate",
+          "row": {
+            "source": "Test"
+          },
+          "extraction_count": 1,
+          "evidence_rows": [
+            21093
+          ],
+          "extraction_tasks": [
+            "extract-r2-00401-f6e50bae-sedd77e04"
+          ]
+        }
+      ],
+      "provisional_selection": "most_extraction_proposals_then_first_seen",
+      "applicability": {
+        "mode": "whole_record",
+        "case_sensitive": false,
+        "reason": "Only a standalone test label is protected; embedded ordinary prose requires contextual translation."
+      }
+    },
+    "authority": "Source/context and user feedback: prose test is translatable."
+  },
+  {
+    "source": "(Truth)",
+    "before": {
+      "source": "(Truth)",
+      "evidence_rows": [
+        27229
+      ],
+      "extraction_candidates": [
+        {
+          "table": "non_translate",
+          "row": {
+            "source": "(Truth)"
+          },
+          "extraction_count": 1,
+          "evidence_rows": [
+            27229
+          ],
+          "extraction_tasks": [
+            "extract-r2-00528-6a10a04b-saf8e3502"
+          ]
+        }
+      ],
+      "provisional_selection": "most_extraction_proposals_then_first_seen"
+    },
+    "after": null,
+    "authority": "Visible source dialogue tag confirmed in screenshot, not an engine placeholder."
+  }
+]

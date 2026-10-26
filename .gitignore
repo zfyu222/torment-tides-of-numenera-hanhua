@@ -42,3 +42,6 @@ Desktop.ini
 .vscode/
 .idea/
 /TranslateFiles/api_cooldown_live_validation_20261025/
+
+# 本次截图反馈的API请求、数据库副本与运行状态
+/TranslateFiles/feedback_20261026/

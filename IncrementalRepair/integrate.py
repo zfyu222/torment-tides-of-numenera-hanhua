@@ -140,14 +140,20 @@ def prepare(r):
         glossary_path = Path('glossary') / ('incremental_revision_' + str(revision)) / 'glossary_reviewed.json'
         (root / glossary_path).parent.mkdir(parents=True)
         shutil.copy2(r.work / 'new_glossary.json', root / glossary_path)
-        for name in ('term_decisions.json', 'term_source_supplements.json'):
+        for name in ('term_decisions.json', 'term_source_supplements.json', 'term_changes.json'):
             if (r.work / name).exists():
                 shutil.copy2(r.work / name, root / glossary_path.parent / name)
+        original_terms = repair.w.read_json(r.work / 'old_glossary.json')
+        revised_terms = repair.w.read_json(r.work / 'new_glossary.json')
+        reviewed_terms_manifest = r.work / 'glossary_review_jobs.json'
         proof = {'source_sha256': b['source_sha256'], 'baseline_glossary_sha256': b['glossary_sha256'],
                  'reviewed_glossary_sha256': manifest['new_glossary_sha256'],
                  'term_decisions_sha256': repair.sha(r.work / 'term_decisions.json'),
-                 'retained_non_translate_provenance': 'Unchanged previously frozen protection; not newly reviewed.',
-                 'repair_directory': str(r.work), 'term_review_jobs': 93}
+                 'retained_non_translate_provenance': ('Unchanged previously frozen protection; not newly reviewed.'
+                     if original_terms['non_translate'] == revised_terms['non_translate'] else
+                     'Only explicit source-bound corrections in term_changes.json; all other previous protection retained. No new semantic-review votes invented.'),
+                 'repair_directory': str(r.work),
+                 'term_review_jobs': len(repair.w.read_json(reviewed_terms_manifest)) if reviewed_terms_manifest.exists() else 0}
         repair.w.write_json(root / glossary_path.parent / 'incremental_provenance.json', proof)
         flow.put(db, 'revision', revision)
         flow.put(db, 'source_path', str(stage_project / b['source_file']))
@@ -290,6 +296,8 @@ def apply(r):
         staged_flow.require_final_approval(db, staged_flow.config(db))
         staged_flow.put(db, 'source_path', str(r.project / b['source_file']))
         last = staged_flow.meta(db, 'last_export'); last['path'] = str(r.project / b['translation_file'])
+        if last.get('mixed_language_audit'):
+            last['mixed_language_audit']['path'] = str(r.project / 'TranslateFiles/reports/mixed_language_audit.json')
         staged_flow.put(db, 'last_export', last)
     repair.w.write_json(staged_flow.root / 'reports/final_validation.json', last)
     archive = r.project / 'TranslateFiles/backups' / ('before_incremental_integration_' + uuid.uuid4().hex)

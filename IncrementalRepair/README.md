@@ -103,3 +103,7 @@ $script = 'D:/StaticHanHua/Projects/torment-tides-of-numenera/IncrementalRepair/
 - 2026-10-25 正式合入增量候选（revision 9）：70,163条正式导出通过结构/占位符/术语及质量闭环验收；25,134条范围内实际变更22,688条，45,029条范围外译文逐值保持。同步冻结新术语、逐条真实API作者与独立审校身份/六维证据、原回复哈希及4,362次历史专项调用；有效累计请求13,372→17,614（新增4,242次模型请求，其余服务故障等不占额度），合入本身0次API请求。原数据库历史逐行验证未改，旧CSV/SQLite完整备份保留。5项合入防护测试通过。正式CSV SHA256：074e4cdee16947f1fe5b4bcd3669f6ce1d91fa2027d4cd6055a0b351166c67b6；与候选逐值一致，字节哈希因正式导出使用BOM和LF记录分隔不同。游戏未回填，实机/发布待后续步骤。见IncrementalRepair/integration_summary_20261025.json。
 
 - 2026-10-25 revision9已回填并作为v1.4完整覆盖包公开发布，旧版可直接覆盖更新。仅启动/主菜单/选项实机冒烟，用户要求“没问题，直接发布”，未追加对白/任务/教程专项实测。正式release-check与ZIP/安装载荷校验通过，公开匿名下载SHA256与本地一致：f3a84751f7e4159ffe30d683d4147794bbb9df48e236eedc99334a755500d6bf。下载：https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.4。本专项当前交付完成，后续反馈另行记录。
+
+- 2026-10-26 四项截图反馈已核对v1.4 ZIP及原安装文件，确认均仍存在；本地revision10修复21条：6条Numenera复合术语旧译名、1条普通shade误套人名、2条正文test漏译、12条可见(Truth)标签漏译。Numenera复合条目按用户既定“扭蒙拉”归一；test禁翻限制为独立整条标签，移除(Truth)错误禁翻。1次按既有API优先级发出的真实审校请求，报告28,810 Token，完整六维证据与真实身份保留；8项本地回归通过，全70,163条正式导出校验通过，范围外70,142条不变。已备份并回填19个变化字符串表，2,251个安装文件哈希一致，DLL未改；逐条资源值复核通过，未做这四个场景的实机复现。公开v1.4保持不变，修正版尚未发布。详见IncrementalRepair/feedback_20261026_report.json。
+
+`feedback_20261026.py prepare|review|export|integrate-prepare|integrate-apply`服务本次反馈，状态与原始请求隔离于TranslateFiles/feedback_20261026；成功结果不重派，不传--api固定供应商，不增加预算。原始v1.4/安装资源核对、源语境及修复差异保留在反馈报告中。

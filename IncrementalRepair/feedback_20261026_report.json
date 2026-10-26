@@ -1,0 +1,462 @@
+{
+  "status": "fixed_locally_not_released",
+  "baseline_release": "v1.4",
+  "all_four_reports_confirmed_in_v1_4": true,
+  "revision": 10,
+  "changed_records": 21,
+  "preserved_records": 70142,
+  "api_requests": 1,
+  "reported_tokens": 28810,
+  "translation_sha256": "3486d8141921a4e68359572387d717bda2082ceda41297127155ac87009252dc",
+  "tests_passed": 8,
+  "installed_changed_files": 19,
+  "installed_verified_files": 2251,
+  "game_program_changed": false,
+  "in_game_scenario_validation": "not performed; resource-value verification only",
+  "new_release_published": false,
+  "changes": [
+    {
+      "id": "R0001993_4eddda72ee",
+      "ordinal": 1993,
+      "source": "(Truth) \"*I* fell from the sky. There was no star.'\"",
+      "before": "(Truth) “*我*从天上坠落。根本没有什么星。”",
+      "after": "（说实话） “*我*从天上坠落。根本没有什么星。”",
+      "resource": "en/text/conversations/a_sagus/a1201_qorro_intro.stringtable#ID=5/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0008050_6c793cbb87",
+      "ordinal": 8050,
+      "source": "(Truth) \"Very well. I awoke miles above the world, falling to my death.\"",
+      "before": "(Truth) “好吧。我在距世界数英里之上的高空醒来，正朝死亡坠落。”",
+      "after": "（说实话） “好吧。我在距世界数英里之上的高空醒来，正朝死亡坠落。”",
+      "resource": "en/text/conversations/a_sagus/a2201_tcg_cultist_01.stringtable#ID=52/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0008064_6dd2315da9",
+      "ordinal": 8064,
+      "source": "(Truth)\" Actually, I was joking. I really awoke miles above the world, falling to my death.\"",
+      "before": "(Truth) “其实，我刚才是在开玩笑。我真的在距世界数英里之上的高空醒来，正朝死亡坠落。”",
+      "after": "（说实话） “其实，我刚才是在开玩笑。我真的在距世界数英里之上的高空醒来，正朝死亡坠落。”",
+      "resource": "en/text/conversations/a_sagus/a2201_tcg_cultist_01.stringtable#ID=66/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0009238_908f6a7d52",
+      "ordinal": 9238,
+      "source": "His smile is dead, an imitation of cheer. \"You know my purpose. You ask for truth. You would *know* it.\"\r\n\r\n\"It is a clarification. An education. Strength and will, combined. An epiphany, a revelation of power and vision. A guarantee of life, wisdom.\" His eyes are lambent, full of a strange vitriol. \"Tell me you wish to play, and we will take your measure. We will find your suitability. The stakes are low. It is a test, nothing more.\"",
+      "before": "他的笑容已经死去，只是一种装出来的欢快。“你知道我的目的。你寻求真相。你会*知道*它的。”\r\n\r\n“这是一次澄清。一场教导。力量与意志的结合。一次顿悟，一次力量与远见的启示。对生命与智慧的保证。”他的双眼泛着光，满是某种奇异的怨毒。“告诉我你想玩，我们就会衡量你。我们会判断你是否合适。赌注很低。这只是一次 test，仅此而已。”",
+      "after": "他的笑容已经死去，只是一种装出来的欢快。“你知道我的目的。你寻求真相。你会*知道*它的。”\r\n\r\n“这是一次澄清。一场教导。力量与意志的结合。一次顿悟，一次力量与远见的启示。对生命与智慧的保证。”他的双眼泛着光，满是某种奇异的怨毒。“告诉我你想玩，我们就会衡量你。我们会判断你是否合适。赌注很低。这只是一次考验，仅此而已。”",
+      "resource": "en/text/conversations/a_sagus/a2211_malaise.stringtable#ID=93/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0011195_d20c10015f",
+      "ordinal": 11195,
+      "source": "(Truth) \"I don't have them.\"",
+      "before": "(Truth) “我没有那些卵。”",
+      "after": "（说实话） “我没有那些卵。”",
+      "resource": "en/text/conversations/a_sagus/a2301_peliai.stringtable#ID=206/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0013616_cd275181e7",
+      "ordinal": 13616,
+      "source": "(Truth) \"Tranquility told me Perseia was indeed here, but she took a ship to the Valley of Dead Heroes.\"",
+      "before": "(Truth)“特兰奎利蒂告诉我，珀尔塞娅确实来过这里，但她乘船去了亡者英雄谷。”",
+      "after": "（说实话）“特兰奎利蒂告诉我，珀尔塞娅确实来过这里，但她乘船去了亡者英雄谷。”",
+      "resource": "en/text/conversations/a_sagus/a2501_omahdon.stringtable#ID=12/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0014360_5776a16ce1",
+      "ordinal": 14360,
+      "source": "[Tell her you don't particularly trust Omahdon yourself. (Truth)]",
+      "before": "[告诉她你自己也不太信任奥马顿。(Truth)]",
+      "after": "[告诉她你自己也不太信任奥马顿。（说实话）]",
+      "resource": "en/text/conversations/a_sagus/a2501_tranquility.stringtable#ID=89/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0015401_2a6a026dfd",
+      "ordinal": 15401,
+      "source": "(Truth) \"I'll make the cost up to you. But I need to ask some questions.\"",
+      "before": "(Truth) “我会补偿你为此付出的代价。但我需要问几个问题。”",
+      "after": "（说实话） “我会补偿你为此付出的代价。但我需要问几个问题。”",
+      "resource": "en/text/conversations/a_sagus/a2601_matkina_assassin.stringtable#ID=42/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0027229_3051482898",
+      "ordinal": 27229,
+      "source": "(Truth) \"Then tell me where Skoura is so that I can protect her from the Memovira.",
+      "before": "(Truth) “那就告诉我斯库拉在哪儿，我好保护她，不让梅莫维拉伤害她。",
+      "after": "（说实话） “那就告诉我斯库拉在哪儿，我好保护她，不让梅莫维拉伤害她。",
+      "resource": "en/text/conversations/c_bloom/c4211_artaglio_maw_for_video.stringtable#ID=16/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0029521_f82fa35d94",
+      "ordinal": 29521,
+      "source": "(Truth) \"I do not have it.\"",
+      "before": "(Truth) “我没有它。”",
+      "after": "（说实话） “我没有它。”",
+      "resource": "en/text/conversations/c_bloom/c4301_gar_koto.stringtable#ID=100/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0030960_5b03b5c511",
+      "ordinal": 30960,
+      "source": "[The lascar nods as if expecting this answer, and moves to the console to perform his part of the \"test\".]",
+      "before": "[这名拉斯卡人点了点头，仿佛早料到这个回答，然后走向控制台，去完成他那部分“test”。]",
+      "after": "[这名拉斯卡人点了点头，仿佛早料到这个回答，然后走向控制台，去完成他那部分“考验”。]",
+      "resource": "en/text/conversations/c_bloom/c4311_pit_lascar.stringtable#ID=23/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0032111_11de57406a",
+      "ordinal": 32111,
+      "source": "(Truth) \"Yes, I will.\"",
+      "before": "(Truth) “是的，我会的。”",
+      "after": "（说实话） “是的，我会的。”",
+      "resource": "en/text/conversations/c_bloom/c4411_siowan.stringtable#ID=33/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0041199_34d435d0a3",
+      "ordinal": 41199,
+      "source": "(Truth) \"No.\"",
+      "before": "(Truth) “不。”",
+      "after": "（说实话） “不。”",
+      "resource": "en/text/conversations/d_oasis/d5101_zenia.stringtable#ID=44/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0041291_c16ccca2fb",
+      "ordinal": 41291,
+      "source": "(Truth) \"Yes.\"",
+      "before": "(Truth) “是的。”",
+      "after": "（说实话） “是的。”",
+      "resource": "en/text/conversations/d_oasis/d5101_zenia.stringtable#ID=194/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0046919_c3ffa2e827",
+      "ordinal": 46919,
+      "source": "There is another way: kill the would-be child-slayers and disable the shield-generating numenera.",
+      "before": "还有另一种办法：杀死这些企图杀害孩子的人，并让生成护盾的努曼内拉装置失效。",
+      "after": "还有另一种办法：杀死这些企图杀害孩子的人，并让生成护盾的扭蒙拉装置失效。",
+      "resource": "en/text/conversations/si_meres/mere_i0_indigotidalmere.stringtable#ID=41/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0046921_dbec0aa7bc",
+      "ordinal": 46921,
+      "source": "With an almost casual gesture, you fling the concussive crystal against the shield-generating numenera. The sound is deafening; the light blinding; the force of the successive explosions enough to knock you off your feet.\r\n\r\nWhen your senses return, you see the slaughter you have worked. Most of the Folk are dead: the Speaker and the child among them. Others are wounded. Armless, the doctor slithers across the floor to some uncertain end. Most are dying; all are helpless.\r\n\r\nThe ribbon of energy that once flowed from the machine, through the window, and to the distant howdah is gone. The hall is dark, and the darkness is rich with the smell and sound of death.\r\n\r\n{[A] SOUND: Crystal exploding.}",
+      "before": "你几乎像随手一抛，将震荡水晶掷向生成护盾的努曼内拉装置。声响震耳欲聋；强光刺得人目盲；接连爆炸的冲击力足以把你掀翻在地。\r\n\r\n等你恢复知觉，眼前正是你一手造成的屠杀。大多数族民都已死去：代言者和那个孩子也在其中。其他人受了伤。医生没了双臂，滑过地板，去向某个未卜的结局。多数人正在死去；所有人都无能为力。\r\n\r\n曾经从机器流出，穿过窗口，通往远处鲸背亭的那条能量光带已经消失。大厅陷入黑暗，黑暗中充斥着死亡的气味与声响。\r\n\r\n{[A] SOUND: Crystal exploding.}",
+      "after": "你几乎像随手一抛，将震荡水晶掷向生成护盾的扭蒙拉装置。声响震耳欲聋；强光刺得人目盲；接连爆炸的冲击力足以把你掀翻在地。\r\n\r\n等你恢复知觉，眼前正是你一手造成的屠杀。大多数族民都已死去：代言者和那个孩子也在其中。其他人受了伤。医生没了双臂，滑过地板，去向某个未卜的结局。多数人正在死去；所有人都无能为力。\r\n\r\n曾经从机器流出，穿过窗口，通往远处鲸背亭的那条能量光带已经消失。大厅陷入黑暗，黑暗中充斥着死亡的气味与声响。\r\n\r\n{[A] SOUND: Crystal exploding.}",
+      "resource": "en/text/conversations/si_meres/mere_i0_indigotidalmere.stringtable#ID=43/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0047059_d3458405e7",
+      "ordinal": 47059,
+      "source": "With an almost casual gesture, you fling the concussive crystal against the shield-generating numenera. The sound is deafening; the light blinding; the force of the successive explosions enough to knock you off your feet.\r\n\r\nWhen your senses return, you see the slaughter you have worked. Most of the Folk are dead: the Speaker and the child among them. Others are wounded. Armless, the doctor slithers across the floor to some uncertain end. Most are dying; all are helpless.\r\n\r\nThe ribbon of energy that once flowed from the machine, through the window, and to the distant howdah is gone. The hall is dark, and the darkness is rich with the smell and sound of death.",
+      "before": "你几乎漫不经心地一挥手，将震荡水晶掷向生成护盾的努曼内拉装置。声响震耳欲聋，光芒令人目盲；接连爆炸的冲击力足以把你掀倒在地。\r\n\r\n等你恢复知觉，你看见了自己造成的屠杀。大多数族民都死了：代言者和那个孩子也在其中。其他人受了伤。医生没了双臂，贴着地板蜿蜒滑向某个未知的结局。多数人正在死去；所有人都无能为力。\r\n\r\n那道曾经从机器流出、穿过窗户、通向远处鲸背亭的能量光带已经消失。大厅一片黑暗，黑暗中弥漫着死亡的气味与声响。",
+      "after": "你几乎漫不经心地一挥手，将震荡水晶掷向生成护盾的扭蒙拉装置。声响震耳欲聋，光芒令人目盲；接连爆炸的冲击力足以把你掀倒在地。\r\n\r\n等你恢复知觉，你看见了自己造成的屠杀。大多数族民都死了：代言者和那个孩子也在其中。其他人受了伤。医生没了双臂，贴着地板蜿蜒滑向某个未知的结局。多数人正在死去；所有人都无能为力。\r\n\r\n那道曾经从机器流出、穿过窗户、通向远处鲸背亭的能量光带已经消失。大厅一片黑暗，黑暗中弥漫着死亡的气味与声响。",
+      "resource": "en/text/conversations/si_meres/mere_io_indigotidalmere.stringtable#ID=43/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0054030_f26da1f5b6",
+      "ordinal": 54030,
+      "source": "Leave the shade alone. ",
+      "before": "别打扰谢德。 ",
+      "after": "别去打扰那个幽影。 ",
+      "resource": "en/text/conversations/x_labyrinth/x1511_reflection_seria.stringtable#ID=70/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0066812_ebdf187760",
+      "ordinal": 66812,
+      "source": "Locksmith: Numenera",
+      "before": "开锁：努曼内拉",
+      "after": "开锁：扭蒙拉",
+      "resource": "en/text/game/ttongui.stringtable#ID=17/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0068068_226337b38a",
+      "ordinal": 68068,
+      "source": "You acquired a Bonded item. These pieces of equipment are powerful numenera artifacts that go in the Bonded equipment slots on the Inventory screen. When equipped, they fuse directly to your skeleton, nervous system, or organs, providing significant positive effects, but their invasive nature can also produce negative effects.",
+      "before": "你获得了一件绑定物品。这类装备是强大的努曼内拉神器，可放入物品栏界面中的绑定装备槽。装备后，它们会直接融合到你的骨骼、神经系统或器官上，提供显著的正面效果，但其侵入性也可能产生负面效果。",
+      "after": "你获得了一件绑定物品。这类装备是强大的扭蒙拉神器，可放入物品栏界面中的绑定装备槽。装备后，它们会直接融合到你的骨骼、神经系统或器官上，提供显著的正面效果，但其侵入性也可能产生负面效果。",
+      "resource": "en/text/game/ttongui.stringtable#ID=1411/DefaultText",
+      "installed_matches": true
+    },
+    {
+      "id": "R0068071_225bdea987",
+      "ordinal": 68071,
+      "source": "Not all encounters must be solved with muscle alone. Try using the numenera artifacts nearby or talking directly to Qorro.\\n\\nHow you choose to solve the Crisis is up to you, but there will be consequences to your actions.",
+      "before": "并非所有遭遇都必须单靠武力解决。试试使用附近的努曼内拉神器，或直接与科罗交谈。\\n\\n如何解决这场危机由你决定，但你的行动会带来后果。",
+      "after": "并非所有遭遇都必须单靠武力解决。试试使用附近的扭蒙拉神器，或直接与科罗交谈。\\n\\n如何解决这场危机由你决定，但你的行动会带来后果。",
+      "resource": "en/text/game/ttongui.stringtable#ID=1414/DefaultText",
+      "installed_matches": true
+    }
+  ],
+  "v1_4_and_original_install_resource_checks": [
+    {
+      "id": "R0001993_4eddda72ee",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a1201_qorro_intro.stringtable#ID=5/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0001993_4eddda72ee",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a1201_qorro_intro.stringtable#ID=5/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0008050_6c793cbb87",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a2201_tcg_cultist_01.stringtable#ID=52/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0008050_6c793cbb87",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a2201_tcg_cultist_01.stringtable#ID=52/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0008064_6dd2315da9",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a2201_tcg_cultist_01.stringtable#ID=66/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0008064_6dd2315da9",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a2201_tcg_cultist_01.stringtable#ID=66/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0009238_908f6a7d52",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a2211_malaise.stringtable#ID=93/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0009238_908f6a7d52",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a2211_malaise.stringtable#ID=93/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0011195_d20c10015f",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a2301_peliai.stringtable#ID=206/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0011195_d20c10015f",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a2301_peliai.stringtable#ID=206/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0013616_cd275181e7",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a2501_omahdon.stringtable#ID=12/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0013616_cd275181e7",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a2501_omahdon.stringtable#ID=12/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0014360_5776a16ce1",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a2501_tranquility.stringtable#ID=89/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0014360_5776a16ce1",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a2501_tranquility.stringtable#ID=89/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0015401_2a6a026dfd",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/a_sagus/a2601_matkina_assassin.stringtable#ID=42/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0015401_2a6a026dfd",
+      "origin": "installed",
+      "resource": "en/text/conversations/a_sagus/a2601_matkina_assassin.stringtable#ID=42/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0027229_3051482898",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/c_bloom/c4211_artaglio_maw_for_video.stringtable#ID=16/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0027229_3051482898",
+      "origin": "installed",
+      "resource": "en/text/conversations/c_bloom/c4211_artaglio_maw_for_video.stringtable#ID=16/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0029521_f82fa35d94",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/c_bloom/c4301_gar_koto.stringtable#ID=100/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0029521_f82fa35d94",
+      "origin": "installed",
+      "resource": "en/text/conversations/c_bloom/c4301_gar_koto.stringtable#ID=100/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0030960_5b03b5c511",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/c_bloom/c4311_pit_lascar.stringtable#ID=23/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0030960_5b03b5c511",
+      "origin": "installed",
+      "resource": "en/text/conversations/c_bloom/c4311_pit_lascar.stringtable#ID=23/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0032111_11de57406a",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/c_bloom/c4411_siowan.stringtable#ID=33/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0032111_11de57406a",
+      "origin": "installed",
+      "resource": "en/text/conversations/c_bloom/c4411_siowan.stringtable#ID=33/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0041199_34d435d0a3",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/d_oasis/d5101_zenia.stringtable#ID=44/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0041199_34d435d0a3",
+      "origin": "installed",
+      "resource": "en/text/conversations/d_oasis/d5101_zenia.stringtable#ID=44/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0041291_c16ccca2fb",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/d_oasis/d5101_zenia.stringtable#ID=194/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0041291_c16ccca2fb",
+      "origin": "installed",
+      "resource": "en/text/conversations/d_oasis/d5101_zenia.stringtable#ID=194/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0046919_c3ffa2e827",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/si_meres/mere_i0_indigotidalmere.stringtable#ID=41/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0046919_c3ffa2e827",
+      "origin": "installed",
+      "resource": "en/text/conversations/si_meres/mere_i0_indigotidalmere.stringtable#ID=41/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0046921_dbec0aa7bc",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/si_meres/mere_i0_indigotidalmere.stringtable#ID=43/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0046921_dbec0aa7bc",
+      "origin": "installed",
+      "resource": "en/text/conversations/si_meres/mere_i0_indigotidalmere.stringtable#ID=43/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0047059_d3458405e7",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/si_meres/mere_io_indigotidalmere.stringtable#ID=43/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0047059_d3458405e7",
+      "origin": "installed",
+      "resource": "en/text/conversations/si_meres/mere_io_indigotidalmere.stringtable#ID=43/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0054030_f26da1f5b6",
+      "origin": "v1.4",
+      "resource": "en/text/conversations/x_labyrinth/x1511_reflection_seria.stringtable#ID=70/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0054030_f26da1f5b6",
+      "origin": "installed",
+      "resource": "en/text/conversations/x_labyrinth/x1511_reflection_seria.stringtable#ID=70/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0066812_ebdf187760",
+      "origin": "v1.4",
+      "resource": "en/text/game/ttongui.stringtable#ID=17/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0066812_ebdf187760",
+      "origin": "installed",
+      "resource": "en/text/game/ttongui.stringtable#ID=17/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0068068_226337b38a",
+      "origin": "v1.4",
+      "resource": "en/text/game/ttongui.stringtable#ID=1411/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0068068_226337b38a",
+      "origin": "installed",
+      "resource": "en/text/game/ttongui.stringtable#ID=1411/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0068071_225bdea987",
+      "origin": "v1.4",
+      "resource": "en/text/game/ttongui.stringtable#ID=1414/DefaultText",
+      "matches_formal": true
+    },
+    {
+      "id": "R0068071_225bdea987",
+      "origin": "installed",
+      "resource": "en/text/game/ttongui.stringtable#ID=1414/DefaultText",
+      "matches_formal": true
+    }
+  ]
+}

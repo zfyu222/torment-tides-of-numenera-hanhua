@@ -1,14 +1,14 @@
 {
   "schema": 2,
   "kind": "final",
-  "pilot_key": "a4593e53cd9dc1f05f8b3f3970331615ccd241ef305629d248bd237c98630e20",
+  "pilot_key": "12a2ada3cc6699a8ae354a8510eb650339eeb2e1855670e58c85d5bcdd0a9277",
   "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
   "glossary": {
-    "hash": "9272200bce5e1168acbe1986e785d5dcb94c4a797f1ee0d09cae9828aca6d007",
-    "path": "glossary\\incremental_revision_9\\glossary_reviewed.json",
-    "revision": 9
+    "hash": "eb1a43fe660606a40eff7adb5b1a8d5afa0108516c1ea3bfadefa6ffb05f1d61",
+    "path": "glossary\\incremental_revision_10\\glossary_reviewed.json",
+    "revision": 10
   },
-  "snapshot_hash": "3c499e2019cf109e12e0fbe05e1eb7ada662d2dbebe5e2b2dc351e2e1ffb7265",
+  "snapshot_hash": "83b29103f845b810eb4ecd3e06dce60cb0f794510525f172daea9a04df2dbd71",
   "coverage": {
     "records": 70163,
     "text_types": {
@@ -17,7 +17,7 @@
       "任务文本": 2002
     },
     "missing_context": 0,
-    "risk_records": 42653,
+    "risk_records": 42657,
     "ordinary_sample": 0,
     "sol_records": 4
   },
@@ -82,6 +82,6 @@
   "sol_scope_policy": "disputes_only_v1",
   "carried_findings": {},
   "selection_explanation": "Only explicit unresolved reviewer issues need Sol adjudication. Risk flags, corrections, ordinary samples, duplicate-source groups and speaker groups do not trigger Sol. Known Sol repair findings are carried to standard repair without re-reading; exhausted or regressing repairs use the existing targeted Sol escalation route.",
-  "report_hash": "82667571ce7ea6e1e08e96c6f827d99618cdf30df53fca1786d6aae9c103a73e",
+  "report_hash": "37ca2108f62ba2a521685ed16686f2ee6f6b2a1ca64b409a2433bd9b00da14d7",
   "round_scope": []
 }
