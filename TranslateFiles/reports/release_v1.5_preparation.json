@@ -1,5 +1,5 @@
 {
-  "status": "package_verified_pending_publication",
+  "status": "published_and_download_verified",
   "archive": "torment-tides-of-numenera_子非鱼汉化1.5.zip",
   "size": 9664840,
   "sha256": "8d7f66d1f59c24c27bdc0db4e093810dd98b309f27ecdb386c8d98d58c424993",
@@ -47,6 +47,13 @@
   "real_game_modified": false,
   "game_started": false,
   "acceptance": "User: 直接通过了，发布; no new agent scene testing",
-  "published": false,
-  "mirror_upload": "not performed; user-provided link included"
+  "published": true,
+  "mirror_upload": "not performed; user-provided link included",
+  "release_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.5",
+  "asset_name": "torment-tides-of-numenera_.1.5.zip",
+  "asset_label": "torment-tides-of-numenera_子非鱼汉化1.5.zip",
+  "asset_download_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/download/v1.5/torment-tides-of-numenera_.1.5.zip",
+  "downloaded_sha256": "8d7f66d1f59c24c27bdc0db4e093810dd98b309f27ecdb386c8d98d58c424993",
+  "latest_stable": true,
+  "repository_public": true
 }

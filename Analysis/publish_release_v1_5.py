@@ -20,13 +20,19 @@ def main():
     head = subprocess.check_output(['git','rev-parse','HEAD'], cwd=P, text=True).strip()
     assert subprocess.check_output(['git','rev-parse','origin/main'],cwd=P,text=True).strip() == head
     title = '《Torment: Tides of Numenera》子非鱼AI汉化补丁 v1.5'
-    # A fresh release/tag is expected. No clobber or edits to old release assets.
-    created = gh('release','create','v1.5', str(archive)+'#'+archive.name,
-        '--repo',REPO,'--target',head,'--title',title,'--notes-file',str(P/'Dispatch/v1.5_发布说明.md'),'--draft')
-    data = json.loads(gh('api','repos/'+REPO+'/releases/tags/v1.5'))
+    # Drafts need not have a live tag yet; find by tag_name in the authenticated
+    # list rather than the published-tag endpoint. Resume only this exact draft.
+    drafts = [r for r in json.loads(gh('api','repos/'+REPO+'/releases')) if r['tag_name'] == 'v1.5']
+    if not drafts:
+        gh('release','create','v1.5', str(archive)+'#'+archive.name,
+            '--repo',REPO,'--target',head,'--title',title,'--notes-file',str(P/'Dispatch/v1.5_发布说明.md'),'--draft')
+        drafts = [r for r in json.loads(gh('api','repos/'+REPO+'/releases')) if r['tag_name'] == 'v1.5']
+    assert len(drafts) == 1
+    data = drafts[0]
     assert data['draft'] and len(data['assets']) == 1 and data['assets'][0]['size'] == report['size']
+    assert data['target_commitish'] == head
     gh('release','edit','v1.5','--repo',REPO,'--draft=false','--latest')
-    print(created.strip())
+    print('https://github.com/'+REPO+'/releases/tag/v1.5')
 
 
 if __name__ == '__main__':

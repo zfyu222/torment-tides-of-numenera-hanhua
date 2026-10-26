@@ -1,5 +1,5 @@
 {
-  "status": "fixed_locally_not_released",
+  "status": "released_v1.5",
   "baseline_release": "v1.4",
   "all_four_reports_confirmed_in_v1_4": true,
   "revision": 10,
@@ -13,7 +13,7 @@
   "installed_verified_files": 2251,
   "game_program_changed": false,
   "in_game_scenario_validation": "not performed; resource-value verification only",
-  "new_release_published": false,
+  "new_release_published": true,
   "changes": [
     {
       "id": "R0001993_4eddda72ee",
@@ -458,5 +458,7 @@
       "resource": "en/text/game/ttongui.stringtable#ID=1414/DefaultText",
       "matches_formal": true
     }
-  ]
+  ],
+  "release_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.5",
+  "release_acceptance": "2026-10-27 User: 直接通过了，发布; no new agent scene test"
 }
