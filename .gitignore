@@ -45,3 +45,13 @@ Desktop.ini
 
 # 本次截图反馈的API请求、数据库副本与运行状态
 /TranslateFiles/feedback_20261026/
+
+# 图片汉化：原始贴图、模型缓存、运行队列与编译产物不入库
+/ImageText/export*/
+/ImageText/input_*/
+/ImageText/work_*/
+/ImageText/calibration_*/
+/ImageText/*.log
+/ImageText/provenance_*.json
+/ImageText/tools/**/bin/
+/ImageText/tools/**/obj/

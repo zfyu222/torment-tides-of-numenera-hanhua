@@ -1,0 +1,72 @@
+{
+  "script": "latin",
+  "ordinary_score": 0.95,
+  "negative_samples": 20,
+  "weak_samples": 10,
+  "ordinary_samples": 10,
+  "qwen_batch": 100,
+  "seed": 42,
+  "families": {},
+  "images": {
+    "resources.assets__4744__Torment_Logo_Loading_Screen.png": {
+      "known_text": true,
+      "risks": [
+        "art",
+        "source_name_text_cue"
+      ]
+    },
+    "resources.assets__6591__frontend-menu-torment.png": {
+      "known_text": true,
+      "risks": [
+        "art"
+      ]
+    },
+    "resources.assets__4855__IconFacebook.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    },
+    "sharedassets10.assets__122__T_SlumpBookshelf.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    },
+    "sharedassets3.assets__35__SpriteAtlasTexture-JournalWindow-4096x2048-fmt5.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    },
+    "sharedassets3.assets__51__Frame-Titlebar_B.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    },
+    "sharedassets3.assets__61__Effort-Title-BG.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    },
+    "sharedassets31.assets__164__T_Bookseller_D.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    },
+    "sharedassets31.assets__180__T_Bookseller_N.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    },
+    "sharedassets33.assets__49__T_theTruthLetters_8x8.png": {
+      "risks": [
+        "source_name_text_cue"
+      ]
+    }
+  },
+  "calibration": {
+    "reviewer": "conversation_agent",
+    "images_seen": 24,
+    "additional_font_atlas_views": 8,
+    "ordinary_families_validated": 0,
+    "evidence": "ImageText/calibration_20261027/contact-1.png through contact-4.png and font-atlases.png. Two Torment title designs, inXile brand, glyph atlases and non-text surfaces. No ordinary composed UI font family established; keep unknown families on risk route."
+  }
+}

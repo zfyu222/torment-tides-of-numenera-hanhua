@@ -1,0 +1,1119 @@
+{
+  "exported_textures": 12650,
+  "inventory_input_files": 12642,
+  "excluded_font_atlases": [
+    {
+      "file": "resources.assets__2627__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 2627,
+        "texture_name": "Font Texture",
+        "width": 512,
+        "height": 512,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 782796296,
+        "stream_size": 262144,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    },
+    {
+      "file": "resources.assets__2819__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 2819,
+        "texture_name": "Font Texture",
+        "width": 256,
+        "height": 512,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 813941244,
+        "stream_size": 131072,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    },
+    {
+      "file": "resources.assets__3400__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 3400,
+        "texture_name": "Font Texture",
+        "width": 512,
+        "height": 1024,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 884860828,
+        "stream_size": 524288,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    },
+    {
+      "file": "resources.assets__3703__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 3703,
+        "texture_name": "Font Texture",
+        "width": 256,
+        "height": 512,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 915795496,
+        "stream_size": 131072,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    },
+    {
+      "file": "resources.assets__4504__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 4504,
+        "texture_name": "Font Texture",
+        "width": 1024,
+        "height": 1024,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 1023847304,
+        "stream_size": 1048576,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    },
+    {
+      "file": "resources.assets__4866__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 4866,
+        "texture_name": "Font Texture",
+        "width": 512,
+        "height": 512,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 1056164860,
+        "stream_size": 262144,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    },
+    {
+      "file": "resources.assets__6062__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 6062,
+        "texture_name": "Font Texture",
+        "width": 256,
+        "height": 256,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 1196611740,
+        "stream_size": 65536,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    },
+    {
+      "file": "resources.assets__6425__Font_Texture.png",
+      "provenance": {
+        "asset": "resources.assets",
+        "path_id": 6425,
+        "texture_name": "Font Texture",
+        "width": 1024,
+        "height": 1024,
+        "texture_format": 1,
+        "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+        "stream_path": "resources.assets.resS",
+        "stream_offset": 1232291924,
+        "stream_size": 1048576,
+        "coordinate_origin": "top_left",
+        "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+      },
+      "classification": "font_glyph_atlas",
+      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+    }
+  ],
+  "export_seconds": 600.6185825,
+  "asset_files": [
+    {
+      "asset": "globalgamemanagers.assets",
+      "sha256": "45678cbbdd567efe206acc363ad1c7059e2fc64d4da3d388d61e8dca29219607",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level0",
+      "sha256": "2f858793b4836e5cf2d7e705daa0f947ce332d19e766e7a9e7ce18ea386988e0",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level1",
+      "sha256": "4181f869b69a5af25ae080c1d879a574ca09b99f8a123dd7e90fa8a20e1c699e",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level10",
+      "sha256": "1adfd269cddc94cfdc57114d3ba82c5f8f2def0901793708c5191986315c4b5f",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level11",
+      "sha256": "ac59c0119905ecc4b163c99c56eb69b4acbd3248fe90903b2668b6d0e23a9f38",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level12",
+      "sha256": "7af1af79d8a56e4dbaeb8480e2e851eb3e56732a06f4e6ca0a124795eed7fe18",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level13",
+      "sha256": "d15a36cb1bbaf7074272de2613cd2b0538d1dac3e5f84925a3b79414a873e3cb",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level14",
+      "sha256": "856b4dbd022c13390a8967a8e99b9a20fbc35a8506f4910b5f618c9908a97e35",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level15",
+      "sha256": "bebc6abe4e58ccae70a0792e0bde51cdac9918fcbe018fb4d9fff67620e78fb3",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level16",
+      "sha256": "2d903edf14f76090d1ad9c7249aa7bcae1294e7f708eae1e8d594615e65b5522",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level17",
+      "sha256": "9e0592e2b77c17885357d1e25cc33f1ec769a5ff6afd249eedf99d72b19ef86c",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level18",
+      "sha256": "8c4e9e2cbf9b12c5dc277ea14996abf03b9a23db65ff9024a51cfa8b6ac5d536",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level19",
+      "sha256": "1396a5a117d1c6a23b827832110da3ad52efeade7530b71fbf483b192843edeb",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level2",
+      "sha256": "8418c0c76128aef49c1a9d82b7128daed12230ddae701fc432bb69e724ffa64a",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level20",
+      "sha256": "72d56935c14ec0464ccf741959cf900906ed6a574d9aa20e853928730203230c",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level21",
+      "sha256": "d5d12b820d44726e21ab92458ad3d842076b9091edb4e4c9355f5f91d04ebe92",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level22",
+      "sha256": "ce28591433be7c238192d013b28cf5d6d1fafeb85f3891d5c3ae1ea3a372f5ff",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level23",
+      "sha256": "495fb2aa08b4670d0cb6845e91273b54bb8076f4809c10a2151a2e7446c80497",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level24",
+      "sha256": "77417750725d38c35e9bf32ec014fdc84ba318b783dd6c0974378c506633fb00",
+      "textures": 3,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level25",
+      "sha256": "10211aeed6ea2d2287a40f860f70ec5a742fded746d6662f5cf52d17ffeae112",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level26",
+      "sha256": "4935f84b63682a68748335506da5bd305423887d04bc05134f61319749c6f247",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level27",
+      "sha256": "a9310d8432c4979095656fb14d3785732f336e222b1a41b85838b529e21994e3",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level28",
+      "sha256": "7b3bc05a712c7a24b6b8c61e93a57a368717cf236bfab0967ea8ae4f8b2c54a0",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level29",
+      "sha256": "70932456f3a076d8ba6e90dbb5f7dc57375d25ef3cce8bd3011ac0ff4126d574",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level3",
+      "sha256": "1b3b978fe9fd8455d8a5f9bc0068b978ccb3c3a3352b1eeb70c2d52eca15300c",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level30",
+      "sha256": "f88e6ac2aac793d2ca4258829498120ba9a649ba406be8d7b4e93178b11cb717",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level31",
+      "sha256": "ffc3a05deb26d8913bf8e49b160a304b4ea029f61eb50c69cc9438ed60c16551",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level32",
+      "sha256": "e74f25a084786abc1d3ca10f70af3cb06d2fb361b697cd291af68c0d1331b43c",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level33",
+      "sha256": "0aca21d72365cf668c86cb4496b1b79c16e29a763eea0c9a54233cd7ad48725e",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level34",
+      "sha256": "0988faa7317337bf3e0652fa657f6a5869f1d21a5e6d7cfdfd634d301361a573",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level35",
+      "sha256": "ab6a86c4ed018bc33ad16428aeb4b9e74848deb119ff8f821e57518a46d84b6b",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level36",
+      "sha256": "32464a8f70a2af5b877ea574d14ecee8a2ac4f24d436668cc396d556fa58a8fa",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level37",
+      "sha256": "dbf7d85e9cb7b37eb0a3c1b6db5e3d74de68f53771566e5c9c4cd25201686a73",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level38",
+      "sha256": "d31f8cf4860d98aa6e3c667e99d3d3ce49ea635183bd4237dcea010674423990",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level39",
+      "sha256": "c9b35e0ebcb3049cb7ffdc7e45726358e91213722bd168248684af0a86c8544a",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level4",
+      "sha256": "f71f64b2cd38d48c6a4a06c23f1d0eef3da58698dcf996d9d0f85ebe7e332588",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level40",
+      "sha256": "e50238d49c8b81ce8f689cd1b5834777891cd01f9cae0c33f8f5def58d06f22e",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level41",
+      "sha256": "03095167a885fa6e98bfbb5eeb6422aedb90b8ceb92218d91fd2dc17a775be2e",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level42",
+      "sha256": "43e58e746bcd880f591007e2b9d70d1b61bf57e0cb5d5b665e701f4984b6f69d",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level43",
+      "sha256": "205e6e3ea72ac810a78391ab3076a438667484eb4901c37b3e20cb85617ffb28",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level44",
+      "sha256": "a18990818398f152967e64193bb7ab097b797539d2c9e010acc207da4065cc52",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level45",
+      "sha256": "7128abe7ed9517f2f040428f164f9d5bf6c6acbdc7d613ffffe9909e3552a457",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level46",
+      "sha256": "1db823b8fb694261538af9eef3b9043233a933301b54c5c94597f35a804daa2d",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level47",
+      "sha256": "e618c94f35a674467481569d7d22772631d2ce694dcaf41888d99b4f2fc7f93c",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level48",
+      "sha256": "afb2287bde096600101c07a4c7d7773d4c3537bea12bceda13c79ef91d8edddb",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level49",
+      "sha256": "ec1e4e7372e9e68fd16c4bee54a80d2883876f20a40324ca004db48e72c5b403",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level5",
+      "sha256": "41b9e4dcee8805fd34a291a98835830189112a484ef66cd6f218c07119488ff1",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level50",
+      "sha256": "f7acb80f9af3468a51326f16c6e91d0be2fdb3950ebd907dfc7a4c4669d11961",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level51",
+      "sha256": "ecd0389d7214fd9d7a58e57aa330bfefe55aa198e1fb31684e625b44dca43863",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level52",
+      "sha256": "4c476ed0ddbfd59d2d8616a410874062275e8a1caf6909f9cea2b7f3aaecd8de",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level53",
+      "sha256": "1546caa5dd84e0a1274ab28e4429e315fd6fc6ebbbfaa9175a0ff26cc95fa6e6",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level54",
+      "sha256": "fe733ad88226b0592c304540567a08f1dd969658c230054d1b27ce98abdc1ec8",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level55",
+      "sha256": "09b7319cf393c00359ff3a6e09467d5c2d62ed01b04f6428635ad2ff14770f89",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level56",
+      "sha256": "9f1587cc8939440a1be1762b5f907841ee83635b0cbf5ab6dd05f6c6d9bfce0c",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level57",
+      "sha256": "34e2c64b5408ee0aa26eb22fb3dcc5626c2d6ddceea7deb4e7410e367be92c2d",
+      "textures": 3,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level58",
+      "sha256": "a8eee53ef350735294f71f157e588f486ae4d0c151811f4e969ac25eb7fd8bfa",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level59",
+      "sha256": "4c5da996e78b4ecb4931435d05f6389249755c7f69bf0dd4b1a0924c3acbccf9",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level6",
+      "sha256": "56231d3fa8ce1913f7e2cf48dc0eef20dcaf040f5a2e0a6b3f00d9da12fa0d4b",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level60",
+      "sha256": "de1bc34c8ad85a7934ae97196f4c77e28b2ea8a880d7a31775576b6fde38d4ac",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level61",
+      "sha256": "50e37281129582bb28e060f7224059304edfe08dbbf7c2c0d8dc30f6aa1b67c1",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level62",
+      "sha256": "435d90aa2b5fbfee414c26f0dc1ad3cf291acd4018c0570cf41d193db8a17cfc",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level63",
+      "sha256": "3c76bbcd812b9a3239f7ee82722fd91a137d8969d95e620375e50fc0d8047346",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level64",
+      "sha256": "042150a704e2b8cc626a6508549bb2be69056c4050f19c76d9da40499a8d46e0",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level65",
+      "sha256": "99098218ff8fdb1b0b1a79eadfee50733db4396a04c2fa11fb6a97187b6e47be",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level66",
+      "sha256": "3b2542145839041bfee9e3d9ffe7282439920c63e9dcd8b455a9f87ad86a9865",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level67",
+      "sha256": "3f991f683b23526639e3adfce7ae4f907c06d60fde05740e630762426700cd79",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level68",
+      "sha256": "d0af3747e2f48591ecceb64c14149da18d75735fd241f8b8be9a5ceec3a95ef1",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level7",
+      "sha256": "c2c432642d984b68ff113c2cd0b9994d3d9db880d52a8b61c15500d2346e8b62",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level8",
+      "sha256": "08643bcc245a4bd2b152131e3bffd78a8999f959c0a8e79f55c14fdc2527fa4b",
+      "textures": 1,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "level9",
+      "sha256": "1ba28cb345a111457f7a58da100a63465118e9a002ec1473a7be9639ec9f23ac",
+      "textures": 2,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "resources.assets",
+      "sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+      "textures": 4456,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets0.assets",
+      "sha256": "199fce139b56f2fc29e7013e9160baf41aaa733bebc9a2a1fd85654aa97dc499",
+      "textures": 7,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets1.assets",
+      "sha256": "dca53fa2f6703b908456efc4f5cc00ff295e080d99100f83d5fad1df6a252907",
+      "textures": 2,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets10.assets",
+      "sha256": "7b5ed7d60f359483e7f991f49b9adaaa9936cb662347fbec3be356ff65ef91ca",
+      "textures": 131,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets11.assets",
+      "sha256": "452b7c3fbb6ff1a047613e7c9a53dfc8ac605967f657eae7118f68257a8d5b97",
+      "textures": 262,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets12.assets",
+      "sha256": "475178e2140e78a4c0d94fc35fad12fdcbaafaa622631711d36b5f536f5dd4f0",
+      "textures": 353,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets13.assets",
+      "sha256": "6ada9c69dc40d29322d6a5d362b37eddf6ce4a0694a5bdb02bad0a2ea096942e",
+      "textures": 224,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets14.assets",
+      "sha256": "9ca25014cc1103849ddb3296004b1f3f9f43b25176588517430b724081fd9aa9",
+      "textures": 175,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets15.assets",
+      "sha256": "c29ae0ee3577384725b26d9a1eebbd14546757800f0bd92474bd8cd36fc958ed",
+      "textures": 76,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets16.assets",
+      "sha256": "1b04b00e8ee93ecd581659c7c36df8d74b867743f1fda1be14f05d6b92456fe9",
+      "textures": 52,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets17.assets",
+      "sha256": "e69545f6effa8e2c64d11e9288b5414b2732fd0b405a0c98a55fc6ae7c01e12c",
+      "textures": 149,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets18.assets",
+      "sha256": "31f2fbf9d34b826a294a14e2fe2c27e6257ad4a2b5d254000a3337f77518848c",
+      "textures": 112,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets19.assets",
+      "sha256": "50aaae72506e5fb7e75adde4b0b06b4af9e4bc8dc40620f0d192cfe7005c3a4f",
+      "textures": 86,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets2.assets",
+      "sha256": "a1a0bc62b03d581feed194d5d0af5d711fb15577d2f7b83f80eba0f70ddb118d",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets20.assets",
+      "sha256": "63047d849d69f57fa3a5a97885ff73599abd4abad88754f1ded6421cf34e8ddc",
+      "textures": 110,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets21.assets",
+      "sha256": "cc8e1b4d35620442c8a7fb9cb6b6a3ddccc0994c3f04b46154724f434d8ab93a",
+      "textures": 59,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets22.assets",
+      "sha256": "549d248e66a53d648ad3bbaa597bbeadcc6e0dea29b48c695a06d1068a04f696",
+      "textures": 102,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets23.assets",
+      "sha256": "baf99cadfc327d50885c828768540048ddc126bbe0d2d41c42b03c7e424a573f",
+      "textures": 19,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets24.assets",
+      "sha256": "4207d1bc152e50e5c226ee580818d802f69fb5789f3d5c63c5872c894f119545",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets25.assets",
+      "sha256": "19f9eef07a8ac690d91c5ccf5b3e0944db31c591815c35289658fd31862103a2",
+      "textures": 19,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets26.assets",
+      "sha256": "4ed682bb57a60f618eb78595953e0483d009c1a3eb750e75313618f5c008498d",
+      "textures": 99,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets27.assets",
+      "sha256": "f38ff05f6e70aab981330d4dcdd815f249fae9e4eaa6c8cffdc04012f7004b4d",
+      "textures": 455,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets28.assets",
+      "sha256": "b0a25af7af0a05d83ce9b1f73a41847460308e5a59816921506e3ef5f600aab7",
+      "textures": 51,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets29.assets",
+      "sha256": "9686e4f315c35cc4826f9adaf57311c567e1898e868e36f24164f4d67be9b391",
+      "textures": 51,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets3.assets",
+      "sha256": "86a65e25ca990f5545eea8b8ab669d9a2fcf91fb4a88b20b6da8b52c68f7489b",
+      "textures": 79,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets30.assets",
+      "sha256": "592e81bf89ab16bb4df889f0db40c11ff9a977f050c21f0350ada04c848bee2b",
+      "textures": 192,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets31.assets",
+      "sha256": "b680a4ee23e45530754503ed111e037040b691ec2ca71d715d7f65ae20a01d9e",
+      "textures": 202,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets32.assets",
+      "sha256": "b74b27f99e4dcdaf356d4edeebf7c6e24437f5880296d889695265dffe67f096",
+      "textures": 227,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets33.assets",
+      "sha256": "afdd70bef034382fdc379920e3251754e464e61368705e2aa7d44cb32e2f6e34",
+      "textures": 75,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets34.assets",
+      "sha256": "f9acf485bec8dcba3df1beed32e4658ed76a518d119ec8701a9db6b0793ebf87",
+      "textures": 234,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets35.assets",
+      "sha256": "e0f643d1e55bd7433dcac6bd9db23849c513175b1ca50df7a9778a51429aa312",
+      "textures": 51,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets36.assets",
+      "sha256": "ae32e436f5dfc760cdfdccf29943c97480c6484b3cd2df436139bc3739227894",
+      "textures": 51,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets37.assets",
+      "sha256": "a9122705e41d6f5f63170136dffdf08999c69c65cfc7a1827afe9480344aa8a8",
+      "textures": 32,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets38.assets",
+      "sha256": "b591b819c95c70130ef3714f39c27fbb95eb48f29ce2f2c6b2d1d986c515d4d1",
+      "textures": 190,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets39.assets",
+      "sha256": "ce1a1579eaafaf10935231eec68dc3af5e5c1fb99e61164b92e4da207af2fedb",
+      "textures": 220,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets4.assets",
+      "sha256": "7a2c1988de6a58b2ace35c0e642f23c95af605fbc51274ecbb0821d19f9771fc",
+      "textures": 50,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets40.assets",
+      "sha256": "ab8063797d3eaab244bdb02061c2c76c9409471e9c14daccda32c2a316f954fa",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets41.assets",
+      "sha256": "86d1db58429ae39e2c14065338cbb0dbc890643efc235ea9b81121bf10273ff3",
+      "textures": 117,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets42.assets",
+      "sha256": "04db0200c2a527b12cd040f11f926ad846e7b0c3df5af3cab2eeb6c4525c2b13",
+      "textures": 102,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets43.assets",
+      "sha256": "baf478c2b5f032e29b76a7430a4104c2f63ae76aab8864faa1c3a48c3b80bd25",
+      "textures": 70,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets44.assets",
+      "sha256": "0b6d041bbeb745fcff8352d8540854ed6dd7bcdb62967b5caf0be8c83bee5ba7",
+      "textures": 198,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets45.assets",
+      "sha256": "c7073da203a23083d9b5393581f62e90afdb1de6d551073cec78e53a6047b0df",
+      "textures": 71,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets46.assets",
+      "sha256": "1262380e7de58b031aa31ce8d6c1740ba3f171d38c2189b34d7e63292a847d9b",
+      "textures": 67,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets47.assets",
+      "sha256": "338ae2b6aaf5691b5abf88e88b8c5020d3b61ec53c08b211d64855dc8523f0ef",
+      "textures": 29,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets48.assets",
+      "sha256": "4d3af086d7a395dac90c17d8fa413b4bd79e42d8fdb889950c9676aa12569897",
+      "textures": 102,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets49.assets",
+      "sha256": "5550d91d14b0d5684a4c4f85bd2c0ab56c33db587806b40af8dc7817fd443634",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets5.assets",
+      "sha256": "7a9e912fa3295ea0e900007e112c2837a565579cc65352b5be0b48aa79078e0c",
+      "textures": 0,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets50.assets",
+      "sha256": "d9ac5cbc7583a24d6fe1ee4a5f80ec3f4a5ae8cc96615acbdbc97caa992b2bdc",
+      "textures": 56,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets51.assets",
+      "sha256": "17dbca6fce16320116dcb22a075b54336065efcf0c78bab3e856b2854ae640f5",
+      "textures": 53,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets52.assets",
+      "sha256": "27e3e135b55c42636fb53b1b547fa9120a34f56191b6039eba2e2e5cb52b8a9b",
+      "textures": 155,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets53.assets",
+      "sha256": "21ce09eb3ff9b749559e22b974f3a0b110d81a5ccc51ccf20656627eec8b4962",
+      "textures": 187,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets54.assets",
+      "sha256": "9bba64f30e365619dd9ee76e0485c0c8e9df2139aa64a8bda5ff4cd4bcef7cd6",
+      "textures": 183,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets55.assets",
+      "sha256": "77145fd5643f27420c7ac3a435e9f76a708ebaa498a7609c96a3b0a3839c1338",
+      "textures": 99,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets56.assets",
+      "sha256": "e9b0cad5b2dad78b769c5c5f01e9420c05d9e99ff40ca0c83c61eef6488e1001",
+      "textures": 55,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets57.assets",
+      "sha256": "00bd7cc5a672b18bd29e163e37f7b3ec68e79bb51ef1248830353646b97fcb53",
+      "textures": 55,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets58.assets",
+      "sha256": "028790e20f8248e9830e72fce00b88624b591db830dcd94d459423f3b4ce9ed8",
+      "textures": 161,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets59.assets",
+      "sha256": "052b2938e41da5796f7def6c0e85b5870e09c8e4740ae8eb32a518c45e5d320f",
+      "textures": 101,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets6.assets",
+      "sha256": "8e539506c0c7e9eb6cc59920e22bc326271218cf7d852ef2e976b4c41c148a35",
+      "textures": 68,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets60.assets",
+      "sha256": "8664ced7395cd3738e58f2982c7138aea06432b8a685ca74462a78b076b20c98",
+      "textures": 52,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets61.assets",
+      "sha256": "e2af83f9bb4bb7842bd7bfc267ec67fa569e4a529cf7ae83c6446f4b049b58e9",
+      "textures": 141,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets62.assets",
+      "sha256": "8c30e995c9c006031dba8a713b281ecfd6f318e50b9a872c71697e749e1a4db6",
+      "textures": 100,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets63.assets",
+      "sha256": "abf99542a823601bec0d94acbeb9822242afd7a61c8ad524d66237336744b378",
+      "textures": 51,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets64.assets",
+      "sha256": "eb86c8a89505738b20d91b06d84c178c80b4174ea1290fc1b2bb38057cf07c3a",
+      "textures": 172,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets65.assets",
+      "sha256": "2bde2672b6544816dac3c6ed3743ec6063c4be199e83a8fb745ef113900281ba",
+      "textures": 138,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets66.assets",
+      "sha256": "2737d417af57a95e020e725abaaa255063d389db74d7eb4de41b20c72b4b03e4",
+      "textures": 133,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets67.assets",
+      "sha256": "c6a6b7c2a2198241a29f159bc364d1c23cc14b15e04a8c03c59a09843739ec53",
+      "textures": 110,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets68.assets",
+      "sha256": "238c41a157fb1fe263e5aa143be277c47963fb50ad98f68141e26d57d7e3762e",
+      "textures": 5,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets7.assets",
+      "sha256": "d35963618aa9bf8def6e13741ac747d784b056df27668798a0dc5487e70989e2",
+      "textures": 458,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets8.assets",
+      "sha256": "3593f1d31c6eb17a52187fcc19e3e092a872a19d36805c3e050379c781ad4732",
+      "textures": 287,
+      "unity": "5.4.1p3"
+    },
+    {
+      "asset": "sharedassets9.assets",
+      "sha256": "de13290a401cfa1c23ef9d74cc3071691efca6da7dbfdc530d2ebb7edb37275d",
+      "textures": 373,
+      "unity": "5.4.1p3"
+    }
+  ],
+  "export_failures": [],
+  "skipped_zero_dimensions": [
+    {
+      "asset": "resources.assets",
+      "path_id": 2613,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 2782,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 2902,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 3110,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 4102,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 4161,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 4642,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 4723,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 4739,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 5321,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 5329,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 5519,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 5713,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 5875,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 6253,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 6285,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 6394,
+      "texture_name": "Font Texture",
+      "reason": "zero_dimensions"
+    }
+  ],
+  "formal_baseline": {
+    "torment-tides-of-numenera_text.csv": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+    "torment-tides-of-numenera_text_translated.csv": "3486d8141921a4e68359572387d717bda2082ceda41297127155ac87009252dc"
+  },
+  "game_modified": false,
+  "paid_api_requests": 0,
+  "preliminary_attempt": {
+    "status": "stopped_for_decoder_fix",
+    "exported": 1203,
+    "recorded_errors": 5239,
+    "processed_files": 90,
+    "reason": "Base TextureFile decoder did not decompress Unity 5 Crunch; retained failed snapshot and reran with AssetRipper Crunch"
+  }
+}
