@@ -1,0 +1,52 @@
+{
+  "status": "package_verified_pending_publication",
+  "archive": "torment-tides-of-numenera_子非鱼汉化1.5.zip",
+  "size": 9664840,
+  "sha256": "8d7f66d1f59c24c27bdc0db4e093810dd98b309f27ecdb386c8d98d58c424993",
+  "payload_files": 2251,
+  "archive_entries": 2258,
+  "xml_parsed": 2250,
+  "manifest_checksums_and_zip_crc": "passed",
+  "package_installed_payload_hashes": "passed",
+  "installer_replay": [
+    {
+      "scope": "release_verify_v1_5_fast",
+      "action": "install",
+      "returncode": 0,
+      "elapsed_seconds": 61.953
+    },
+    {
+      "scope": "release_verify_v1_5_fast",
+      "action": "install",
+      "returncode": 0,
+      "elapsed_seconds": 29.407
+    },
+    {
+      "scope": "release_verify_v1_5_fast",
+      "action": "uninstall",
+      "returncode": 0,
+      "elapsed_seconds": 30.5
+    },
+    {
+      "scope": "release_verify_v1_5_fast_legacy",
+      "action": "install",
+      "returncode": 0,
+      "elapsed_seconds": 0.719
+    },
+    {
+      "scope": "release_verify_v1_5_fast_legacy",
+      "action": "uninstall",
+      "returncode": 0,
+      "elapsed_seconds": 0.687
+    }
+  ],
+  "full_install_repeat_uninstall_files": 2251,
+  "actual_v1_4_legacy_upgrade_sample": 5,
+  "additional_installer_regressions": 8,
+  "player_extra_runtime_required": false,
+  "real_game_modified": false,
+  "game_started": false,
+  "acceptance": "User: 直接通过了，发布; no new agent scene testing",
+  "published": false,
+  "mirror_upload": "not performed; user-provided link included"
+}
