@@ -7,18 +7,18 @@ using System.Security.Cryptography;
 using System.Text.Json;
 
 // Isolated compatibility test only. Does not install or write game assets.
-if (args.Length != 6) throw new ArgumentException("<source assets> <expected SHA256> <logo 4744 PNG> <logo 6591 PNG> <new ImageText/engine_* directory> <classdata.tpk>");
+if (args.Length != 7) throw new ArgumentException("<source assets> <expected SHA256> <logo 4744 PNG> <logo 6591 PNG> <atlas 2167 PNG> <new ImageText/engine_* directory> <classdata.tpk>");
 string source = Path.GetFullPath(args[0]), expected = args[1].ToLowerInvariant();
-string destination = Path.GetFullPath(args[4]);
+string destination = Path.GetFullPath(args[5]);
 if (Path.GetFileName(source) != "resources.assets" || !Path.GetFileName(destination).StartsWith("engine_", StringComparison.Ordinal)
     || Path.GetFileName(Path.GetDirectoryName(destination)) != "ImageText" || Directory.Exists(destination))
     throw new IOException("Use a fresh ImageText/engine_* test directory and a resources.assets input");
 static string Sha(string path) { using var s=File.OpenRead(path); return Convert.ToHexString(SHA256.HashData(s)).ToLowerInvariant(); }
 if (Sha(source) != expected) throw new IOException("Source assets hash mismatch");
 Directory.CreateDirectory(destination);
-var targets = new Dictionary<long,string> { [4744] = Path.GetFullPath(args[2]), [6591] = Path.GetFullPath(args[3]) };
+var targets = new Dictionary<long,string> { [4744] = Path.GetFullPath(args[2]), [6591] = Path.GetFullPath(args[3]), [2167] = Path.GetFullPath(args[4]) };
 var am = new AssetsManager();
-am.LoadClassPackage(Path.GetFullPath(args[5]));
+am.LoadClassPackage(Path.GetFullPath(args[6]));
 var inst = am.LoadAssetsFile(source, false);
 am.LoadClassDatabaseFromPackage(inst.file.Metadata.UnityVersion);
 var replacers = new List<AssetsReplacer>();
@@ -34,7 +34,7 @@ foreach (var (id, path) in targets)
     var field = template.MakeValue(inst.file.Reader, info.AbsoluteByteStart);
     int width=field["m_Width"].AsInt, height=field["m_Height"].AsInt, format=field["m_TextureFormat"].AsInt;
     int mip=field["m_MipCount"].AsInt;
-    if (format != 28 || mip != 1 || width < 1 || height < 1) throw new IOException($"Unexpected original format/mips for {id}");
+    if (format != (id == 2167 ? 5 : 28) || mip != 1 || width < 1 || height < 1) throw new IOException($"Unexpected original format/mips for {id}");
     using var image=Image.Load<Rgba32>(path);
     if (image.Width != width || image.Height != height) throw new IOException($"PNG dimensions do not match {id}");
     image.Mutate(x => x.Flip(FlipMode.Vertical));
