@@ -1,0 +1,231 @@
+{
+  "parent_manifest_hash": "2e187fa3ca9c8c3a92f08843d8c08068feeb31bffce0d932359a839dfedd11c0",
+  "scoped_manifest_hash": "d4d30e1f891ed9a6b924a8d2b55f39b51b8d64d9aaf274f35c261f5d675f97d5",
+  "excluded_images": [
+    {
+      "image_id": "320a58bcb58f6d11f320583e40a56988bd5e95c4f4e6f9f402a7526e9df9cb8a",
+      "width": 1024,
+      "height": 1024,
+      "sources": [
+        {
+          "path": "resources.assets__2185__Bangers_SDF_Atlas.png",
+          "file_sha256": "b76296b1bf5566164bd85650b741e87c160489792825c08f024cf7d4e0f5475f",
+          "image_id": "320a58bcb58f6d11f320583e40a56988bd5e95c4f4e6f9f402a7526e9df9cb8a",
+          "width": 1024,
+          "height": 1024,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 2185,
+            "texture_name": "Bangers SDF Atlas",
+            "width": 1024,
+            "height": 1024,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        }
+      ]
+    },
+    {
+      "image_id": "64a3b147cdccf973ddddf384ca552a9a6b467e299920af7fb9b1a13855cfc585",
+      "width": 512,
+      "height": 512,
+      "sources": [
+        {
+          "path": "resources.assets__2186__IMPACT_SDF_Atlas.png",
+          "file_sha256": "3568a4e50f168ea98708caed2d5db9ee22c7ed9e3760281f89dcf9e9c60058c2",
+          "image_id": "64a3b147cdccf973ddddf384ca552a9a6b467e299920af7fb9b1a13855cfc585",
+          "width": 512,
+          "height": 512,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 2186,
+            "texture_name": "IMPACT SDF Atlas",
+            "width": 512,
+            "height": 512,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        }
+      ]
+    },
+    {
+      "image_id": "7e5d971786bfeab549bcb21ea35c0381d9770ff60a4e0e9b69c1387122a13779",
+      "width": 1024,
+      "height": 1024,
+      "sources": [
+        {
+          "path": "resources.assets__6617__ARIAL_SDF_Atlas.png",
+          "file_sha256": "02d2f49773e77d69d4c06579713ec3401b2a7ece7a4b6fd87df45fae0d6b0224",
+          "image_id": "7e5d971786bfeab549bcb21ea35c0381d9770ff60a4e0e9b69c1387122a13779",
+          "width": 1024,
+          "height": 1024,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 6617,
+            "texture_name": "ARIAL SDF Atlas",
+            "width": 1024,
+            "height": 1024,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        }
+      ]
+    },
+    {
+      "image_id": "11ee76d6d081bb64a1889ead98c084563819ffff6a8804cf4da3cd1c5021c352",
+      "width": 2048,
+      "height": 2048,
+      "sources": [
+        {
+          "path": "resources.assets__6618__QuattrocentoSans_SDF_Atlas.png",
+          "file_sha256": "d50c9ae9ff9ebb53e841b0f89abf07e737e73f10a8e19a3e033852378d747657",
+          "image_id": "11ee76d6d081bb64a1889ead98c084563819ffff6a8804cf4da3cd1c5021c352",
+          "width": 2048,
+          "height": 2048,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 6618,
+            "texture_name": "QuattrocentoSans SDF Atlas",
+            "width": 2048,
+            "height": 2048,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        },
+        {
+          "path": "resources.assets__6619__QuattrocentoSans_SDF_Atlas.png",
+          "file_sha256": "d50c9ae9ff9ebb53e841b0f89abf07e737e73f10a8e19a3e033852378d747657",
+          "image_id": "11ee76d6d081bb64a1889ead98c084563819ffff6a8804cf4da3cd1c5021c352",
+          "width": 2048,
+          "height": 2048,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 6619,
+            "texture_name": "QuattrocentoSans SDF Atlas",
+            "width": 2048,
+            "height": 2048,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        }
+      ]
+    },
+    {
+      "image_id": "a46b6868969f1a1975856786b87ad1cd55785e47080ade973faffd0619343ba4",
+      "width": 512,
+      "height": 512,
+      "sources": [
+        {
+          "path": "resources.assets__6620__ARCADE_SDF_Atlas.png",
+          "file_sha256": "e1a4857a05fed03cdb39a054ef762c977fb3f5f0980c2590362a7ca1f738c7b1",
+          "image_id": "a46b6868969f1a1975856786b87ad1cd55785e47080ade973faffd0619343ba4",
+          "width": 512,
+          "height": 512,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 6620,
+            "texture_name": "ARCADE SDF Atlas",
+            "width": 512,
+            "height": 512,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        }
+      ]
+    },
+    {
+      "image_id": "d7f2311d6b35d400fef7b14c29e738df26e57e54d7a764b6dbed1617b410904e",
+      "width": 1024,
+      "height": 1024,
+      "sources": [
+        {
+          "path": "resources.assets__6621__Avalon_Bold_SDF_Atlas.png",
+          "file_sha256": "ef08151097fca6105810412a14b8de9e1e57c021c2000b79a997f447a88e021c",
+          "image_id": "d7f2311d6b35d400fef7b14c29e738df26e57e54d7a764b6dbed1617b410904e",
+          "width": 1024,
+          "height": 1024,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 6621,
+            "texture_name": "Avalon Bold SDF Atlas",
+            "width": 1024,
+            "height": 1024,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        }
+      ]
+    },
+    {
+      "image_id": "0ed717cb8242c3d0140260d7d7971aea4d2ba640cba2929fa880fb411af98539",
+      "width": 1024,
+      "height": 1024,
+      "sources": [
+        {
+          "path": "resources.assets__6622__QuattrocentoSans_Atlas.png",
+          "file_sha256": "63d86507b26176ce89b6fa4f51993cd2a637cce829d9ca4f8fb601c537f2224e",
+          "image_id": "0ed717cb8242c3d0140260d7d7971aea4d2ba640cba2929fa880fb411af98539",
+          "width": 1024,
+          "height": 1024,
+          "provenance": {
+            "asset": "resources.assets",
+            "path_id": 6622,
+            "texture_name": "QuattrocentoSans Atlas",
+            "width": 1024,
+            "height": 1024,
+            "texture_format": 1,
+            "source_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+            "stream_path": "",
+            "stream_offset": 0,
+            "stream_size": 0,
+            "coordinate_origin": "top_left",
+            "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
+          }
+        }
+      ]
+    }
+  ],
+  "reason": "Exclude eight additional font glyph atlas references visually checked on ImageText/calibration_20261027/sdf-atlases.png; preserve parent inventory and partial scan",
+  "unique_images": 10544,
+  "source_files": 12634,
+  "reusable_cache_images": 567,
+  "parent_scope_preserved": true,
+  "human_approval": false,
+  "reviewer": "conversation_agent",
+  "model_label": "current conversation model; runtime label unavailable"
+}

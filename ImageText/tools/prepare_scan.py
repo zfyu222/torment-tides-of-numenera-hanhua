@@ -21,7 +21,7 @@ accepted = {}
 for name, metadata in provenance.items():
     if metadata['asset'] == 'resources.assets' and metadata['path_id'] in font_ids:
         excluded.append(dict(file=name, provenance=metadata, classification='font_glyph_atlas',
-                             reason='Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim.'))
+                             reason='Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim.'))
         continue
     os.link(source/name, target/name)
     accepted[name] = metadata

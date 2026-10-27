@@ -19,7 +19,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     },
     {
       "file": "resources.assets__2819__Font_Texture.png",
@@ -38,7 +38,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     },
     {
       "file": "resources.assets__3400__Font_Texture.png",
@@ -57,7 +57,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     },
     {
       "file": "resources.assets__3703__Font_Texture.png",
@@ -76,7 +76,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     },
     {
       "file": "resources.assets__4504__Font_Texture.png",
@@ -95,7 +95,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     },
     {
       "file": "resources.assets__4866__Font_Texture.png",
@@ -114,7 +114,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     },
     {
       "file": "resources.assets__6062__Font_Texture.png",
@@ -133,7 +133,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     },
     {
       "file": "resources.assets__6425__Font_Texture.png",
@@ -152,7 +152,7 @@
         "decoder": "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip"
       },
       "classification": "font_glyph_atlas",
-      "reason": "Conversation agent viewed all eight on calibration/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
+      "reason": "Conversation agent viewed all eight on ImageText/calibration_20261027/font-atlases.png: packed individual font glyphs, not composed UI wording. Keep font resources unchanged; not a no-text claim."
     }
   ],
   "export_seconds": 600.6185825,
