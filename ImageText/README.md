@@ -15,6 +15,8 @@
 
 `tools/TextureExport` 可附第四个参数：包含 `targets` 数组的JSON，每项指定 `asset` 和 `path_id`，以便定向重新读取资源；新报告包含实际纹理数据哈希。五张当前源图与最初PNG快照逐通道比较一致，已保存来源绑定。像素比较需分别检查四个通道，不能直接用RGBA差异图的默认 `getbbox` 来排除RGB变化；复核方法及结果见 `rgba_channel_verification_20261027.json`。
 
+`Tools/image_text/.venv-gpu/Scripts/python.exe Projects/torment-tides-of-numenera/ImageText/tools/verify_source_binding.py` 只读复核上述五项的原 `.assets` 哈希、各自 `.resS` 数据段哈希和PNG快照哈希；发现变化即停止，不修改游戏。当前五项复核通过，进行正式回填前需再运行一次；后续新发现的图片须建立自己的来源绑定，不能假设已覆盖。
+
 ## 复现资源导出
 
 在工作区根目录运行，`<新导出目录>`必须不存在；不要覆盖已有快照：
