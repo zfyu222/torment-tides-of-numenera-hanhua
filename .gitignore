@@ -56,3 +56,14 @@ Desktop.ini
 /ImageText/provenance_*.json
 /ImageText/tools/**/bin/
 /ImageText/tools/**/obj/
+
+# 图片翻译隔离工程的缓存、凭据与运行状态
+/TranslateFiles/image-text/TranslateFiles/backups/
+/TranslateFiles/image-text/TranslateFiles/cache/
+/TranslateFiles/image-text/TranslateFiles/history/
+/TranslateFiles/image-text/TranslateFiles/logs/
+/TranslateFiles/image-text/TranslateFiles/results/
+/TranslateFiles/image-text/TranslateFiles/source/
+/TranslateFiles/image-text/TranslateFiles/state/
+/TranslateFiles/image-text/TranslateFiles/tasks/
+/TranslateFiles/image-text/**/api.local.jsonc

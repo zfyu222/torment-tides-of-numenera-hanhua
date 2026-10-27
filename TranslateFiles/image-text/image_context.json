@@ -1,0 +1,157 @@
+{
+  "1": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2167__SpriteAtlasTexture-Codex-4096x4096-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "2": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2167__SpriteAtlasTexture-Codex-4096x4096-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "3": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2170__SpriteAtlasTexture-Icons-4096x4096-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "4": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2170__SpriteAtlasTexture-Icons-4096x4096-fmt5.png; resources.assets__2177__SpriteAtlasTexture-Icons-4096x2048-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "5": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2170__SpriteAtlasTexture-Icons-4096x4096-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "6": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2171__SpriteAtlasTexture-HUD-2048x2048-fmt5.png; resources.assets__2522__XboxOne_LT.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "7": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2171__SpriteAtlasTexture-HUD-2048x2048-fmt5.png; resources.assets__3470__PS4_R2.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "8": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2171__SpriteAtlasTexture-HUD-2048x2048-fmt5.png; resources.assets__4444__XboxOne_RT.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "9": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2171__SpriteAtlasTexture-HUD-2048x2048-fmt5.png; resources.assets__2936__PS4_L2.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "10": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png; resources.assets__3780__Default_Sprite_Asset.png; sharedassets0.assets__8__Legal.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "11": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "12": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "13": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png; sharedassets0.assets__8__Legal.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "14": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png; sharedassets0.assets__8__Legal.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "15": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "16": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png; sharedassets0.assets__8__Legal.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "17": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2177__SpriteAtlasTexture-Icons-4096x2048-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "18": {
+    "text_type": "image_text",
+    "resource": "resources.assets__2177__SpriteAtlasTexture-Icons-4096x2048-fmt5.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "19": {
+    "text_type": "image_text",
+    "resource": "resources.assets__3079__Grissler_Robotic_Leg_C.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "20": {
+    "text_type": "image_text",
+    "resource": "resources.assets__4427__XboxOne_Left_Stick.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "21": {
+    "text_type": "image_text",
+    "resource": "resources.assets__4744__Torment_Logo_Loading_Screen.png; resources.assets__6591__frontend-menu-torment.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "22": {
+    "text_type": "image_text",
+    "resource": "resources.assets__4744__Torment_Logo_Loading_Screen.png; resources.assets__6591__frontend-menu-torment.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "23": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__8__Legal.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "24": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "25": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "26": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "27": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "28": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "29": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "30": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  },
+  "31": {
+    "text_type": "image_text",
+    "resource": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+    "note": "图片原文已视觉确认；品牌及真实姓名、手柄按键应保留。开发占位图是否实机可见尚未确认。"
+  }
+}

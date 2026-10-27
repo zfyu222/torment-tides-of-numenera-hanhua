@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "source": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_images_text.csv",
+  "source_sha256": "02007b2ee2d00dfdf6a01a8d9169abb1a2d7369961d089822ce58fd1de318483",
+  "mapping_sha256": "723dc210d6916db9223b347fb25809973fabbd4cc2c9493b94be624cbcbcc498",
+  "workspace": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\image-text",
+  "translation": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\image-text\\torment-tides-of-numenera_images_text_translated.csv",
+  "validation": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\image-text\\TranslateFiles\\reports\\final_validation.json"
+}
