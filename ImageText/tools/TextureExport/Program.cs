@@ -11,8 +11,16 @@ using AssetRipper.Conversions.Crunch;
 using SixLabors.ImageSharp.Formats.Png;
 
 // Read-only engine adapter. Uses the exact UABEA TexturePlugin channel/vertical conventions.
-if (args.Length != 3) throw new ArgumentException("TextureExport <Data directory> <new export directory> <classdata.tpk>");
+if (args.Length is < 3 or > 4) throw new ArgumentException("TextureExport <Data directory> <new export directory> <classdata.tpk> [explicit targets JSON]");
 string input = Path.GetFullPath(args[0]), output = Path.GetFullPath(args[1]);
+HashSet<(string asset, long id)>? requested = null;
+if (args.Length == 4)
+{
+    using var selection = JsonDocument.Parse(File.ReadAllText(args[3]));
+    requested = selection.RootElement.GetProperty("targets").EnumerateArray()
+        .Select(x => (x.GetProperty("asset").GetString() ?? throw new IOException("Asset name missing"), x.GetProperty("path_id").GetInt64())).ToHashSet();
+    if (requested.Count == 0) throw new IOException("Explicit target set is empty");
+}
 if (Directory.Exists(output)) throw new IOException("Refusing to overwrite an export snapshot");
 Directory.CreateDirectory(output);
 var provenance = new Dictionary<string, object>();
@@ -21,7 +29,8 @@ var failures = new List<object>();
 var skipped = new List<object>();
 var watch = System.Diagnostics.Stopwatch.StartNew();
 string[] inputs = Directory.GetFiles(input).Where(p => p.EndsWith(".assets", StringComparison.OrdinalIgnoreCase)
-    || Regex.IsMatch(Path.GetFileName(p), @"^level\d+$")).Order().ToArray();
+    || Regex.IsMatch(Path.GetFileName(p), @"^level\d+$"))
+    .Where(p => requested == null || requested.Any(x => x.asset == Path.GetFileName(p))).Order().ToArray();
 int completed = 0;
 foreach (string path in inputs)
 {
@@ -33,7 +42,8 @@ foreach (string path in inputs)
         manager.LoadClassDatabaseFromPackage(instance.file.Metadata.UnityVersion);
         string sourceHash;
         using (var stream = File.OpenRead(path)) sourceHash = Convert.ToHexString(SHA256.HashData(stream)).ToLowerInvariant();
-        var textures = instance.file.Metadata.AssetInfos.Where(a => a.TypeId == 28).ToArray();
+        var textures = instance.file.Metadata.AssetInfos.Where(a => a.TypeId == 28
+            && (requested == null || requested.Contains((Path.GetFileName(path), a.PathId)))).ToArray();
         files.Add(new { asset = Path.GetFileName(path), sha256 = sourceHash, textures = textures.Length, unity = instance.file.Metadata.UnityVersion });
         foreach (var info in textures)
         {
@@ -63,6 +73,7 @@ foreach (string path in inputs)
                     bytes = new byte[checked((int)tex.m_StreamData.size)];
                     stream.ReadExactly(bytes);
                 }
+                string rawHash = Convert.ToHexString(SHA256.HashData(bytes)).ToLowerInvariant();
                 var format = (TextureFormat)tex.m_TextureFormat;
                 if (format is TextureFormat.DXT1Crunched or TextureFormat.DXT5Crunched)
                 {
@@ -82,7 +93,8 @@ foreach (string path in inputs)
                     texture_name = tex.m_Name, width = tex.m_Width, height = tex.m_Height,
                     texture_format = tex.m_TextureFormat, source_sha256 = sourceHash,
                     stream_path = tex.m_StreamData.path, stream_offset = tex.m_StreamData.offset,
-                    stream_size = tex.m_StreamData.size, coordinate_origin = "top_left", decoder = "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip" };
+                    stream_size = tex.m_StreamData.size, texture_data_sha256 = rawHash,
+                    coordinate_origin = "top_left", decoder = "UABEA DecodeManaged BGRA + AssetRipper Unity5 Crunch + vertical flip" };
                 if (provenance.Count % 100 == 0) Console.WriteLine($"textures={provenance.Count}; errors={failures.Count}; seconds={watch.Elapsed.TotalSeconds:F1}");
             }
             catch (Exception ex) { failures.Add(new { asset = Path.GetFileName(path), path_id = info.PathId, error = ex.ToString() }); }
@@ -94,3 +106,5 @@ foreach (string path in inputs)
     File.WriteAllText(Path.Combine(output, "provenance.json"), JsonSerializer.Serialize(provenance));
     File.WriteAllText(Path.Combine(output, "report.json"), JsonSerializer.Serialize(new { inputs = files, exported = provenance.Count, failures, skipped, elapsed_seconds = watch.Elapsed.TotalSeconds }));
 }
+if (requested != null && provenance.Count + failures.Count + skipped.Count != requested.Count)
+    throw new IOException("At least one explicitly requested texture was not found");

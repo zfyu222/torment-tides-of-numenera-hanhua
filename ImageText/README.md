@@ -13,6 +13,8 @@
 
 `tools/TextureImportTest` 已改为读取显式目标清单，核对源文件哈希、资源名称、原格式和尺寸，输出限制在本项目全新的 `ImageText/engine_*` 目录。对 `sharedassets0.assets` 的版权和致谢原图往返验证见 `engine_shared0_smoke_report_20261027.json`：两图像素一致，其余25个资源对象字节不变；重测原三张标题图与已核验副本的文件哈希一致。导入器仅供副本验证，正式中文图和用户实测尚未进行。
 
+`tools/TextureExport` 可附第四个参数：包含 `targets` 数组的JSON，每项指定 `asset` 和 `path_id`，以便定向重新读取资源；新报告包含实际纹理数据哈希。五张当前源图与最初PNG快照逐通道比较一致，已保存来源绑定。像素比较需分别检查四个通道，不能直接用RGBA差异图的默认 `getbbox` 来排除RGB变化；复核方法及结果见 `rgba_channel_verification_20261027.json`。
+
 ## 复现资源导出
 
 在工作区根目录运行，`<新导出目录>`必须不存在；不要覆盖已有快照：

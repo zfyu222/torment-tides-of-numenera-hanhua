@@ -1,0 +1,67 @@
+{
+  "scope": "5 known image candidates; snapshot binding for future engine work",
+  "targets": [
+    {
+      "asset": "resources.assets",
+      "path_id": 2167,
+      "texture_name": "SpriteAtlasTexture-Codex-4096x4096-fmt5",
+      "asset_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+      "stream_path": "resources.assets.resS",
+      "stream_offset": 0,
+      "stream_size": 67108864,
+      "texture_data_sha256": "2b57eae0f95a43acd284bfd583f08008ac02b2c40a15f04d539c29dae2d86c5c",
+      "snapshot_png_sha256": "4e8754d493af3c801151953ffb54b56f0f9bc496d0d89470274370062593588c",
+      "current_pixels_match_snapshot": true
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 4744,
+      "texture_name": "Torment_Logo_Loading_Screen",
+      "asset_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+      "stream_path": "resources.assets.resS",
+      "stream_offset": 1043452356,
+      "stream_size": 108657,
+      "texture_data_sha256": "5b86496c9914dd33b902fc34888e4cba16a8488055ffbb8bde5e10750eedad0e",
+      "snapshot_png_sha256": "b5ba659ba6ec9ffc2c122a8a7d50c239ff763214073a6352e1e0441701b4edd8",
+      "current_pixels_match_snapshot": true
+    },
+    {
+      "asset": "resources.assets",
+      "path_id": 6591,
+      "texture_name": "frontend-menu-torment",
+      "asset_sha256": "97c158208d78f8173f1c19abbd833d47f44f62438fa4a06b365e5d1e60e0941f",
+      "stream_path": "resources.assets.resS",
+      "stream_offset": 1266069088,
+      "stream_size": 108823,
+      "texture_data_sha256": "9904a743f6c86eaa0665720ee27b39badf2c23c0fe8d400ce6c65e592b92a7c7",
+      "snapshot_png_sha256": "ca434f8195c2d188ac0cc9338212e54957beb15fb867aa4005e706ba5ff90eab",
+      "current_pixels_match_snapshot": true
+    },
+    {
+      "asset": "sharedassets0.assets",
+      "path_id": 8,
+      "texture_name": "Legal",
+      "asset_sha256": "199fce139b56f2fc29e7013e9160baf41aaa733bebc9a2a1fd85654aa97dc499",
+      "stream_path": "sharedassets0.assets.resS",
+      "stream_offset": 34974404,
+      "stream_size": 1036800,
+      "texture_data_sha256": "27ce3e4415908de4d01bc0cf8085f62defce93d4498850be1082a1da77e41fb9",
+      "snapshot_png_sha256": "aec8a76ef3fb11c3029caf320afd004bf7505eb0eb44422c8b8a49a434394d30",
+      "current_pixels_match_snapshot": true
+    },
+    {
+      "asset": "sharedassets0.assets",
+      "path_id": 9,
+      "texture_name": "OpeningCredits_Backers",
+      "asset_sha256": "199fce139b56f2fc29e7013e9160baf41aaa733bebc9a2a1fd85654aa97dc499",
+      "stream_path": "sharedassets0.assets.resS",
+      "stream_offset": 36011204,
+      "stream_size": 160237,
+      "texture_data_sha256": "743c577f8c8d1eec630760e686e48ac821e27abaf12fdb25bf321d0f9bd267c7",
+      "snapshot_png_sha256": "0caaed0b0d795d906857ced9e37c0ba61a2a6c749a7bab70bc14b92ef33e2c89",
+      "current_pixels_match_snapshot": true
+    }
+  ],
+  "source_modified": false,
+  "runtime_tested": false
+}

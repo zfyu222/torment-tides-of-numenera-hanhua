@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "test": "engine_smoke_20261027",
+      "path_id": 4744,
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "engine_smoke_20261027",
+      "path_id": 6591,
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "engine_atlas_smoke_20261027",
+      "path_id": 2167,
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "engine_shared0_smoke_20261027",
+      "path_id": 8,
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "engine_shared0_smoke_20261027",
+      "path_id": 9,
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "current_source_binding",
+      "name": "resources.assets__2167__SpriteAtlasTexture-Codex-4096x4096-fmt5.png",
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "current_source_binding",
+      "name": "resources.assets__4744__Torment_Logo_Loading_Screen.png",
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "current_source_binding",
+      "name": "resources.assets__6591__frontend-menu-torment.png",
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "current_source_binding",
+      "name": "sharedassets0.assets__8__Legal.png",
+      "all_rgba_channels_identical": true
+    },
+    {
+      "test": "current_source_binding",
+      "name": "sharedassets0.assets__9__OpeningCredits_Backers.png",
+      "all_rgba_channels_identical": true
+    }
+  ],
+  "method": "Compare each R,G,B,A difference channel separately, not RGBA getbbox alpha shortcut."
+}
