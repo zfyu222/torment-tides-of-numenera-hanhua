@@ -60,6 +60,24 @@
       "risks": [
         "source_name_text_cue"
       ]
+    },
+    "resources.assets__2167__SpriteAtlasTexture-Codex-4096x4096-fmt5.png": {
+      "known_text": true,
+      "risks": [
+        "art_title_atlas"
+      ]
+    },
+    "resources.assets__2170__SpriteAtlasTexture-Icons-4096x4096-fmt5.png": {
+      "known_text": true,
+      "risks": [
+        "development_label_atlas"
+      ]
+    },
+    "resources.assets__2172__SpriteAtlasTexture-Credits-2048x2048-fmt5.png": {
+      "known_text": true,
+      "risks": [
+        "brand_credit_atlas"
+      ]
     }
   },
   "calibration": {
@@ -67,6 +85,11 @@
     "images_seen": 24,
     "additional_font_atlas_views": 8,
     "ordinary_families_validated": 0,
-    "evidence": "ImageText/calibration_20261027/contact-1.png through contact-4.png and font-atlases.png. Two Torment title designs, inXile brand, glyph atlases and non-text surfaces. No ordinary composed UI font family established; keep unknown families on risk route."
+    "evidence": "ImageText/calibration_20261027/contact-1.png through contact-4.png and font-atlases.png. Two Torment title designs, inXile brand, glyph atlases and non-text surfaces. No ordinary composed UI font family established; keep unknown families on risk route.",
+    "additional_visual_checks": [
+      "Source 2167: full title embedded among illustrations",
+      "Source 2170: icon atlas includes handwritten Not 4 Beta placeholders; actual usage not established",
+      "Source 2172: graphic technology/brand badges; their presentation requires visual judgment"
+    ]
   }
 }

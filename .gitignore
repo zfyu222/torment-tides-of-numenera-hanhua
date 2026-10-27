@@ -51,6 +51,7 @@ Desktop.ini
 /ImageText/input_*/
 /ImageText/work_*/
 /ImageText/calibration_*/
+/ImageText/engine_*/
 /ImageText/*.log
 /ImageText/provenance_*.json
 /ImageText/tools/**/bin/
