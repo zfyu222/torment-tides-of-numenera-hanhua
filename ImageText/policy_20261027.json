@@ -78,6 +78,30 @@
       "risks": [
         "brand_credit_atlas"
       ]
+    },
+    "resources.assets__2177__SpriteAtlasTexture-Icons-4096x2048-fmt5.png": {
+      "known_text": true,
+      "risks": [
+        "development_label_atlas"
+      ]
+    },
+    "sharedassets0.assets__8__Legal.png": {
+      "known_text": true,
+      "risks": [
+        "legal_notice_and_brands"
+      ]
+    },
+    "sharedassets0.assets__9__OpeningCredits_Backers.png": {
+      "known_text": true,
+      "risks": [
+        "backer_thanks_and_names"
+      ]
+    },
+    "sharedassets0.assets__5__SpriteAtlasTexture-Common-4096x2048-fmt5.png": {
+      "known_text": true,
+      "risks": [
+        "controller_labels"
+      ]
     }
   },
   "calibration": {
@@ -89,7 +113,9 @@
     "additional_visual_checks": [
       "Source 2167: full title embedded among illustrations",
       "Source 2170: icon atlas includes handwritten Not 4 Beta placeholders; actual usage not established",
-      "Source 2172: graphic technology/brand badges; their presentation requires visual judgment"
+      "Source 2172: graphic technology/brand badges; their presentation requires visual judgment",
+      "Source 2177: additional red handwritten beta-placeholder icons; actual usage not established",
+      "Legal.png contains legal paragraphs and brand logos; OpeningCredits_Backers.png contains three thank-you lines, a heading, and supporter names; atlas Common includes English controller key labels."
     ]
   }
 }

@@ -1,0 +1,53 @@
+{
+  "status": "isolated_test_only",
+  "source_sha256": "199fce139b56f2fc29e7013e9160baf41aaa733bebc9a2a1fd85654aa97dc499",
+  "output_sha256": "c5a9bba2867108519e8a2c76a0dc134959196cf811048c7b8ddcc7228e6a274c",
+  "asset_count": 27,
+  "unrelated_assets_byte_identical": 25,
+  "changes": [
+    {
+      "path_id": 8,
+      "width": 1920,
+      "height": 1080,
+      "old_format": 10,
+      "new_format": 4,
+      "mip_count": 1,
+      "image_sha256": "aec8a76ef3fb11c3029caf320afd004bf7505eb0eb44422c8b8a49a434394d30",
+      "original_stream_preserved": true,
+      "new_texture_embedded": true
+    },
+    {
+      "path_id": 9,
+      "width": 1920,
+      "height": 1080,
+      "old_format": 28,
+      "new_format": 4,
+      "mip_count": 1,
+      "image_sha256": "0caaed0b0d795d906857ced9e37c0ba61a2a6c749a7bab70bc14b92ef33e2c89",
+      "original_stream_preserved": true,
+      "new_texture_embedded": true
+    }
+  ],
+  "source_modified": false,
+  "game_installed": false,
+  "runtime_tested": false,
+  "pixel_verification": [
+    {
+      "path_id": 8,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "pixels_identical": true
+    },
+    {
+      "path_id": 9,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "pixels_identical": true
+    }
+  ],
+  "scope_note": "Original PNGs used; checks cover static readback only, not translated edits or gameplay."
+}

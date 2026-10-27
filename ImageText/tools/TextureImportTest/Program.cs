@@ -7,24 +7,30 @@ using System.Security.Cryptography;
 using System.Text.Json;
 
 // Isolated compatibility test only. Does not install or write game assets.
-if (args.Length != 7) throw new ArgumentException("<source assets> <expected SHA256> <logo 4744 PNG> <logo 6591 PNG> <atlas 2167 PNG> <new ImageText/engine_* directory> <classdata.tpk>");
+if (args.Length != 5) throw new ArgumentException("<source assets> <expected SHA256> <target definitions JSON> <new ImageText/engine_* directory> <classdata.tpk>");
 string source = Path.GetFullPath(args[0]), expected = args[1].ToLowerInvariant();
-string destination = Path.GetFullPath(args[5]);
-if (Path.GetFileName(source) != "resources.assets" || !Path.GetFileName(destination).StartsWith("engine_", StringComparison.Ordinal)
-    || Path.GetFileName(Path.GetDirectoryName(destination)) != "ImageText" || Directory.Exists(destination))
-    throw new IOException("Use a fresh ImageText/engine_* test directory and a resources.assets input");
+string destination = Path.GetFullPath(args[3]);
+string expectedParent = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../../"));
+if (!source.EndsWith(".assets", StringComparison.OrdinalIgnoreCase) || !Path.GetFileName(destination).StartsWith("engine_", StringComparison.Ordinal)
+    || !String.Equals(Path.GetDirectoryName(destination), expectedParent.TrimEnd(Path.DirectorySeparatorChar), StringComparison.OrdinalIgnoreCase)
+    || Directory.Exists(destination))
+    throw new IOException("Use a fresh engine_* test directory in this project's ImageText and an assets input");
 static string Sha(string path) { using var s=File.OpenRead(path); return Convert.ToHexString(SHA256.HashData(s)).ToLowerInvariant(); }
 if (Sha(source) != expected) throw new IOException("Source assets hash mismatch");
 Directory.CreateDirectory(destination);
-var targets = new Dictionary<long,string> { [4744] = Path.GetFullPath(args[2]), [6591] = Path.GetFullPath(args[3]), [2167] = Path.GetFullPath(args[4]) };
+using var definitions = JsonDocument.Parse(File.ReadAllText(args[2]));
+var targetItems = definitions.RootElement.GetProperty("targets").EnumerateArray().ToArray();
+if (targetItems.Length == 0 || targetItems.Length > 32) throw new IOException("Test scope must have 1..32 explicit targets");
+var targets = targetItems.ToDictionary(x => x.GetProperty("path_id").GetInt64());
 var am = new AssetsManager();
-am.LoadClassPackage(Path.GetFullPath(args[6]));
+am.LoadClassPackage(Path.GetFullPath(args[4]));
 var inst = am.LoadAssetsFile(source, false);
 am.LoadClassDatabaseFromPackage(inst.file.Metadata.UnityVersion);
 var replacers = new List<AssetsReplacer>();
 var changes = new List<object>();
-foreach (var (id, path) in targets)
+foreach (var (id, target) in targets)
 {
+    string path = Path.GetFullPath(target.GetProperty("image").GetString() ?? throw new IOException("Image path missing"));
     var info = inst.file.GetAssetInfo(id) ?? throw new IOException($"Missing PathID {id}");
     if (info.TypeId != 28) throw new IOException($"Not Texture2D: {id}");
     var template = am.GetTemplateBaseField(inst, inst.file.Reader, info.AbsoluteByteStart,
@@ -34,7 +40,10 @@ foreach (var (id, path) in targets)
     var field = template.MakeValue(inst.file.Reader, info.AbsoluteByteStart);
     int width=field["m_Width"].AsInt, height=field["m_Height"].AsInt, format=field["m_TextureFormat"].AsInt;
     int mip=field["m_MipCount"].AsInt;
-    if (format != (id == 2167 ? 5 : 28) || mip != 1 || width < 1 || height < 1) throw new IOException($"Unexpected original format/mips for {id}");
+    if (field["m_Name"].AsString != target.GetProperty("name").GetString()
+        || format != target.GetProperty("original_format").GetInt32() || mip != 1
+        || width != target.GetProperty("width").GetInt32() || height != target.GetProperty("height").GetInt32())
+        throw new IOException($"Original name/format/mips/dimensions do not match target {id}");
     using var image=Image.Load<Rgba32>(path);
     if (image.Width != width || image.Height != height) throw new IOException($"PNG dimensions do not match {id}");
     image.Mutate(x => x.Flip(FlipMode.Vertical));
@@ -55,7 +64,7 @@ foreach (var (id, path) in targets)
     changes.Add(new {path_id=id, width, height, old_format=format, new_format=4, mip_count=1,
                      image_sha256=Sha(path), original_stream_preserved=true, new_texture_embedded=true});
 }
-string output=Path.Combine(destination,"resources.assets");
+string output=Path.Combine(destination,Path.GetFileName(source));
 using (var fs=File.Create(output)) using (var writer=new AssetsFileWriter(fs)) inst.file.Write(writer,0,replacers);
 am.UnloadAllAssetsFiles();
 if (Sha(source) != expected) throw new IOException("Source changed during test");
