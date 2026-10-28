@@ -1,5 +1,5 @@
 {
-  "status": "package_verified_pending_publication",
+  "status": "published_and_download_verified",
   "archive": "torment-tides-of-numenera_子非鱼汉化1.6.zip",
   "size": 9669313,
   "sha256": "535f89ded8247580270e9a7ec961be2e2cecb1822830e8f8336109d59eecd932",
@@ -48,6 +48,18 @@
   "game_started": false,
   "release_authorization": "explicit_user_release",
   "in_game_validation": "pending",
-  "published": false,
-  "mirror_upload": "not performed; user-provided link included"
+  "published": true,
+  "mirror_upload": "not performed; user-provided link included",
+  "release_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/tag/v1.6",
+  "asset_name": "torment-tides-of-numenera_.1.6.zip",
+  "asset_label": "torment-tides-of-numenera_子非鱼汉化1.6.zip",
+  "asset_download_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/download/v1.6/torment-tides-of-numenera_.1.6.zip",
+  "downloaded_sha256": "535f89ded8247580270e9a7ec961be2e2cecb1822830e8f8336109d59eecd932",
+  "latest_stable": true,
+  "repository_public": true,
+  "anonymous_download": true,
+  "github_body_matches_package_guide": true,
+  "metadata_access": "authenticated metadata API; anonymous API rate limited",
+  "anonymous_public_release_page": true,
+  "release_authorization_gate_regressions": 6
 }
