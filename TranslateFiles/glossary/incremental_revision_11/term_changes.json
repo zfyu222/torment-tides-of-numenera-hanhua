@@ -1,0 +1,668 @@
+{
+  "changes": [
+    {
+      "table": "characters",
+      "source": "Adult Stichus",
+      "before": {
+        "source": "Adult Stichus",
+        "translation": "成年斯提库斯",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Adult Stichus",
+        "translation": "成年斯提查",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "characters",
+      "source": "Juvenile Stichus",
+      "before": {
+        "source": "Juvenile Stichus",
+        "translation": "幼年斯提库斯",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Juvenile Stichus",
+        "translation": "幼年斯提查",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "characters",
+      "source": "Outcast Stichus",
+      "before": {
+        "source": "Outcast Stichus",
+        "translation": "流亡者斯提库斯",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Outcast Stichus",
+        "translation": "流亡者斯提查",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "characters",
+      "source": "Stichus Automaton",
+      "before": {
+        "source": "Stichus Automaton",
+        "translation": "斯提库斯自动机",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Stichus Automaton",
+        "translation": "斯提查自动机",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "non_translate",
+      "source": "[Critical Success]",
+      "before": {
+        "source": "[Critical Success]",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "[Failure]",
+      "before": {
+        "source": "[Failure]",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "failure",
+      "before": {
+        "source": "failure",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "success",
+      "before": {
+        "source": "success",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|are|is|",
+      "before": {
+        "source": "|are|is|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|come|comes|",
+      "before": {
+        "source": "|come|comes|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|need|needs|",
+      "before": {
+        "source": "|need|needs|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|smash|smashes|",
+      "before": {
+        "source": "|smash|smashes|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|swing|swings|",
+      "before": {
+        "source": "|swing|swings|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|you|[Actor Name]|",
+      "before": {
+        "source": "|you|[Actor Name]|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|you|he|",
+      "before": {
+        "source": "|you|he|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|you|him|",
+      "before": {
+        "source": "|you|him|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "non_translate",
+      "source": "|you|she|",
+      "before": {
+        "source": "|you|she|",
+        "translation": null,
+        "table": "protected",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": null
+    },
+    {
+      "table": "terms",
+      "source": "Order of Outcast Sticha",
+      "before": {
+        "source": "Order of Outcast Sticha",
+        "translation": "流亡斯蒂库斯教团",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Order of Outcast Sticha",
+        "translation": "流亡者斯提查教团",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "Saved by the Sticha",
+      "before": {
+        "source": "Saved by the Sticha",
+        "translation": "被斯提查所救",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Saved by the Sticha",
+        "translation": "被斯提查所救",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "Stichus Amniotic Fluid",
+      "before": {
+        "source": "Stichus Amniotic Fluid",
+        "translation": "斯提库斯羊水",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Stichus Amniotic Fluid",
+        "translation": "斯提查羊水",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "Stichus Claw",
+      "before": {
+        "source": "Stichus Claw",
+        "translation": "斯提库斯之爪",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Stichus Claw",
+        "translation": "斯提查之爪",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "Stichus Fluid",
+      "before": {
+        "source": "Stichus Fluid",
+        "translation": "斯提库斯流体",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "Stichus Fluid",
+        "translation": "斯提查流体",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "doppelganger",
+      "before": null,
+      "after": {
+        "source": "doppelganger",
+        "translation": "二重身",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "sticha eggs",
+      "before": {
+        "source": "sticha eggs",
+        "translation": "斯提库斯卵",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "sticha eggs",
+        "translation": "斯提查卵",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "sticha lair",
+      "before": {
+        "source": "sticha lair",
+        "translation": "斯提库斯巢穴",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "sticha lair",
+        "translation": "斯提查巢穴",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "stichus",
+      "before": {
+        "source": "stichus",
+        "translation": "斯提库斯",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "stichus",
+        "translation": "斯提查",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "stichus egg",
+      "before": {
+        "source": "stichus egg",
+        "translation": "斯提库斯卵",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "stichus egg",
+        "translation": "斯提查卵",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "stichus egg cluster",
+      "before": {
+        "source": "stichus egg cluster",
+        "translation": "斯提库斯卵簇",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "stichus egg cluster",
+        "translation": "斯提查卵簇",
+        "table": "translated",
+        "enforcement": "required",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    },
+    {
+      "table": "terms",
+      "source": "stichus eggs",
+      "before": {
+        "source": "stichus eggs",
+        "translation": "斯提库斯卵",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      },
+      "after": {
+        "source": "stichus eggs",
+        "translation": "斯提查卵",
+        "table": "translated",
+        "enforcement": "reference",
+        "scope": {
+          "mode": "text",
+          "case_sensitive": false,
+          "prefix": "",
+          "suffix": ""
+        }
+      }
+    }
+  ],
+  "annotation_only": [
+    {
+      "table": "terms",
+      "source": "Sticha Incursion"
+    }
+  ]
+}

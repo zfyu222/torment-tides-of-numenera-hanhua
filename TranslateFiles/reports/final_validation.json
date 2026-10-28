@@ -11,26 +11,26 @@
     }
   },
   "glossary": {
-    "hash": "eb1a43fe660606a40eff7adb5b1a8d5afa0108516c1ea3bfadefa6ffb05f1d61",
-    "path": "glossary\\incremental_revision_10\\glossary_reviewed.json",
-    "revision": 10
+    "hash": "ff028acdd68456cfbfa5d9e97f48dd7b740ce4e4d6b95b402211ec5edc5b717e",
+    "path": "glossary\\incremental_revision_11\\glossary_reviewed.json",
+    "revision": 11
   },
   "in_game_check": "pending_repack",
   "mixed_language_audit": {
-    "candidate_records": 5393,
+    "candidate_records": 5373,
     "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\reports\\mixed_language_audit.json",
     "status": "candidates_only"
   },
   "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_text_translated.csv",
   "polish": false,
   "quality_review": {
-    "report_hash": "37ca2108f62ba2a521685ed16686f2ee6f6b2a1ca64b409a2433bd9b00da14d7",
+    "report_hash": "9d2ef6eab29a50cc6dd6545f09268a8621e646449aaeb1e3c125ec1058c153cd",
     "reviewer": "workflow:no-disputes"
   },
   "records": 70163,
-  "revision": 10,
+  "revision": 11,
   "semantic_review": "full",
   "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
   "status": "passed",
-  "translation_sha256": "3486d8141921a4e68359572387d717bda2082ceda41297127155ac87009252dc"
+  "translation_sha256": "105bed6bf58fa3196dcdc82ef0a7acb0872627b495fc8191f535efb3a8cabd5f"
 }

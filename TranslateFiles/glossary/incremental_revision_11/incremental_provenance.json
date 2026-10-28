@@ -1,0 +1,16 @@
+{
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "baseline_glossary_sha256": "eb1a43fe660606a40eff7adb5b1a8d5afa0108516c1ea3bfadefa6ffb05f1d61",
+  "reviewed_glossary_sha256": "ff028acdd68456cfbfa5d9e97f48dd7b740ce4e4d6b95b402211ec5edc5b717e",
+  "term_decisions_sha256": "f5cb109f6ab0ca1bace72d6fbd251aa122a305c95076ad477f3a36933c5de09e",
+  "retained_non_translate_provenance": "Only explicit source-bound corrections in term_changes.json; all other previous protection retained. No new semantic-review votes invented.",
+  "repair_directory": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\feedback_20261028",
+  "term_review_jobs": 1,
+  "additional_term_audits": [
+    {
+      "directory": "glossary\\incremental_revision_11\\additional_audits\\mirror_terms",
+      "decisions_sha256": "2fe29231de91bf128cf41845a6867d460f8c6eac211a5bcb21a672460a154faa",
+      "original_work": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\feedback_20261028\\mirror_terms"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "characters": [],
+  "terms": [
+    {
+      "source": "doppelganger",
+      "recommended_translation": "二重身",
+      "category_path": "镜像概念",
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "待API裁决的候选，来自玩家反馈和既有译文；另一个既有候选为“分身”。不是已确认术语。",
+      "evidence_rows": [
+        53017,
+        53018,
+        53019,
+        53020,
+        53021,
+        53023,
+        53025,
+        53027,
+        53028
+      ]
+    }
+  ],
+  "non_translate": [],
+  "stats": {
+    "character_count": 0,
+    "term_count": 1,
+    "non_translate_count": 0,
+    "total_hits": 1
+  },
+  "corpus_evidence_policy": 1,
+  "nontranslate_scope_policy": 1
+}

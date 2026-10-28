@@ -1,0 +1,26 @@
+{
+  "status": "installed_hash_verified_game_check_pending",
+  "original_sha256": "fdc889090036407c7625cb847e2ebc9827cd6bbe47ae6e50ac2461cf00056b88",
+  "patched_sha256": "ddece215218f4c82b2ce2c578e0d27b548fe21c538b51291acdc68f0a1f819d5",
+  "payload": "repack\\cjk_crop_20261028\\WIN\\TidesOfNumenera_Data\\Managed\\Assembly-CSharp.dll",
+  "verification": [
+    "PASS: 45469 existing methods checked; only CJK crop prefix added; tutorial methods unchanged; assembly references unchanged.",
+    "PASS: original screenshot-class failure reproduced offline; 9 rich-text/CJK/Unicode boundary cases passed on injected assembly helper."
+  ],
+  "source_sha256": {
+    "CjkRichTextCrop.cs": "24c04a09e66bb37cfb2aaea3e5ac9bb316488f638195e40e1c4cfbb51602acb5",
+    "PatchCjkCrop.cs": "1d383d2cc57f904840e5bfebd955e9a9f67684d745d88bc5630e60d9cbdd845b",
+    "VerifyCjkCrop.cs": "31f368bca8aa149239e91101ea9f5ff79f4edd1eaee671b222294b599d56e32b",
+    "cjk_crop_patch.py": "8cfa65c39efe00a5fd4f2fa4cc60022374a95bbc23492ce6f0084ca98bc84c11"
+  },
+  "evidence": "Existing source-bound item translation plus synthetic valid prerequisite markup reproduces the cut-tag class of failure offline; not an in-game capture.",
+  "changed_existing_methods": [
+    "InXile.Strings.StringCropper.CropString"
+  ],
+  "new_runtime_dependencies": false,
+  "tutorial_patch_preserved": true,
+  "game_started": false,
+  "in_game_check": "pending_user_test",
+  "installed": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\Torment Tides of Numenera\\WIN\\TidesOfNumenera_Data\\Managed\\Assembly-CSharp.dll",
+  "backup": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\backups\\cjk_crop_20261028\\Assembly-CSharp.dll"
+}

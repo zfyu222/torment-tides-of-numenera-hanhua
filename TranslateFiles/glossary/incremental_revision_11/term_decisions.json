@@ -1,0 +1,1317 @@
+{
+  "review_complete": true,
+  "review_summary": "Scoped screenshot terminology review; actual API evidence retained.",
+  "snapshot_sha256": "cfaa0e8d26ea00f1dbb412846b0b9f612173285663cf3d083c4d13e84a634117",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "reviewed_refs": [
+    "characters:0",
+    "characters:1",
+    "characters:2",
+    "characters:3",
+    "terms:0",
+    "terms:1",
+    "terms:2",
+    "terms:3",
+    "terms:4",
+    "terms:5",
+    "terms:6",
+    "terms:7",
+    "terms:8",
+    "terms:9",
+    "terms:10",
+    "terms:11",
+    "terms:12",
+    "terms:13",
+    "terms:14",
+    "terms:15",
+    "terms:16",
+    "non_translate:0",
+    "non_translate:1",
+    "non_translate:2",
+    "non_translate:3",
+    "non_translate:4",
+    "non_translate:5",
+    "non_translate:6",
+    "non_translate:7",
+    "non_translate:8",
+    "non_translate:9",
+    "non_translate:10",
+    "non_translate:11",
+    "non_translate:12"
+  ],
+  "entry_reviews": [
+    {
+      "ref": "characters:0",
+      "evidence_rows": [
+        62139
+      ],
+      "source_excerpt": "Juvenile Stichus",
+      "reason": "核对来源、译名、分类与一致性；统一为“斯提查”并限定完整标签匹配。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "62139原文为Juvenile Stichus，与source字段一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“幼年斯提库斯”把stichus另作“斯提库斯”；统一为“幼年斯提查”。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "作为普通生物阶段标签保留game_term/reference，并补充whole_record限定，未误作专名。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已与e5/e6统一为“斯提查”，不再另译“斯提库斯”。"
+        }
+      }
+    },
+    {
+      "ref": "characters:1",
+      "evidence_rows": [
+        62331,
+        68540
+      ],
+      "source_excerpt": "Stichus Automaton",
+      "reason": "核对具名自动机实体及译名一致性。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "62331原文为Stichus Automaton；68540任务标题同指该实体。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯自动机”改为“斯提查自动机”，与同族名统一。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "作为具名自动机实体保留proper_name/required合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已统一使用“斯提查”，不再出现“斯提库斯”。"
+        }
+      }
+    },
+    {
+      "ref": "characters:2",
+      "evidence_rows": [
+        62395
+      ],
+      "source_excerpt": "Outcast Stichus",
+      "reason": "核对普通流亡者状态标签并修正分类与译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "62395原文为Outcast Stichus。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“流亡者斯提库斯”改为“流亡者斯提查”，统一生物名。"
+        },
+        "category": {
+          "status": "corrected",
+          "evidence": "Outcast为状态描述、Stichus为物种单数，整体是普通角色标签，由proper_name/required改为game_term/reference，并加whole_record限定。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已与e5/e6的“斯提查”统一，并与e7的流亡者表述一致。"
+        }
+      }
+    },
+    {
+      "ref": "characters:3",
+      "evidence_rows": [
+        62515
+      ],
+      "source_excerpt": "Adult Stichus",
+      "reason": "核对普通成年阶段标签并修正分类与译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "62515原文为Adult Stichus。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“成年斯提库斯”改为“成年斯提查”。"
+        },
+        "category": {
+          "status": "corrected",
+          "evidence": "Adult为普通阶段词，整体是角色/生物阶段标签，由proper_name/required改为game_term/reference；保留whole_record限定避免Adult泛化。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已统一为“斯提查”，与e1/e3等阶段/状态标签一致。"
+        }
+      }
+    },
+    {
+      "ref": "terms:0",
+      "evidence_rows": [
+        8408,
+        68717
+      ],
+      "source_excerpt": "sticha family",
+      "reason": "核对种族名基准译名及来源。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "8408出现sticha family，68717出现the sticha lair，可证sticha为种族名。"
+        },
+        "translation": {
+          "status": "pass",
+          "evidence": "“斯提查”作为统一生物名保留。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "种族名归入“种族”且proper_name/required合适。"
+        },
+        "consistency": {
+          "status": "pass",
+          "evidence": "作为基准译名；e6及所有复合词按此统一。"
+        }
+      }
+    },
+    {
+      "ref": "terms:1",
+      "evidence_rows": [
+        3147,
+        6658,
+        8508
+      ],
+      "source_excerpt": "A rogue stichus has been slain",
+      "reason": "核对stichus单数个体用法并统一译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "3147的A rogue stichus、6658的ravaging stichus、8508的the stichus均指该物种单数个体。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯”改为“斯提查”，中文不区分sticha/stichus单复数。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "作为种族单数称法归入“种族”、proper_name/required合适，且与e5同词根。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已与e5统一；不再另造“斯提库斯”物种名。"
+        }
+      }
+    },
+    {
+      "ref": "terms:2",
+      "evidence_rows": [
+        8461
+      ],
+      "source_excerpt": "Order of Outcast Sticha",
+      "reason": "核对教团名来源并统一组织译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "8461原文为Order of Outcast Sticha。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“流亡斯蒂库斯教团”改为“流亡者斯提查教团”，统一sticha译名并补足流亡者。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "教团名归入“组织”、proper_name/required合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已与e3的“流亡者斯提查”及e5/e6的“斯提查”统一。"
+        }
+      }
+    },
+    {
+      "ref": "terms:3",
+      "evidence_rows": [
+        10450,
+        10451
+      ],
+      "source_excerpt": "the sticha tunnels",
+      "reason": "核对隧道地名及译名一致性。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "10450/10451均作the sticha tunnels，指特定隧道区域。"
+        },
+        "translation": {
+          "status": "pass",
+          "evidence": "“斯提查隧道”已使用统一生物名。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "作为特定隧道地名归入“地名”、proper_name/required合适。"
+        },
+        "consistency": {
+          "status": "pass",
+          "evidence": "与e5/e6的“斯提查”一致。"
+        }
+      }
+    },
+    {
+      "ref": "terms:4",
+      "evidence_rows": [
+        10578,
+        10581,
+        68738
+      ],
+      "source_excerpt": "The sticha lair.",
+      "reason": "核对巢穴地点并修正译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "10578作The sticha lair，68738作the sticha lair，指其巢穴。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯巢穴”改为“斯提查巢穴”，避免把sticha另译。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "作为任务中的巢穴区域归入“地名”，game_term/reference可接受。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已统一为“斯提查”，与e8/e10等复合词一致。"
+        }
+      }
+    },
+    {
+      "ref": "terms:5",
+      "evidence_rows": [
+        68720
+      ],
+      "source_excerpt": "I gave the sticha eggs to Peliai",
+      "reason": "核对sticha eggs来源并统一卵类译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "68720明确作the sticha eggs，指交给Peliai的卵。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯卵”改为“斯提查卵”，统一物种名。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "任务物品归入“物品”，game_term/reference合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "与e11/e12单复数形式统一为“斯提查卵”；f1的共用译名经核对正确。"
+        }
+      }
+    },
+    {
+      "ref": "terms:6",
+      "evidence_rows": [
+        11234,
+        12915
+      ],
+      "source_excerpt": "a single stichus egg",
+      "reason": "核对单枚卵物品并统一译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "11234作a single stichus egg，12915作a stichus egg。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯卵”改为“斯提查卵”。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "单枚卵物品归入“物品”，game_term/reference合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "与e10/e12统一为“斯提查卵”；英文单复数差异不另造译名。"
+        }
+      }
+    },
+    {
+      "ref": "terms:7",
+      "evidence_rows": [
+        11253
+      ],
+      "source_excerpt": "three stichus eggs",
+      "reason": "核对复数卵物品并统一译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "11253作three stichus eggs。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯卵”改为“斯提查卵”。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "复数卵物品归入“物品”，game_term/reference合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "与e10/e11统一；中文不体现复数，共用“斯提查卵”正确。"
+        }
+      }
+    },
+    {
+      "ref": "terms:8",
+      "evidence_rows": [
+        56938
+      ],
+      "source_excerpt": "Cluster of Sticha Eggs",
+      "reason": "核对卵簇物品名及共用译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "56938原文为Cluster of Sticha Eggs。"
+        },
+        "translation": {
+          "status": "pass",
+          "evidence": "“斯提查卵簇”保留，使用统一生物名。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "物品名归入“物品”，game_term/required合适。"
+        },
+        "consistency": {
+          "status": "pass",
+          "evidence": "与e18/e20的egg cluster词序/单复数变体共用“斯提查卵簇”，f2经核对为同一物品，非错误。"
+        }
+      }
+    },
+    {
+      "ref": "terms:9",
+      "evidence_rows": [
+        56953
+      ],
+      "source_excerpt": "Sticha Healing Patch",
+      "reason": "核对治疗贴片物品名及译名一致性。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "56953原文为Sticha Healing Patch。"
+        },
+        "translation": {
+          "status": "pass",
+          "evidence": "“斯提查治疗贴片”保留。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "物品名归入“物品”，game_term/required合适。"
+        },
+        "consistency": {
+          "status": "pass",
+          "evidence": "Sticha统一为“斯提查”，与基准一致。"
+        }
+      }
+    },
+    {
+      "ref": "terms:10",
+      "evidence_rows": [
+        57000
+      ],
+      "source_excerpt": "Stichus Amniotic Fluid",
+      "reason": "核对羊水物品名并统一译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "57000原文为Stichus Amniotic Fluid。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯羊水”改为“斯提查羊水”。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "物品名归入“物品”，game_term/required合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已按同一生物名统一，不再另作“斯提库斯”。"
+        }
+      }
+    },
+    {
+      "ref": "terms:11",
+      "evidence_rows": [
+        57172
+      ],
+      "source_excerpt": "Stichus Fluid",
+      "reason": "核对流体物品名并统一译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "57172原文为Stichus Fluid。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯流体”改为“斯提查流体”。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "特定流体物品归入“物品”，game_term/required合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已与e5/e6的“斯提查”统一。"
+        }
+      }
+    },
+    {
+      "ref": "terms:12",
+      "evidence_rows": [
+        62786
+      ],
+      "source_excerpt": "Sticha Incursion",
+      "reason": "核对事件名称并修正类别。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "62786原文为Sticha Incursion。"
+        },
+        "translation": {
+          "status": "pass",
+          "evidence": "“斯提查入侵”保留，使用统一生物名。"
+        },
+        "category": {
+          "status": "corrected",
+          "evidence": "Incursion指入侵事件/危机而非地点，类别由“地名”改为“其他”；proper_name/required保留。"
+        },
+        "consistency": {
+          "status": "pass",
+          "evidence": "Sticha统一为“斯提查”，与基准一致。"
+        }
+      }
+    },
+    {
+      "ref": "terms:13",
+      "evidence_rows": [
+        63236,
+        63237
+      ],
+      "source_excerpt": "sticha egg cluster",
+      "reason": "核对任务物品名及共用译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "63236/63237均含sticha egg cluster(s)。"
+        },
+        "translation": {
+          "status": "pass",
+          "evidence": "“斯提查卵簇”保留。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "任务物品名归入“物品”，game_term/required合适。"
+        },
+        "consistency": {
+          "status": "pass",
+          "evidence": "与e13/e20的卵簇名称统一；f2经核对为同一物品，非错误。"
+        }
+      }
+    },
+    {
+      "ref": "terms:14",
+      "evidence_rows": [
+        63774
+      ],
+      "source_excerpt": "Stichus Claw",
+      "reason": "核对爪物品名并统一译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "63774原文为Stichus Claw。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯之爪”改为“斯提查之爪”。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "物品名归入“物品”，game_term/required合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "已统一为“斯提查”，不再另译。"
+        }
+      }
+    },
+    {
+      "ref": "terms:15",
+      "evidence_rows": [
+        68742,
+        68743
+      ],
+      "source_excerpt": "stichus egg cluster",
+      "reason": "核对任务卵簇物品并统一译名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "68742/68743作stichus egg cluster(s)。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "原译“斯提库斯卵簇”改为“斯提查卵簇”。"
+        },
+        "category": {
+          "status": "pass",
+          "evidence": "任务物品名归入“物品”，game_term/required合适。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "与e13/e18统一为“斯提查卵簇”；f2经核对为同一物品。"
+        }
+      }
+    },
+    {
+      "ref": "terms:16",
+      "evidence_rows": [
+        68538
+      ],
+      "source_excerpt": "Saved by the Sticha",
+      "reason": "任务标题中的 Sticha 指斯提查种族；译文“被斯提查所救”准确且未另造物种名。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "68538 原文为任务标题“Saved by the Sticha”，Sticha 为其中种族名。"
+        },
+        "translation": {
+          "status": "pass",
+          "evidence": "“被斯提查所救”对应标题语义，并保留统一族名“斯提查”。"
+        },
+        "category": {
+          "status": "corrected",
+          "evidence": "原 category_path=其他 未体现核心词为种族名；已按 Sticha 的种族义改为“种族”。"
+        },
+        "consistency": {
+          "status": "pass",
+          "evidence": "68538 的 Sticha 按同一族名译作“斯提查”，未另造物种名。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:0",
+      "evidence_rows": [
+        12602,
+        50559,
+        45691
+      ],
+      "source_excerpt": "success",
+      "reason": "success 是显示/正文结果词，不是内部枚举；全局禁翻错误，应隔离。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12602 原文为小写 success，50559、45691 也显示 Success 结果文本。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "non_translate 无目标译文；success 作为结果词应进入正文翻译，不能禁翻。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "与 GUIUtils.GetTaskResultString 显示给玩家的成功结果及正文字面用法冲突，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:1",
+      "evidence_rows": [
+        12616
+      ],
+      "source_excerpt": "|you|[Actor Name]|",
+      "reason": "该片段含可译的 you 和真实变量 [Actor Name]；不能整段禁翻。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12616 原文包含“|you|[Actor Name]|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "分支中的 you 是自然语言，应翻译；仅竖线语法和 [Actor Name] 变量保留。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "TokenReplacer 的分支语法不等于整段非译，需隔离该错误禁翻。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:2",
+      "evidence_rows": [
+        12651
+      ],
+      "source_excerpt": "|you|him|",
+      "reason": "|you|him| 是玩家/同伴分支，you/him 应译，不能整段禁翻。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12651 原文包含“|you|him|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "you/him 为分支内自然语言，应翻译；仅竖线语法保留。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "将整个分支设为 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:3",
+      "evidence_rows": [
+        12651
+      ],
+      "source_excerpt": "|you|he|",
+      "reason": "|you|he| 是玩家/同伴分支，you/he 应译，不能整段禁翻。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12651 原文包含“|you|he|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "you/he 为分支内自然语言，应翻译；仅竖线语法保留。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "将整个分支设为 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:4",
+      "evidence_rows": [
+        12651
+      ],
+      "source_excerpt": "|need|needs|",
+      "reason": "|need|needs| 分支中的 need/needs 为自然语言，应翻译；不能冻结整个片段。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12651 原文包含“|need|needs|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "need/needs 为分支内自然语言，应翻译；不能冻结整个片段。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "整段 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:5",
+      "evidence_rows": [
+        12658
+      ],
+      "source_excerpt": "|swing|swings|",
+      "reason": "|swing|swings| 分支中的动词应翻译；仅竖线语法保留。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12658 原文包含“|swing|swings|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "swing/swings 为分支内动词，应翻译；仅竖线语法保留。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "整段 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:6",
+      "evidence_rows": [
+        12652
+      ],
+      "source_excerpt": "|you|she|",
+      "reason": "|you|she| 是玩家/同伴分支，you/she 为自然语言，应翻译。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12652 原文包含“|you|she|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "you/she 为分支内自然语言，应翻译；仅竖线语法保留。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "整段 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:7",
+      "evidence_rows": [
+        12658
+      ],
+      "source_excerpt": "|smash|smashes|",
+      "reason": "|smash|smashes| 分支中的动词应翻译；仅竖线语法保留。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12658 原文包含“|smash|smashes|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "smash/smashes 为分支内动词，应翻译；仅竖线语法保留。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "整段 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:8",
+      "evidence_rows": [
+        12660
+      ],
+      "source_excerpt": "|are|is|",
+      "reason": "|are|is| 分支中的系动词应翻译；不能冻结整个片段。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12660 原文包含“|are|is|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "are/is 为分支内系动词，应翻译；不能冻结整个片段。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "整段 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:9",
+      "evidence_rows": [
+        12663
+      ],
+      "source_excerpt": "|come|comes|",
+      "reason": "|come|comes| 分支中的动词应翻译；不能冻结整个片段。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "12663 原文包含“|come|comes|”，与条目 source 一致。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "come/comes 为分支内动词，应翻译；不能冻结整个片段。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "整段 non_translate 会阻止 TokenReplacer 分支内文本翻译，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:10",
+      "evidence_rows": [
+        26905
+      ],
+      "source_excerpt": "[Failure]",
+      "reason": "[Failure] 是显示给玩家的失败结果提示，应翻译，不能作为内部枚举禁翻。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "26905 原文为“[Failure]”。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "方括号内 Failure 是玩家可见结果，应译作失败类提示；方括号不是运行时禁翻标记。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "与 GUIUtils.GetTaskResultString 的显示结果不符，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:11",
+      "evidence_rows": [
+        27226
+      ],
+      "source_excerpt": "[Critical Success]",
+      "reason": "[Critical Success] 是玩家可见的大成功结果标签，应翻译。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "27226 原文以“[Critical Success]”开头，条目 source 为其连续片段。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "标签内 Critical Success 是结果文本，应译；不是内部枚举。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "不能作为 non_translate 整体冻结，需隔离。"
+        }
+      }
+    },
+    {
+      "ref": "non_translate:12",
+      "evidence_rows": [
+        50380,
+        50086,
+        49335
+      ],
+      "source_excerpt": "failure",
+      "reason": "failure 是玩家可见结果词，不是内部枚举；全局禁翻错误。",
+      "checks": {
+        "source": {
+          "status": "pass",
+          "evidence": "50380 原文为小写 failure，50086、49335 也为失败结果文本。"
+        },
+        "translation": {
+          "status": "corrected",
+          "evidence": "non_translate 无目标译文；failure 作为结果词应进入正文翻译。"
+        },
+        "category": {
+          "status": "not_applicable",
+          "evidence": "non_translate 条目无 category_path。"
+        },
+        "consistency": {
+          "status": "corrected",
+          "evidence": "与 GUIUtils.GetTaskResultString 的失败结果及正文用法冲突，需隔离。"
+        }
+      }
+    }
+  ],
+  "acknowledged_findings": [
+    "F0000",
+    "F0001",
+    "F0002",
+    "F0003"
+  ],
+  "edits": [
+    {
+      "patch": {
+        "recommended_translation": "幼年斯提查",
+        "term_reason": "原文为游戏内生物阶段标签；Stichus为sticha单数，中文统一为“斯提查”，Juvenile为普通阶段词。",
+        "applicability": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "reason": "仅匹配完整标签Juvenile Stichus，避免把Juvenile普通词全局替换。"
+        }
+      },
+      "reason": "统一stichus/sticha译名，并限定普通阶段标签匹配范围。",
+      "evidence_rows": [
+        62139
+      ],
+      "table": "characters",
+      "index": 0
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查自动机",
+        "term_reason": "任务标题Saved by the Stichus Automaton指该具体自动机实体；Stichus按同族统一为“斯提查”。"
+      },
+      "reason": "统一同族译名。",
+      "evidence_rows": [
+        62331,
+        68540
+      ],
+      "table": "characters",
+      "index": 1
+    },
+    {
+      "patch": {
+        "recommended_translation": "流亡者斯提查",
+        "term_kind": "game_term",
+        "enforcement": "reference",
+        "term_reason": "角色表中的流亡斯提查标签；Outcast为状态描述，Stichus为sticha单数，中文统一为“斯提查”，不按专名冻结。",
+        "applicability": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "reason": "仅匹配完整标签Outcast Stichus，避免把Outcast普通词全局替换。"
+        }
+      },
+      "reason": "修正普通状态角色标签的分类并统一译名。",
+      "evidence_rows": [
+        62395
+      ],
+      "table": "characters",
+      "index": 2
+    },
+    {
+      "patch": {
+        "recommended_translation": "成年斯提查",
+        "term_kind": "game_term",
+        "enforcement": "reference",
+        "term_reason": "角色表中的斯提查成年阶段标签；Adult为普通阶段词，Stichus与sticha统一为“斯提查”。",
+        "applicability": {
+          "mode": "whole_record",
+          "case_sensitive": true,
+          "reason": "仅匹配完整标签Adult Stichus，避免把Adult普通词全局替换。"
+        }
+      },
+      "reason": "修正普通阶段标签分类并统一译名。",
+      "evidence_rows": [
+        62515
+      ],
+      "table": "characters",
+      "index": 3
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查",
+        "term_reason": "sticha的单数个体称法（3147/6658/8508）；中文不区分单复数，与sticha统一为“斯提查”。"
+      },
+      "reason": "避免把单数stichus另造为“斯提库斯”。",
+      "evidence_rows": [
+        3147,
+        6658,
+        8508
+      ],
+      "table": "terms",
+      "index": 1
+    },
+    {
+      "patch": {
+        "recommended_translation": "流亡者斯提查教团",
+        "term_reason": "8461原文为Order of Outcast Sticha，作为教团名；Sticha与Stichus同族，中文统一为“斯提查”。"
+      },
+      "reason": "统一组织名中的生物译名。",
+      "evidence_rows": [
+        8461
+      ],
+      "table": "terms",
+      "index": 2
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查巢穴",
+        "term_reason": "10578/10581指任务中斯提查的巢穴；Sticha与Stichus同族，中文统一为“斯提查”。"
+      },
+      "reason": "修正sticha lair中误用的“斯提库斯”。",
+      "evidence_rows": [
+        10578,
+        10581
+      ],
+      "table": "terms",
+      "index": 4
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查卵",
+        "term_reason": "68720指交给Peliai的sticha eggs，为斯提查的卵；中文用统一生物名。"
+      },
+      "reason": "统一卵类物品中的生物译名。",
+      "evidence_rows": [
+        68720
+      ],
+      "table": "terms",
+      "index": 5
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查卵",
+        "term_reason": "11234/12915指单枚stichus egg；Stichus为sticha单数，中文统一为“斯提查卵”。"
+      },
+      "reason": "统一单枚卵物品译名。",
+      "evidence_rows": [
+        11234,
+        12915
+      ],
+      "table": "terms",
+      "index": 6
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查卵",
+        "term_reason": "11253的stichus eggs为同种卵的复数；中文不区分单复数，统一为“斯提查卵”。"
+      },
+      "reason": "统一复数卵物品译名。",
+      "evidence_rows": [
+        11253
+      ],
+      "table": "terms",
+      "index": 7
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查羊水",
+        "term_reason": "57000为物品名；Stichus为sticha单数，中文统一为“斯提查羊水”。"
+      },
+      "reason": "统一物品名中的生物译名。",
+      "evidence_rows": [
+        57000
+      ],
+      "table": "terms",
+      "index": 10
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查流体",
+        "term_reason": "57172为特定流体物品名；Stichus按同族统一为“斯提查”。"
+      },
+      "reason": "统一物品名中的生物译名。",
+      "evidence_rows": [
+        57172
+      ],
+      "table": "terms",
+      "index": 11
+    },
+    {
+      "patch": {
+        "category_path": "其他",
+        "term_reason": "GUI事件/危机名称，指斯提查的入侵；非地名。"
+      },
+      "reason": "Incursion指事件而非地点，修正类别。",
+      "evidence_rows": [
+        62786
+      ],
+      "table": "terms",
+      "index": 12
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查之爪",
+        "term_reason": "63774为具体物品名；Stichus为sticha单数，中文统一为“斯提查之爪”。"
+      },
+      "reason": "统一物品名中的生物译名。",
+      "evidence_rows": [
+        63774
+      ],
+      "table": "terms",
+      "index": 14
+    },
+    {
+      "patch": {
+        "recommended_translation": "斯提查卵簇",
+        "term_reason": "68742/68743指任务中的斯提查卵簇；Stichus与sticha统一为“斯提查”。"
+      },
+      "reason": "统一任务物品名中的生物译名。",
+      "evidence_rows": [
+        68742,
+        68743
+      ],
+      "table": "terms",
+      "index": 15
+    },
+    {
+      "patch": {
+        "category_path": "种族",
+        "term_kind": "proper_name",
+        "enforcement": "required",
+        "term_reason": "68538 任务标题中的 Sticha 指“斯提查”这一种族；按种族专名统一音译。"
+      },
+      "reason": "Sticha 是任务标题中的种族专名，原条目按“其他/game_term/reference”处理不足以冻结该族名；修正为种族专名并统一译名。",
+      "evidence_rows": [
+        68538
+      ],
+      "table": "terms",
+      "index": 16
+    }
+  ],
+  "quarantine": [
+    {
+      "reason": "success 是玩家可见的结果词，不是内部枚举；全局禁翻会阻止 GUIUtils.GetTaskResultString 成功文本及正文翻译。",
+      "evidence_rows": [
+        12602,
+        50559,
+        45691
+      ],
+      "table": "non_translate",
+      "index": 0
+    },
+    {
+      "reason": "|you|[Actor Name]| 含可译自然语言 you；TokenReplacer 只保留竖线语法与 [Actor Name] 变量，不能整段禁翻。",
+      "evidence_rows": [
+        12616
+      ],
+      "table": "non_translate",
+      "index": 1
+    },
+    {
+      "reason": "|you|him| 是玩家/同伴分支，you/him 为自然语言，应翻译；仅竖线语法保留。",
+      "evidence_rows": [
+        12651
+      ],
+      "table": "non_translate",
+      "index": 2
+    },
+    {
+      "reason": "|you|he| 是玩家/同伴分支，you/he 为自然语言，应翻译；仅竖线语法保留。",
+      "evidence_rows": [
+        12651
+      ],
+      "table": "non_translate",
+      "index": 3
+    },
+    {
+      "reason": "|need|needs| 分支中的 need/needs 为自然语言，应翻译；不能冻结整个片段。",
+      "evidence_rows": [
+        12651
+      ],
+      "table": "non_translate",
+      "index": 4
+    },
+    {
+      "reason": "|swing|swings| 分支中的动词应翻译；仅竖线语法保留。",
+      "evidence_rows": [
+        12658
+      ],
+      "table": "non_translate",
+      "index": 5
+    },
+    {
+      "reason": "|you|she| 是玩家/同伴分支，you/she 为自然语言，应翻译；不能整段禁翻。",
+      "evidence_rows": [
+        12652
+      ],
+      "table": "non_translate",
+      "index": 6
+    },
+    {
+      "reason": "|smash|smashes| 分支中的动词应翻译；仅竖线语法保留。",
+      "evidence_rows": [
+        12658
+      ],
+      "table": "non_translate",
+      "index": 7
+    },
+    {
+      "reason": "|are|is| 分支中的系动词应翻译；不能冻结整个片段。",
+      "evidence_rows": [
+        12660
+      ],
+      "table": "non_translate",
+      "index": 8
+    },
+    {
+      "reason": "|come|comes| 分支中的动词应翻译；不能冻结整个片段。",
+      "evidence_rows": [
+        12663
+      ],
+      "table": "non_translate",
+      "index": 9
+    },
+    {
+      "reason": "[Failure] 是显示给玩家的失败结果提示，应翻译；不是内部枚举。",
+      "evidence_rows": [
+        26905
+      ],
+      "table": "non_translate",
+      "index": 10
+    },
+    {
+      "reason": "[Critical Success] 是显示给玩家的大成功结果标签，应翻译；不是内部枚举。",
+      "evidence_rows": [
+        27226
+      ],
+      "table": "non_translate",
+      "index": 11
+    },
+    {
+      "reason": "failure 是玩家可见的结果词，不是内部枚举；全局禁翻会阻止 GUI 失败结果及正文翻译。",
+      "evidence_rows": [
+        50380,
+        50086,
+        49335
+      ],
+      "table": "non_translate",
+      "index": 12
+    }
+  ],
+  "additions": [],
+  "allow_no_match": [],
+  "review_instances": {
+    "characters:0": "api:5208ad7350604f6c807313519a0aba03",
+    "characters:1": "api:5208ad7350604f6c807313519a0aba03",
+    "characters:2": "api:5208ad7350604f6c807313519a0aba03",
+    "characters:3": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:0": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:1": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:2": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:3": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:4": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:5": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:6": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:7": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:8": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:9": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:10": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:11": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:12": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:13": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:14": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:15": "api:5208ad7350604f6c807313519a0aba03",
+    "terms:16": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:0": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:1": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:2": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:3": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:4": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:5": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:6": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:7": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:8": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:9": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:10": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:11": "api:9ba694b769db4fdd92526a2ca43a4c49",
+    "non_translate:12": "api:9ba694b769db4fdd92526a2ca43a4c49"
+  }
+}

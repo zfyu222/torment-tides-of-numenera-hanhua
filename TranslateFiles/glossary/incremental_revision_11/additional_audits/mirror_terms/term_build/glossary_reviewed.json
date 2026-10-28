@@ -1,0 +1,33 @@
+{
+  "characters": [],
+  "terms": [
+    {
+      "source": "doppelganger",
+      "recommended_translation": "二重身",
+      "category_path": "其他",
+      "term_kind": "game_term",
+      "enforcement": "required",
+      "term_reason": "53017/53018 中 doppelganger/doppelgangers 指镜中与玩家完全相同的平行自我：53017 为可选择的 which doppelganger to choose，53018 为 crowd of exact doppelgangers of *you*。译作“二重身”，仅用于该游戏概念，不扩展到普通 reflection、copy、duplicate 或其他怪物的替身。",
+      "evidence_rows": [
+        53017,
+        53018,
+        53019,
+        53020,
+        53021,
+        53023,
+        53025,
+        53027,
+        53028
+      ]
+    }
+  ],
+  "non_translate": [],
+  "stats": {
+    "character_count": 0,
+    "term_count": 1,
+    "non_translate_count": 0,
+    "total_hits": 1
+  },
+  "corpus_evidence_policy": 1,
+  "nontranslate_scope_policy": 1
+}

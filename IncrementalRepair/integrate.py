@@ -154,6 +154,40 @@ def prepare(r):
                      'Only explicit source-bound corrections in term_changes.json; all other previous protection retained. No new semantic-review votes invented.'),
                  'repair_directory': str(r.work),
                  'term_review_jobs': len(repair.w.read_json(reviewed_terms_manifest)) if reviewed_terms_manifest.exists() else 0}
+        extra_audits = r.work / 'additional_term_audits.json'
+        if extra_audits.exists():
+            proof['additional_term_audits'] = []
+            for relative in repair.w.read_json(extra_audits):
+                audit = (r.work / relative).resolve()
+                if not audit.is_relative_to(r.work.resolve()):
+                    raise ValueError('Additional term audit leaves repair directory')
+                decisions = repair.w.read_json(audit / 'term_decisions.json')
+                snapshot = audit / 'term_audit/glossary_original.json'
+                built = repair.w.read_json(audit / 'term_build/glossary_manifest.json')
+                if decisions['source_sha256'] != b['source_sha256'] or decisions['snapshot_sha256'] != repair.sha(snapshot):
+                    raise ValueError('Additional term evidence binding mismatch')
+                if built['decisions_sha256'] != repair.sha(audit / 'term_decisions.json'):
+                    raise ValueError('Additional term build binding mismatch')
+                evidence = []
+                for job in repair.w.read_json(audit / 'glossary_review_jobs.json'):
+                    folder = audit / job
+                    accepted = repair.w.read_json(folder / 'accepted.json')
+                    payload = repair.w.read_json(folder / 'payload.json')
+                    if accepted['input_hash'] != payload['input_hash']:
+                        raise ValueError('Additional accepted term binding mismatch')
+                    for ref, instance in accepted['entry_instances'].items():
+                        raw = folder / instance.removeprefix('api:') / 'response.raw.txt'
+                        if not instance.startswith('api:') or repair.sha(raw) != accepted['entry_response_sha256'][ref]:
+                            raise ValueError('Additional term response provenance mismatch')
+                    evidence.append({'job': job, 'accepted': accepted})
+                destination = root / glossary_path.parent / 'additional_audits' / Path(relative).name
+                for name in ('term_decisions.json', 'term_audit/glossary_original.json',
+                             'term_build/glossary_manifest.json', 'term_build/glossary_reviewed.json'):
+                    (destination / name).parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(audit / name, destination / name)
+                repair.w.write_json(destination / 'api_evidence.json', evidence)
+                proof['additional_term_audits'].append({'directory': str(destination.relative_to(root)),
+                    'decisions_sha256': repair.sha(audit / 'term_decisions.json'), 'original_work': str(audit)})
         repair.w.write_json(root / glossary_path.parent / 'incremental_provenance.json', proof)
         flow.put(db, 'revision', revision)
         flow.put(db, 'source_path', str(stage_project / b['source_file']))

@@ -1,0 +1,75 @@
+[
+  {
+    "job": "jobs\\glossary_review\\inc-glossary_review-622134dff5c5e459efeb",
+    "accepted": {
+      "result": {
+        "decisions": {
+          "review_complete": true,
+          "review_summary": "确认 e1 是镜像场景中的游戏术语：doppelganger/doppelgangers 指镜中与玩家完全相同的平行自我，可从中选择。译名统一为“二重身”，不采用“分身”；原非法类别“镜像概念”改为“其他”，并更新术语说明。未新增其他术语。",
+          "snapshot_sha256": "5de9c3582c562739de6f524bb676625f69a17fab04e4b8ec6d92a2c4b1b48c17",
+          "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+          "reviewed_refs": [
+            "terms:0"
+          ],
+          "entry_reviews": [
+            {
+              "ref": "terms:0",
+              "evidence_rows": [
+                53017,
+                53018
+              ],
+              "source_excerpt": "which doppelganger to choose",
+              "reason": "53017/53018 显示 doppelganger 指镜中与玩家完全相同的平行自我，可从中选择；译作“二重身”比“分身”更贴合诡异镜像概念。原类别“镜像概念”不在允许枚举中，改为“其他”；单复数同指一概念，应统一。",
+              "checks": {
+                "source": {
+                  "status": "pass",
+                  "evidence": "53017 的 which doppelganger to choose 与 53018 的 exact doppelgangers of *you* 均指镜中平行自我，作为游戏术语提取成立。"
+                },
+                "translation": {
+                  "status": "pass",
+                  "evidence": "“二重身”准确对应 doppelganger 的镜像替身/平行自我含义，较“分身”更能体现诡异镜像概念，且不混同普通 reflection、copy、duplicate。"
+                },
+                "category": {
+                  "status": "corrected",
+                  "evidence": "原 category_path“镜像概念”不在允许枚举中；该词非身份、物品、组织、地名、技能或种族，改归“其他”。"
+                },
+                "consistency": {
+                  "status": "pass",
+                  "evidence": "53017 单数与 53018 复数同指镜中 crowd of exact doppelgangers of *you*，应统一译作“二重身”，不因人物外貌或单复数另造译名。"
+                }
+              }
+            }
+          ],
+          "acknowledged_findings": [
+            "F0000"
+          ],
+          "edits": [
+            {
+              "patch": {
+                "category_path": "其他",
+                "term_reason": "53017/53018 中 doppelganger/doppelgangers 指镜中与玩家完全相同的平行自我：53017 为可选择的 which doppelganger to choose，53018 为 crowd of exact doppelgangers of *you*。译作“二重身”，仅用于该游戏概念，不扩展到普通 reflection、copy、duplicate 或其他怪物的替身。"
+              },
+              "reason": "修正非法 category_path，并将待裁决说明替换为确认后的实际含义与适用范围；译名“二重身”保持不变。",
+              "evidence_rows": [
+                53017,
+                53018
+              ],
+              "table": "terms",
+              "index": 0
+            }
+          ],
+          "quarantine": [],
+          "additions": [],
+          "allow_no_match": []
+        }
+      },
+      "input_hash": "885e010a03962351308ddace47ffe136de22dd49cc7382e1cae04c634557d937",
+      "entry_instances": {
+        "terms:0": "api:923b7e2ec4d648c0b4be825e3b86b112"
+      },
+      "entry_response_sha256": {
+        "terms:0": "92410314e73a089e5c5b5338f4490370682c59714fd322ea6676dc00cd7020f7"
+      }
+    }
+  }
+]
