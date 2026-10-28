@@ -1,0 +1,21 @@
+{
+  "project": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera",
+  "game_name": "torment-tides-of-numenera",
+  "version": "1.6",
+  "title": "《Torment: Tides of Numenera》子非鱼AI汉化补丁 v1.6",
+  "release_date": "2026-10-28",
+  "introduction": "为Steam Windows版制作的简体中文完整汉化补丁，包含历次修正、教程字号及物品描述显示修复。",
+  "coverage": "剧情、对白、任务、物品、系统提示与界面文本。",
+  "game_version": "Steam v1.1.0",
+  "platform": "Steam（Windows）",
+  "install": "退出游戏，解压到含 WIN 文件夹的游戏根目录，双击“安装汉化.cmd”；游戏语言选择 English（英语）。",
+  "upgrade": "旧版玩家覆盖解压新版补丁后，双击“安装汉化.cmd”，无需先卸载。",
+  "uninstall": "退出游戏，双击“卸载汉化.cmd”。",
+  "installer_config": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\Dispatch\\v1.6_installer_config.json",
+  "changes": "修复物品描述出现颜色标签代码的问题；补齐取卵等对话中的英文残留及成功、失败提示；统一镜像术语为“二重身”、生物名称为“斯提查”；改善生硬对白及相关名称，共修正445条文本。",
+  "download_url": "https://github.com/zfyu222/torment-tides-of-numenera-hanhua/releases/",
+  "mirror_url": "https://pan.baidu.com/s/1hmMAhKbJe_oyeqcV146d3A?pwd=uxyx",
+  "share_name": "Torment: Tides of Numenera 汉化补丁",
+  "feedback_name": "扭拉蒙汉化问题收集",
+  "feedback_url": "https://docs.qq.com/sheet/DTkdOd01JcEFPQWRF?tab=BB08J2"
+}

@@ -1,0 +1,110 @@
+{
+  "previous_approval": {
+    "decisions": {
+      "decisions": [],
+      "report_hash": "9d2ef6eab29a50cc6dd6545f09268a8621e646449aaeb1e3c125ec1058c153cd",
+      "reviewer": "workflow:no-disputes",
+      "summary": "Completed inspection round; explicit per-item decisions and actual reviewer archived."
+    },
+    "pilot_key": "710c060b8e5f897a1afa96dbbd48797e21512a15e7b7173576de8cb6fdf5053b",
+    "report_hash": "9d2ef6eab29a50cc6dd6545f09268a8621e646449aaeb1e3c125ec1058c153cd",
+    "reviewer": "workflow:no-disputes",
+    "snapshot_hash": "358aa1781227c9dd3d6106ba61173d693e66e0d97879d313c787388edec22210"
+  },
+  "previous_report": {
+    "schema": 2,
+    "kind": "final",
+    "pilot_key": "710c060b8e5f897a1afa96dbbd48797e21512a15e7b7173576de8cb6fdf5053b",
+    "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+    "glossary": {
+      "hash": "ff028acdd68456cfbfa5d9e97f48dd7b740ce4e4d6b95b402211ec5edc5b717e",
+      "path": "glossary\\incremental_revision_11\\glossary_reviewed.json",
+      "revision": 11
+    },
+    "snapshot_hash": "358aa1781227c9dd3d6106ba61173d693e66e0d97879d313c787388edec22210",
+    "coverage": {
+      "records": 70163,
+      "text_types": {
+        "对白或叙述（具体类型以本句为准）": 56466,
+        "系统或界面文本": 11695,
+        "任务文本": 2002
+      },
+      "missing_context": 0,
+      "risk_records": 42770,
+      "ordinary_sample": 0,
+      "sol_records": 4
+    },
+    "risk_detection": "Heuristic candidates plus reviewer findings; absence of flags is not proof of correctness.",
+    "records_to_check": [],
+    "consistency": [],
+    "glossary_checks": [],
+    "pilot_batch_summaries": {},
+    "check_signatures": {
+      "R0017271_049add9262": "c71902ea36f9c17e6611dd8ca7e6536d12ca390a2107bec7b9cd3e754eedcff3",
+      "R0032300_fd983259d2": "266213a8fd4e248942655fd4352aafa81ffe3461a1bf5741225160a3e045a04f",
+      "R0036199_dae690f193": "ef086952700027ccbbbb68d24f5b819ad08930cba4e16fa3fc2dc0820d47097f",
+      "R0047777_20285741c5": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33"
+    },
+    "reused_decisions": {
+      "R0017271_049add9262": {
+        "decision": {
+          "disposition": "contextual",
+          "id": "R0017271_049add9262",
+          "reason": "本句原文which he pours明确采用he，译文他忠实。其他句原文用it只能证明源文指代不同，缺乏译文错误证据，不宜在这次术语修订中擅自改源文性别/物种指代；同批不代表连续剧情。正文动作顺序、十件奇物、脚本150%均完整，接受现译。",
+          "reviewer": "main:user-authorized-small-review",
+          "user_authorization": "继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+        },
+        "report_hash": "23a56a45a2b6fd1d4bd6333fa1989f6a51c1ce67187cc3cdc7be1c49b4b97a32",
+        "signature": "c71902ea36f9c17e6611dd8ca7e6536d12ca390a2107bec7b9cd3e754eedcff3"
+      },
+      "R0032300_fd983259d2": {
+        "decision": {
+          "disposition": "pass",
+          "id": "R0032300_fd983259d2",
+          "reason": "实际中文首段为“里亚斯特拉德微笑着说道”，未出现“她”，后文照原句He译他。审校备注所说中文先她后他与实际译文不符，现译已通过使用人名避开源文首句she/后句He矛盾，无需改文。",
+          "reviewer": "main:user-authorized-small-review",
+          "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+        },
+        "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+        "signature": "266213a8fd4e248942655fd4352aafa81ffe3461a1bf5741225160a3e045a04f"
+      },
+      "R0036199_dae690f193": {
+        "decision": {
+          "disposition": "pass",
+          "id": "R0036199_dae690f193",
+          "reason": "本条原文只问Order of Truth中的朋友，中文为“你在真理教团里有个朋友？”，原译均没有Orth。该条Orth译名警告来自同包其他记录，不适用于本条；问题在含Orth的记录单独修复。",
+          "reviewer": "main:user-authorized-small-review",
+          "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+        },
+        "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+        "signature": "ef086952700027ccbbbb68d24f5b819ad08930cba4e16fa3fc2dc0820d47097f"
+      },
+      "R0047777_20285741c5": {
+        "decision": {
+          "disposition": "contextual",
+          "id": "R0047777_20285741c5",
+          "reason": "原文是East加换行及! point，没有可验证数字1。现译东及! 点保留原标点、换行，未擅自把感叹号改数值，属于源文疑似笔误，不构成新增译错。",
+          "reviewer": "main:user-authorized-small-review",
+          "user_authorization": "用户原话：继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
+        },
+        "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
+        "signature": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33"
+      }
+    },
+    "required_decisions": [],
+    "sol_scope_policy": "disputes_only_v1",
+    "carried_findings": {},
+    "selection_explanation": "Only explicit unresolved reviewer issues need Sol adjudication. Risk flags, corrections, ordinary samples, duplicate-source groups and speaker groups do not trigger Sol. Known Sol repair findings are carried to standard repair without re-reading; exhausted or regressing repairs use the existing targeted Sol escalation route.",
+    "report_hash": "9d2ef6eab29a50cc6dd6545f09268a8621e646449aaeb1e3c125ec1058c153cd",
+    "round_scope": []
+  },
+  "current_report_hash": "6ee74829c124ffc36f9b8b25ec7e448361d085b046acfa5f9160f3265ba68c6f",
+  "changed_fields": [
+    "coverage.sol_records -> coverage.standard_records",
+    "sol_scope_policy -> standard_scope_policy",
+    "empty legacy round_scope",
+    "selection_explanation labels"
+  ],
+  "snapshot_review_evidence_and_decisions_unchanged": true,
+  "api_requests": 0
+}

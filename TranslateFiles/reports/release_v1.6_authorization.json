@@ -1,0 +1,8 @@
+{
+  "authorization": "explicit_user_release",
+  "in_game_validation": "pending",
+  "accept_pending_runtime": true,
+  "user_statement": "目前是这些问题都修复了吗，只剩下我测试吗，如果是这样，那么直接发布吧",
+  "verified_scope": "Revision11 full text gates, source binding, offline managed crop checks and installed payload hashes passed. No game launched; no new runtime checks claimed.",
+  "translation_sha256": "105bed6bf58fa3196dcdc82ef0a7acb0872627b495fc8191f535efb3a8cabd5f"
+}

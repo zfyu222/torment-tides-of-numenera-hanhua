@@ -7,3 +7,4 @@ Analysis/CjkRichTextCrop.cs -text
 Analysis/PatchCjkCrop.cs -text
 Analysis/VerifyCjkCrop.cs -text
 Analysis/cjk_crop_patch.py -text
+TranslateFiles/reports/release*_authorization.json -text
