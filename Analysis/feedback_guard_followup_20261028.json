@@ -1,0 +1,66 @@
+{
+  "status": "blocked_before_next_export",
+  "finding": "Runtime syntax regression: [[\"R0012644_51e26169dc\", [\"listener_untranslated_branch\"]]]",
+  "isolated_api_candidates": [
+    {
+      "record": {
+        "id": "R0012644_51e26169dc",
+        "translation": "卵簇的气味与声音唤起了 |你|[Actor Name]| 本能的父母天性。一阵更深沉的轰鸣预示着：若有人触碰里面珍贵的卵，将会带来可怕的后果。",
+        "reason": "将 |you| 分支译成中文，保留变量和选择语法；条件、主体与后果与原句一致。",
+        "checks": {
+          "accuracy": {
+            "status": "pass",
+            "evidence": "原句说卵簇的气味和声音唤起你/角色本能的亲代本能，更低沉轰鸣预示若有人触碰内部珍贵的卵会有可怕后果；主体、条件与结果均一致。"
+          },
+          "completeness": {
+            "status": "corrected",
+            "evidence": "原译把 |you| 分支留作英文；新译文改为 |你|[Actor Name]|，完整译出人物指代。"
+          },
+          "terminology": {
+            "status": "pass",
+            "evidence": "[Actor Name] 与 | | 选择语法原样保留，符合 t3、t4；无术语误用。"
+          },
+          "tone": {
+            "status": "pass",
+            "evidence": "“更深沉的轰鸣”“可怕的后果”保持陌生、压迫的叙述口吻。"
+          },
+          "logic": {
+            "status": "pass",
+            "evidence": "原句说卵簇的气味和声音唤起你/角色本能的亲代本能，更低沉轰鸣预示若有人触碰内部珍贵的卵会有可怕后果；主体、条件与结果均一致。"
+          },
+          "placeholders": {
+            "status": "corrected",
+            "evidence": "保留 [Actor Name] 变量和 | | 分支；you 分支译“你”后仍与 [Actor Name] 对应，未改变选择结构。"
+          }
+        },
+        "changes": [
+          {
+            "category": "completeness",
+            "severity": "major",
+            "reason": "原译把 |you| 分支留作英文；新译文改为 |你|[Actor Name]|，完整译出人物指代。",
+            "source_excerpt": "The scents and sounds of the egg cluster tickle an instinctive parental instinct in |you|[Actor Name]|. A deeper rumble promises terrible consequences if anyone touches the precious eggs inside.",
+            "before": "卵簇的气味与声音唤起了 |you|[Actor Name]| 本能的父母天性。一阵更深沉的轰鸣预示着：若有人触碰里面珍贵的卵，将会带来可怕的后果。",
+            "after": "卵簇的气味与声音唤起了 |你|[Actor Name]| 本能的父母天性。一阵更深沉的轰鸣预示着：若有人触碰里面珍贵的卵，将会带来可怕的后果。"
+          },
+          {
+            "category": "placeholders",
+            "severity": "major",
+            "reason": "保留 [Actor Name] 变量和 | | 分支；you 分支译“你”后仍与 [Actor Name] 对应，未改变选择结构。",
+            "source_excerpt": "The scents and sounds of the egg cluster tickle an instinctive parental instinct in |you|[Actor Name]|. A deeper rumble promises terrible consequences if anyone touches the precious eggs inside.",
+            "before": "卵簇的气味与声音唤起了 |you|[Actor Name]| 本能的父母天性。一阵更深沉的轰鸣预示着：若有人触碰里面珍贵的卵，将会带来可怕的后果。",
+            "after": "卵簇的气味与声音唤起了 |你|[Actor Name]| 本能的父母天性。一阵更深沉的轰鸣预示着：若有人触碰里面珍贵的卵，将会带来可怕的后果。"
+          }
+        ],
+        "issues": [],
+        "exceptions": [],
+        "source_excerpt": "The scents and sounds of the egg cluster tickle an instinctive parental instinct in |you|[Actor Name]|. A deeper rumble promises terrible consequences if anyone touches the precious eggs inside.",
+        "reviewed": true
+      },
+      "producer": "api:62ed940c52334fc785241bcc75f1ee71",
+      "response_sha256": "7ff474da9c4a4ad12965f85755a1c5935150ade1e20c1fe3e9dff94785c19f18",
+      "request_payload": "Projects\\torment-tides-of-numenera\\TranslateFiles\\feedback_pipeline_validation_20261028\\jobs\\review\\inc-review-93760185a85a7a66aeea\\payload.json"
+    }
+  ],
+  "production_modified": false,
+  "published_v1_6_modified": false
+}

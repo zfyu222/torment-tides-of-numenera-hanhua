@@ -1,0 +1,19 @@
+{
+  "status": "real_api_validation_passed",
+  "logical_batches": 2,
+  "max_effective_requests": 4,
+  "actual_requests": 3,
+  "reported_tokens": 58608,
+  "unknown_usage": 0,
+  "production_translation_and_glossary_unchanged": true,
+  "api_route": "current configured priority",
+  "thinking": true,
+  "concurrency": "configuration",
+  "scope": "4 terminology candidates and 5 text records",
+  "confirmed_semantic_case_retry": {
+    "failed_records": 1,
+    "other_accepted_records_retained": 4,
+    "original_false_positive_preserved": true,
+    "attempts_reset": false
+  }
+}

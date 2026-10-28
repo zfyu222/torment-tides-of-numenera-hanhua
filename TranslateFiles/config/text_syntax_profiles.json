@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "engine": {
+    "path": "Game/WIN/TidesOfNumenera_Data/Managed/Assembly-CSharp.dll",
+    "sha256": "ddece215218f4c82b2ce2c578e0d27b548fe21c538b51291acdc68f0a1f819d5"
+  },
+  "records": {
+    "R0012589_f94fd24449": {
+      "source_sha256": "f94fd24449fb3796355512a2da065ace7bf256949670b04775be97875200985c",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012590_b803cdeb23": {
+      "source_sha256": "b803cdeb23f244938f64ea036dc23dc1eff37565741b1b584a7416a40f20d65f",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012616_ef94f07e8e": {
+      "source_sha256": "ef94f07e8e9830d05c82fa895c6471b55422ad970ac51ebe62613ab47ed88310",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012619_35550ed534": {
+      "source_sha256": "35550ed53428a3604f41260e46419bad6e9c523e16792b98777b579fb23e445b",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012620_28d12affe5": {
+      "source_sha256": "28d12affe5512f991d249b9b8e8fdee5c16c756b54efdbdcec5500b01428511e",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012621_ada20cf098": {
+      "source_sha256": "ada20cf0988c61c362cd0192e08a2f55da3e8ae4c91884bd74c8d2e7f0bd706f",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012622_c77d231d54": {
+      "source_sha256": "c77d231d54e8ec634694598671b30d00162e594f42594627e2aa7bfd33d8fa6f",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012623_58e96bb0ea": {
+      "source_sha256": "58e96bb0ea2399dd7151a313d5041c01d5acc5db6f16d384e700e56d6b7973a7",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012624_04fcfd8e35": {
+      "source_sha256": "04fcfd8e3572d174b852c377606a1d88c240a9eb70b15e538d69f7da6d880302",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012625_5418aa25cf": {
+      "source_sha256": "5418aa25cf557aa6310adc60e4a017f49b834f192c2b5c98604249467605efa8",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012626_582a7c1e0b": {
+      "source_sha256": "582a7c1e0b846c80757d1bb0ac813bb354b79b42936bf1b14524662b777c7ce9",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012628_115df08d77": {
+      "source_sha256": "115df08d775b879afd8c273e11b9b399224ce0e60dd97bc44ba6c450ff5e2b13",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012629_e6b815ddcf": {
+      "source_sha256": "e6b815ddcf43d2ac01070be63def8e76478d9e1a81bfdb446c2a15782c9133a1",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012630_4b0bc2957e": {
+      "source_sha256": "4b0bc2957ecc338f2403fc734fca186f81c0294bcfef74fae44c25301dc3bedc",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012631_bc57d32b18": {
+      "source_sha256": "bc57d32b1867bef5b86aba1c37d7e490c99a5f801c769b232454fbd376080cfd",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012642_2386d54156": {
+      "source_sha256": "2386d54156a1e520442e8e083b715be2107c753f3c568a9f50b1fbc21436ebcf",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012644_51e26169dc": {
+      "source_sha256": "51e26169dc57deeb88cfe06047f61e4caa86b1ac88453a7ddc3f68137f8aadf3",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012647_dd7cbb893a": {
+      "source_sha256": "dd7cbb893a24f736be58a67de5ce9da23737b198478bd9009d5a3a11b272ff27",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012648_798262a369": {
+      "source_sha256": "798262a36915fc1a40bd3d36d4373c436baee29fd17ee1fa70ee66a38a26ff51",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012649_d496def6bd": {
+      "source_sha256": "d496def6bd58c54c59c57c2e7091a38cd02fc91c8a8369bbc80c963d2450e3bb",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012651_0cc68fe2f0": {
+      "source_sha256": "0cc68fe2f0899c0b844d44c5a7480a8ed9d6f06faf1bb4d8081e8d5772865ce7",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012652_0550549828": {
+      "source_sha256": "0550549828130122840c59a85edb565461d02e93b544c40c46e4ed2e3c33feb4",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012658_5677ada2ed": {
+      "source_sha256": "5677ada2ed6011798cee7476d95bbaecca4e0b5e5c1507ea1133bc1b90592879",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012659_ac2fcd1606": {
+      "source_sha256": "ac2fcd16069d9511a1abf30d34ae647b7d8d1366e1aa68991b9af0d036de3847",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012660_5498cdc967": {
+      "source_sha256": "5498cdc967ed9664782e94ec6a52c5c602d1667e6abba1eea245c77c5f51b600",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0012663_5f32278854": {
+      "source_sha256": "5f32278854ff51a7b5f0388e4a7d40e6d0242493ec55490019e9de9ae9df9304",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0050163_dc98a5f3e2": {
+      "source_sha256": "dc98a5f3e261b4e9d6ab19558c86e5899f565d592e0e46b865cb30edd8e9fadc",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0050164_c7854f0f2e": {
+      "source_sha256": "c7854f0f2e8aa8ca099f8157da32f169d88ecef62fd788276cc75ad40a68743e",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0050166_04bba446eb": {
+      "source_sha256": "04bba446eb694e66c6c791e73a50ce03dee2147f9300506e6057639d6a08b433",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    },
+    "R0050167_ea32d56cae": {
+      "source_sha256": "ea32d56caea60aeed231416f3537914c8f283bc3f8e960e0e3c94f58dda7b590",
+      "profile": "inXile_listener_v1",
+      "evidence": "Analysis/feedback_20261028.md: TokenReplacer.ReplaceListenerTokens; managed input and patch methods verified"
+    }
+  },
+  "semantic_cases": {
+    "R0001912_9154460176": {
+      "source_sha256": "91544601760e402f734b01b317e91c6c68e38076d19ce0000527178b29ba085c",
+      "evidence": "Analysis/feedback_20261028.md: user-reported awkward alive phrase; accepted revision11 API correction",
+      "reason": "or alive in the alternate realities conveys death after the beam pierced his eye; retain black humour naturally, not a degree of being alive or merely sickly appearance.",
+      "reject_literals": [
+        "没那么活着",
+        "不那么像个活人"
+      ]
+    }
+  }
+}
