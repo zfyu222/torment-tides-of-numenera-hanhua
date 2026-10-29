@@ -1,0 +1,22 @@
+{
+  "status": "full_real_resource_roundtrip_passed",
+  "records": 89239,
+  "files": 2251,
+  "silver_occurrences": [
+    [
+      "en/text/conversations/test/jeremy_tidal_surge_test.stringtable#ID=56/DefaultText",
+      "银潮"
+    ],
+    [
+      "en/text/game/characters.stringtable#ID=661/DefaultText",
+      "西尔弗"
+    ],
+    [
+      "en/text/game/ttongui.stringtable#ID=72/DefaultText",
+      "银潮"
+    ]
+  ],
+  "byte_identical_to_scoped_fix": true,
+  "api_requests": 0,
+  "game_started": false
+}

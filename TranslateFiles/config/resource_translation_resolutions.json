@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "records": [
+    {
+      "ordinal": 49319,
+      "source_sha256": "a0b43df06f52085e62ab592a6adc991e32fadfa13f51c7692ba1c1720b5663d2",
+      "default_translation": "银潮",
+      "policy": "existing approved character term reused at its character-name field; tide uses retained",
+      "occurrences": [
+        {
+          "resource": "en/text/conversations/test/jeremy_tidal_surge_test.stringtable#ID=56/DefaultText",
+          "translation": "银潮",
+          "reason": "潮汐UI/测试字段；保留既有潮汐义银潮，与角色名分开。"
+        },
+        {
+          "resource": "en/text/game/characters.stringtable#ID=661/DefaultText",
+          "translation": "西尔弗",
+          "reason": "角色名字段；正文I am Silver及既有冻结角色术语均为西尔弗。",
+          "approved_term": {
+            "path": "TranslateFiles/glossary/incremental_revision_11/glossary_reviewed.json",
+            "sha256": "ff028acdd68456cfbfa5d9e97f48dd7b740ce4e4d6b95b402211ec5edc5b717e"
+          }
+        },
+        {
+          "resource": "en/text/game/ttongui.stringtable#ID=72/DefaultText",
+          "translation": "银潮",
+          "reason": "潮汐UI/测试字段；保留既有潮汐义银潮，与角色名分开。"
+        }
+      ]
+    }
+  ]
+}

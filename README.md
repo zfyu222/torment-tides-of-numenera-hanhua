@@ -27,6 +27,7 @@
 | 发布 | `game-release-patch`；百度网盘本地上传 MCP | Python 3.12.10 |
 
 ## 文本提取
+- 2026-10-29 Silver同形异义修复：原文Silver曾按字面去重，将角色名字段和两处潮汐字段合并；已有术语语境例外只依据第一处潮汐测试资源，导致角色标题误用“银潮”。新增`TranslateFiles/config/resource_translation_resolutions.json`，枚举并绑定三处原始资源，角色表ID661复用已有API冻结译名“西尔弗”，潮汐UI ID72与测试ID56保留“银潮”。本次不生成新译文、不请求API；70,163条正式CSV及DB历史保持不变，逐资源resolution作为必需回填输入。新提取入口改为逐字段独立记录及source-bound mapping，禁止仅按原文字面去重。
 - 文本位置：`Game/WIN/TidesOfNumenera_Data/StreamingAssets/data/localized/en/text/**/*.stringtable`
 - 工具/命令：递归读取 2,250 个 `.stringtable` XML 文件，提取每个 `Entry` 的非空 `DefaultText` 与 `FemaleText`，按原文去重后写入标准单列 CSV；使用 Python 标准库 `csv` 与 `xml.etree.ElementTree` 交叉回读校验。
 - 步骤：扫描英文 `conversations`、`game`、`quests` 三类字符串表；提取 89,239 个非空字段（其中 `DefaultText` 88,084 个、`FemaleText` 1,155 个）；按精确文本去重并将 CRLF/LF 视作同一文本，输出 70,163 条唯一原文到 `torment-tides-of-numenera_text.csv`。
@@ -92,6 +93,7 @@
 - 2026-08-22 重新翻译与术语校准：导入用户完成的全量重译稿后，70,163 条记录全部对齐且无空译文，68,374 条与原文不同；译文 SHA-256：`9113E17BBC059DDDD86F1EB34E9BEC6F1051C6BD5C80BC1CDB5719F478202B55`。复检仅恢复上一已验证版本的换行和字面 `\n` 布局，不改动措辞；修复 4 处可确证的机器标记问题（`FettleIcon`、颜色关闭标签和两个 `{01}` / `{02}` 编号）。颜色/图标/全局变量、`<quad>` / `<a>`、数字花括号、美元变量和唯一的 `%%` 格式符均逐项匹配。通用校验器的其余 949 条方括号报告为玩家可见技能判定、编辑说明或自然语言方括号文本的既有误判。
 
 ## 回填
+- 2026-10-29 已安装Silver角色标题修复：完整重建并核对2,251个语言文件，仅`text/game/characters.stringtable`的ID661/DefaultText一处变化。安装前备份`backups/silver_occurrence_20261029.zip`，安装后逐文件哈希通过；本地载荷`repack/silver_occurrence_20261029/localized/en`为当前修复版本，公开v1.6未更新。使用真实原资源以新入口重新提取89,239个独立字段并回填，2,251个文件与修复载荷逐字节一致，三处Silver分别保留“西尔弗/银潮/银潮”。9项身份/拒收回归与29项质量工作流测试通过。未启动游戏，实机待用户测试。证据：`Analysis/silver_occurrence_20261029.json`、`Analysis/resource_occurrence_roundtrip_20261029.json`。
 - 2026-10-28 revision11已本地回填：从原英文备份生成`repack/feedback_20261028/localized/en/`，2,250个字符串表、89,239个非空字段映射通过；修改前备份94个变化文件，安装后2,251个文件逐项哈希一致。另安装`repack/cjk_crop_20261028/WIN/TidesOfNumenera_Data/Managed/Assembly-CSharp.dll`：修正中文物品简介按原始字符截断颜色标签的问题，按文字字符计数并保持样式标签完整。逐一核对45,469个既有方法，仅`StringCropper.CropString`新增中文入口，保留英文原路径及已有教程字号修复，无额外运行依赖；实际正文加合成前提标签已复现原故障，9项边界用例及文本回归通过。REA/Ghidra明确返回托管目标不支持，托管修复依据已有dnSpy档案与Mono.Cecil验证，未切换原生后端。仅离线及安装文件验证，未启动游戏，原截图场景待玩家实测；公开v1.5及其ZIP保持不变。详见`TranslateFiles/reports/deployment_feedback_20261028.json`、`cjk_crop_patch_20261028.json`。
 - 2026-10-26 本地revision10已回填：2,250个XML/89,239个非空字段映射通过，修改前备份19个变化文件，安装后2,251个文件逐项哈希一致。回填树SHA256：3AF30E13EBAFAC80704D391B816F5844E61A229148F75AE5B2D1B98027E99EE1；教程DLL保持既有哈希。本次仅资源/文件验证，实机场景待测，未发布新版。见TranslateFiles/reports/deployment_feedback_20261026.json。
 - 2026-10-25 revision9已回填并安装：从原英文备份重建2,250个字符串表，89,239个非空字段零缺失映射，全部XML可解析。安装前备份1,466个变化文件，安装后2,251个文件逐一哈希一致，教程修复DLL保持既有哈希。树SHA256：9402B16F36D19C867D3B2AB758DE4438F1ADD31EFCE930153F4AC49BE1B459AC。实机完成启动/主菜单/选项冒烟，用户要求“没问题，直接发布”；未追加对白、任务、教程专项或通关实测。详见TranslateFiles/reports/deployment_incremental_revision9_20261025.json与Analysis/revision9_runtime_20261025/verification.md。
@@ -136,6 +138,7 @@
 - 已知问题：标题 Logo 仍为英文；本补丁为 AI 辅助汉化，尚未逐条人工润色，少量超长文本可能需要后续优化。
 
 ## 已知问题
+- 逐资源mapping/resolution现在计入共用最终质量报告哈希，变更后旧批准失效，须在下次完整导出/发布前重新闭环；回填适配器拒绝缺失、新增、重复或源文变化的已绑定字段。本次仅修复Silver名称问题，截图中“最先进”的两处及既存R0012644漏译未在此范围内处理，不能把定向安装报告视为全项目语义/发布验收通过。
 
 - 2026-10-28 追加流程复查：旧扫描先去除变量再匹配分支，漏掉逻辑记录12644中只有`|you|[Actor Name]|`的一条同类英文残留。新共用语法检查保留变量后解析，已登记30条来源/引擎哈希绑定的分支记录，并在提交及最终导出/发布前检查旧缓存。另将1912的已确认生硬译法登记为源文绑定回归案例；真实API首次仍将坏译判为pass，保留该错误回复后仅补审1条、其余4条不重派，最终修正版由API提供。12644的API修正版保存在`Analysis/feedback_guard_followup_20261028.json`，尚未合入正式译文或v1.6；新门槛会阻止它随下一次导出带出。本轮为流程开发，正式CSV/DB、游戏文件及已发布ZIP保持不变。76项本地回归通过；2个逻辑API批次实际3次请求，报告58,608 Token、未知用量0；见`Analysis/feedback_pipeline_live_validation_20261028.json`。
 

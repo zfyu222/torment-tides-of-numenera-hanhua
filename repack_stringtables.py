@@ -21,6 +21,9 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'Tools/localization'))
+from workflow_resource_occurrences import locator, project_resolutions
+
 
 TEXT_NODE = re.compile(
     r"<(DefaultText|FemaleText)>(.*?)</\1>",
@@ -29,6 +32,7 @@ TEXT_NODE = re.compile(
 INVALID_XML_CHAR = re.compile(
     "[\x00-\x08\x0b\x0c\x0e-\x1f\ud800-\udfff\ufffe\uffff]"
 )
+ENTRY_NODE = re.compile(r'<Entry>.*?</Entry>', re.DOTALL)
 
 
 def load_column(path: Path) -> list[str]:
@@ -65,14 +69,13 @@ def main() -> int:
     mapping: dict[str, str] = {}
     for original, replacement in zip(source, translated):
         key = normalize_newlines(original)
-        previous = mapping.setdefault(key, replacement)
-        if previous != replacement:
-            raise ValueError("one source string maps to multiple translations")
+        mapping.setdefault(key, replacement)  # identity/ambiguity validated by ResourceResolver
         if INVALID_XML_CHAR.search(replacement):
             raise ValueError(f"translation contains an invalid XML character: {replacement!r}")
 
-    shutil.copytree(args.english_locale, args.output_locale)
-    files = sorted(args.output_locale.rglob("*.stringtable"))
+    resolver = project_resolutions(args.source_csv.resolve().parent, args.source_csv, args.translated_csv)
+    files = sorted(args.english_locale.rglob("*.stringtable"))
+    outputs = {}
     replaced = 0
     changed = 0
     missing: list[dict[str, str]] = []
@@ -88,26 +91,36 @@ def main() -> int:
             original = html.unescape(encoded)
             if not original.strip():
                 return match.group(0)
-            key = normalize_newlines(original)
-            replacement = mapping.get(key)
-            if replacement is None:
-                missing.append(
-                    {
-                        "file": str(path.relative_to(args.output_locale)),
-                        "field": match.group(1),
-                        "text": original[:200],
-                    }
-                )
-                return match.group(0)
+            resource = args.english_locale.name + '/' + path.relative_to(args.english_locale).as_posix()
+            replacement = resolver.resolve(locator(resource, entry_id, match.group(1)), original)
+            if INVALID_XML_CHAR.search(replacement):
+                raise ValueError('Occurrence translation contains invalid XML characters')
             replaced += 1
             changed += replacement != original
             return f"<{match.group(1)}>{xml_escape(replacement)}</{match.group(1)}>"
 
-        output = TEXT_NODE.sub(replace, text)
+        def replace_entry(match):
+            nonlocal entry_id
+            body = match.group(0)
+            id_match = re.search(r'<ID>(.*?)</ID>', body, re.DOTALL)
+            if not id_match:
+                raise ValueError('Stringtable entry missing ID')
+            entry_id = html.unescape(id_match.group(1))
+            return TEXT_NODE.sub(replace, body)
+
+        entry_id = None
+        output = ENTRY_NODE.sub(replace_entry, text)
         payload = output.encode("utf-8")
         if has_bom:
             payload = b"\xef\xbb\xbf" + payload
-        path.write_bytes(payload)
+        outputs[path.relative_to(args.english_locale)] = payload
+
+    resolver.finish()
+    # Validate the entire mapping before creating a new output or writing files.
+    shutil.copytree(args.english_locale, args.output_locale)
+    for relative, payload in outputs.items():
+        (args.output_locale / relative).write_bytes(payload)
+    files = sorted(args.output_locale.rglob("*.stringtable"))
 
     if missing:
         report = args.output_locale.parent / "missing_stringtable_mappings.json"
