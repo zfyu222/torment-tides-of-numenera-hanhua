@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-29",
+  "status": "created",
+  "game": "Torment: Tides of Numenera",
+  "title": "折磨：扭蒙拉之潮 汉化",
+  "output": "Dispatch/title.png",
+  "method": "主对话内置 image_gen，以官方原画为参考生成；未使用外部CLI/API",
+  "sources": [
+    {
+      "page": "https://store.steampowered.com/app/272270/Torment_Tides_of_Numenera/",
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/272270/library_hero.jpg",
+      "local": "Dispatch/Artwork/official_steam_hero.jpg",
+      "role": "primary artwork"
+    },
+    {
+      "page": "https://store.steampowered.com/app/272270/Torment_Tides_of_Numenera/",
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/272270/header.jpg?t=1776379983",
+      "local": "Dispatch/Artwork/official_steam_header.jpg",
+      "role": "logo styling reference"
+    }
+  ],
+  "visual_check": "主对话已查看：折磨、扭蒙拉之潮、汉化及英文标题正确可读，横版构图完整；保留官方群像辨识度及深蓝星图/金色光效。",
+  "reuse": "后续版本复用 Dispatch/title.png；未加入安装载荷，未发布。",
+  "prompt": "Use case: text-localization / ads-marketing. Create one finished landscape Chinese localization release cover for Torment: Tides of Numenera, approximately 16:9.\nInput image 1 (official Steam library hero): primary edit target and artwork. Preserve the recognizable official painted character montage, masked hooded central figure and companions, astronomical star-map lines and dark indigo blue background, antique gold illumination, and delicate pale-blue magical flourishes. Input image 2 (official Steam header): reference for original logo styling only.\nRecompose the very wide hero into a polished cinematic landscape cover, retaining its official artwork style and characters, with the character medallion on the right and beautiful typography in the generous space on the left. Do not stretch faces; do not invent extra characters. Maintain the restrained mysterious science-fantasy painterly aesthetic.\nText must be exactly these Chinese strings, clearly legible and spelled correctly: large main title \"折磨\"; second title line \"扭蒙拉之潮\"; third line \"汉化\". Create refined custom Chinese display lettering with elegant sharp wedge serifs, subtly weathered metal, antique gold edges and cool silver-blue faces, inspired by the original TORMENT logo. Make 汉化 prominent and stylish, integrated with delicate blue tidal energy and fine gold geometric ornament, not a flat sticker. Chinese characters must remain structurally correct, especially 扭、蒙、拉、潮.\nA small, restrained English line \"TORMENT: TIDES OF NUMENERA\" may appear above the Chinese title. No other text, version numbers, fake awards, watermark, download links, or UI. Preserve a high-end editorial hierarchy and generous margins. Finished opaque artwork, no transparency."
+}
