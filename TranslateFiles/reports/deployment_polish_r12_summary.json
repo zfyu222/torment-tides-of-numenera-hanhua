@@ -1,0 +1,13 @@
+{
+  "status": "deployed_files_verified",
+  "translation_sha256": "8a22965afa70437fffeef58938d8a69d0b323516a935cb5ebf323ec2055eb0eb",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "tree_sha256": "302DFB76DA5FAA8853EBC36FBBB35EFD95ECDE0FD91ADFAD62D9E5C7A50C7B0F",
+  "verified_nonempty_fields": 89239,
+  "backup": "backups/localized_en_before_polish_r12_8a22965afa70.zip",
+  "changed_files": 1319,
+  "display_fix_sha256": "ddece215218f4c82b2ce2c578e0d27b548fe21c538b51291acdc68f0a1f819d5",
+  "in_game_validation": "pending",
+  "verified_locale_files": 2251,
+  "repack_input": "torment-tides-of-numenera_text_translated.csv"
+}
