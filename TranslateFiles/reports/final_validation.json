@@ -1,4 +1,16 @@
 {
+  "status": "passed",
+  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
+  "translation_sha256": "8a22965afa70437fffeef58938d8a69d0b323516a935cb5ebf323ec2055eb0eb",
+  "records": 70163,
+  "semantic_review": "full",
+  "polish": true,
+  "revision": 12,
+  "glossary": {
+    "hash": "ff028acdd68456cfbfa5d9e97f48dd7b740ce4e4d6b95b402211ec5edc5b717e",
+    "path": "glossary\\incremental_revision_11\\glossary_reviewed.json",
+    "revision": 11
+  },
   "ainiee": {
     "actual_commit": "c50570c1dee7df7bd51316a253f0b42d10a8ca4c",
     "expected_commit": "c50570c1dee7df7bd51316a253f0b42d10a8ca4c",
@@ -10,27 +22,15 @@
       "Infrastructure/LLMRequester/OpenaiRequester.py": "b2b1f5e6fd3a31727b2e1d2597e1bcca3e5e4db2cfec550ff6cfcd6a6cff3f79"
     }
   },
-  "glossary": {
-    "hash": "ff028acdd68456cfbfa5d9e97f48dd7b740ce4e4d6b95b402211ec5edc5b717e",
-    "path": "glossary\\incremental_revision_11\\glossary_reviewed.json",
-    "revision": 11
+  "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_text_translated.csv",
+  "quality_review": {
+    "report_hash": "8b1aa0d368b8a9d26699b277ac66ee799cdc49b44a731412d59fb539e89b74cb",
+    "reviewer": "standard"
   },
   "in_game_check": "pending_repack",
   "mixed_language_audit": {
-    "candidate_records": 5373,
     "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\TranslateFiles\\reports\\mixed_language_audit.json",
+    "candidate_records": 5291,
     "status": "candidates_only"
-  },
-  "path": "D:\\StaticHanHua\\Projects\\torment-tides-of-numenera\\torment-tides-of-numenera_text_translated.csv",
-  "polish": false,
-  "quality_review": {
-    "report_hash": "6ee74829c124ffc36f9b8b25ec7e448361d085b046acfa5f9160f3265ba68c6f",
-    "reviewer": "workflow:no-disputes"
-  },
-  "records": 70163,
-  "revision": 11,
-  "semantic_review": "full",
-  "source_sha256": "bd3b7f02212489417247eb0956c771ae2d52471c5999e6aeff6f588618b8f416",
-  "status": "passed",
-  "translation_sha256": "105bed6bf58fa3196dcdc82ef0a7acb0872627b495fc8191f535efb3a8cabd5f"
+  }
 }

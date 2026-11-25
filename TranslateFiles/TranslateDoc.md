@@ -1,14 +1,21 @@
 # 翻译操作记录
 
 - 工作流：custom
-- 自定义执行后端：api
+- 执行路线（subagent=SubAgent，api=API）：api
 - 原文：项目根目录 `torment-tides-of-numenera_text.csv`
 - 正式译文：项目根目录 `torment-tides-of-numenera_text_translated.csv`
 - 中间产物：`TranslateFiles/`
 
-由 game-translate 技能调用流程程序；正文前完成全文术语整理及冻结。
+由 game-translate 技能调用共用流程程序；路线为 SubAgent（subagent）或 API（api）。正文前完成全文术语整理及冻结。
 试译：固定随机样本 → pilot_translate → pilot-report → 主 AI pilot-decide；按需 pilot-retry。
 试译用于校准流程和风格，不要求逐句零错误；正式译文仍须完整独立审校和导出验收。
+
+## 2026-11-25 旧项目润色复审与导出（revision 12）
+
+- 旧项目在既有独立审校后启用润色，润色实际改动的 13,198 条进入独立复审。其余 56,965 条沿用原审校证据。相对上一版正式译文保留 13,125 条修订。
+- 常规润色与复审采用已选 API 路线和原接口优先级。接口故障后，剩余交接由独立 SubAgent 处理，保留 API 原始尝试与回执。
+- 冻结术语仍使用 `glossary/incremental_revision_11/glossary_reviewed.json`。按原文保护运行时标记、变量及配置指定的开发注释。可见文本按语境翻译，逐条术语例外保留证据。
+- 70,163 条全部通过原文对齐、结构、占位符和冻结术语校验。正式 CSV SHA-256 为 `8a22965afa70437fffeef58938d8a69d0b323516a935cb5ebf323ec2055eb0eb`。 最终质量报告和源文残缺的定向裁决已保存。
 
 ## 2026-10-28 六项截图反馈（revision 11）
 

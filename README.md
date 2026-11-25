@@ -22,7 +22,7 @@
 | 环节 | 工具 | 版本 |
 |------|------|------|
 | 提取 | PowerShell `.NET XmlDocument` + 标准 CSV 写入；Python `csv` / `ElementTree` 完整性校验 | PowerShell 7.6.4 / Python 3.12.10 |
-| 翻译 | 自定义 API 工作流；冻结术语、独立语义审校与来源绑定校验；AINiee 共用组件 | 自定义API / revision 11（截图反馈定向修复）/ Python 3.12.10 |
+| 翻译 | 自定义 API 工作流；冻结术语、独立语义审校与来源绑定校验；AINiee 共用组件 | 自定义 API 与定点 SubAgent / revision 12 / Python 3.12.10 |
 | 回填 | `repack_stringtables.py` 直接替换 StreamingAssets XML 字符串表 | Python 3.12.10 |
 | 发布 | `game-release-patch`；百度网盘本地上传 MCP | Python 3.12.10 |
 
@@ -35,6 +35,8 @@
 - 注意事项：输出为 UTF-8（无 BOM）标准单列 CSV、无表头。含逗号、双引号或内嵌换行的文本使用 CSV 引号转义；原文内的段落换行得到保留。安装包还含 `de/es/fr/it/pl/ru` 本地化目录，但本次只提取英语源文。资源内含少量测试/调试字符串，留待翻译阶段通过排除表处理。
 
 ## 翻译
+
+- 2026-11-25 revision 12 润色、复审与正式导出完成。旧项目在既有独立审校后启用润色，润色实际改动的 13,198 条进入独立复审。其余 56,965 条沿用原审校证据。相对上一版正式译文保留 13,125 条修订。70,163 条全部通过原文对齐、结构、占位符和冻结术语校验。正式 CSV SHA-256 为 `8a22965afa70437fffeef58938d8a69d0b323516a935cb5ebf323ec2055eb0eb`。常规批次沿用原 API 选路，服务故障后少量交接使用独立 SubAgent 定点收尾。占位符、禁翻表及逐条语境例外沿用配置与冻结表。报告见 `TranslateFiles/reports/final_validation.json` 与 `TranslateFiles/reports/release_v1.7_text_delta.json`。
 
 - 2026-10-28 六项截图反馈已完成本地revision11：API定向审校806条，修改445条，范围外69,357条逐条保持。去除错误禁翻的运行分支自然语言及成功/失败显示标签，保留真正的变量；修复源文裸`Actor Name`，镜像概念`doppelganger`经单独四维审校统一为“二重身”，`Stichus/Sticha`及相关复合名统一为“斯提查”；另复核`or alive`的死亡黑色幽默。相关658条生物文本、86条镜像文本、27条可见分支文本及38条英文成功/失败残留均通过专项检查，分类有重叠。正文修复和术语语义判断全部使用配置选路的真实API，思考及并发按接口配置，不使用Sol；历史尝试不重置。共60次请求，服务端报告输入465,031、输出1,208,398、合计1,673,429 Token，无未知用量；不据此推算金额。全70,163条正式导出结构/占位符/术语校验通过，正式CSV SHA256为`105bed6bf58fa3196dcdc82ef0a7acb0872627b495fc8191f535efb3a8cabd5f`；与候选仅CSV外层序列化不同，逐条值完全一致。详见`IncrementalRepair/feedback_20261028_report.json`及`Analysis/feedback_20261028.md`。
 

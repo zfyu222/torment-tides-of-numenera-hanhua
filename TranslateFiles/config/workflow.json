@@ -1,7 +1,6 @@
 {
   "workflow": "custom",
   "backend": "api",
-  "model": "gpt-6-luna",
   "record_constraints": {
     "R0047130_885cf407e0": {
       "literal_suffix": "{NATHAN: This node begins 3 Talk Nodes in a row (a no-no for Meres, if you'll recall). Also it forces an action on the player, so maybe this node can give the player a choice of things to do, all of which ultimately lead to him realizing that he can make ice with his powers. (It also might be cooler to describe how he uses the numenera to make ice - not defining, of course, just a brief description of what it would feel like).",
@@ -58,8 +57,8 @@
   "review_batch_tokens": 1024,
   "task_input_tokens": 65536,
   "review_output_tokens": 32768,
-  "sol_repair_round_limit": 3,
-  "sol_no_progress_limit": 2,
+  "standard_repair_round_limit": 3,
+  "standard_no_progress_limit": 2,
   "review_output_reserve_percent": 20,
   "review_estimate": {
     "ascii_chars_per_token": 3,
@@ -69,13 +68,13 @@
     "translation_multiplier": 3
   },
   "draft_scan_workers": 1,
+  "layout_normalization": "exact_v1",
   "case_sensitive": false,
   "whole_word": true,
   "protect_named_curly": true,
-  "polish": false,
+  "polish": true,
   "max_attempts": 12,
   "body_repair_round_limit": 6,
-  "sol_repair_model": "gpt-6-sol",
   "lease_seconds": 3600,
   "exclusions": [
     {
@@ -105,5 +104,9 @@
     "temperature": 1,
     "think_switch": false,
     "tls_switch": false
-  }
+  },
+  "model": "gpt-6-luna",
+  "sol_no_progress_limit": 2,
+  "sol_repair_model": "gpt-6-sol",
+  "sol_repair_round_limit": 3
 }

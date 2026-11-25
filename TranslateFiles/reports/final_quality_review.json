@@ -8,7 +8,7 @@
     "path": "glossary\\incremental_revision_11\\glossary_reviewed.json",
     "revision": 11
   },
-  "snapshot_hash": "358aa1781227c9dd3d6106ba61173d693e66e0d97879d313c787388edec22210",
+  "snapshot_hash": "1566cd32fe6e1dc4728f2109ed11acb8742ce46eff6da7fe70e1e8fa091306d9",
   "coverage": {
     "records": 70163,
     "text_types": {
@@ -17,22 +17,300 @@
       "任务文本": 2002
     },
     "missing_context": 0,
-    "risk_records": 42770,
+    "risk_records": 39960,
     "ordinary_sample": 0,
-    "standard_records": 4
+    "standard_records": 16
   },
   "risk_detection": "Heuristic candidates plus reviewer findings; absence of flags is not proof of correctness.",
-  "records_to_check": [],
+  "records_to_check": [
+    {
+      "id": "R0006517_160fcf99f8",
+      "ordinal": 6517,
+      "source": "\"Because people will pay it,\" he says promptly. \"I could charge half the amount and live very comfortably, but I'd rather be rich. Who wo after all my expenses are paid, but I'm afraid I just like getting the extra money",
+      "translation": "“因为人们愿意付这个价，”他立刻回答。“我本可以只收一半，照样过得很舒服，但我更想发财。付清所有开销后……不过恐怕我就是喜欢多赚些钱。”",
+      "metadata": {
+        "group": "conversations/a_sagus",
+        "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。",
+        "resource": "en/text/conversations/a_sagus/a2201_jernaugh.stringtable#ID=91/DefaultText",
+        "scene": "a_sagus/a2201_jernaugh.stringtable",
+        "text_type": "对白或叙述（具体类型以本句为准）"
+      },
+      "risk_reasons": [
+        "conditions",
+        "term_exception",
+        "review_correction",
+        "review_warning"
+      ],
+      "review": {
+        "task_id": "final_review-round-660b09a328ab4c1d",
+        "instance": "/root/repair_r12_6517",
+        "stage": "final_review",
+        "before": "“因为人们愿意付这个价，”他立刻回答。“我本可以只收一半，照样过得很舒服，但我更想发财。付清所有开销后，我还能赚不少，不过恐怕我就是喜欢多赚些钱。”",
+        "translation": "“因为人们愿意付这个价，”他立刻回答。“我本可以只收一半，照样过得很舒服，但我更想发财。付清所有开销后……不过恐怕我就是喜欢多赚些钱。”",
+        "changes": [
+          {
+            "after": "“因为人们愿意付这个价，”他立刻回答。“我本可以只收一半，照样过得很舒服，但我更想发财。付清所有开销后……不过恐怕我就是喜欢多赚些钱。”",
+            "before": "“因为人们愿意付这个价，”他立刻回答。“我本可以只收一半，照样过得很舒服，但我更想发财。付清所有开销后，我还能赚不少，不过恐怕我就是喜欢多赚些钱。”",
+            "category": "accuracy",
+            "reason": "将候选译文中的‘付清所有开销后，我还能赚不少’改为‘付清所有开销后……’，避免把残损原文补成确定的盈利陈述。",
+            "severity": "major",
+            "source_excerpt": "Who wo after all my expenses are paid"
+          }
+        ],
+        "checks": {
+          "accuracy": {
+            "evidence": "原文明确说人们愿意付价、说话者可收一半仍过得舒服却更想富有；‘Who wo’残损，不能据此断定付清开销后还能赚不少，现译以省略号标出缺口。",
+            "status": "corrected"
+          },
+          "completeness": {
+            "evidence": "保留‘after all my expenses are paid’的付清开销后，以及‘but I'm afraid I just like getting the extra money’的喜欢多收钱；残损的‘Who wo’没有可确定的完整词句可译。",
+            "status": "pass"
+          },
+          "logic": {
+            "evidence": "‘could charge half ... but I'd rather be rich’的让步与转折保持不变；付清开销后的未知谓语不再被当成确定的盈利事实。",
+            "status": "pass"
+          },
+          "placeholders": {
+            "evidence": "原句没有运行时变量、性别控制标记或渲染标签；普通英文代词和名词不是占位符。",
+            "status": "not_applicable"
+          },
+          "terminology": {
+            "evidence": "本句‘I’是第一人称代词，译作‘我’；‘money’是普通名词，译作‘钱’。两处既有语境例外继续适用，并非需要保留原样的标识符。",
+            "status": "pass"
+          },
+          "tone": {
+            "evidence": "‘but I'd rather be rich’和‘I'm afraid I just like getting the extra money’仍呈现说话者直白承认贪财的口吻；省略号仅对应残缺处。",
+            "status": "pass"
+          }
+        },
+        "exceptions": [
+          {
+            "reason": "原句中的 I 是第一人称代词，应译为“我”；此处不是需要保留原文的单字母占位符。",
+            "source": "i"
+          },
+          {
+            "reason": "原句中的 money 是普通名词，语境义为“钱”，不是需要保留原文的术语 MONEY；照搬术语名会破坏对白，因此按语境译作“钱”。",
+            "source": "MONEY"
+          }
+        ],
+        "id": "R0006517_160fcf99f8",
+        "issues": [
+          {
+            "reason": "英文原串‘Who wo after all my expenses are paid’确实残损，‘Who wo’原本的完整措辞仍无法确定；译文已用省略号保留此缺口。",
+            "severity": "warning"
+          }
+        ],
+        "reason": "删去原文残损处无法证实的‘我还能赚不少’，用省略号保留缺口；其余价钱、开销和喜好多收钱的意思不变。",
+        "reviewed": true,
+        "source_excerpt": "\"Because people will pay it,\" he says promptly. \"I could charge half the amount and live very comfortably, but I'd rather be rich. Who wo after all my expenses are paid, but I'm afraid I just like getting the extra money"
+      }
+    },
+    {
+      "id": "R0036151_06687f97e7",
+      "ordinal": 36151,
+      "source": "\"It was as he was leaving that he said the thing that made me realize in retrospect that he knew he was ruining my life. He said, 'Say farewell to your family for me.'\"\n\n\"The very next day, I got the frame powered, and turned it on, and....\" He hangs his head. \"Out of it came a swarm of black creatures, like oil-covered sticks, thousands of them. They overwealmed me, knocked me unconscious, and when I awoke... they were gone, and my aldeia them. Everyone. My friends, my wife, my children. I was the only one left - except for a few dead.\"",
+      "translation": "“就在他离开时，他说了一句话，让我事后回想起来才意识到，他当时知道自己正在毁掉我的人生。他说：‘代我向你的家人告别。’”\n\n“就在第二天，我给那装置通了电，打开了它，然后……”他低下头。“里面涌出一群黑色生物，像裹着油的棍子，成千上万。它们淹没了我，把我打昏；等我醒来……它们不见了，我的村落里所有人也都不见了。我的朋友、我的妻子、我的孩子们。除了几具尸体，我是唯一剩下的人。”",
+      "metadata": {
+        "group": "conversations/companions",
+        "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。同一原文共有2处引用。",
+        "resource": "en/text/conversations/companions/companion_aligern_stage2.stringtable#ID=31/DefaultText",
+        "scene": "companions/companion_aligern_stage2.stringtable",
+        "text_type": "对白或叙述（具体类型以本句为准）"
+      },
+      "risk_reasons": [
+        "conditions",
+        "relationships",
+        "term_exception",
+        "review_correction",
+        "review_warning"
+      ],
+      "review": {
+        "task_id": "final_review-round-527c359a139d4b58",
+        "instance": "standard:/root/quality_r12_stopped",
+        "stage": "final_review",
+        "before": "“就在他离开时，他说了一句话，让我事后回想起来才意识到，他当时知道自己正在毁掉我的人生。他说：‘代我向你的家人告别。’”\n\n“就在第二天，我给那装置通了电，打开了它，然后……”他低下头。“里面涌出一群黑色生物，像裹着油的棍子，成千上万。它们淹没了我，把我打昏；等我醒来……它们不见了，而我的村落它们。所有人都不见了。我的朋友、我的妻子、我的孩子们。除了几具尸体，我是唯一剩下的人。”",
+        "translation": "“就在他离开时，他说了一句话，让我事后回想起来才意识到，他当时知道自己正在毁掉我的人生。他说：‘代我向你的家人告别。’”\n\n“就在第二天，我给那装置通了电，打开了它，然后……”他低下头。“里面涌出一群黑色生物，像裹着油的棍子，成千上万。它们淹没了我，把我打昏；等我醒来……它们不见了，我的村落里所有人也都不见了。我的朋友、我的妻子、我的孩子们。除了几具尸体，我是唯一剩下的人。”",
+        "changes": [
+          {
+            "after": "“就在他离开时，他说了一句话，让我事后回想起来才意识到，他当时知道自己正在毁掉我的人生。他说：‘代我向你的家人告别。’”\n\n“就在第二天，我给那装置通了电，打开了它，然后……”他低下头。“里面涌出一群黑色生物，像裹着油的棍子，成千上万。它们淹没了我，把我打昏；等我醒来……它们不见了，我的村落里所有人也都不见了。我的朋友、我的妻子、我的孩子们。除了几具尸体，我是唯一剩下的人。”",
+            "before": "“就在他离开时，他说了一句话，让我事后回想起来才意识到，他当时知道自己正在毁掉我的人生。他说：‘代我向你的家人告别。’”\n\n“就在第二天，我给那装置通了电，打开了它，然后……”他低下头。“里面涌出一群黑色生物，像裹着油的棍子，成千上万。它们淹没了我，把我打昏；等我醒来……它们不见了，而我的村落它们。所有人都不见了。我的朋友、我的妻子、我的孩子们。除了几具尸体，我是唯一剩下的人。”",
+            "category": "accuracy",
+            "reason": "现译逐字残留不可读的“而我的村落它们”；按后续 Everyone 与亲属名单表达村民不见，避免增加村落消失的情节。",
+            "severity": "major",
+            "source_excerpt": "when I awoke... they were gone, and my aldeia them. Everyone. My friends, my wife, my children."
+          }
+        ],
+        "checks": {
+          "accuracy": {
+            "evidence": "原文明确黑色生物使叙述者昏迷，醒后生物消失，随后列出 Everyone、朋友、妻子和孩子；现译“而我的村落它们”既非通顺关系也未表达名单，改为“我的村落里所有人也都不见了”，仅据可辨内容交代人失踪。",
+            "status": "corrected"
+          },
+          "completeness": {
+            "evidence": "保留离开者的告别、翌日启动装置、黑色生物的外形与数量、昏迷醒来后的情形，以及朋友、妻子、孩子和少数尸体；修订将 Everyone 融入前句，未遗漏人物。",
+            "status": "pass"
+          },
+          "logic": {
+            "evidence": "叙述顺序仍为预告式告别、次日通电、黑色生物出现、昏迷、醒后生物与村民不见；未把“my aldeia them”的残缺语法推断成村落本身消失，也未断言村民被带走或死亡。",
+            "status": "corrected"
+          },
+          "placeholders": {
+            "evidence": "原文没有运行时变量、标签或需逐字保留的占位符；译文保持原有 LF 双换行分段和 Aligern 男性叙述中的“他”。",
+            "status": "not_applicable"
+          },
+          "terminology": {
+            "evidence": "aldeia 按冻结 required 译为“村落”；frame 在此指通电启动的具体装置，冻结项为 reference，沿用现译“装置”及既有语境例外；小写 dead 是死者、I 是第一人称，保留 DEAD 与 i 的既有例外。",
+            "status": "pass"
+          },
+          "tone": {
+            "evidence": "告别话语的回顾、说到启动装置时的停顿和低头、逐一提到亲友的悲痛节奏均由现译保留；合并重复的“所有人都不见了”后中文更自然。",
+            "status": "pass"
+          }
+        },
+        "exceptions": [
+          {
+            "reason": "原句中的 I 是第一人称代词，应译为“我”，不是禁翻单字母标记。",
+            "source": "i"
+          },
+          {
+            "reason": "except for a few dead 中的小写 dead 指少数死者，不是大写状态标记 DEAD。",
+            "source": "DEAD"
+          },
+          {
+            "reason": "got the frame powered, and turned it on 与 Out of it came 表明此处是可通电并涌出黑色生物的具体装置；沿用“装置”，不套用参考译名“框架”。",
+            "source": "frame"
+          }
+        ],
+        "id": "R0036151_06687f97e7",
+        "issues": [
+          {
+            "reason": "源文“and my aldeia them”缺谓语，无法还原完整措辞；本次仅根据紧随其后的 Everyone 和亲友名单表达村民不见，保留既有源文缺漏警告。",
+            "severity": "warning"
+          }
+        ],
+        "reason": "现译把残缺的“and my aldeia them”直落成“而我的村落它们”，中文不可读；结合紧随其后的“Everyone. My friends, my wife, my children”及同资源后文对村民下落的疑问，改成村落里的人不见了，不推断村落建筑消失或众人遭遇。其他叙述沿用现译。",
+        "reviewed": true,
+        "source_excerpt": "they were gone, and my aldeia them. Everyone. My friends, my wife, my children. I was the only one left - except for a few dead."
+      }
+    },
+    {
+      "id": "R0036152_0a9afd4484",
+      "ordinal": 36152,
+      "source": "\"It was as she was leaving that she said the thing that made me realize in retrospect that she knew she was ruining my life. She said, 'Say farewell to your family for me.'\"\r\n\r\n\"The very next day, I got the frame powered, and turned it on, and....\" He hangs his head. \"Out of it came a swarm of black creatures, like oil-covered sticks, thousands of them. They overwealmed me, knocked me unconscious, and when I awoke... they were gone, and my aldeia them. Everyone. My friends, my wife, my children. I was the only one left - except for a few dead.\"",
+      "translation": "“就在她离开时，她说了一句话，让我事后才意识到，她早知道自己正在毁掉我的人生。她说：‘代我向你的家人告别。’”\r\n\r\n“就在第二天，我给那装置通了电，打开了它，然后……”他垂下头。“里面涌出成群的黑色生物，像裹着油的棍子，成千上万。它们扑倒了我，把我打昏。等我醒来……它们已经不见了，我的村落里所有人也都不见了。我的朋友、妻子、孩子。只剩下我一个人——还有几具尸体。”",
+      "metadata": {
+        "group": "conversations/companions",
+        "note": "资源定位仅表示存储位置，不证明说话者身份或剧情先后。同一原文共有2处引用。",
+        "resource": "en/text/conversations/companions/companion_aligern_stage2.stringtable#ID=31/FemaleText",
+        "scene": "companions/companion_aligern_stage2.stringtable",
+        "text_type": "对白或叙述（具体类型以本句为准）"
+      },
+      "risk_reasons": [
+        "conditions",
+        "relationships",
+        "term_exception",
+        "review_correction",
+        "review_warning"
+      ],
+      "review": {
+        "task_id": "final_review-round-9e7c97a2df9c4906",
+        "instance": "/root/repair_r12_36152",
+        "stage": "final_review",
+        "before": "“就在她离开时，她说了一句话，让我事后才意识到，她早知道自己正在毁掉我的人生。她说：‘代我向你的家人告别。’”\r\n\r\n“就在第二天，我给那装置通了电，打开了它，然后……”他垂下头。“里面涌出成群的黑色生物，像裹着油的棍子，成千上万。它们扑倒了我，把我打昏。等我醒来……它们已经不见了，我的村落也跟着消失了。所有人都不见了。我的朋友、妻子、孩子。只剩下我一个人——还有几具尸体。”",
+        "translation": "“就在她离开时，她说了一句话，让我事后才意识到，她早知道自己正在毁掉我的人生。她说：‘代我向你的家人告别。’”\r\n\r\n“就在第二天，我给那装置通了电，打开了它，然后……”他垂下头。“里面涌出成群的黑色生物，像裹着油的棍子，成千上万。它们扑倒了我，把我打昏。等我醒来……它们已经不见了，我的村落里所有人也都不见了。我的朋友、妻子、孩子。只剩下我一个人——还有几具尸体。”",
+        "changes": [
+          {
+            "after": "“就在她离开时，她说了一句话，让我事后才意识到，她早知道自己正在毁掉我的人生。她说：‘代我向你的家人告别。’”\r\n\r\n“就在第二天，我给那装置通了电，打开了它，然后……”他垂下头。“里面涌出成群的黑色生物，像裹着油的棍子，成千上万。它们扑倒了我，把我打昏。等我醒来……它们已经不见了，我的村落里所有人也都不见了。我的朋友、妻子、孩子。只剩下我一个人——还有几具尸体。”",
+            "before": "“就在她离开时，她说了一句话，让我事后才意识到，她早知道自己正在毁掉我的人生。她说：‘代我向你的家人告别。’”\r\n\r\n“就在第二天，我给那装置通了电，打开了它，然后……”他垂下头。“里面涌出成群的黑色生物，像裹着油的棍子，成千上万。它们扑倒了我，把我打昏。等我醒来……它们已经不见了，我的村落也跟着消失了。所有人都不见了。我的朋友、妻子、孩子。只剩下我一个人——还有几具尸体。”",
+            "category": "accuracy",
+            "reason": "醒来后原文先说黑色生物不见了，随后残缺地提到“and my aldeia them”，再以“Everyone. My friends, my wife, my children.”说明失踪者是村落里的人。原译“我的村落也跟着消失了”把村落本身当成消失对象，超出原文；修改为“我的村落里所有人也都不见了”，不猜测他们的具体遭遇。",
+            "severity": "major",
+            "source_excerpt": "and my aldeia them. Everyone."
+          }
+        ],
+        "checks": {
+          "accuracy": {
+            "evidence": "醒来后原文先说黑色生物不见了，随后残缺地提到“and my aldeia them”，再以“Everyone. My friends, my wife, my children.”说明失踪者是村落里的人。原译“我的村落也跟着消失了”把村落本身当成消失对象，超出原文；修改为“我的村落里所有人也都不见了”，不猜测他们的具体遭遇。",
+            "status": "corrected"
+          },
+          "completeness": {
+            "evidence": "离别话语、装置通电启动、生物涌出并袭击、说话者昏厥后醒来以及朋友、妻子、孩子和尸体均有对应译文，没有漏译明确内容或添加额外事件。",
+            "status": "pass"
+          },
+          "logic": {
+            "evidence": "醒来后原文先说黑色生物不见了，随后残缺地提到“and my aldeia them”，再以“Everyone. My friends, my wife, my children.”说明失踪者是村落里的人。原译“我的村落也跟着消失了”把村落本身当成消失对象，超出原文；修改为“我的村落里所有人也都不见了”，不猜测他们的具体遭遇。",
+            "status": "corrected"
+          },
+          "placeholders": {
+            "evidence": "原文没有变量或运行时标签。",
+            "status": "not_applicable"
+          },
+          "terminology": {
+            "evidence": "aldeia 按冻结术语译为“村落”；frame 在通电、启动并有生物从中涌出的语境指装置；dead 在“a few dead”中是死者而非 DEAD 状态标签。沿用本条既有语境例外。",
+            "status": "pass"
+          },
+          "tone": {
+            "evidence": "说话者叙述家人失踪，语气悲痛克制；译文中文自然，保留对白叙述口吻。",
+            "status": "pass"
+          }
+        },
+        "exceptions": [
+          {
+            "reason": "原句“I didn't know”中的 I 是第一人称代词，不是独立词条 i；译为“我”符合对话语法。",
+            "source": "i"
+          },
+          {
+            "reason": "原句“except for a few dead”里的 dead 是普通名词化形容词，指少数死者，并非全大写状态标记 DEAD；译为“几具尸体”符合语境。",
+            "source": "DEAD"
+          },
+          {
+            "reason": "本句“got the frame powered, and turned it on”以及“Out of it came”表明 frame 是可通电启动、能涌出黑色生物的具体装置，并非普通意义的“框架”，故译作“装置”。",
+            "source": "frame"
+          }
+        ],
+        "id": "R0036152_0a9afd4484",
+        "issues": [
+          {
+            "reason": "原文“and my aldeia them”缺少谓语，无法确认黑色生物对村民具体做了什么；结合紧接的“Everyone.”可知村落里的人都不见了，但不能据此断言村落本身消失或村民的确切遭遇。",
+            "severity": "warning"
+          }
+        ],
+        "reason": "醒来后原文先说黑色生物不见了，随后残缺地提到“and my aldeia them”，再以“Everyone. My friends, my wife, my children.”说明失踪者是村落里的人。原译“我的村落也跟着消失了”把村落本身当成消失对象，超出原文；修改为“我的村落里所有人也都不见了”，不猜测他们的具体遭遇。",
+        "reviewed": true,
+        "source_excerpt": "\"It was as she was leaving that she said the thing that made me realize in retrospect that she knew she was ruining my life. She said, 'Say farewell to your family for me.'\"\r\n\r\n\"The very next day, I got the frame powered, and turned it on, and....\" He hangs his head. \"Out of it came a swarm of black creatures, like oil-covered sticks, thousands of them. They overwealmed me, knocked me unconscious, and when I awoke... they were gone, and my aldeia them. Everyone. My friends, my wife, my children. I was the only one left - except for a few dead.\""
+      }
+    }
+  ],
   "consistency": [],
   "glossary_checks": [],
   "pilot_batch_summaries": {},
   "check_signatures": {
-    "R0017271_049add9262": "c71902ea36f9c17e6611dd8ca7e6536d12ca390a2107bec7b9cd3e754eedcff3",
+    "R0006517_160fcf99f8": "23b4a43330b0ed5b65a0b62845aa729642b0e88228a604dcd24ea94e95817770",
+    "R0009438_1d57fbaa1d": "39cc444ccfc47a493a9f3001f3c969d2c9abaf7527e8e5258a80fbaad7cdf3dd",
+    "R0017271_049add9262": "847feb2ab8fa3a79e1e23236147ba503a8044115f828bdf7d41f2983083b2e08",
+    "R0026299_6182b48133": "f5ce214952bf1cb42de81a7d22e36140d6fafc024f831ff32026afdcc588b741",
+    "R0026749_337a7a91a4": "0c72ff76e1b1a5ad379397b7bbbd66df38b4acf895626506bc91988190501b3c",
     "R0032300_fd983259d2": "266213a8fd4e248942655fd4352aafa81ffe3461a1bf5741225160a3e045a04f",
+    "R0036151_06687f97e7": "c99bc4a1e9297b3379c6e7130f3399ee312de85342adbc77bfd4ce52c7f0ccff",
+    "R0036152_0a9afd4484": "1a67e57f672110930daf0cf81c1b34ccd547efa75c89dd9cb47cab82c7f0e3f8",
     "R0036199_dae690f193": "ef086952700027ccbbbb68d24f5b819ad08930cba4e16fa3fc2dc0820d47097f",
-    "R0047777_20285741c5": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33"
+    "R0045556_4a3f4688bb": "0801e410f21ff6a328147822ad3f77d27237d2844658aa4650fc8337ab17975b",
+    "R0047295_097cbb665d": "450f01141491bd3569e3365c82bcdad1cafd6ead0d83fd10a7837e132a40a82b",
+    "R0047777_20285741c5": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33",
+    "R0049539_9aa6582b1b": "be3780340d0ff754005b79031ab71e2386ec21a9aef9cbaa06d0848b0ad594c9",
+    "R0049540_d7dbcee39b": "b77dc3edbc03700c21060b46a022a646a999f6407d11486138d91440d289ff5e",
+    "R0049549_3a3c180a4a": "9e760a83d26cb570ee0b1ba822192ad85f47642a4b8d74a1d9096ae062cc9794",
+    "R0058702_9908395ea7": "d89c945659edcdca1386a47037523f3c045d3db9439cf765f7fc1a4ec9abd5f7"
   },
   "reused_decisions": {
+    "R0009438_1d57fbaa1d": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0009438_1d57fbaa1d",
+        "reason": "同表英文 ID 80 紧邻句为“Farewell.”，ID 81 是对这句告别的迟疑回应；译文“也祝你如此”所补的祝别含义由前句支持。法德西同 ID 亦作“你也一样／给你也一样”方向，不需返修。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "39cc444ccfc47a493a9f3001f3c969d2c9abaf7527e8e5258a80fbaad7cdf3dd"
+    },
     "R0017271_049add9262": {
       "decision": {
         "disposition": "contextual",
@@ -42,7 +320,25 @@
         "user_authorization": "继续，对于剩余的，如果东西比较少的话，你就直接解决了吧"
       },
       "report_hash": "23a56a45a2b6fd1d4bd6333fa1989f6a51c1ce67187cc3cdc7be1c49b4b97a32",
-      "signature": "c71902ea36f9c17e6611dd8ca7e6536d12ca390a2107bec7b9cd3e754eedcff3"
+      "signature": "847feb2ab8fa3a79e1e23236147ba503a8044115f828bdf7d41f2983083b2e08"
+    },
+    "R0026299_6182b48133": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0026299_6182b48133",
+        "reason": "“They all”指历代 Speck；同区域英文 c01_observant_speck 明说“the Speck herself”，c4121_observant_speck 描写现任 Speck 为“Her”。法西波同 ID 也使用阴性复数形式。译文“她们”有角色语境依据，可保留。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "f5ce214952bf1cb42de81a7d22e36140d6fafc024f831ff32026afdcc588b741"
+    },
+    "R0026749_337a7a91a4": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0026749_337a7a91a4",
+        "reason": "英文源文件 ID 63 的“so many so little of you”漏词；同表 ID 61 的近乎同文版本完整写作“so many think so little of you”。法德西波俄同 ID 均指许多人轻视她，支持现译“那么多人瞧不起你”。其余内容和 SCRIPT 注释亦对应原文，可保留，源文缺词宜记 warning。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "0c72ff76e1b1a5ad379397b7bbbd66df38b4acf895626506bc91988190501b3c"
     },
     "R0032300_fd983259d2": {
       "decision": {
@@ -66,6 +362,24 @@
       "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
       "signature": "ef086952700027ccbbbb68d24f5b819ad08930cba4e16fa3fc2dc0820d47097f"
     },
+    "R0045556_4a3f4688bb": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0045556_4a3f4688bb",
+        "reason": "原始 mere_g1_kholnvillage_revised ID728 确有多余 and，其他语言同ID为空；相邻 ID726 是从记忆返回村落，ID729 仍有人称呼主角为 Tash。现译仅按可辨识部分呈现塔什思绪、冰封瞬间与本人缺席的疑问，没有补写缺失名词或身份结论；保留源文笔误 warning 即可。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "0801e410f21ff6a328147822ad3f77d27237d2844658aa4650fc8337ab17975b"
+    },
+    "R0047295_097cbb665d": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0047295_097cbb665d",
+        "reason": "原始 mere_r0_redtidalmere ID119 的“the but others”是多余冠词；同ID法、德、西、波、俄均明确泽尔似乎享受挨打而其他人不然，现译对此准确。上下文 ID116-118 也均为石窟变种人遭殴打的分支；其余行动与情绪内容无实质误译，保留源文笔误 warning 即可。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "450f01141491bd3569e3365c82bcdad1cafd6ead0d83fd10a7837e132a40a82b"
+    },
     "R0047777_20285741c5": {
       "decision": {
         "disposition": "contextual",
@@ -76,11 +390,60 @@
       },
       "report_hash": "9af9ec094c97941c3e9486f581e7d969e7d084d58776e4d1c95956ebd2c5c95e",
       "signature": "900489694f447e23fe276973f11863381d2f21de79cf4606ee13f3fadcf82e33"
+    },
+    "R0049539_9aa6582b1b": {
+      "decision": {
+        "disposition": "pass",
+        "id": "R0049539_9aa6582b1b",
+        "reason": "同一测试脚本 ID 98–107 明列 Fettles、Murden Fettle、Add、Remove、Check，ID 91/93/95 的 Found the fettle 对应状态检查成功；此处 fettle 确指游戏状态，译作“状态效果”成立。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "be3780340d0ff754005b79031ab71e2386ec21a9aef9cbaa06d0848b0ad594c9"
+    },
+    "R0049540_d7dbcee39b": {
+      "decision": {
+        "disposition": "pass",
+        "id": "R0049540_d7dbcee39b",
+        "reason": "同一测试脚本 ID 91–107 连续测试 fettle 的添加、移除与检查；ID 92/94/96 的 No fettle there 对应检查未发现状态，现译“那里没有状态效果”准确。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "b77dc3edbc03700c21060b46a022a646a999f6407d11486138d91440d289ff5e"
+    },
+    "R0049549_3a3c180a4a": {
+      "decision": {
+        "disposition": "pass",
+        "id": "R0049549_3a3c180a4a",
+        "reason": "同一脚本紧邻 ID 105 Check、ID 106 You've got it，ID 107 No fettle 为检查结果的否定分支；现译“没有状态效果”符合机制语境。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "9e760a83d26cb570ee0b1ba822192ad85f47642a4b8d74a1d9096ae062cc9794"
+    },
+    "R0058702_9908395ea7": {
+      "decision": {
+        "disposition": "contextual",
+        "id": "R0058702_9908395ea7",
+        "reason": "原始英文墓志铭 ID 192 实存 I legate / You all than happy and the rich 的残缺比较；德、西、法、波、俄对应条目均复制同一英文，无法独立还原。现译“比留给快乐者和富人还多”是可成立的一种解读，尚无证据判定为译错或支持唯一修法；保留源文歧义警告。"
+      },
+      "report_hash": "8f64afa31645ae619ce170ac12644b3d22add13e7d49da74f98c838b14d6b552",
+      "signature": "d89c945659edcdca1386a47037523f3c045d3db9439cf765f7fc1a4ec9abd5f7"
     }
   },
-  "required_decisions": [],
+  "required_decisions": [
+    "R0006517_160fcf99f8",
+    "R0036151_06687f97e7",
+    "R0036152_0a9afd4484"
+  ],
   "standard_scope_policy": "disputes_only_v1",
   "carried_findings": {},
   "selection_explanation": "Only explicit unresolved reviewer issues need standard-tier adjudication. Risk flags, corrections, ordinary samples, duplicate-source groups and speaker groups do not trigger standard-tier review. Known standard-tier repair findings are carried to cheap-tier repair without re-reading; exhausted or regressing repairs use the existing targeted standard-tier escalation route.",
-  "report_hash": "6ee74829c124ffc36f9b8b25ec7e448361d085b046acfa5f9160f3265ba68c6f"
+  "resource_occurrence_binding": {
+    "torment-tides-of-numenera_images_text.mapping.json": "723dc210d6916db9223b347fb25809973fabbd4cc2c9493b94be624cbcbcc498",
+    "TranslateFiles/config/resource_translation_resolutions.json": "5be4c77524745b3651453c34657f69f00ff5370cac682b92d33a700bdea9e83a"
+  },
+  "report_hash": "8b1aa0d368b8a9d26699b277ac66ee799cdc49b44a731412d59fb539e89b74cb",
+  "round_scope": [
+    "R0006517_160fcf99f8",
+    "R0036151_06687f97e7",
+    "R0036152_0a9afd4484"
+  ]
 }
